@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="TestUtiles.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="AutomationTesting.BchatApp.Create_Password_Screen_TestCases">
+        <methods>
+          <include name="closeApp"/>
+          <include name="Configure"/>
+          <include name="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen"/>
+        </methods>
+      </class> <!-- AutomationTesting.BchatApp.Create_Password_Screen_TestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

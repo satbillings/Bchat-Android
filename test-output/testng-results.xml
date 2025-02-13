@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-13T13:51:12 IST" name="Suite" finished-at="2025-02-13T13:52:12 IST" duration-ms="60116">
+    <groups>
+    </groups>
+    <test started-at="2025-02-13T13:51:12 IST" name="Test" finished-at="2025-02-13T13:52:12 IST" duration-ms="60116">
+      <class name="AutomationTesting.BchatApp.Create_Password_Screen_TestCases">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@34a875b3]" started-at="2025-02-13T13:51:12 IST" name="Configure" finished-at="2025-02-13T13:51:27 IST" duration-ms="14868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Configure -->
+        <test-method signature="preSetup()[pri:1, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@34a875b3]" started-at="2025-02-13T13:51:27 IST" name="preSetup" finished-at="2025-02-13T13:51:45 IST" duration-ms="18538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@34a875b3]" started-at="2025-02-13T13:51:45 IST" name="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-13T13:51:47 IST" duration-ms="2067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen -->
+        <test-method signature="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@34a875b3]" started-at="2025-02-13T13:51:47 IST" name="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-13T13:52:11 IST" duration-ms="24140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@34a875b3]" started-at="2025-02-13T13:52:11 IST" name="closeApp" finished-at="2025-02-13T13:52:12 IST" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- AutomationTesting.BchatApp.Create_Password_Screen_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
