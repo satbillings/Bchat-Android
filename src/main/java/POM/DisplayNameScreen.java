@@ -21,7 +21,7 @@ public class DisplayNameScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.Button[@resource-id=\"io.beldex.bchat:id/registerButton\"]")
 	private WebElement ContinueButton;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@hint='Enter a display name']")
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='Enter a display name']")
 	private WebElement ElementPlacholder;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/title_name")

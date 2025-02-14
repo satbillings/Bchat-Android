@@ -42,8 +42,7 @@ public class Create_Password_Screen_TestCases extends baseclass {
 	}
 
 	/*
-	 * Validate the next function without entering a value in Enter password field
-	 * in create password screen.
+	  Validate the next function without entering a value in Enter password field in create password screen.
 	 */
 	@Test(priority = 2)
 	public void To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen() {
@@ -60,8 +59,7 @@ public class Create_Password_Screen_TestCases extends baseclass {
 	}
 
 	/*
-	 * Validate with Valid value in password field and Invalid value in Re-enter
-	 * password field in create password screen.
+	  Validate with Valid value in password field and Invalid value in Re-enter password field in create password screen.
 	 */
 	@Test(priority = 3)
 	public void To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen() throws InterruptedException {

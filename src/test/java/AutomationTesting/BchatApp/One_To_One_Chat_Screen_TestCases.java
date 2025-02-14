@@ -595,7 +595,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
        Assert.assertTrue(chatpage.Btn_Slide_to_pay().isDisplayed());
 	}
 	/*
-	validate whether the user is able to disable "Pay as you chat" option using shortcut in one to one chat screen.
+	Validate whether the user is able to disable "Pay as you chat" option using shortcut in one to one chat screen.
 	*/
 	@Test(priority = 42)
 	public void To_validate_whether_the_user_is_able_to_disable_pay_as_you_chat_option_using_shortcut_in_one_to_one_chat_screen () {
