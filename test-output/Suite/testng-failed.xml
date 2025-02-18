@@ -10,7 +10,7 @@
         <methods>
           <include name="closeApp"/>
           <include name="Configure"/>
-          <include name="To_validate_the_clicking_continue_button_without_enter_any_value_in_display_name_text_box_in_display_name_screen"/>
+          <include name="To_Validate_DisplayName_With_Invalid_Datas_like_empty_space_and_special_characters_and_To_validate_whether_display_name_textbox_is_editable_and_deleteable" invocation-numbers="1 3"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases -->
     </classes>

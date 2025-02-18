@@ -1,10 +1,15 @@
 package POM;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import TestUtiles.ActionsClass;
 import io.appium.java_client.android.AndroidDriver;
+//import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -39,8 +44,13 @@ public class DisplayNameScreen extends ActionsClass {
 	    //super.Send_keys(txtboxDisplayName, displayname);	
 		return displayname;
 	}
-
-	
+   
+	public void CopyDisplayName(String text){
+		TxtBoxDisplayName.click();
+		driver.setClipboardText(text);
+		
+		
+	}
 	public void clickContinue() {
 		super.click(ContinueButton);
 	}

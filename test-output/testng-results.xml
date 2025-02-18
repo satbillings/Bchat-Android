@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-14T14:19:16 IST" name="Suite" finished-at="2025-02-14T14:20:01 IST" duration-ms="44876">
+  <suite started-at="2025-02-18T16:56:08 IST" name="Default suite" finished-at="2025-02-18T16:56:38 IST" duration-ms="30612">
     <groups>
     </groups>
-    <test started-at="2025-02-14T14:19:16 IST" name="Test" finished-at="2025-02-14T14:20:01 IST" duration-ms="44876">
+    <test started-at="2025-02-18T16:56:08 IST" name="Default test" finished-at="2025-02-18T16:56:38 IST" duration-ms="30612">
       <class name="AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:16 IST" name="Configure" finished-at="2025-02-14T14:19:36 IST" duration-ms="19740" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:08 IST" name="Configure" finished-at="2025-02-18T16:56:23 IST" duration-ms="14894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:36 IST" name="PreSetup" finished-at="2025-02-14T14:19:39 IST" duration-ms="3235" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:23 IST" name="PreSetup" finished-at="2025-02-18T16:56:27 IST" duration-ms="3825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_presence_of_placeholder_in_Display_Name_Textbox_in_display_name_screen()[pri:1, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:39 IST" name="To_Validate_presence_of_placeholder_in_Display_Name_Textbox_in_display_name_screen" finished-at="2025-02-14T14:19:43 IST" duration-ms="3857" status="PASS">
+        <test-method signature="To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen()[pri:7, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:27 IST" name="To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen" finished-at="2025-02-18T16:56:38 IST" duration-ms="11235" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_presence_of_placeholder_in_Display_Name_Textbox_in_display_name_screen -->
-        <test-method signature="To_Validate_whether_the_crusher_blink_on_clicking_textbox_of_Display_Name_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:43 IST" name="To_Validate_whether_the_crusher_blink_on_clicking_textbox_of_Display_Name_screen" finished-at="2025-02-14T14:19:44 IST" duration-ms="1545" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_whether_the_crusher_blink_on_clicking_textbox_of_Display_Name_screen -->
-        <test-method signature="To_Validate_Display_Name_text_box_With_Empty_Value_in_display_name_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:44 IST" name="To_Validate_Display_Name_text_box_With_Empty_Value_in_display_name_screen" finished-at="2025-02-14T14:19:48 IST" duration-ms="3502" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_Display_Name_text_box_With_Empty_Value_in_display_name_screen -->
-        <test-method signature="To_validate_the_clicking_continue_button_without_enter_any_value_in_display_name_text_box_in_display_name_screen()[pri:4, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:48 IST" name="To_validate_the_clicking_continue_button_without_enter_any_value_in_display_name_text_box_in_display_name_screen" finished-at="2025-02-14T14:19:52 IST" duration-ms="3984" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_validate_the_clicking_continue_button_without_enter_any_value_in_display_name_text_box_in_display_name_screen -->
-        <test-method signature="To_validate_the_text_box_of_the_Display_Name_screen_by_entering_values_above_boundary_value()[pri:5, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:19:52 IST" name="To_validate_the_text_box_of_the_Display_Name_screen_by_entering_values_above_boundary_value" finished-at="2025-02-14T14:20:00 IST" duration-ms="8209" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_validate_the_text_box_of_the_Display_Name_screen_by_entering_values_above_boundary_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@6ad3381f]" started-at="2025-02-14T14:20:00 IST" name="closeApp" finished-at="2025-02-14T14:20:01 IST" duration-ms="728" status="PASS">
+        </test-method> <!-- To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:38 IST" name="closeApp" finished-at="2025-02-18T16:56:38 IST" duration-ms="623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
