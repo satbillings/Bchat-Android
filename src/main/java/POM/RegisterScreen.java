@@ -46,7 +46,7 @@ public class RegisterScreen extends ActionsClass {
 	}
 	//Hey hi, welcome to BChat!
 	public String getdisplayName() {
-	String displayName =TextWithDisplayName.getText().substring(4, 9);
+	String displayName =TextWithDisplayName.getText().substring(4, 7);
 	String name=displayName;
 	return name;
 	}

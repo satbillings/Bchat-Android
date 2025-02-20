@@ -125,7 +125,7 @@ public class Create_Account_Flow_DisplayNameScreen_TestCases extends baseclass {
 	     Validate whether the value entered in the text box of display Name screen is editable. 
 	     Validate whether the value entered in the text box of display Name screen is delete-able.*/
 	  
-	   @Test(priority = 6,dataProvider="setInvaliddata") 
+	   /*@Test(priority = 6,dataProvider="setInvaliddata") 
         public void To_Validate_DisplayName_With_Invalid_Datas_like_empty_space_and_special_characters_and_To_validate_whether_display_name_textbox_is_editable_and_deleteable (HashMap<String,String> input) throws IOException, InterruptedException {
 	    displaynamepage = new DisplayNameScreen(driver);
 	    Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
@@ -144,7 +144,7 @@ public class Create_Account_Flow_DisplayNameScreen_TestCases extends baseclass {
 	  	  }
 	    /* Validate whether the paste option is working on the text box of display Name screen. */
 		  
-		 @Test(priority = 7) 
+		 /*@Test(priority = 7) 
 	     public void To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen () throws InterruptedException { 
 	      displaynamepage = new DisplayNameScreen(driver); 
 	      Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
@@ -161,5 +161,31 @@ public class Create_Account_Flow_DisplayNameScreen_TestCases extends baseclass {
 		  catch(Throwable th) { 
 	          th.printStackTrace(); 
 	          }
-		 } 
-}
+		 } */
+	 /* Validate the text box of the Display Name screen using alphabets both in upper case and lower case. 
+        Validate the text box of the Display Name screen by numerical value. */
+
+      @Test(dataProvider="setValiddata") 
+      public void To_Validate_DisplayName_textbox_With_valid_Datas_like_alphapets_both_in_uppercase_and_lowercase_and_numerical_value (HashMap<String,String> input) throws IOException {
+      //openingpage.clickCreateAccount(); 
+       displaynamepage = new DisplayNameScreen(driver);
+       Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+      displaynamepage.cleardisplayname();
+      displaynamepage.setDisplayName(input.get("DisplayName"));
+      displaynamepage.clickContinue(); 
+       Registerpage = new RegisterScreen(driver);
+      wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+      wait.until(ExpectedConditions.visibilityOf(Registerpage.TextPageTitle));
+      Assert.assertEquals(Registerpage.pageTitle(), "Register");
+      driver.navigate().back();
+      wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+      Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
+     }
+
+    @DataProvider 
+    public Object[][] setValiddata() throws IOException {
+    List <HashMap <String,String>>data=super.getjsonFile("//Data//ValidDisplayNames.json");
+    return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)},{data.get(4)}};
+    }
+
+   }

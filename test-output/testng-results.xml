@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-18T16:56:08 IST" name="Default suite" finished-at="2025-02-18T16:56:38 IST" duration-ms="30612">
+  <suite started-at="2025-02-20T16:05:51 IST" name="Suite" finished-at="2025-02-20T16:06:33 IST" duration-ms="41461">
     <groups>
     </groups>
-    <test started-at="2025-02-18T16:56:08 IST" name="Default test" finished-at="2025-02-18T16:56:38 IST" duration-ms="30612">
-      <class name="AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:08 IST" name="Configure" finished-at="2025-02-18T16:56:23 IST" duration-ms="14894" status="PASS">
+    <test started-at="2025-02-20T16:05:51 IST" name="Test" finished-at="2025-02-20T16:06:33 IST" duration-ms="41461">
+      <class name="AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:05:51 IST" name="Configure" finished-at="2025-02-20T16:06:06 IST" duration-ms="14472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:23 IST" name="PreSetup" finished-at="2025-02-18T16:56:27 IST" duration-ms="3825" status="PASS">
+        <test-method signature="To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box()[pri:1, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:06 IST" name="To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box" finished-at="2025-02-20T16:06:26 IST" duration-ms="20402" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen()[pri:7, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:27 IST" name="To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen" finished-at="2025-02-18T16:56:38 IST" duration-ms="11235" status="PASS">
+        </test-method> <!-- To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box -->
+        <test-method signature="To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:26 IST" name="To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen" finished-at="2025-02-20T16:06:29 IST" duration-ms="3294" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_Whether_the_user_is_able_to_paste_values_in_display_name_textBox_in_display_name_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases@57a78e3]" started-at="2025-02-18T16:56:38 IST" name="closeApp" finished-at="2025-02-18T16:56:38 IST" duration-ms="623" status="PASS">
+        </test-method> <!-- To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen -->
+        <test-method signature="To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:29 IST" name="To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen" finished-at="2025-02-20T16:06:32 IST" duration-ms="2817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:32 IST" name="closeApp" finished-at="2025-02-20T16:06:33 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_DisplayNameScreen_TestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
