@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-20T16:05:51 IST" name="Suite" finished-at="2025-02-20T16:06:33 IST" duration-ms="41461">
+  <suite started-at="2025-02-21T12:28:50 IST" name="Default suite" finished-at="2025-02-21T12:29:47 IST" duration-ms="57288">
     <groups>
     </groups>
-    <test started-at="2025-02-20T16:05:51 IST" name="Test" finished-at="2025-02-20T16:06:33 IST" duration-ms="41461">
-      <class name="AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:05:51 IST" name="Configure" finished-at="2025-02-20T16:06:06 IST" duration-ms="14472" status="PASS">
+    <test started-at="2025-02-21T12:28:50 IST" name="Default test" finished-at="2025-02-21T12:29:47 IST" duration-ms="57288">
+      <class name="AutomationTesting.BchatApp.Create_Password_Screen_TestCases">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:28:50 IST" name="Configure" finished-at="2025-02-21T12:29:07 IST" duration-ms="16751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box()[pri:1, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:06 IST" name="To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box" finished-at="2025-02-20T16:06:26 IST" duration-ms="20402" status="PASS">
+        <test-method signature="preSetup()[pri:1, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:07 IST" name="preSetup" finished-at="2025-02-21T12:29:25 IST" duration-ms="18639" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box -->
-        <test-method signature="To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:26 IST" name="To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen" finished-at="2025-02-20T16:06:29 IST" duration-ms="3294" status="PASS">
+        </test-method> <!-- preSetup -->
+        <test-method signature="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:25 IST" name="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-21T12:29:30 IST" duration-ms="4233" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_Whether_the_user_is_able_to_navigate_to_previous_screen_from_register_screen -->
-        <test-method signature="To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:29 IST" name="To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen" finished-at="2025-02-20T16:06:32 IST" duration-ms="2817" status="PASS">
+        </test-method> <!-- To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen -->
+        <test-method signature="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:30 IST" name="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-21T12:29:47 IST" duration-ms="17185" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_whether_the_user_is_able_to_copy_the_ID_and_Address_showing_in_the_register_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases@46dffdc3]" started-at="2025-02-20T16:06:32 IST" name="closeApp" finished-at="2025-02-20T16:06:33 IST" duration-ms="435" status="PASS">
+        </test-method> <!-- To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:47 IST" name="closeApp" finished-at="2025-02-21T12:29:47 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- AutomationTesting.BchatApp.Create_Password_Screen_TestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

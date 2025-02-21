@@ -8,9 +8,9 @@
     <classes>
       <class name="AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases">
         <methods>
-          <include name="closeApp"/>
           <include name="Configure"/>
-          <include name="To_Validate_whether_the_displaying_same_Name_entered_in_the_display_name_text_box"/>
+          <include name="closeApp"/>
+          <include name="To_Validate_the_working_of_next_Button_functionality_in_register_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases -->
     </classes>
