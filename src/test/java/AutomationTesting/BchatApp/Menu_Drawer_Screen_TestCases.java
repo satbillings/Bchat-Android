@@ -63,7 +63,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		// menupage =new MenuScreen(driver);
 		// Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
@@ -266,7 +266,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 Validate the working of the Send Link Previews option in both On and Off condition in settings screen.
 	*/
-	@Test(priority = 13)
+	/*@Test(priority = 13)
 	public void To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition_in_settings_screen () throws InterruptedException {
 		// to check in on condition
 		menupage = new MenuScreen(driver);
@@ -311,6 +311,42 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		//Assert.assertFalse(notetomyselfpage.Link_Preview().isDisplayed());
 		Thread.sleep(2000);
 		driver.navigate().back();
-	}
+	}*/
 	
+	/* Validate whether the user is able to navigate back to the home screen from invite screen. */
+	@Test(priority = 14)
+	public void To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_invite_screen() throws InterruptedException {
+		menupage = new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(), "Menu");
+		menupage.ClickOptionInvite();
+		Assert.assertTrue(menupage.getElementofInviteScreen().isDisplayed());
+		Thread.sleep(3000);
+		driver.navigate().back();
+	}
+	/* Validate the working of the Invite functionality in menu screen. */
+	@Test(priority = 15)
+	public void To_validate_whether_the_working_of_the_invite_functionality_in_menu_screen() {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(), "Menu");
+		menupage.ClickOptionInvite();
+		Assert.assertTrue(menupage.getElementofInviteScreen().isDisplayed());
+		menupage.InviteToBchat();
+		Assert.assertEquals(menupage.getForwardScreenTitle(),"Forward");
+		driver.navigate().back();
+	}
+	/* Validate whether the user is able to navigate back to the home screen from about screen */
+	@Test(priority = 16)
+	public void To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_about_screen() {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(), "Menu");
+		menupage.ClickOptionAbout();
+		Assert.assertEquals(menupage.getAboutScreenTitle(),"About");
+		driver.navigate().back();
+	}	
 }

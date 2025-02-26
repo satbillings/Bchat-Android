@@ -70,10 +70,10 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	    accountsettingspage.click_App_Lock_Option();
 	}
 	/*
-	Validate whether able to navigate back to the Account Screen from app lock screen.
+	   Validate whether able to navigate back to the Account Screen from app lock screen.
 	*/
-	/*@Test(priority = 1)
-	public void To_Validate_whether_able_to_navigate_back_to_the_Account_Screen_from_Applock_screen () {
+	    @Test(priority = 1)
+	    public void To_Validate_whether_able_to_navigate_back_to_the_Account_Screen_from_Applock_screen () {
 		applockpage = new AppLockScreen(driver);
 		Assert.assertEquals(applockpage.pageTitle(),"App Lock");
 		applockpage.click_Back_Arrow();
@@ -87,11 +87,10 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	Validate whether the functions present in the App Lock screen response for the touch action.
 	Validate navigation to the functions in the App Lock screen in both forward and backward direction.
 	*/
-	/*@Test(priority = 2)
-	public void To_validate_functions_present_in_the_app_lock_screen_response_for_touch_action_To_Validate_functions_forward_and_backward_navigation_in_the_App_Lock_screen () {
+	    @Test(priority = 2)
+	    public void To_validate_functions_present_in_the_app_lock_screen_response_for_touch_action_To_Validate_functions_forward_and_backward_navigation_in_the_App_Lock_screen () {
 		applockpage = new AppLockScreen(driver);
 		Assert.assertEquals(applockpage.pageTitle(),"App Lock");
-		
 		applockpage.click_ChangePassword_option();
 		createpasswordpage = new CreatePasswordScreen(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -102,10 +101,10 @@ public class App_Lock_Screen_TestCases extends baseclass {
 		Assert.assertEquals(applockpage.pageTitle(),"App Lock");	
 	}
 	 /*
-	Validate the Change password fields with Invalid Old password value
+	Validate the Change password fields with Invalid Old password value.
 	*/
-	/*@Test(priority = 3)
-	public void To_Validate_the_Change_password_fields_with_Invalid_Old_password_value () {
+	    @Test(priority = 3)
+	    public void To_Validate_the_Change_password_fields_with_Invalid_Old_password_value () {
 		applockpage = new AppLockScreen(driver);
 		Assert.assertEquals(applockpage.pageTitle(),"App Lock");
 		applockpage.click_ChangePassword_option();
@@ -125,8 +124,8 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	/*
 	Validate whether next button clickable without entering the values in all change password fields
 	*/
-	/*@Test(priority = 4)
-	public void To_Validate_whether_next_button_clickable_without_entering_the_values_in_all_change_password_fields () {
+	    @Test(priority = 4)
+	    public void To_Validate_whether_next_button_clickable_without_entering_the_values_in_all_change_password_fields () {
 		createpasswordpage =new CreatePasswordScreen(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 		createpasswordpage.clickNext();
@@ -141,13 +140,13 @@ public class App_Lock_Screen_TestCases extends baseclass {
 		Assert.assertEquals(createpasswordpage.textReEnter(),"Re-Enter your PIN");
 		createpasswordpage.clickNext();
 		driver.navigate().back();
-	}*/
+	}
 	/*
-	Validate the password fields with valid Old password and valid New Password and invalid Reenter password
+	Validate the password fields with valid Old password and valid New Password and invalid Reenter password.
 	*/
-	/* @Test(priority = 5)
-	 public void To_Validate_password_fields_with_valid_Old_password_and_valid_New_Password_and_invalid_ReEnter_password () {
-		 applockpage = new AppLockScreen(driver);
+	        @Test(priority = 5)
+	        public void To_Validate_password_fields_with_valid_Old_password_and_valid_New_Password_and_invalid_ReEnter_password () {
+		    applockpage = new AppLockScreen(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
 			applockpage.click_ChangePassword_option();
 			createpasswordpage =new CreatePasswordScreen(driver);
@@ -174,8 +173,8 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	 /*
     Validate whether able to set the new password with old password value
      */
-   /*@Test(priority = 6)
-   public void To_Validate_whether_able_to_set_the_new_password_with_old_password_value () {
+      @Test(priority = 6)
+    public void To_Validate_whether_able_to_set_the_new_password_with_old_password_value () {
 	applockpage = new AppLockScreen(driver);
 	Assert.assertEquals(applockpage.pageTitle(),"App Lock");
 	applockpage.click_ChangePassword_option();
@@ -202,7 +201,7 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	Validate whether the value entered in all pin number fields is editable.
 	Validate whether the value entered in all pin number fields is deleteable.
 	*/
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void TC_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable () {
 		
 		
@@ -227,7 +226,7 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	/*
 	Validate both the Password fields by entering values Below boundary value.
 	*/
-		/*@Test(priority =8)
+		@Test(priority =8)
 		public void TC_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field () {
 			
 			applockpage = new AppLockScreen(driver);
@@ -267,7 +266,7 @@ public class App_Lock_Screen_TestCases extends baseclass {
 		/* 
 		Validate whether values entered in the pin number fields are visible
 	*/
-		/*@Test(priority = 9)
+		@Test(priority = 9)
 		public void To_Validate_whether_values_entered_in_the_pin_number_fields_are_visible () {
 			applockpage = new AppLockScreen(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -295,7 +294,7 @@ public class App_Lock_Screen_TestCases extends baseclass {
 		/*
 		Validate the password fields with valid Old password and Valid New Password.
 		*/
-		/*@Test(priority = 10)
+		@Test(priority = 10)
 		public void To_Validate_password_fields_with_valid_Old_password_and_Valid_New_Password () {
 			applockpage = new AppLockScreen(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -313,7 +312,7 @@ public class App_Lock_Screen_TestCases extends baseclass {
 	/*
 	 Validate the working of the Ok and Cancel option in the Screen lock inactivity timeout functionality
 	 */
-	/*@Test (priority = 12)
+	@Test (priority = 12)
 	public void To_Validate_working_of_Ok_and_Cancel_option_in_Screenlock_inactivity_timeout_functionality () throws InterruptedException {
 	   // accountsettingspage.click_App_Lock_Option();
 		applockpage = new AppLockScreen(driver);

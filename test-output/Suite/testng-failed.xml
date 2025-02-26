@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases">
+      <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
         <methods>
-          <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_next_Button_functionality_in_register_screen"/>
+          <include name="Configure"/>
+          <include name="To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen"/>
+          <include name="To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Create_Account_Flow_RegisterScreen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.New_Chat_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

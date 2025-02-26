@@ -83,6 +83,12 @@ public class MenuScreen extends ActionsClass {
 	
 	@AndroidFindBy(accessibility ="support beldex, support@beldex.io")
 	private WebElement SupportMailId;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='android:id/text1' and @text='BChat Messenger']")
+	private WebElement BchatOption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Forward']")
+	private WebElement ForwardScreenTitle;
 	    
 	public void LongpressOnHelpOption () {
 		 longPress(optionHelp);
@@ -91,11 +97,16 @@ public class MenuScreen extends ActionsClass {
 	public String getSupportMailId() {
 		return SupportMailId.getText();
 	}
+	public String getForwardScreenTitle() {
+		return ForwardScreenTitle.getText();
+	}
 	
 	 public void ClickCloseIcon () {
 		 Closeicon.click();
 		 }
-	
+	 public void  InviteToBchat() {
+		 BchatOption.click();
+		 }
 	public String pagetitle() {
 	String title =	pagetitle.getText();
 	return title;
@@ -123,7 +134,7 @@ public class MenuScreen extends ActionsClass {
 	   scrollgesture_Using_WebElement(Element);
     	}*/
     
-    public String contentAbout () {
+    public String getAboutScreenTitle () {
 		return optionAbout.getText();
     	
     }
@@ -160,4 +171,8 @@ public class MenuScreen extends ActionsClass {
     public void ClickOptionInvite () {
     	optionInvite.click();
     }
+    public void ClickOptionAbout () {
+    	optionAbout.click();
+    }
+    
 }

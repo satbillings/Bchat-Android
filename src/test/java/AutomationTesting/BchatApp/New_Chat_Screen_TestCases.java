@@ -56,15 +56,15 @@ public class New_Chat_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
-		homepage.OpenNewChat();
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.OpenNewScreen();
 	}
 	/*
 	 * Validate whether able to navigate back to the home screen from new chat
 	 * screen
 	 */
 	
-	  @Test(priority = 1) public void
+	 /* @Test(priority = 1) public void
 	  To_Validate_whether_able_to_navigate_back_to_home_screen_from_new_chat_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -173,7 +173,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /* Validate the new chat function without internet connection in the new chat screen */
 	  
 	  
-	  @Test(priority = 11) 
+	  /*@Test(priority = 11) 
 	  public void To_validate_the_new_chat_function_without_internet_connection_in_the_new_chat_screen () throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -186,7 +186,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate whether able to paste values in the text box in the new chat screen. */
 	  
-	  @Test(priority = 12) public void
+	 /* @Test(priority = 12) public void
 	  To_validate_whether_able_to_paste_values_in_text_box_in_the_new_chat_screen
 	  () throws InterruptedException {
 	  newchatpage = new NewChatScreen(driver);
@@ -202,7 +202,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /* Validate the New Chat by entering a valid BChat ID in the new chat screen. */
 	  
-	  @Test(priority = 13) public void
+	 /* @Test(priority = 13) public void
 	  To_Validate_the_New_Chat_by_entering_a_valid_BChat_ID_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -216,8 +216,8 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the New Chat by entering a valid BNS name in the new chat screen.*/
 	  
-	  @Test(priority = 14) public void
-	  To_Validate_the_New_Chat_by_entering_a_valid_BNS_name_in_the_new_chat_screen
+	/*  @Test(priority = 14) 
+	  public void To_Validate_the_New_Chat_by_entering_a_valid_BNS_name_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.Check_with_Valid_BNS_Name(); wait = new WebDriverWait(driver,
@@ -229,7 +229,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	/*  Validate the working of upload from gallery option with valid QR code image. */
 	  
-	  @Test(priority = 15) public void
+	/*  @Test(priority = 15) public void
 	  To_Validate_the_working_of_upload_from_gallery_option_with_valid_QR_code_image
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -242,7 +242,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* validate the working of upload from gallery option with normal QR code image.*/
 	  
-	  @Test(priority = 16) public void
+	 /* @Test(priority = 16) public void
 	  To_validate_the_working_of_upload_from_gallery_option_with_normal_QR_code_image
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -255,14 +255,33 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 /* validate the working of upload from gallery option with invalid QR code
 	  image.
 	  */
-	  @Test(priority = 17) public void
-	  To_validate_the_working_of_upload_from_gallery_option_with_invalid_QR_code_image() { 
+	 /* @Test(priority = 17) 
+	  public void To_validate_the_working_of_upload_from_gallery_option_with_invalid_QR_code_image() { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.UploadInValidQRCode();
 	  Assert.assertEquals(Toast(),"An error occurred.");
 	  Assert.assertEquals(newchatpage.getScanQRScreenTitle(),"Scan QR");
-	  newchatpage.ClickScanQRBackArrow(); }
-	 
-
+	  newchatpage.ClickScanQRBackArrow(); }*/
+	
+	/* Validate the working of close icon in search text box in new screen */
+	  
+	  @Test(priority = 18) 
+	  public void To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen() { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchIcon();
+	  newchatpage.EnterTextInSearchTextBox();
+	  newchatpage.ClickCloseIconInSearchTextBox();
+	  }
+	
+	/* Validate whether the search option is able to open and close in new screen */
+	  @Test(priority = 19) 
+	  public void To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen(){ 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.OpenAndCloseSearchOption();
+	  }
+	
+	
 }

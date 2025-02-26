@@ -17,11 +17,14 @@ public class NewChatScreen extends ActionsClass {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='New Chat']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='New']")
 	private WebElement pageTitle;
 	
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement BchatIDOrBNSNameTextBox;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText")
+	private WebElement SearchTextBox;
 	
 	@AndroidFindBy(xpath="//android.widget.Button[@index='1']")
 	private WebElement btnLetsBChat;
@@ -31,6 +34,10 @@ public class NewChatScreen extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.view.View[@index='0']")
 	private WebElement Newchatoption;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[7]/android.view.View[2]/android.widget.Button")
+	//@AndroidFindBy(className="android.widget.Button")
+	private WebElement Searchoption;
 	
 	@AndroidFindBy(accessibility ="Back")
 	private WebElement BackArrow;
@@ -63,6 +70,12 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(accessibility="Photo, November 29, 2024 16:47:36")
 	private WebElement InvalidQRcodeimage;
 	
+	@AndroidFindBy(accessibility="clear search text")
+	private WebElement SearchCloseIcon;
+	
+	public void ClickCloseIconInSearchTextBox(){
+		SearchCloseIcon.click();
+		}
 	
 	public String getScanQRScreenTitle() {
 		 return ScanQRscreentitle.getText();
@@ -137,6 +150,19 @@ public class NewChatScreen extends ActionsClass {
 		plusicon.click();
 		Newchatoption.click();
 	}
+	public void OpenAndCloseSearchOption () {
+		plusicon.click();
+		Searchoption.click();
+		Searchoption.click();
+	}
+	
+	public void ClickSearchIcon () {
+		Searchoption.click();
+	}
+	public void EnterTextInSearchTextBox(){
+		SearchTextBox.sendKeys("bd3586");
+	}
+	
 	
 	public void ClickBackArrow () {
 		BackArrow.click();

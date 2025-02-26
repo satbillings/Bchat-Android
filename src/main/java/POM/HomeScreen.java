@@ -20,7 +20,7 @@ public class HomeScreen extends ActionsClass {
 	}
 
 	//@AndroidFindBy(id="io.beldex.bchat:id/bchatHeaderImage")
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='BChat']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Chats']")
 	private WebElement pageTitle;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Save your seed']")
@@ -199,6 +199,11 @@ public class HomeScreen extends ActionsClass {
 		groupsIcon.click();
 		btnNewChat.click();
 	}
+	public void OpenNewScreen(){
+		groupsIcon.click();
+		//btnNewChat.click();
+	}
+	
 
 public void OpenNewSecretGroup() {
 	groupsIcon.click();

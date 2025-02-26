@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-21T12:28:50 IST" name="Default suite" finished-at="2025-02-21T12:29:47 IST" duration-ms="57288">
+  <suite started-at="2025-02-26T19:16:48 IST" name="Suite" finished-at="2025-02-26T19:18:04 IST" duration-ms="76964">
     <groups>
     </groups>
-    <test started-at="2025-02-21T12:28:50 IST" name="Default test" finished-at="2025-02-21T12:29:47 IST" duration-ms="57288">
-      <class name="AutomationTesting.BchatApp.Create_Password_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:28:50 IST" name="Configure" finished-at="2025-02-21T12:29:07 IST" duration-ms="16751" status="PASS">
+    <test started-at="2025-02-26T19:16:48 IST" name="Test" finished-at="2025-02-26T19:18:04 IST" duration-ms="76964">
+      <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@46dffdc3]" started-at="2025-02-26T19:16:48 IST" name="Configure" finished-at="2025-02-26T19:17:05 IST" duration-ms="17528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="preSetup()[pri:1, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:07 IST" name="preSetup" finished-at="2025-02-21T12:29:25 IST" duration-ms="18639" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@46dffdc3]" started-at="2025-02-26T19:17:05 IST" name="PreSetup" finished-at="2025-02-26T19:17:57 IST" duration-ms="52115" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method signature="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen()[pri:2, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:25 IST" name="To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-21T12:29:30 IST" duration-ms="4233" status="PASS">
+        </test-method> <!-- PreSetup -->
+        <test-method signature="To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen()[pri:18, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@46dffdc3]" started-at="2025-02-26T19:17:57 IST" name="To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen" finished-at="2025-02-26T19:18:02 IST" duration-ms="4546" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_next_function_without_entering_a_value_in_Enter_password_field_and_ReEnter_password_field_in_create_password_screen -->
-        <test-method signature="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen()[pri:3, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:30 IST" name="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen" finished-at="2025-02-21T12:29:47 IST" duration-ms="17185" status="PASS">
+        </test-method> <!-- To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen -->
+        <test-method signature="To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen()[pri:18, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@46dffdc3]" started-at="2025-02-26T19:18:02 IST" name="To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen" finished-at="2025-02-26T19:18:04 IST" duration-ms="2020" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_in_create_password_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Create_Password_Screen_TestCases@cecf639]" started-at="2025-02-21T12:29:47 IST" name="closeApp" finished-at="2025-02-21T12:29:47 IST" duration-ms="435" status="PASS">
+        </test-method> <!-- To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@46dffdc3]" started-at="2025-02-26T19:18:04 IST" name="closeApp" finished-at="2025-02-26T19:18:04 IST" duration-ms="651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- AutomationTesting.BchatApp.Create_Password_Screen_TestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- AutomationTesting.BchatApp.New_Chat_Screen_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
