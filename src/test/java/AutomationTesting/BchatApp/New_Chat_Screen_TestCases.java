@@ -8,14 +8,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import POM.ChatScreen;
+import POM.CreatePINScreen;
+import POM.CreatePINScreen2;
 import POM.CreatePasswordScreen;
 import POM.DisplayNameScreen;
+import POM.EnableWalletScreen;
 import POM.HomeScreen;
+import POM.MenuScreen;
 import POM.MyAccountScreen;
 import POM.NewChatScreen;
 import POM.OpeningPage;
 import POM.RecoveryPhraseScreen;
 import POM.RegisterScreen;
+import POM.RestoreFromSeedScreen;
+import POM.SeedScreen;
 import TestUtiles.baseclass;
 
 public class New_Chat_Screen_TestCases extends baseclass {
@@ -28,36 +34,56 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	NewChatScreen newchatpage;
 	ChatScreen chatpage;
 	MyAccountScreen myaccountpage;
+	SeedScreen Seedpage;
+	RestoreFromSeedScreen restorefromseedpage;
 	WebDriverWait wait;
 
 	@Test(priority = 0)
 	public void PreSetup() throws InterruptedException {
+		/*
+		 * wait = new WebDriverWait(driver, Duration.ofSeconds(10)); Openingpage = new
+		 * OpeningPage(driver); Openingpage.clickCreateAccount(); displaynamepage = new
+		 * DisplayNameScreen(driver); Assert.assertEquals(displaynamepage.pageTitle(),
+		 * "Display Name"); displaynamepage.setDisplayName("Sat");
+		 * displaynamepage.clickContinue(); registerpage = new RegisterScreen(driver);
+		 * wait.until(ExpectedConditions.visibilityOf(registerpage.TextPageTitle));
+		 * Assert.assertEquals(registerpage.pageTitle(), "Register"); // wait = new
+		 * WebDriverWait(driver, Duration.ofSeconds(20)); Thread.sleep(20000);
+		 * registerpage.clickNext(); createpasswordpage = new
+		 * CreatePasswordScreen(driver);
+		 * Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");
+		 * createpasswordpage.setValidPassword(); // createpasswordpage.clickOk();
+		 * createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
+		 * recoveryphrasepage = new RecoveryPhraseScreen(driver);
+		 * Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Seed");
+		 * recoveryphrasepage.clickCopyIcon(); recoveryphrasepage.ClickContinue();
+		 * Thread.sleep(5000); homepage = new HomeScreen(driver);
+		 * Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
+		 */
+		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		Openingpage = new OpeningPage(driver);
-		Openingpage.clickCreateAccount();
-		displaynamepage = new DisplayNameScreen(driver);
-		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-		displaynamepage.setDisplayName("Sat");
-		displaynamepage.clickContinue();
-		registerpage = new RegisterScreen(driver);
-		wait.until(ExpectedConditions.visibilityOf(registerpage.TextPageTitle));
-		Assert.assertEquals(registerpage.pageTitle(), "Register");
-		// wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		Thread.sleep(20000);
-		registerpage.clickNext();
+		 Openingpage = new OpeningPage(driver); 
+		 Openingpage.clickSignIn(); 
+		 Seedpage = new SeedScreen(driver);
+		Assert.assertTrue(Seedpage.SeedTextBox().isDisplayed());
+		Seedpage.pasteSeedValue(); 
+		Seedpage.clickNext(); 
+		restorefromseedpage = new RestoreFromSeedScreen(driver);
+		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+		restorefromseedpage.paste_Value_In_DisplayName("Sathish");
+		restorefromseedpage.paste_Value_In_Blockheight("4000000");
+		restorefromseedpage.clickBtnRestore(); 
 		createpasswordpage = new CreatePasswordScreen(driver);
-		Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");
+		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 		createpasswordpage.setValidPassword();
-		// createpasswordpage.clickOk();
-		createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
-		recoveryphrasepage = new RecoveryPhraseScreen(driver);
-		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Seed");
-		recoveryphrasepage.clickCopyIcon();
-		recoveryphrasepage.ClickContinue();
-		Thread.sleep(5000);
-		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		 createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
+		//Thread.sleep(10000); 
+		 homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//restrictNotification();
+		Thread.sleep(59000);
 		homepage.OpenNewScreen();
+		
 	}
 	/*
 	 * Validate whether able to navigate back to the home screen from new chat
@@ -266,22 +292,77 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate the working of close icon in search text box in new screen */
 	  
-	  @Test(priority = 18) 
+	 /* @Test(priority = 18) 
 	  public void To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen() { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
 	  newchatpage.ClickSearchIcon();
-	  newchatpage.EnterTextInSearchTextBox();
+	  Assert.assertEquals(newchatpage.getPlaceHolderOfSearchTextBox(),"Search people and groups");
+	  newchatpage.EnterSearchValue("sat123");
 	  newchatpage.ClickCloseIconInSearchTextBox();
 	  }
 	
 	/* Validate whether the search option is able to open and close in new screen */
-	  @Test(priority = 19) 
+	/*  @Test(priority = 19) 
 	  public void To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen(){ 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
 	  newchatpage.OpenAndCloseSearchOption();
-	  }
+	  
+	  }*/
 	
+	/* Validate the presence of placeholder in search text box on the new screen */
+	  @Test(priority = 20) 
+	  public void To_validate_the_presence_of_placeholder_in_search_textbox_on_the_new_screen() { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchIcon();
+	  Assert.assertEquals(newchatpage.getPlaceHolderOfSearchTextBox(),"Search people and groups");
+	 }
+	 
+	 /* Validate the cursor blink in search text box on the new screen */
+	  @Test(priority = 21) 
+	  public void To_validate_the_cursor_blink_in_search_textbox_on_the_new_screen() { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  Assert.assertTrue(newchatpage.activeElement().isDisplayed());
+	 }
+
+	/* Validate the search text box in new screen by entering the valid value */
+	  @Test(priority = 22) 
+	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_valid_value() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.EnterSearchValue("Aravind");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox();
+	 }
+     /* Validate the search text box in new screen by entering the special character
+      * Validate whether the value entered in the search text box of new screen is editable and delete-able. 
+      *  */
+	  
+	  @Test(priority = 23) 
+	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_special_character_And_To_validate_whether_the_value_entered_in_the_search_textbox_of_new_screen_is_editable_and_deleteable() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("!@#$%^&*()");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox(); 
+	  }
+	 /* Validate the search text box in new screen by entering the space value */
+	  @Test(priority = 24) 
+	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_space_value() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("    ");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox();  
+	  }
 	
 }

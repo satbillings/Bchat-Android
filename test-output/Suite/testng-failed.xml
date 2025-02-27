@@ -8,10 +8,13 @@
     <classes>
       <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
         <methods>
+          <include name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_space_value"/>
           <include name="closeApp"/>
           <include name="Configure"/>
-          <include name="To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen"/>
-          <include name="To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen"/>
+          <include name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_valid_value"/>
+          <include name="To_validate_the_cursor_blink_in_search_textbox_on_the_new_screen"/>
+          <include name="To_validate_the_presence_of_placeholder_in_search_textbox_on_the_new_screen"/>
+          <include name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_special_character"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.New_Chat_Screen_TestCases -->
     </classes>

@@ -66,27 +66,27 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 	Validate the all possible navigation from the home screen in both forward and backward direction
 	Validate whether able to navigate to the device home page directly.
 	*/
-	/*@Test(priority = 1)
-	public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction_To_validate_whether_able_to_navigate_to_the_device_home_page_directly () throws InterruptedException {
-		//homepage = new HomeScreen(driver);
-		//Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	   @Test(priority = 1)
+	   public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction_To_validate_whether_able_to_navigate_to_the_device_home_page_directly () throws InterruptedException {
 		driver.navigate().back();
 		 driver.navigate().back();
 		// if(Openingpage.WebElementAppList().isDisplayed()||Openingpage.WebElementAppList().isDisplayed()) {
-				Openingpage.swipeGesture(100, 100, 200, 200, "UP");
-			 Openingpage.openApp();
+		Openingpage.swipeGesture(100, 100, 200, 200, "UP");
+		Openingpage.openApp();
 	//}
 		 Assert.assertEquals(homepage.Pagetitle(),"BChat");
 	}
+	   
 	/*
 	 Validate the blank screen While creating new Account
 	 */
-	/*@Test(priority = 2)
-	public void To_Validate_the_blank_screen_While_creating_new_Account () {
+	   @Test(priority = 2)
+	   public void To_Validate_the_blank_screen_While_creating_new_Account () {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		Assert.assertTrue(homepage.BlankChatScreen.isDisplayed());
 	}
+	   
 	/*
 	Validate the navigation to the settings screen in both forward and backward direction.
 	*/
@@ -100,6 +100,7 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 		homepage.ClickCancel();
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 	}
+	
 	/*
 	Validate the navigation to the Search screen in both forward and backward direction.
 	*/
@@ -115,6 +116,7 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 		Assert.assertEquals(homepage.Pagetitle(), "BChat");
 	   
 	}
+	
 	/*
 	 Validate the navigation to the new chat screen
 	 */
@@ -129,6 +131,7 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 		//homepage.clickBackArrow();
 		driver.navigate().back();
 	}
+	
 	/*
 	 validate the navigation to the create secret group screen	
    */
@@ -136,7 +139,7 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 	public void To_validate_the_navigation_to_Create_SecretGroup_screen () {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-		homepage.openNewSecretGroup();
+		homepage.OpenNewSecretGroup();
 		createsecretgrouppage =new CreateSecretGroupScreen(driver);
 		Assert.assertEquals(createsecretgrouppage.Pagetitle(), "Secret Group");
 		//homepage.clickBackArrow();

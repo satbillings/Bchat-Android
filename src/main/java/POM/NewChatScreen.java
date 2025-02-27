@@ -58,6 +58,9 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Gallery']")
 	private WebElement galleryoption;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search people and groups']")
+	private WebElement PlaceHolderOfSearchTextBox;
+	
 	@AndroidFindBy(accessibility="Photo, November 29, 2024 11:47:43")
 	private WebElement validQRcodeimage;
 	
@@ -79,6 +82,10 @@ public class NewChatScreen extends ActionsClass {
 	
 	public String getScanQRScreenTitle() {
 		 return ScanQRscreentitle.getText();
+	}
+	
+	public String getPlaceHolderOfSearchTextBox() {
+		 return PlaceHolderOfSearchTextBox.getText();
 	}
 	
 	public void UploadValidQRCode(){
@@ -159,10 +166,24 @@ public class NewChatScreen extends ActionsClass {
 	public void ClickSearchIcon () {
 		Searchoption.click();
 	}
+	public void EnterSearchValue(String value) {
+		//SearchTextBox.click();
+		SearchTextBox.sendKeys(value);
+	}
 	public void EnterTextInSearchTextBox(){
 		SearchTextBox.sendKeys("bd3586");
 	}
+	public void ClickSearchTextBox () {
+		SearchTextBox.click();
+	}
+	public void ClearSearchTextBox () {
+		SearchTextBox.clear();
+	}
 	
+	
+	public void EnterValidTextInSearchTextBox(){
+		SearchTextBox.sendKeys("Aravind");
+	}
 	
 	public void ClickBackArrow () {
 		BackArrow.click();
