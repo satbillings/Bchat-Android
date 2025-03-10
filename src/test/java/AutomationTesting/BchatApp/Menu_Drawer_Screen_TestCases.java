@@ -73,46 +73,53 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 * Validate whether entered display name is showing in profile name.
 	 */
-	/*
-	 * @Test (priority = 1) public void
-	 * To_Validate_whether_entered_display_name_is_showing_in_profile_name () {
-	 * 
-	 * menupage =new MenuScreen(driver);
-	 * Assert.assertEquals(menupage.pagetitle(),"Menu");
-	 * Assert.assertEquals(menupage.getProfileName(), "Sat");
-	 * 
-	 * } /* TC_249 Validate whether the icons and functions present in the Settings
-	 * screen response for the touch action.
-	 */
-	/*
-	 * @Test (priority = 2) public void
-	 * TC_249_To_Validate_Whether_icon_Response_For_touch_action (){ menupage =new
-	 * MenuScreen(driver); Assert.assertEquals(menupage.pagetitle(),"Menu");
-	 * menupage.click_My_Account_option(); driver.navigate().back();
-	 * 
-	 * } /* Validate the working of the scrolling action in both upward and downward
-	 * direction.
-	 */
-	/*
-	 * @Test (priority = 3) public void
-	 * To_Validate_Whether_Screen_is_Scrollable_in_both_upward_and_downward_direction
-	 * () throws InterruptedException { //homepage.clickMenuDrawer();
-	 * //Assert.assertEquals(menupage.pagetitle(), "Menu"); menupage =new
-	 * MenuScreen(driver); Assert.assertEquals(menupage.pagetitle(),"Menu");
-	 * Thread.sleep(3000); menupage.swipeGesture(100, 100, 200, 200, "UP");
-	 * //Thread.sleep(2000); //menupage.swipeGesture(100, 100, 200, 200, "down");
-	 * //menupage.Scroll_the_Screen(optionAbout); //menupage.scroll_the_page(700,
-	 * 750, 300, "down"); // menupage.Scroll_the_Screen(optionAbout);
-	 * //menupage.scrollgesture_Using_text("About");
-	 * //menupage.scrollgesture_Using_text("Account Settings");
-	 * //Assert.assertEquals(menupage.contentAbout(), "About"); }
-	 */
+	
+	  @Test (priority = 1) 
+	  public void To_Validate_whether_entered_display_name_is_showing_in_profile_name () {
+	  
+	  menupage =new MenuScreen(driver);
+	  Assert.assertEquals(menupage.pagetitle(),"Menu");
+	  Assert.assertEquals(menupage.getProfileName(), "Sat");
+	  
+	  } /* TC_249 Validate whether the icons and functions present in the Settings
+	  screen response for the touch action.*/
+	 
+	
+	  @Test (priority = 2) 
+	  public void TC_249_To_Validate_Whether_icon_Response_For_touch_action (){ 
+	   menupage =new MenuScreen(driver); 
+	   Assert.assertEquals(menupage.pagetitle(),"Menu");
+	  menupage.click_My_Account_option(); 
+	  driver.navigate().back();
+	  
+	  } 
+	  /* Validate the working of the scrolling action in both upward and downward
+	  direction.*/
+	 
+	
+	  @Test (priority = 3) 
+	  public void To_Validate_Whether_Screen_is_Scrollable_in_both_upward_and_downward_direction
+	  () throws InterruptedException { 
+	   //homepage.clickMenuDrawer();
+	  //Assert.assertEquals(menupage.pagetitle(), "Menu");
+	  menupage =new MenuScreen(driver); 
+	  Assert.assertEquals(menupage.pagetitle(),"Menu");
+	  Thread.sleep(3000); menupage.swipeGesture(100, 100, 200, 200, "UP");
+	  //Thread.sleep(2000); //menupage.swipeGesture(100, 100, 200, 200, "down");
+	  //menupage.Scroll_the_Screen(optionAbout); 
+	  //menupage.scroll_the_page(700,750, 300, "down"); 
+	  // menupage.Scroll_the_Screen(optionAbout);
+	  //menupage.scrollgesture_Using_text("About");
+	  //menupage.scrollgesture_Using_text("Account Settings");
+	  //Assert.assertEquals(menupage.contentAbout(), "About"); 
+	  }
+	 
 	/*
 	 * Validate the working of the cancel icon in menu screen.
 	 * 
 	 */
-	/*@Test(priority = 3)
-	public void To_Validate_the_working_of_the_Cancel_Icon_in_Menu_Screen() throws InterruptedException {
+	    @Test(priority = 3)
+	    public void To_Validate_the_working_of_the_Cancel_Icon_in_Menu_Screen() throws InterruptedException {
 
 		menupage = new MenuScreen(driver);
 		Assert.assertEquals(menupage.pagetitle(), "Menu");
@@ -125,8 +132,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 * Validate the working of help functionality in menu screen.
 	 */
-/*	@Test(priority = 4)
-	public void To_Validate_the_working_of_help_functionality_in_menu_Screen() {
+	    @Test(priority = 4)
+	    public void To_Validate_the_working_of_help_functionality_in_menu_Screen() {
 		homepage = new HomeScreen(driver);
 		homepage.clickMenuDrawer();
 		menupage = new MenuScreen(driver);
@@ -141,8 +148,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate the Gmail id in the Gmail screen by clicking the help option in menu
 	 * screen.
 	 */
-	/*@Test(priority = 5)
-	public void To_Validate_the_Gmail_id_in_Gmail_screen_by_clicking_the_help_option_in_menu_screen() {
+	   @Test(priority = 5)
+	   public void To_Validate_the_Gmail_id_in_Gmail_screen_by_clicking_the_help_option_in_menu_screen() {
 		menupage = new MenuScreen(driver);
 		Assert.assertTrue(menupage.getElementofGmailScreen().isDisplayed());
 		Assert.assertEquals(menupage.getSupportMailId(), "support beldex");
@@ -152,8 +159,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate whether the user is able to navigate back to the home screen from
 	 * Gmail screen.
 	 */
-	/*@Test(priority = 6)
-	public void To_Validate_whether_the_user_is_able_to_navigate_back_to_home_screen_from_Gmail_screen() {
+	    @Test(priority = 6)
+	    public void To_Validate_whether_the_user_is_able_to_navigate_back_to_home_screen_from_Gmail_screen() {
 		menupage = new MenuScreen(driver);
 		Assert.assertTrue(menupage.getElementofGmailScreen().isDisplayed());
 		driver.navigate().back();
@@ -166,8 +173,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 * Validate the working of theme change button in menu screen.
 	 */
-	/*@Test(priority = 7)
-	public void To_validate_the_working_of_theme_Change_button_in_menu_screen() {
+	    @Test(priority = 7)
+	    public void To_validate_the_working_of_theme_Change_button_in_menu_screen() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "BChat");
 		homepage.clickMenuDrawer();
@@ -182,8 +189,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate whether the user is able to click the theme change button multiple
 	 * times in menu screen.
 	 */
-	/*@Test(priority = 8)
-	public void To_validate_whether_the_user_is_able_to_click_theme_change_button_multiple_times_in_menu_screen() {
+	    @Test(priority = 8)
+	    public void To_validate_whether_the_user_is_able_to_click_theme_change_button_multiple_times_in_menu_screen() {
 		for (int i = 0; i <= 5; i++) {
 			homepage = new HomeScreen(driver);
 			Assert.assertEquals(homepage.Pagetitle(), "BChat");
@@ -193,7 +200,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 			homepage = new HomeScreen(driver);
 			Assert.assertEquals(homepage.Pagetitle(), "BChat");
 		}
-	}*/
+	}
 	
 	/* Settings Screen */
 

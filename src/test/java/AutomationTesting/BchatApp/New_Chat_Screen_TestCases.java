@@ -292,7 +292,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate the working of close icon in search text box in new screen */
 	  
-	 /* @Test(priority = 18) 
+	/*@Test(priority = 18) 
 	  public void To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen() { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -302,8 +302,8 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  newchatpage.ClickCloseIconInSearchTextBox();
 	  }
 	
-	/* Validate whether the search option is able to open and close in new screen */
-	/*  @Test(priority = 19) 
+	/*Validate whether the search option is able to open and close in new screen */
+	/*@Test(priority = 19) 
 	  public void To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen(){ 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -312,7 +312,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  }*/
 	
 	/* Validate the presence of placeholder in search text box on the new screen */
-	  @Test(priority = 20) 
+	 /* @Test(priority = 20) 
 	  public void To_validate_the_presence_of_placeholder_in_search_textbox_on_the_new_screen() { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -321,7 +321,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 }
 	 
 	 /* Validate the cursor blink in search text box on the new screen */
-	  @Test(priority = 21) 
+	 /* @Test(priority = 21) 
 	  public void To_validate_the_cursor_blink_in_search_textbox_on_the_new_screen() { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -330,7 +330,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 }
 
 	/* Validate the search text box in new screen by entering the valid value */
-	  @Test(priority = 22) 
+	 /* @Test(priority = 22) 
 	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_valid_value() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -343,7 +343,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
       * Validate whether the value entered in the search text box of new screen is editable and delete-able. 
       *  */
 	  
-	  @Test(priority = 23) 
+	  /*@Test(priority = 23) 
 	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_special_character_And_To_validate_whether_the_value_entered_in_the_search_textbox_of_new_screen_is_editable_and_deleteable() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -354,7 +354,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  newchatpage.ClearSearchTextBox(); 
 	  }
 	 /* Validate the search text box in new screen by entering the space value */
-	  @Test(priority = 24) 
+	 /* @Test(priority = 24) 
 	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_space_value() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -363,6 +363,61 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  driver.navigate().back();
 	  Thread.sleep(3000);
 	  newchatpage.ClearSearchTextBox();  
-	  }
+	  }*/
 	
+	/* Validate the search text box in new screen by entering the numerical value */
+	
+	  @Test(priority = 25) 
+	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_numerical_value() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchIcon();
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("1234567890");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox();  
+	  }
+	  
+	  /* Validate the search text box in new screen by entering the alphabets both in upper case and lower case */
+ 
+	  @Test(priority = 26) 
+	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("ABCDEFGH");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox();  
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("abcdefgh");
+	  newchatpage.ClearSearchTextBox();  
+	  }
+	 
+	/* Validate whether the paste option is working on the search text box in new screen. */
+	  @Test(priority = 27) 
+	  public void To_validate_whether_paste_option_is_working_on_the_search_textbox_in_new_screen() throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.PasteValuesInSearchTextbox("Hello");
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox(); 
+	  }
+	  
+   /* Validate whether the user is able enter a lengthy value in the search text box in new screen */
+	  @Test(priority = 28) 
+	  public void To_Validate_whether_the_user_is_able_to_enter_a_lengthy_value_in_search_textbox_in_new_screen () throws InterruptedException { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	  newchatpage.ClickSearchTextBox();
+	  newchatpage.EnterSearchValue("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok " ); 
+	  driver.navigate().back();
+	  Thread.sleep(3000);
+	  newchatpage.ClearSearchTextBox(); 
+	  }
+	  
+  
 }

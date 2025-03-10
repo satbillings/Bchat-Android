@@ -53,78 +53,79 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	 /*
 		Validate whether able to navigate back to the home screen from create secret group screen.
 		*/
-		/*@Test(priority = 1)
-		public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_create_secret_group_screen () {
-			createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			 createsecretgrouppage.ClickBackArrow();
-			homepage = new HomeScreen(driver);
-			  Assert.assertEquals(homepage.Pagetitle(),"BChat");	
-			  homepage.OpenNewSecretGroup();
+		   @Test(priority = 1)
+		   public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_create_secret_group_screen () {
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+		   createsecretgrouppage.ClickBackArrow();
+		   homepage = new HomeScreen(driver);
+		   Assert.assertEquals(homepage.Pagetitle(),"BChat");	
+		   homepage.OpenNewSecretGroup();
 		} 
 		/*
 		Validate Whether able to select the contacts showing in create secret group screen.
 		*/
-		/*@Test(priority = 2)
-		public void To_Validate_Whether_able_to_select_the_contacts_showing_in_create_secret_group_screen () {
+		    @Test(priority = 2)
+		    public void To_Validate_Whether_able_to_select_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			  Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			  Assert.assertEquals(createsecretgrouppage.CheckContactSelectorNot(),"false");
-			  createsecretgrouppage.SelectContact();
-			  Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
+			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+			Assert.assertEquals(createsecretgrouppage.CheckContactSelectorNot(),"false");
+			createsecretgrouppage.SelectContact();
+			Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
 		}
 		/*
 		 Validate Whether able to unselect the selected contact in create secret group screen.
 		 */
-		/*@Test(priority = 3)
-		public void To_Validate_Whether_able_to_Unselect_the_contacts_showing_in_create_secret_group_screen () {
+		    @Test(priority = 3)
+		    public void To_Validate_Whether_able_to_Unselect_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			  Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			  createsecretgrouppage.SelectContact();
-			  Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
-			  createsecretgrouppage.SelectContact();
-			  Assert.assertEquals(createsecretgrouppage.CheckContactSelectorNot(),"false");
+			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+			createsecretgrouppage.SelectContact();
+			Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
+			createsecretgrouppage.SelectContact();
+			Assert.assertEquals(createsecretgrouppage.CheckContactSelectorNot(),"false");
 		}
 		/*
 		Validate Whether able to multi select the contacts showing in create secret group screen.
 		*/
-		/*@Test(priority = 4)
-		public void To_Validate_Whether_able_to_multi_select_the_contacts_showing_in_create_secret_group_screen () {
+		   @Test(priority = 4)
+		    public void To_Validate_Whether_able_to_multi_select_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			  Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			  createsecretgrouppage.MultiSelectContact();
-			  Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
-			  Assert.assertTrue(createsecretgrouppage.DisplaySelectedSecondContact().isDisplayed());
-			  createsecretgrouppage.MultiSelectContact();
+			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+			createsecretgrouppage.MultiSelectContact();
+			Assert.assertTrue(createsecretgrouppage.DisplaySelectedFirstContact().isDisplayed());
+			Assert.assertTrue(createsecretgrouppage.DisplaySelectedSecondContact().isDisplayed());
+			createsecretgrouppage.MultiSelectContact();
 		}
+		   
 		/*
 		Validate the Create function without entering a group name and without selecting a member in create secret group screen.
 		*/
-		/*@Test(priority = 5)
-		public void To_Validate_Create_function_without_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
-			createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			 createsecretgrouppage.ClickCreateButton();
-			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+		   @Test(priority = 5)
+		   public void To_Validate_Create_function_without_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+		   createsecretgrouppage.ClickCreateButton();
+		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 		}
 		/*
 		Validate the Create function with entering a group name and without selecting a member in create secret group screen.
 		*/
-	  /* @Test(priority = 6)
-	   public void To_Validate_Create_function_with_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
+	      @Test(priority = 6)
+	      public void To_Validate_Create_function_with_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
-			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			 createsecretgrouppage.Set_Values_In_GroupName_Textbox("Test");
-			createsecretgrouppage.ClickCreateButton();
-			 Assert.assertEquals(Toast(),"Please pick at least 1 group member");
-			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
-			 createsecretgrouppage.ClearGroupNameTextBox();
-			 }*/
+		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+		   createsecretgrouppage.Set_Values_In_GroupName_Textbox("Test");
+		   createsecretgrouppage.ClickCreateButton();
+		   Assert.assertEquals(Toast(),"Please pick at least 1 group member");
+		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+		   createsecretgrouppage.ClearGroupNameTextBox();
+			 }
 	 /*
 	   Validate the Create function without entering a group name and with selecting a member in create secret group screen.
 	   */
-	   /*@Test(priority = 7)
-	   public void To_Validate_the_Create_function_without_entering_groupName_and_with_selecting_member_in_create_secret_group_screen () {
+	      @Test(priority = 7)
+	      public void To_Validate_the_Create_function_without_entering_groupName_and_with_selecting_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 			 createsecretgrouppage.SelectContact();
@@ -135,8 +136,8 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	    Validate the Create function with entering space value in group name and with selecting a member in create secret group screen.
 	    */
-	  /* @Test(priority = 8)
-	   public void To_Validate_Create_function_with_entering_space_value_in_groupName_and_with_selecting_a_member_in_create_secret_group_screen () {
+	     @Test(priority = 8)
+	      public void To_Validate_Create_function_with_entering_space_value_in_groupName_and_with_selecting_a_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 			 createsecretgrouppage.Set_Values_In_GroupName_Textbox("     ");
@@ -147,10 +148,11 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 			 createsecretgrouppage.ClearGroupNameTextBox();
 			 createsecretgrouppage.SelectContact();
 	   }
+	     
 	   /*
 	   Validate the Create function with entering a group name and with selecting a member in create secret group screen.
 	   */
-	   /*@Test(priority = 9)
+	   @Test(priority = 9)
 	   public void To_Validate_Create_function_with_entering_groupName_and_with_selecting_member_in_create_secret_group_screen () throws InterruptedException {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -166,11 +168,12 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		   	homepage.OpenNewSecretGroup();
 			createsecretgrouppage.SelectContact();
 	   }
+	   
 	   /*
 	   Validate whether crusher blink on clicking the text box of Secret Group in create secret group screen.
 		*/
-	  /* @Test(priority = 10)
-	   public void To_Validate_whether_crusher_blink_on_clicking_textboxes_of_SecretGroup_in_create_secret_group_screen () {
+	      @Test(priority = 10)
+	      public void To_Validate_whether_crusher_blink_on_clicking_textboxes_of_SecretGroup_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 		   createsecretgrouppage.ClickGroupNameTextBox();
@@ -183,8 +186,8 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the presence of placeholder in the text box of the Secret Group in create secret group screen. 
 	   */
-	 /* @Test(priority = 11)
-	  public void To_Validate_presence_of_placeholder_in_the_textboxes_of_SecretGroup_in_create_secret_group_screen () {
+	     @Test(priority = 11)
+	     public void To_Validate_presence_of_placeholder_in_the_textboxes_of_SecretGroup_in_create_secret_group_screen () {
 		  createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 		   Assert.assertEquals(createsecretgrouppage.getGroupNameTextBoxPlaceHolder(),"Enter Group Name");
@@ -193,8 +196,8 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	  /*
 	   validate whether paste option is working on the text boxes of the Secret Group in create secret group screen.
 		*/
-	  /* @Test(priority = 12)
-	   public void To_validate_whether_paste_option_is_working_on_textboxes_of_create_Secret_Group_screen () {
+	      @Test(priority = 12)
+	      public void To_validate_whether_paste_option_is_working_on_textboxes_of_create_Secret_Group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
 		   createsecretgrouppage.PasteValues_In_GroupNameTextBox("Test");

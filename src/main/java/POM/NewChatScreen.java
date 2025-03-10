@@ -111,6 +111,9 @@ public class NewChatScreen extends ActionsClass {
 	public void PasteValuesInTextbox (String value) {
 		Copy_And_Paste_Values(value, BchatIDOrBNSNameTextBox);
 	}
+	public void PasteValuesInSearchTextbox (String value) {
+		Copy_And_Paste_Values(value, SearchTextBox);
+	}
 	
 	public void ClearTextbox(){
 		BchatIDOrBNSNameTextBox.clear();

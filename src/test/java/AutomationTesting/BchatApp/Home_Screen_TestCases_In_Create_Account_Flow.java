@@ -141,10 +141,11 @@ public class Home_Screen_TestCases_In_Create_Account_Flow extends baseclass {
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.OpenNewSecretGroup();
 		createsecretgrouppage =new CreateSecretGroupScreen(driver);
-		Assert.assertEquals(createsecretgrouppage.Pagetitle(), "Secret Group");
+		Assert.assertEquals(createsecretgrouppage.getPageTitle(), "Secret Group");
 		//homepage.clickBackArrow();
 		driver.navigate().back();
 	}
+	
 	/*
 	  Validate the navigation to the join social group screen
 	 */
