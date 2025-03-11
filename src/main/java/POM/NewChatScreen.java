@@ -76,6 +76,60 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(accessibility="clear search text")
 	private WebElement SearchCloseIcon;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Invite a Friend']")
+	private WebElement optionInviteFriend;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Copy']")
+	private WebElement ElementofInviteScreen;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='android:id/text1' and @text='BChat Messenger']")
+	private WebElement BchatOption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Forward']")
+	private WebElement ForwardScreenTitle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Secret Group']")
+	private WebElement SecretGroupOption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Social Group']")
+	private WebElement SocialGroupOption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Note to Self']")
+	private WebElement NoteToSelfOption;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]")
+	private WebElement ContactorGroup;
+	
+	public void ClickContactorGroup() {
+		ContactorGroup.click();
+    }
+	
+	public void ClickSecretGroupOption() {
+		SecretGroupOption.click();
+    }
+	
+	public void ClickSocialGroupOption() {
+		SocialGroupOption.click();
+    }
+	public void ClickNoteToSelfOption() {
+		NoteToSelfOption.click();
+    }
+	
+	public String getForwardScreenTitle() {
+		return ForwardScreenTitle.getText();
+	}
+	
+	public void InviteToBchat() {
+		 BchatOption.click();
+		 }
+	
+	public void ClickOptionInviteFriend() {
+		optionInviteFriend.click();
+    }
+	 public WebElement getElementofInviteScreen () {
+			return ElementofInviteScreen;	
+	    }
+	
 	public void ClickCloseIconInSearchTextBox(){
 		SearchCloseIcon.click();
 		}

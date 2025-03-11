@@ -11,9 +11,11 @@ import POM.ChatScreen;
 import POM.CreatePINScreen;
 import POM.CreatePINScreen2;
 import POM.CreatePasswordScreen;
+import POM.CreateSecretGroupScreen;
 import POM.DisplayNameScreen;
 import POM.EnableWalletScreen;
 import POM.HomeScreen;
+import POM.JoinSocialGroupScreen;
 import POM.MenuScreen;
 import POM.MyAccountScreen;
 import POM.NewChatScreen;
@@ -36,6 +38,8 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	MyAccountScreen myaccountpage;
 	SeedScreen Seedpage;
 	RestoreFromSeedScreen restorefromseedpage;
+	CreateSecretGroupScreen createsecretgrouppage; 
+	JoinSocialGroupScreen joinsocialgrouppage;
 	WebDriverWait wait;
 
 	@Test(priority = 0)
@@ -86,44 +90,47 @@ public class New_Chat_Screen_TestCases extends baseclass {
 		
 	}
 	/*
-	 * Validate whether able to navigate back to the home screen from new chat
-	 * screen
+	  Validate whether able to navigate back to the home screen from new chat screen
 	 */
 	
-	 /* @Test(priority = 1) public void
-	  To_Validate_whether_able_to_navigate_back_to_home_screen_from_new_chat_screen
+	  @Test(priority = 1) 
+	  public void  To_Validate_whether_able_to_navigate_back_to_home_screen_from_new_chat_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.ClickBackArrow(); homepage = new HomeScreen(driver);
-	  Assert.assertEquals(homepage.Pagetitle(),"BChat"); homepage.OpenNewChat(); }
-	  /* Validate the working of your bchat id option in the new chat screen
+	  Assert.assertEquals(homepage.Pagetitle(),"BChat"); homepage.OpenNewChat();
+	  }
+	  /* Validate the working of your bchat id option in the new chat screen*/
 	  
 	  
-	  @Test(priority = 2) public void
-	  To_Validate_the_working_of_your_bchatId_option_in_new_chat_screen () {
+	  @Test(priority = 2) 
+	  public void To_Validate_the_working_of_your_bchatId_option_in_new_chat_screen () {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.ClickChatID(); myaccountpage = new MyAccountScreen(driver);
-	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account"); }
+	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account"); 
+	  }
 	  
 	  
-	  validate whether able to copy BChat id and beldex address
+	 /* validate whether able to copy BChat id and beldex address*/
 	  
 	  
-	  @Test(priority = 3) public void
-	  To_validate_whether_able_to_copy_BChatId_and_beldexAddress_in_my_account_screen
-	  () { newchatpage = new NewChatScreen(driver);
+	  @Test(priority = 3) 
+	  public void To_validate_whether_able_to_copy_BChatId_and_beldexAddress_in_my_account_screen () { 
+	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.ClickChatID(); myaccountpage =new MyAccountScreen(driver);
 	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account");
 	  myaccountpage.ClickBchatIDCopyIcon(); Assert.assertEquals(Toast(),
 	  "Copied to clip board"); myaccountpage.ClickBeldexAddressCopyIcon();
-	  Assert.assertEquals(Toast(), "Copied to clip board"); } /* Validate the
-	  working of the share button QR code Functionality.
+	  Assert.assertEquals(Toast(), "Copied to clip board"); 
+	  } 
+	  
+	  /* Validate the working of the share button QR code Functionality */
 	  
 	  
-	  @Test(priority = 4) public void
-	  To_Validate_Working_of_Share_QR_code_functionality_in_my_account_screen () {
+	  @Test(priority = 4) 
+	  public void To_Validate_Working_of_Share_QR_code_functionality_in_my_account_screen () {
 	  myaccountpage =new MyAccountScreen(driver);
 	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account");
 	  //myaccountpage.scroll_the_page(450, 1400, 100, "down");
@@ -131,75 +138,84 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  Assert.assertEquals(myaccountpage.getShareScreenTitle(),"Share QR Code");
 	  myaccountpage.ClickShareScreenCancelButton();;
 	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account");
-	  myaccountpage.ClickBackArrow(); } /* Validate Whether Let's Bchat button is
-	  enable without enter a value in the Enter BChat ID field in the new chat
-	  screen.
+	  myaccountpage.ClickBackArrow();
+	  } 
 	  
+	  /* Validate Whether Let's Bchat button is enable without enter a value in the Enter BChat ID field in the new chat screen.*/
 	  
-	  @Test(priority = 5) public void
-	  To_Validate_Whether_Lets_Bchat_button_is_enable_without_enter_a_value_in_BChatID_field_in_the_new_chat_screen
-	  () { newchatpage = new NewChatScreen(driver);
+	  @Test(priority = 5) 
+	  public void To_Validate_Whether_Lets_Bchat_button_is_enable_without_enter_a_value_in_BChatID_field_in_the_new_chat_screen() { 
+	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.ClickLetsBchatButton();
-	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat"); } /* Validate the
-	  New Chat by entering a Invalid BChat ID in the new chat screen.
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat"); 
+	  } 
+	  
+	  /* Validate the New Chat by entering a Invalid BChat ID in the new chat screen */
 	  
 	  
-	  @Test(priority = 6) public void
-	  To_Validate_the_NewChat_by_entering_a_Invalid_BChat_ID_in_the_new_chat_screen
-	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
-	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
-	  newchatpage.Check_with_InValid_Bchat_ID(); wait = new WebDriverWait(driver,
-	  Duration.ofSeconds(10)); Assert.assertEquals(Toast(),
-	  "Please check the BChat ID or BNS name and try again.");
-	  //Thread.sleep(5000); } /* Validate the New Chat by entering a Invalid BNS
-	  name in the new chat screen.
-	  
-	  
-	  @Test(priority = 7) public void
-	  To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_in_the_new_chat_screen
-	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
-	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
-	  newchatpage.Check_with_InValid_BNS_name(); wait = new WebDriverWait(driver,
-	  Duration.ofSeconds(10)); Assert.assertEquals(Toast(),
-	  "Please check the BChat ID or BNS name and try again.");
-	  //Thread.sleep(5000); } /* Validate the New Chat by entering a Invalid BNS
-	  name without .bdx in the new chat screen.
-	  
-	  
-	  @Test(priority = 8) public void
-	  To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_without_bdx_in_the_new_chat_screen
-	  () { newchatpage = new NewChatScreen(driver);
-	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
-	  newchatpage.Check_with_InValid_BNS_name_without_bdx(); wait = new
-	  WebDriverWait(driver, Duration.ofSeconds(20)); Assert.assertEquals(Toast(),
-	  "Please check the BChat ID or BNS name and try again."); } /* Validate the
-	  new chat with empty space value in the new chat screen
-	  
-	  
-	  @Test(priority = 9) public void
-	  To_validate_the_new_chat_with_empty_space_value_in_the_new_chat_screen () {
+	  @Test(priority = 6) 
+	  public void To_Validate_the_NewChat_by_entering_a_Invalid_BChat_ID_in_the_new_chat_screen () throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
-	  newchatpage.Check_with_empty_space_value(); wait = new WebDriverWait(driver,
-	  Duration.ofSeconds(20)); Assert.assertEquals(Toast(),
-	  "Please check the BChat ID or BNS name and try again."); } /* Validate the
-	  new chat with special characters in the new chat screen
+	  newchatpage.Check_with_InValid_Bchat_ID(); 
+	  wait = new WebDriverWait(driver,Duration.ofSeconds(10)); 
+	  Assert.assertEquals(Toast(), "Please check the BChat ID or BNS name and try again.");
+	  //Thread.sleep(5000); 
+	  } 
+	  
+	  /* Validate the New Chat by entering a Invalid BNS name in the new chat screen.*/
 	  
 	  
-	  @Test(priority = 10) public void
-	  To_validate_the_new_chat_with_special_characters_in_the_new_chat_screen () {
+	  @Test(priority = 7) 
+	  public void To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_in_the_new_chat_screen() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
-	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat"); wait = new
-	  WebDriverWait(driver, Duration.ofSeconds(5));
-	  newchatpage.Check_with_special_characters(); wait = new WebDriverWait(driver,
-	  Duration.ofSeconds(20)); Assert.assertEquals(Toast(),
-	  "Please check the BChat ID or BNS name and try again."); } 
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
+	  newchatpage.Check_with_InValid_BNS_name();
+	  wait = new WebDriverWait(driver,Duration.ofSeconds(10)); 
+	  Assert.assertEquals(Toast(), "Please check the BChat ID or BNS name and try again.");
+	  //Thread.sleep(5000); 
+	  } 
+	  
+	  /* Validate the New Chat by entering a Invalid BNS name without .bdx in the new chat screen.*/
+	  
+	  @Test(priority = 8) 
+	  public void To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_without_bdx_in_the_new_chat_screen() { 
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
+	  newchatpage.Check_with_InValid_BNS_name_without_bdx(); 
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
+	  Assert.assertEquals(Toast(), "Please check the BChat ID or BNS name and try again."); 
+	  } 
+	  
+	  /* Validate the new chat with empty space value in the new chat screen */
+	  
+	  @Test(priority = 9) 
+	  public void To_validate_the_new_chat_with_empty_space_value_in_the_new_chat_screen () {
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
+	  newchatpage.Check_with_empty_space_value();
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
+	  Assert.assertEquals(Toast(),  "Please check the BChat ID or BNS name and try again."); 
+	  } 
+	  
+	  /* Validate the new chat with special characters in the new chat screen */
+	  
+	  
+	  @Test(priority = 10) 
+	  public void To_validate_the_new_chat_with_special_characters_in_the_new_chat_screen () {
+	  newchatpage = new NewChatScreen(driver);
+	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat"); 
+	  wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	  newchatpage.Check_with_special_characters(); 
+	  wait = new WebDriverWait(driver,Duration.ofSeconds(20)); 
+	  Assert.assertEquals(Toast(), "Please check the BChat ID or BNS name and try again.");
+	  } 
 	  
 	  /* Validate the new chat function without internet connection in the new chat screen */
 	  
 	  
-	  /*@Test(priority = 11) 
+	  @Test(priority = 11) 
 	  public void To_validate_the_new_chat_function_without_internet_connection_in_the_new_chat_screen () throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -212,17 +228,15 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate whether able to paste values in the text box in the new chat screen. */
 	  
-	 /* @Test(priority = 12) public void
-	  To_validate_whether_able_to_paste_values_in_text_box_in_the_new_chat_screen
-	  () throws InterruptedException {
+	  @Test(priority = 12) 
+	  public void To_validate_whether_able_to_paste_values_in_text_box_in_the_new_chat_screen () throws InterruptedException {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.PasteValuesInTextbox("Bnstest.bdx");
 	  Assert.assertEquals(newchatpage.get_Values_from_TextBox(), "Bnstest.bdx");
-	  newchatpage.ClearTextbox(); newchatpage.PasteValuesInTextbox(
-	  "bdfdd35e38a8c0c3022b9ba791b611bab297fec0ca3a6e82547435876419ff2e0b");
-	  Assert.assertEquals(newchatpage.get_Values_from_TextBox(),
-	  "bdfdd35e38a8c0c3022b9ba791b611bab297fec0ca3a6e82547435876419ff2e0b");
+	  newchatpage.ClearTextbox(); 
+	  newchatpage.PasteValuesInTextbox("bdfdd35e38a8c0c3022b9ba791b611bab297fec0ca3a6e82547435876419ff2e0b");
+	  Assert.assertEquals(newchatpage.get_Values_from_TextBox(), "bdfdd35e38a8c0c3022b9ba791b611bab297fec0ca3a6e82547435876419ff2e0b");
 	  newchatpage.ClearTextbox();
 	  }
 	  
@@ -367,7 +381,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate the search text box in new screen by entering the numerical value */
 	
-	  @Test(priority = 25) 
+	/*  @Test(priority = 25) 
 	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_numerical_value() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -381,7 +395,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /* Validate the search text box in new screen by entering the alphabets both in upper case and lower case */
  
-	  @Test(priority = 26) 
+	/*  @Test(priority = 26) 
 	  public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -396,7 +410,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  }
 	 
 	/* Validate whether the paste option is working on the search text box in new screen. */
-	  @Test(priority = 27) 
+	/*  @Test(priority = 27) 
 	  public void To_validate_whether_paste_option_is_working_on_the_search_textbox_in_new_screen() throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -408,7 +422,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  }
 	  
    /* Validate whether the user is able enter a lengthy value in the search text box in new screen */
-	  @Test(priority = 28) 
+	 /* @Test(priority = 28) 
 	  public void To_Validate_whether_the_user_is_able_to_enter_a_lengthy_value_in_search_textbox_in_new_screen () throws InterruptedException { 
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -417,7 +431,88 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  driver.navigate().back();
 	  Thread.sleep(3000);
 	  newchatpage.ClearSearchTextBox(); 
-	  }
-	  
-  
+	  }*/
+	
+    /*Validate whether the user is able to navigate back to the home screen from invite friend screen. */
+	@Test(priority = 29)
+	public void To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_invite_friend_screen() throws InterruptedException {
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickOptionInviteFriend();
+	Assert.assertTrue(newchatpage.getElementofInviteScreen().isDisplayed());
+	Thread.sleep(3000);
+	driver.navigate().back();
+	}
+	
+	/* Validate the working of the Invite friend functionality in new screen. */
+	@Test(priority = 30)
+	public void To_validate_whether_the_working_of_the_invite_friend_functionality_in_new_screen() {
+	homepage = new HomeScreen(driver);
+	Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	homepage.OpenNewScreen();
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickOptionInviteFriend();
+	Assert.assertTrue(newchatpage.getElementofInviteScreen().isDisplayed());
+	//newchatpage.swipeGesture(100, 100, 200, 200, "left");
+	newchatpage.InviteToBchat();
+	Assert.assertEquals(newchatpage.getForwardScreenTitle(),"Forward");
+	driver.navigate().back();
+	}
+	
+	/* Validate whether the user is able to navigate to secret group screen by clicking the secret group option in new screen */
+	@Test(priority = 31)
+	public void To_validate_whether_the_user_is_able_to_navigate_to_secret_group_screen_by_clicking_the_secret_group_option_in_new_screen() {
+	homepage = new HomeScreen(driver);
+	Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	homepage.OpenNewScreen();
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickSecretGroupOption();
+	createsecretgrouppage = new CreateSecretGroupScreen(driver);
+	Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+	createsecretgrouppage.ClickBackArrow();
+	}
+	
+	/* Validate whether the user is able to navigate to social group screen by clicking the social group option in new screen */
+	@Test(priority = 32)
+	public void To_validate_whether_the_user_is_able_to_navigate_to_social_group_screen_by_clicking_the_social_group_option_in_new_screen() {
+	homepage = new HomeScreen(driver);
+	Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	homepage.OpenNewScreen();
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickSocialGroupOption();
+	joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+	joinsocialgrouppage.ClickBackArrow();
+	}
+	
+	/* Validate whether the user is able to navigate to Note to self chat screen by clicking the Note to Self option in new screen */
+	@Test(priority = 33)
+	public void To_validate_whether_the_user_is_able_to_navigate_to_Note_to_Self_chat_screen_by_clicking_the_Note_to_Self_option_in_new_screen() {
+	homepage = new HomeScreen(driver);
+	Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	homepage.OpenNewScreen();
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickNoteToSelfOption();
+	chatpage = new ChatScreen(driver);
+	Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
+	chatpage.click_Back_Arrow();
+	}
+	/* Validate whether the user is able to navigate to one to one chat screen or secret group chat screen by clicking the contact name or group name in new screen */
+	@Test(priority = 34)
+	public void To_validate_whether_the_user_is_able_to_navigate_to_one_to_one_chat_screen_or_secret_group_chat_screen_by_clicking_the_contact_name_or_group_name_in_new_screen() {
+	homepage = new HomeScreen(driver);
+	Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	homepage.OpenNewScreen();
+	newchatpage = new NewChatScreen(driver);
+	Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	newchatpage.ClickContactorGroup();
+	chatpage = new ChatScreen(driver);
+	Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	driver.navigate().back();
+	}
+	   
 }
