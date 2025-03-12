@@ -135,6 +135,27 @@ public class HomeScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/mute_icon")
 	public WebElement MentionsMuteIcon;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='io.beldex.bchat:id/title' and @text='Archive Chat']")
+	private WebElement ArchiveChatOption;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/archiveChatCardView")
+	public WebElement ArchivedChatCard;
+	
+	public void ClickArchivedChatCard() {
+		ArchivedChatCard.click();
+	}
+	
+	public void ClickArchiveChatsOptionForFirstContactorGroup() {
+		longPress(FirstContactorGroup);
+		ArchiveChatOption.click();
+		
+	}
+	public void ClickArchiveChatsOptionForSecondContactorGroup() {
+		longPress(SecondContactorGroup);
+		ArchiveChatOption.click();
+		
+	}
+	
 	public void ClickEighthContactorGroup() {
 		EighthContactorGroup.click();
 	}

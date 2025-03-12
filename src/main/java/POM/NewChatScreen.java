@@ -100,6 +100,13 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]")
 	private WebElement ContactorGroup;
 	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ImageView")
+	private WebElement QRCodeIcon;
+	
+	public void ClickQRCodeIcon() {
+		QRCodeIcon.click();
+    }
+	
 	public void ClickContactorGroup() {
 		ContactorGroup.click();
     }
