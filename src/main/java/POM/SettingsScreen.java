@@ -26,10 +26,10 @@ public class SettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[4]")
 	private WebElement optionPayAsYouChat;
 	
-	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[6]")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[7]")
 	private WebElement optionSendLinkPreview;
 	
-	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[7]")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[8]")
 	private WebElement optionVoiceCalls;
 
    @AndroidFindBy(id="io.beldex.bchat:id/callPermissionEnableButton")

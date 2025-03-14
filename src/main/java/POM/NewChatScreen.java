@@ -103,6 +103,14 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ImageView")
 	private WebElement QRCodeIcon;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='aravind']")
+	private WebElement ContactAndGroupList;
+	
+	public WebElement getContactAndGroupList() {
+		return ContactAndGroupList;
+	}
+	
+
 	public void ClickQRCodeIcon() {
 		QRCodeIcon.click();
     }

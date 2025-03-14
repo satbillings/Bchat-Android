@@ -263,6 +263,25 @@ public class ChatScreen extends ActionsClass {
 	//@AndroidFindBy(xpath="//android.widget.TextView[@text='jnkvg']")
 	//private WebElement ReceiveMessage;
 	
+	@AndroidFindBy(accessibility = "Gif Option")
+	private WebElement GifOption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Ok']")
+	private WebElement OkButtonInSearchGifPopup;
+	
+	public void ClickOkButtonInSearchGifPopup () {
+		OkButtonInSearchGifPopup.click();
+	}
+	
+	public void ClickAttachmentsIcon () {
+		btnattachments.click();
+	}
+	
+	public void ClickGifOption () {
+		GifOption.click();
+	}
+	
+	
 	public String getCallScreenTitle () {
 		return CallScreenTitle.getText();
 	}

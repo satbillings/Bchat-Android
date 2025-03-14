@@ -141,6 +141,20 @@ public class HomeScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/archiveChatCardView")
 	public WebElement ArchivedChatCard;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='1']")
+	private WebElement ArchivedChatsCount;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='aravind']")
+	private WebElement SearchedContact;
+	
+	public String getSearchedContact () {
+		return SearchedContact.getText();
+	}
+	
+	public String getArchivedChatsCount () {
+		return ArchivedChatsCount.getText();
+	}
+	
 	public void ClickArchivedChatCard() {
 		ArchivedChatCard.click();
 	}
