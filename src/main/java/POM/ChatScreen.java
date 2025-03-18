@@ -269,8 +269,15 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Ok']")
 	private WebElement OkButtonInSearchGifPopup;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Cancel']")
+	private WebElement CancelButtonInSearchGifPopup;
+	
 	public void ClickOkButtonInSearchGifPopup () {
 		OkButtonInSearchGifPopup.click();
+	}
+	
+	public void ClickCancelButtonInSearchGifPopup () {
+		CancelButtonInSearchGifPopup.click();
 	}
 	
 	public void ClickAttachmentsIcon () {

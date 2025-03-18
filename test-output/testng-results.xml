@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-14T19:30:35 IST" name="Suite" finished-at="2025-03-14T19:33:06 IST" duration-ms="151058">
+  <suite started-at="2025-03-18T19:34:53 IST" name="Suite" finished-at="2025-03-18T19:41:57 IST" duration-ms="423683">
     <groups>
     </groups>
-    <test started-at="2025-03-14T19:30:35 IST" name="Test" finished-at="2025-03-14T19:33:06 IST" duration-ms="151058">
+    <test started-at="2025-03-18T19:34:53 IST" name="Test" finished-at="2025-03-18T19:41:57 IST" duration-ms="423683">
       <class name="AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@525575]" started-at="2025-03-14T19:30:35 IST" name="Configure" finished-at="2025-03-14T19:30:54 IST" duration-ms="19334" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:34:53 IST" name="Configure" finished-at="2025-03-18T19:35:12 IST" duration-ms="19077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@525575]" started-at="2025-03-14T19:30:54 IST" name="PreSetup" finished-at="2025-03-14T19:32:42 IST" duration-ms="107529" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:35:12 IST" name="PreSetup" finished-at="2025-03-18T19:36:56 IST" duration-ms="104258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_working_of_Gif_icon_in_attachments_To_validate_working_of_the_Ok_button_in_search_Gif_popup_To_validate_working_of_back_arrow_in_Gif_and_Stickers_screen()[pri:1, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@525575]" started-at="2025-03-14T19:32:42 IST" name="To_Validate_working_of_Gif_icon_in_attachments_To_validate_working_of_the_Ok_button_in_search_Gif_popup_To_validate_working_of_back_arrow_in_Gif_and_Stickers_screen" finished-at="2025-03-14T19:33:05 IST" duration-ms="23198" status="PASS">
+        <test-method signature="To_validate_working_of_the_Cancel_button_in_search_Gif_popup()[pri:2, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:36:56 IST" name="To_validate_working_of_the_Cancel_button_in_search_Gif_popup" finished-at="2025-03-18T19:37:02 IST" duration-ms="6181" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_working_of_Gif_icon_in_attachments_To_validate_working_of_the_Ok_button_in_search_Gif_popup_To_validate_working_of_back_arrow_in_Gif_and_Stickers_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@525575]" started-at="2025-03-14T19:33:05 IST" name="closeApp" finished-at="2025-03-14T19:33:06 IST" duration-ms="954" status="PASS">
+        </test-method> <!-- To_validate_working_of_the_Cancel_button_in_search_Gif_popup -->
+        <test-method signature="To_validate_the_working_of_the_different_view_option_in_Gif_and_Stickers_screen()[pri:3, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:37:03 IST" name="To_validate_the_working_of_the_different_view_option_in_Gif_and_Stickers_screen" finished-at="2025-03-18T19:37:38 IST" duration-ms="35862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_working_of_the_different_view_option_in_Gif_and_Stickers_screen -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_open_the_gif_and_stickers_screen_without_internet_connection()[pri:4, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:37:38 IST" name="To_validate_whether_the_user_is_able_to_open_the_gif_and_stickers_screen_without_internet_connection" finished-at="2025-03-18T19:39:03 IST" duration-ms="84539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_open_the_gif_and_stickers_screen_without_internet_connection -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_send_gif_and_stickers()[pri:5, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:39:03 IST" name="To_validate_whether_the_user_is_able_to_send_gif_and_stickers" finished-at="2025-03-18T19:40:05 IST" duration-ms="61864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_send_gif_and_stickers -->
+        <test-method signature="To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen()[pri:6, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:40:05 IST" name="To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen" finished-at="2025-03-18T19:41:42 IST" duration-ms="97144" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Can't locate an element by this strategy: By.chained({AppiumBy.id: //android.widget.EditText[@resource-id="io.beldex.bchat:id/search_view"]})]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.id: //android.widget.EditText[@resource-id="io.beldex.bchat:id/search_view"]})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$v1PZf4iI.click(Unknown Source)
+at POM.GifAndStickersScreen.ClickSearchTextBox(GifAndStickersScreen.java:50)
+at AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases.To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen(Gif_And_Stickers_Screen_TestCases.java:138)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3330f3ad (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: //android.widget.EditText[@resource-id="io.beldex.bchat:id/search_view"]})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@5d066c7d]" started-at="2025-03-18T19:41:56 IST" name="closeApp" finished-at="2025-03-18T19:41:57 IST" duration-ms="595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

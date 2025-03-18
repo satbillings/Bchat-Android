@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_archived_chats_are_showing_in_the_new_screen_contact_list"/>
+          <include name="To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -19,8 +19,61 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="//android.widget.TextView[@text='GIFS']")
 	private WebElement GifTitle;
 	
+	@AndroidFindBy(xpath ="//android.widget.TextView[@text='STICKERS']")
+	private WebElement StickersOption;
+	
+	@AndroidFindBy(xpath ="//android.widget.TextView[@text='STICKERS']")
+	private WebElement StickersTitle;
+	
+	@AndroidFindBy(xpath ="//android.widget.TextView[@text='Search']")
+	private WebElement SearchPlaceHolder;
+	
 	@AndroidFindBy(accessibility ="Navigate up")
 	private WebElement BackArrow;
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/view_grid")
+	private WebElement ViewOption;
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/view_stream")
+	private WebElement AnotherViewOption;
+	
+	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
+	private WebElement Gif;
+	
+	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
+	private WebElement Stickers;
+	
+	@AndroidFindBy(id ="//android.widget.EditText[@resource-id=\"io.beldex.bchat:id/search_view\"]")
+	private WebElement SearchTextBox;
+	
+	public void ClickSearchTextBox () {
+		SearchTextBox.click();	
+	}
+	
+	
+	public String getSearchPlaceHolder() {
+		return SearchPlaceHolder.getText();
+	}
+	
+	public void ClickGif () {
+		Gif.click();	
+	}
+	
+	public void ClickStickers () {
+		Stickers.click();	
+	}
+	
+	public void ClickStickersOption () {
+		StickersOption.click();	
+	}
+	
+	public void ClickViewOption () {
+		ViewOption.click();	
+	}
+	
+	public void ClickAnotherViewOption () {
+		AnotherViewOption.click();	
+	}
 	
 	public void ClickBackArrow () {
 		BackArrow.click();	
@@ -29,6 +82,10 @@ public class GifAndStickersScreen extends ActionsClass {
 	
 	public String getGifTitle() {
 		return GifTitle.getText();
+	}
+	
+	public String getStickersTitle() {
+		return StickersTitle.getText();
 	}
 
 }
