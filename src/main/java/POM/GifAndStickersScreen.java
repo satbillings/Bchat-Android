@@ -25,7 +25,7 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="//android.widget.TextView[@text='STICKERS']")
 	private WebElement StickersTitle;
 	
-	@AndroidFindBy(xpath ="//android.widget.TextView[@text='Search']")
+	@AndroidFindBy(xpath ="//android.widget.EditText[@text='Search']")
 	private WebElement SearchPlaceHolder;
 	
 	@AndroidFindBy(accessibility ="Navigate up")
@@ -43,8 +43,17 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
 	private WebElement Stickers;
 	
-	@AndroidFindBy(id ="//android.widget.EditText[@resource-id=\"io.beldex.bchat:id/search_view\"]")
+	@AndroidFindBy(xpath ="//android.widget.EditText[@resource-id=\"io.beldex.bchat:id/search_view\"]")
 	private WebElement SearchTextBox;
+	
+	@AndroidFindBy(xpath ="(//android.widget.ImageView[@content-desc='Media message'])[3]")
+	private WebElement GifMediaMessage;
+	
+	@AndroidFindBy(accessibility ="Forward")
+	private WebElement ForwardOption;
+	
+	@AndroidFindBy(xpath ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\" and @text=\"grppp\"]")
+	private WebElement ContactorGroupInForwardScreen;
 	
 	public void ClickSearchTextBox () {
 		SearchTextBox.click();	

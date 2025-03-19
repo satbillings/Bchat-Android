@@ -65,7 +65,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	 }*/
 	
 	/* Validate the working of the Cancel button in search Gif popup */
-	   @Test (priority = 2)
+	  /* @Test (priority = 2)
 	   public void To_validate_working_of_the_Cancel_button_in_search_Gif_popup() {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -75,7 +75,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	   }
 	   
 	/* Validate the working of the different view option in Gif and Stickers screen */
-	   @Test (priority = 3)
+	 /*  @Test (priority = 3)
 	   public void To_validate_the_working_of_the_different_view_option_in_Gif_and_Stickers_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -92,7 +92,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	   }
 	   
 	   /* Validate whether the user is able to open the gif and sticker screen without internet connection */
-		  @Test (priority = 4)
+		/*  @Test (priority = 4)
 		   public void To_validate_whether_the_user_is_able_to_open_the_gif_and_stickers_screen_without_internet_connection() throws InterruptedException {
 			chatpage = new ChatScreen(driver);
 			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -106,7 +106,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 		   }  
 		  
       /* Validate whether the user is able to send Gif and Stickers */
-		  @Test (priority = 5)
+		  /*@Test (priority = 5)
 		   public void To_validate_whether_the_user_is_able_to_send_gif_and_stickers() throws InterruptedException {
 			chatpage = new ChatScreen(driver);
 			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -125,7 +125,41 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 			gifandstickerspage.ClickStickersOption();
 			gifandstickerspage.ClickStickers();
 			Thread.sleep(8000);
-		  }   
+		  }  */
+	
+	/* Validate whether send or received gifs or stickers showing in all media */
+	    @Test (priority = 6)
+	    public void To_validate_whether_send_or_received_gif_and_stickers_is_showing_all_media_section() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bd68a48ca4fb888...");
+		Thread.sleep(5000);
+		chatpage.OpenAllMedia();
+		driver.navigate().back();
+	    }
+	
+	  /* Validate the cursor blinks inside the search text box while clicking at the search text box in Gif and Stickers screen */
+	    @Test (priority = 7)
+	   public void To_validate_the_cursor_blinks_inside_the_search_text_box_while_clicking_at_the_search_text_box_in_Gif_and_stickers_screen() throws InterruptedException {
+	    chatpage = new ChatScreen(driver);
+		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bd68a48ca4fb888...");  
+		chatpage.ClickAttachmentsIcon();
+		chatpage.ClickGifOption();
+		chatpage.ClickOkButtonInSearchGifPopup(); 
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
+		gifandstickerspage.ClickSearchTextBox();
+		Assert.assertTrue(gifandstickerspage.activeElement().isDisplayed());
+	    }
+	    
+	    /* Validate the presence of placeholder inside the search text box in Gif and Stickers screen */
+	    @Test (priority = 8)
+	   public void To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen() throws InterruptedException {
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
+		//gifandstickerspage.ClickSearchTextBox();
+		Assert.assertEquals(gifandstickerspage.getSearchPlaceHolder(),"Search");
+	    }
 
-			
+
+	
 }

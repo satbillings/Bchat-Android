@@ -272,6 +272,34 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Cancel']")
 	private WebElement CancelButtonInSearchGifPopup;
 	
+	@AndroidFindBy(xpath ="(//android.widget.ImageView[@content-desc=\"Media message\"])[3]")
+	private WebElement GifMediaMessage;
+	
+	@AndroidFindBy(accessibility ="Forward")
+	private WebElement ForwardOption;
+	
+	@AndroidFindBy(id ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\" and @text=\"aravind\"]")
+	private WebElement ContactorGroupInForwardScreen;
+	
+	@AndroidFindBy(accessibility ="Send")
+	private WebElement SendIconInForwardScreen;
+	
+	public void ClickGifMediaMessage () {
+		GifMediaMessage.click();
+	}
+	
+	public void ClickForwardOption () {
+		ForwardOption.click();
+	}
+	
+	public void ClickContactorGroupInForwardScreen () {
+		ContactorGroupInForwardScreen.click();
+	}
+	
+	public void ClickSendIconInForwardScreen () {
+		SendIconInForwardScreen.click();
+	}
+	
 	public void ClickOkButtonInSearchGifPopup () {
 		OkButtonInSearchGifPopup.click();
 	}
