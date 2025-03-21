@@ -40,6 +40,9 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
 	private WebElement Gif;
 	
+	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[2]")
+	private WebElement Gif2;
+	
 	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
 	private WebElement Stickers;
 	
@@ -67,6 +70,10 @@ public class GifAndStickersScreen extends ActionsClass {
 	public void ClickGif () {
 		Gif.click();	
 	}
+	public void ClickGif2 () {
+		Gif2.click();	
+	}
+	
 	
 	public void ClickStickers () {
 		Stickers.click();	

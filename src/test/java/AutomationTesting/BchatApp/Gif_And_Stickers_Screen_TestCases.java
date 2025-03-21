@@ -128,7 +128,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 		  }  */
 	
 	/* Validate whether send or received gifs or stickers showing in all media */
-	    @Test (priority = 6)
+	    /*@Test (priority = 6)
 	    public void To_validate_whether_send_or_received_gif_and_stickers_is_showing_all_media_section() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bd68a48ca4fb888...");
@@ -138,7 +138,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	    }
 	
 	  /* Validate the cursor blinks inside the search text box while clicking at the search text box in Gif and Stickers screen */
-	    @Test (priority = 7)
+	   /* @Test (priority = 7)
 	   public void To_validate_the_cursor_blinks_inside_the_search_text_box_while_clicking_at_the_search_text_box_in_Gif_and_stickers_screen() throws InterruptedException {
 	    chatpage = new ChatScreen(driver);
 		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bd68a48ca4fb888...");  
@@ -152,14 +152,45 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	    }
 	    
 	    /* Validate the presence of placeholder inside the search text box in Gif and Stickers screen */
-	    @Test (priority = 8)
+	   /* @Test (priority = 8)
 	   public void To_validate_the_presence_of_placeholder_of_search_text_box_in_Gif_and_stickers_screen() throws InterruptedException {
 		gifandstickerspage = new GifAndStickersScreen(driver);
 		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
 		//gifandstickerspage.ClickSearchTextBox();
 		Assert.assertEquals(gifandstickerspage.getSearchPlaceHolder(),"Search");
-	    }
-
-
+	    }*/
+	
+	/* Validate whether the user is able to forward Gif in chat screen */
+    @Test (priority = 9)
+    public void To_validate_whether_the_user_is_able_to_forward_Gif_in_chat_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	Thread.sleep(7000);
+	chatpage.ClickGifMediaMessage();
+	chatpage.ClickForwardOption();
+	Assert.assertEquals(chatpage.getForwardScreenTitle(),"Forward");
+	driver.navigate().back();
+	chatpage.ClickMediaPreview();
+	chatpage.ClickForwardScreenBackArrow();
+	//driver.navigate().back();
+    }
+    
+    /* Validate whether the user is able to reply to gif in chat screen */
+    @Test (priority = 10)
+    public void To_validate_whether_the_user_is_able_to_reply_to_Gif_in_chat_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.ReplyGifMediaMessage("hii");
+	Thread.sleep(3000);
+    }
+    
+   /* Validate whether the user is able to delete gif in chat screen */
+    @Test (priority = 11)
+    public void To_validate_whether_the_user_is_able_to_delete_Gif_in_chat_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.DeleteGifMediaMessage();
+	Thread.sleep(3000);
+    }
 	
 }

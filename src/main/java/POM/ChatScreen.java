@@ -272,19 +272,70 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Cancel']")
 	private WebElement CancelButtonInSearchGifPopup;
 	
-	@AndroidFindBy(xpath ="(//android.widget.ImageView[@content-desc=\"Media message\"])[3]")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Forward']")
+	private WebElement ForwardScreenTitle;
+	
+//	@AndroidFindBy(xpath ="(//android.widget.ImageView[@content-desc=\"Media message\"])[3]")
+	@AndroidFindBy(accessibility = "Media message")
 	private WebElement GifMediaMessage;
+	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[2]']")
+	private WebElement GifMessage1;
+	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[3]']")
+	private WebElement GifMessage2;
 	
 	@AndroidFindBy(accessibility ="Forward")
 	private WebElement ForwardOption;
 	
-	@AndroidFindBy(id ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\" and @text=\"aravind\"]")
+	@AndroidFindBy(accessibility ="Media preview")
+	private WebElement MediaPreview;
+	
+	@AndroidFindBy(accessibility ="Navigate up")
+	private WebElement ForwardScreenBackArrow;
+	
+	
+	//@AndroidFindBy(id ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\"]")
+	//@AndroidFindBy(id ="(//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[2]")
+	@AndroidFindBy(xpath ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\" and @text=\"grppp\"]")
+	//@AndroidFindBy(xpath="((//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[1]")
 	private WebElement ContactorGroupInForwardScreen;
 	
 	@AndroidFindBy(accessibility ="Send")
 	private WebElement SendIconInForwardScreen;
 	
+	public String getForwardScreenTitle () {
+		return ForwardScreenTitle.getText();
+	}
+	
+	public void ClickForwardScreenBackArrow () {
+		ForwardScreenBackArrow.click();
+	}
+	
+	public void ClickMediaPreview () {
+		MediaPreview.click();
+	}
+	
 	public void ClickGifMediaMessage () {
+		GifMediaMessage.click();
+	}
+	
+	public void DeleteGifMediaMessage () {
+		longPress(GifMediaMessage);
+		btnMoreoptions.click();
+		DeleteMessageOption.click();
+		Deleteformeoption.click();	
+	}
+	
+	public void ReplyGifMediaMessage (String value) {
+		longPress(GifMediaMessage);
+		replyoption.click();	
+		messageTextbox.sendKeys(value);
+		btnSend.click();
+	}
+	
+	public void MultiSelectGifMediaMessages () {
+		longPress(GifMediaMessage);
 		GifMediaMessage.click();
 	}
 	
