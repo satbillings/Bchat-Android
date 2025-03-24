@@ -161,7 +161,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	    }*/
 	
 	/* Validate whether the user is able to forward Gif in chat screen */
-    @Test (priority = 9)
+   /* @Test (priority = 9)
     public void To_validate_whether_the_user_is_able_to_forward_Gif_in_chat_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -176,7 +176,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }
     
     /* Validate whether the user is able to reply to gif in chat screen */
-    @Test (priority = 10)
+   /* @Test (priority = 10)
     public void To_validate_whether_the_user_is_able_to_reply_to_Gif_in_chat_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -185,12 +185,74 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }
     
    /* Validate whether the user is able to delete gif in chat screen */
-    @Test (priority = 11)
+   /* @Test (priority = 11)
     public void To_validate_whether_the_user_is_able_to_delete_Gif_in_chat_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
 	chatpage.DeleteGifMediaMessage();
 	Thread.sleep(3000);
-    }
+    }*/ 
 	
+	/* Validate whether the user is able to save Gif in chat screen */
+	@Test (priority = 12)
+    public void To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	Thread.sleep(10000);
+	chatpage.ClickGifMediaMessage();
+	Thread.sleep(2000);
+	chatpage.ClickSaveOption();
+	Thread.sleep(2000);
+	chatpage.ClickSaveToStoragePopupYesButton();
+	chatpage.ClickMediaPreview();
+	chatpage.ClickForwardScreenBackArrow();
+	}
+	
+	/*Validate whether the user is able to multi select Gif in Gif and Stickers screen */
+    @Test (priority = 13)
+    public void To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.ClickAttachmentsIcon();
+	chatpage.ClickGifOption();
+	chatpage.ClickOkButtonInSearchGifPopup(); 
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
+	Thread.sleep(5000);
+	gifandstickerspage.ClickGif();
+	//Assert.assertNotEquals(gifandstickerspage.getGifTitle(),"GIFS");
+
+    }
+    
+  /* Validate whether user is able to navigate between Gif and Stickers option in Gif and Stickers Screen */
+    @Test (priority = 14)
+    public void To_validate_whether_the_user_is_able_to_navigate_between_Gif_and_Stickers_option_in_Gif_and_Stickers_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.ClickAttachmentsIcon();
+	chatpage.ClickGifOption();
+	//chatpage.ClickOkButtonInSearchGifPopup(); 
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	gifandstickerspage.ClickStickersOption();
+	gifandstickerspage.ClickGifsOption();
+	gifandstickerspage.ClickStickersOption();
+	gifandstickerspage.ClickGifsOption();
+	gifandstickerspage.ClickBackArrow();
+    }
+    
+   /* Validate whether the user is able to delete the gifs and stickers by multiselecting in all media screen */
+    
+    @Test (priority = 15)
+    public void To_validate_whether_the_user_is_able_to_delete_Gif_and_Stickers_by_multiselecting_in_all_media_screen () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind"); 
+	chatpage.OpenAllMedia();
+	chatpage.MultiSelectMedia();
+	chatpage.ClickDeleteOptionInAllMedia();
+	chatpage.ClickDeleteButtonInAllMedia();
+    }
+
+
+
 }

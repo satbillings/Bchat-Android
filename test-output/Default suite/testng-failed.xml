@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Create_Password_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases">
         <methods>
-          <include name="To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable"/>
-          <include name="closeApp"/>
           <include name="Configure"/>
-          <include name="To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field"/>
-          <include name="To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field"/>
-          <include name="To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_and_repeat_it_for_multiple_time"/>
+          <include name="closeApp"/>
+          <include name="PreSetup"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Create_Password_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

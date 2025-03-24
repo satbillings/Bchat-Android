@@ -19,6 +19,9 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="//android.widget.TextView[@text='GIFS']")
 	private WebElement GifTitle;
 	
+	@AndroidFindBy(xpath ="//android.widget.TextView[@text='GIFS']")
+	private WebElement GifsOption;
+	
 	@AndroidFindBy(xpath ="//android.widget.TextView[@text='STICKERS']")
 	private WebElement StickersOption;
 	
@@ -81,6 +84,10 @@ public class GifAndStickersScreen extends ActionsClass {
 	
 	public void ClickStickersOption () {
 		StickersOption.click();	
+	}
+	
+	public void ClickGifsOption () {
+		GifsOption.click();	
 	}
 	
 	public void ClickViewOption () {

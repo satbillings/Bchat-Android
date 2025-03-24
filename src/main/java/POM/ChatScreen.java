@@ -294,6 +294,9 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(accessibility ="Navigate up")
 	private WebElement ForwardScreenBackArrow;
 	
+	@AndroidFindBy(accessibility ="Save")
+	private WebElement SaveOption;
+	
 	
 	//@AndroidFindBy(id ="(//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\"]")
 	//@AndroidFindBy(id ="(//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[2]")
@@ -304,12 +307,50 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(accessibility ="Send")
 	private WebElement SendIconInForwardScreen;
 	
+	@AndroidFindBy(id ="io.beldex.bchat:id/positiveButton")
+	private WebElement SaveToStoragePopupYesButton;
+	
+	@AndroidFindBy(xpath="(//android.widget.FrameLayout[@resource-id=\"io.beldex.bchat:id/image\"])[1]")
+	private WebElement Media1;
+	
+	@AndroidFindBy(xpath="(//android.widget.FrameLayout[@resource-id=\"io.beldex.bchat:id/image\"])[2]")
+	private WebElement Media2;
+	
+	@AndroidFindBy(accessibility ="Delete")
+	private WebElement DeleteOptionInAllMedia; 
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/deleteButton")
+	private WebElement DeleteButtonInAllMedia; 
+	
+	
+	public void MultiSelectMedia () {
+	   longPress(Media1);
+	   Media2.click();
+	   
+	} 
+	
+	public void ClickDeleteOptionInAllMedia () {
+		DeleteOptionInAllMedia.click();
+	}
+	
+	public void ClickDeleteButtonInAllMedia () {
+		DeleteButtonInAllMedia.click();
+	}
+	
+	
+	public void ClickSaveToStoragePopupYesButton () {
+		SaveToStoragePopupYesButton.click();
+	}
+	
 	public String getForwardScreenTitle () {
 		return ForwardScreenTitle.getText();
 	}
 	
 	public void ClickForwardScreenBackArrow () {
 		ForwardScreenBackArrow.click();
+	}
+	public void ClickSaveOption () {
+		SaveOption.click();
 	}
 	
 	public void ClickMediaPreview () {

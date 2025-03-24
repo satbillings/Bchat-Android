@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen"/>
+          <include name="To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases -->
     </classes>
