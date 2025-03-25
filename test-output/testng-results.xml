@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-24T15:43:10 IST" name="Suite" finished-at="2025-03-24T15:48:28 IST" duration-ms="317984">
+  <suite started-at="2025-03-25T15:11:47 IST" name="Suite" finished-at="2025-03-25T15:16:09 IST" duration-ms="261970">
     <groups>
     </groups>
-    <test started-at="2025-03-24T15:43:10 IST" name="Test" finished-at="2025-03-24T15:48:28 IST" duration-ms="317984">
+    <test started-at="2025-03-25T15:11:47 IST" name="Test" finished-at="2025-03-25T15:16:09 IST" duration-ms="261970">
       <class name="AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:43:10 IST" name="Configure" finished-at="2025-03-24T15:43:29 IST" duration-ms="18180" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:11:47 IST" name="Configure" finished-at="2025-03-25T15:12:04 IST" duration-ms="17029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:43:29 IST" name="PreSetup" finished-at="2025-03-24T15:45:05 IST" duration-ms="96033" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:12:04 IST" name="PreSetup" finished-at="2025-03-25T15:14:02 IST" duration-ms="117725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen()[pri:12, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:45:05 IST" name="To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen" finished-at="2025-03-24T15:46:23 IST" duration-ms="78379" status="PASS">
+        <test-method signature="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_empty_space_value()[pri:16, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:14:02 IST" name="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_empty_space_value" finished-at="2025-03-25T15:14:25 IST" duration-ms="23366" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen()[pri:13, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:46:23 IST" name="To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen" finished-at="2025-03-24T15:47:20 IST" duration-ms="57299" status="PASS">
+        </test-method> <!-- To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_empty_space_value -->
+        <test-method signature="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable()[pri:17, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:14:25 IST" name="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable" finished-at="2025-03-25T15:14:30 IST" duration-ms="4369" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_navigate_between_Gif_and_Stickers_option_in_Gif_and_Stickers_screen()[pri:14, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:47:20 IST" name="To_validate_whether_the_user_is_able_to_navigate_between_Gif_and_Stickers_option_in_Gif_and_Stickers_screen" finished-at="2025-03-24T15:48:19 IST" duration-ms="58582" status="PASS">
+        </test-method> <!-- To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable -->
+        <test-method signature="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_numerical_value()[pri:18, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:14:30 IST" name="To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_numerical_value" finished-at="2025-03-25T15:14:36 IST" duration-ms="6123" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_navigate_between_Gif_and_Stickers_option_in_Gif_and_Stickers_screen -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_delete_Gif_and_Stickers_by_multiselecting_in_all_media_screen()[pri:15, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:48:19 IST" name="To_validate_whether_the_user_is_able_to_delete_Gif_and_Stickers_by_multiselecting_in_all_media_screen" finished-at="2025-03-24T15:48:28 IST" duration-ms="8712" status="PASS">
+        </test-method> <!-- To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_numerical_value -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_send_Gif_and_Stickers_without_internet_connection()[pri:19, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:14:36 IST" name="To_validate_whether_the_user_is_able_to_send_Gif_and_Stickers_without_internet_connection" finished-at="2025-03-25T15:16:09 IST" duration-ms="92718" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_delete_Gif_and_Stickers_by_multiselecting_in_all_media_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-24T15:48:28 IST" name="closeApp" finished-at="2025-03-24T15:48:28 IST" duration-ms="756" status="PASS">
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_send_Gif_and_Stickers_without_internet_connection -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases@265adfad]" started-at="2025-03-25T15:16:09 IST" name="closeApp" finished-at="2025-03-25T15:16:09 IST" duration-ms="570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

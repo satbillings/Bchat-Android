@@ -65,6 +65,17 @@ public class GifAndStickersScreen extends ActionsClass {
 		SearchTextBox.click();	
 	}
 	
+	public void Set_Values_In_Search_textbox (String value) {
+		SearchTextBox.sendKeys(value);
+		}
+	
+	public void ClearSearchTextBox () {
+		SearchTextBox.clear();	
+	}
+	
+	public void Paste_Values_In_Search_TextBox (String value) {
+		Copy_And_Paste_Values(value, SearchTextBox);
+	}
 	
 	public String getSearchPlaceHolder() {
 		return SearchPlaceHolder.getText();

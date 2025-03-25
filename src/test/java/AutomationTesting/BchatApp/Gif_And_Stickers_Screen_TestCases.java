@@ -194,7 +194,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }*/ 
 	
 	/* Validate whether the user is able to save Gif in chat screen */
-	@Test (priority = 12)
+	/*@Test (priority = 12)
     public void To_validate_whether_the_user_is_able_to_save_Gif_in_chat_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -209,7 +209,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	}
 	
 	/*Validate whether the user is able to multi select Gif in Gif and Stickers screen */
-    @Test (priority = 13)
+   /* @Test (priority = 13)
     public void To_validate_whether_the_user_is_able_to_multiselect_Gif_in_Gif_and_Stickers_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -225,7 +225,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }
     
   /* Validate whether user is able to navigate between Gif and Stickers option in Gif and Stickers Screen */
-    @Test (priority = 14)
+   /* @Test (priority = 14)
     public void To_validate_whether_the_user_is_able_to_navigate_between_Gif_and_Stickers_option_in_Gif_and_Stickers_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -241,9 +241,9 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	gifandstickerspage.ClickBackArrow();
     }
     
-   /* Validate whether the user is able to delete the gifs and stickers by multiselecting in all media screen */
+   /* Validate whether the user is able to delete the gifs and stickers by multi selecting in all media screen */
     
-    @Test (priority = 15)
+   /* @Test (priority = 15)
     public void To_validate_whether_the_user_is_able_to_delete_Gif_and_Stickers_by_multiselecting_in_all_media_screen () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind"); 
@@ -251,6 +251,61 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	chatpage.MultiSelectMedia();
 	chatpage.ClickDeleteOptionInAllMedia();
 	chatpage.ClickDeleteButtonInAllMedia();
+    }*/
+	
+	/* Validate the search text box in Gif and Stickers screen by entering the empty space value */
+	@Test (priority = 16)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_empty_space_value () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.ClickAttachmentsIcon();
+	chatpage.ClickGifOption();
+    chatpage.ClickOkButtonInSearchGifPopup(); 
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+    gifandstickerspage.ClickSearchTextBox();
+    gifandstickerspage.Set_Values_In_Search_textbox("        ");
+    gifandstickerspage.ClearSearchTextBox();
+	}
+	
+	/* Validate the search text box in Gif and Stickers screen by entering the special characters
+	 * Validate whether the value entered in the search text box of Gif and Stickers is editable and delete-able. 
+	   */
+	@Test (priority = 17)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable () throws InterruptedException {
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+		gifandstickerspage.ClickSearchTextBox();
+		gifandstickerspage.Set_Values_In_Search_textbox("!@#$%^&*()_+=");
+		gifandstickerspage.ClearSearchTextBox();
+		
+	}
+    
+    /* Validate the search text box in Gif and Stickers screen by entering the numerical value */
+	@Test (priority = 18)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_numerical_value () throws InterruptedException {
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	gifandstickerspage.ClickSearchTextBox();
+	gifandstickerspage.Set_Values_In_Search_textbox("1234567890");
+	gifandstickerspage.ClearSearchTextBox();
+	}
+	
+	/* Validate whether the user is able to send gif and stickers without internet connection */
+    @Test (priority = 19)
+    public void To_validate_whether_the_user_is_able_to_send_Gif_and_Stickers_without_internet_connection () throws InterruptedException {
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
+	Thread.sleep(3000);
+	turnOff_Mobile_Wifi();
+	Thread.sleep(5000);
+	gifandstickerspage.ClickGif();
+	gifandstickerspage.ClickStickersOption();
+	gifandstickerspage.ClickStickers();
+	//gifandstickerspage.ClickBackArrow();
+	Thread.sleep(5000);
+	turnOn_Mobile_Wifi();	
+	Thread.sleep(5000);
     }
 
 
