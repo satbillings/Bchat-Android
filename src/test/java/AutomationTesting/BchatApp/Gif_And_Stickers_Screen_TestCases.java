@@ -254,7 +254,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }*/
 	
 	/* Validate the search text box in Gif and Stickers screen by entering the empty space value */
-	@Test (priority = 16)
+	/*@Test (priority = 16)
     public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_empty_space_value () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -271,7 +271,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	/* Validate the search text box in Gif and Stickers screen by entering the special characters
 	 * Validate whether the value entered in the search text box of Gif and Stickers is editable and delete-able. 
 	   */
-	@Test (priority = 17)
+	/*@Test (priority = 17)
     public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable () throws InterruptedException {
 		gifandstickerspage = new GifAndStickersScreen(driver);
 		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
@@ -282,7 +282,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	}
     
     /* Validate the search text box in Gif and Stickers screen by entering the numerical value */
-	@Test (priority = 18)
+	/*@Test (priority = 18)
     public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_numerical_value () throws InterruptedException {
 	gifandstickerspage = new GifAndStickersScreen(driver);
 	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
@@ -292,7 +292,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	}
 	
 	/* Validate whether the user is able to send gif and stickers without internet connection */
-    @Test (priority = 19)
+    /*@Test (priority = 19)
     public void To_validate_whether_the_user_is_able_to_send_Gif_and_Stickers_without_internet_connection () throws InterruptedException {
 	gifandstickerspage = new GifAndStickersScreen(driver);
 	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
@@ -306,8 +306,55 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	Thread.sleep(5000);
 	turnOn_Mobile_Wifi();	
 	Thread.sleep(5000);
-    }
-
-
+    }*/
+	
+	/* Validate the search text box in Gif and Stickers screen by entering the alphabets both in uppercase and lowercase letter */
+	@Test (priority = 20)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
+	chatpage = new ChatScreen(driver);
+	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
+	chatpage.ClickAttachmentsIcon();
+	chatpage.ClickGifOption();
+    chatpage.ClickOkButtonInSearchGifPopup(); 
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+    gifandstickerspage.ClickSearchTextBox();
+    gifandstickerspage.Set_Values_In_Search_textbox("ABCDEF");
+    gifandstickerspage.ClearSearchTextBox();
+    gifandstickerspage.Set_Values_In_Search_textbox("abcdef");
+    gifandstickerspage.ClearSearchTextBox();
+	}
+	
+	/* Validate whether the user is able enter a lengthy value in the search text box in Gif and Stickers screen */
+	 
+	@Test (priority = 21)
+    public void To_validate_whether_the_user_is_able_to_enter_a_lengthy_value_in_the_search_text_box_in_Gif_and_Stickers_screen () throws InterruptedException {
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	gifandstickerspage.ClickSearchTextBox();
+	gifandstickerspage.Set_Values_In_Search_textbox("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok");
+	gifandstickerspage.ClearSearchTextBox();
+	}
+	
+	/* Validate whether the paste option is working on the search text box in Gif and Stickers screen */
+	 
+	@Test (priority = 22)
+    public void To_validate_whether_the_paste_option_is_working_on_the_search_text_box_in_Gif_and_Stickers_screen () throws InterruptedException {
+	gifandstickerspage = new GifAndStickersScreen(driver);
+	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	gifandstickerspage.ClickSearchTextBox();
+	gifandstickerspage.Paste_Values_In_Search_TextBox("hello");
+	gifandstickerspage.ClearSearchTextBox();
+	}
+	
+	/* Validate the search text box in Gif and Stickers screen by entering the valid value */
+	@Test (priority = 23)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_valid_value () throws InterruptedException {
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+		gifandstickerspage.ClickSearchTextBox();
+	    gifandstickerspage.Set_Values_In_Search_textbox("happy");
+		gifandstickerspage.ClearSearchTextBox();
+		}
 
 }
