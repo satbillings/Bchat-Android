@@ -130,6 +130,27 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/noLongerParticipantTextView")
 	private WebElement LeaveGroupContent;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/doubleModeImageView1")
+	private WebElement GroupProfileImage;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/conversationSubtitleView")
+	private WebElement GroupSubtitleView;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/layout_conversation")
+	private WebElement GroupTopBar;
+	
+	public void ClickGroupTopBar () {
+		GroupTopBar.click();	
+	}
+	
+	public void ClickGroupProfileImage () {
+		GroupProfileImage.click();	
+	}
+	
+	public void ClickGroupSubtitleView () {
+		GroupSubtitleView.click();	
+	}
+	
 	 public WebElement getLeaveGroupContent() {
 			return LeaveGroupContent;
 		}
