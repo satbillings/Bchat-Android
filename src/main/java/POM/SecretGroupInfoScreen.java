@@ -82,6 +82,12 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	 public String getGroupInfoScreenTitle() {
 			return GroupInfoScreenTitle.getText();
 		}
-	
+	 
+	 public void Set_Values_In_EnterName_textbox (String value) {
+		 EnterNameTextBox.sendKeys(value);
+		}
+	 public void Clear_EnterName_textbox () {
+		 EnterNameTextBox.clear();
+		}
 
 }
