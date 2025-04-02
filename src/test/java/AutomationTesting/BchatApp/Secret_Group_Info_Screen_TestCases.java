@@ -98,7 +98,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	}*/
 	
 	/* Validate whether cursor blinks inside the search text box in secret group info screen */
-	 @Test(priority = 5)
+	/* @Test(priority = 5)
 	public void To_validate_whether_cursor_blinks_inside_the_search_textbox_in_secret_group_info_screen () throws InterruptedException {
 		groupchatpage = new SecretGroupChatScreen(driver);
 		//Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
@@ -114,7 +114,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	}
 	
   /* Validate the presence of placeholder inside the search text box in secret group info screen */
-	 @Test(priority = 6)
+	/* @Test(priority = 6)
 	public void To_validate_presence_of_placeholder_inside_the_search_textbox_in_secret_group_info_screen () throws InterruptedException {
 	   secretgroupinfopage = new SecretGroupInfoScreen(driver);
        Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
@@ -124,7 +124,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	 
 	 /* Validate the search text box in Secret group info screen by entering the empty space value */
 	 
-	    @Test(priority = 7)
+	   /* @Test(priority = 7)
 		public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_empty_space_value () throws InterruptedException {
 		secretgroupinfopage = new SecretGroupInfoScreen(driver);
         Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
@@ -136,11 +136,63 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  * Validate whether the value entered in the search text box of Secret group info screen is editable and delete-able. 
 	  * */
 	    
-	      @Test(priority = 8)
+	     /* @Test(priority = 8)
 	  	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_search_text_box_of_Secret_group_info_screen_is_editable_deletable () throws InterruptedException {
 	  	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
 	      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
 	  	  secretgroupinfopage.Set_Values_In_EnterName_textbox("!@#$%^&*()_+=");
 	  	  secretgroupinfopage.Clear_EnterName_textbox();
-	  	 }   
+	  	 }   */
+	
+	/* Validate the search text box in Secret group info screen by entering the numerical value */
+	 @Test(priority = 9)
+	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_numerical_value () throws InterruptedException {
+		    groupchatpage = new SecretGroupChatScreen(driver);
+			//Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
+		    Thread.sleep(5000);
+			groupchatpage.ClickGroupTopBar();
+			secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	        Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+	        secretgroupinfopage.ClickSearchIcon();
+		    Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+	        secretgroupinfopage.ClickEnterNameTextBox();
+	        secretgroupinfopage.Set_Values_In_EnterName_textbox("1234567890");
+	        Thread.sleep(2000);
+		  	secretgroupinfopage.Clear_EnterName_textbox();
+	 }
+	 
+	 /* Validate the search text box in Secret group info screen by entering the alphabets both in uppercase and lowercase letter */
+	  @Test(priority = 10)
+ 	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
+ 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+ 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("ABCDEF");
+      Thread.sleep(2000);
+ 	  secretgroupinfopage.Clear_EnterName_textbox();
+ 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("abcdef");
+      Thread.sleep(2000);
+	  secretgroupinfopage.Clear_EnterName_textbox();
+	  }
+	  
+	  /* Validate whether the user is able enter a lengthy value in the search text box in Secret group info screen */
+	  @Test(priority = 11)
+ 	  public void To_validate_whether_the_user_is_able_to_enter_a_lenghty_value_in_Search_textbox_in_Secret_group_info_screen () throws InterruptedException {
+ 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+ 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok");
+      Thread.sleep(2000);
+ 	  secretgroupinfopage.Clear_EnterName_textbox();
+	  }
+	  
+	  /* Validate the search text box in Secret group info screen by entering the valid value */
+	  @Test(priority = 12)
+ 	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_valid_value () throws InterruptedException {
+ 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+ 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("Android");
+      Thread.sleep(2000);
+ 	  secretgroupinfopage.Clear_EnterName_textbox();
+	  }    
+	
+
 }
