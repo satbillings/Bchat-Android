@@ -39,6 +39,9 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//android.widget.EditText")
 	private WebElement EnterNameTextBox;
 	
+	@AndroidFindBy(xpath = "//android.widget.EditText[@text='']")
+	private WebElement EmptyValueInEnterNameTextBox;
+	
 	@AndroidFindBy(accessibility="Back")
 	public WebElement BackArrowInSearchMembersScreen;
 	
@@ -48,8 +51,23 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[6]")
 	private WebElement Member2;
 	
+	@AndroidFindBy(accessibility="admin crown")
+	public WebElement CrownSymbol;
+	
+	public String getEmptyValueInEnterNameTextBox() {
+		return EmptyValueInEnterNameTextBox.getText();
+	}
+	
 	public WebElement ShowMember1() {
 		return Member1;
+	}
+	
+	public WebElement ShowCrownSymbol() {
+		return CrownSymbol;
+	}
+	
+	public WebElement ShowNoRecordsFound() {
+		return NoRecordsFoundText;
 	}
 	
 	public WebElement ShowMember2() {

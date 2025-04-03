@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T13:27:16 IST" name="Suite" finished-at="2025-04-02T13:31:04 IST" duration-ms="227717">
+  <suite started-at="2025-04-03T13:17:09 IST" name="Suite" finished-at="2025-04-03T13:19:28 IST" duration-ms="138518">
     <groups>
     </groups>
-    <test started-at="2025-04-02T13:27:16 IST" name="Test" finished-at="2025-04-02T13:31:04 IST" duration-ms="227717">
+    <test started-at="2025-04-03T13:17:09 IST" name="Test" finished-at="2025-04-03T13:19:28 IST" duration-ms="138518">
       <class name="AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:27:16 IST" name="Configure" finished-at="2025-04-02T13:27:32 IST" duration-ms="15648" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:17:09 IST" name="Configure" finished-at="2025-04-03T13:17:25 IST" duration-ms="15344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:27:32 IST" name="PreSetup" finished-at="2025-04-02T13:29:03 IST" duration-ms="91547" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:17:25 IST" name="PreSetup" finished-at="2025-04-03T13:18:51 IST" duration-ms="86819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_numerical_value()[pri:9, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:29:03 IST" name="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_numerical_value" finished-at="2025-04-02T13:30:03 IST" duration-ms="59827" status="PASS">
+        <test-method signature="To_validate_whether_the_paste_option_is_working_on_the_Search_textbox_in_Secret_group_info_screen()[pri:13, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:18:51 IST" name="To_validate_whether_the_paste_option_is_working_on_the_Search_textbox_in_Secret_group_info_screen" finished-at="2025-04-03T13:19:23 IST" duration-ms="31950" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_numerical_value -->
-        <test-method signature="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter()[pri:10, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:30:03 IST" name="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter" finished-at="2025-04-02T13:30:10 IST" duration-ms="6666" status="PASS">
+        </test-method> <!-- To_validate_whether_the_paste_option_is_working_on_the_Search_textbox_in_Secret_group_info_screen -->
+        <test-method signature="To_validate_whether_the_crown_symbol_is_showing_for_group_admin_in_Secret_group_info_screen()[pri:14, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:19:23 IST" name="To_validate_whether_the_crown_symbol_is_showing_for_group_admin_in_Secret_group_info_screen" finished-at="2025-04-03T13:19:24 IST" duration-ms="1032" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_enter_a_lenghty_value_in_Search_textbox_in_Secret_group_info_screen()[pri:11, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:30:10 IST" name="To_validate_whether_the_user_is_able_to_enter_a_lenghty_value_in_Search_textbox_in_Secret_group_info_screen" finished-at="2025-04-02T13:30:52 IST" duration-ms="41756" status="PASS">
+        </test-method> <!-- To_validate_whether_the_crown_symbol_is_showing_for_group_admin_in_Secret_group_info_screen -->
+        <test-method signature="To_validate_whether_value_entered_in_the_Search_textbox_getting_cleared_after_navigate_out_of_that_screen()[pri:15, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:19:24 IST" name="To_validate_whether_value_entered_in_the_Search_textbox_getting_cleared_after_navigate_out_of_that_screen" finished-at="2025-04-03T13:19:27 IST" duration-ms="2711" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_enter_a_lenghty_value_in_Search_textbox_in_Secret_group_info_screen -->
-        <test-method signature="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_valid_value()[pri:12, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:30:52 IST" name="To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_valid_value" finished-at="2025-04-02T13:31:03 IST" duration-ms="11652" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_valid_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@265adfad]" started-at="2025-04-02T13:31:03 IST" name="closeApp" finished-at="2025-04-02T13:31:04 IST" duration-ms="538" status="PASS">
+        </test-method> <!-- To_validate_whether_value_entered_in_the_Search_textbox_getting_cleared_after_navigate_out_of_that_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases@7a1a14a4]" started-at="2025-04-03T13:19:27 IST" name="closeApp" finished-at="2025-04-03T13:19:28 IST" duration-ms="631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
