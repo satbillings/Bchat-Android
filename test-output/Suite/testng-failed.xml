@@ -10,8 +10,10 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_the_No_records_found_text_is_showing_when_the_user_entering_the_invalid_search_value_in_Secret_grouo_info_screen"/>
-          <include name="To_validate_whether_the_crown_symbol_is_showing_for_group_admin_in_Secret_group_info_screen"/>
+          <include name="PreSetup"/>
+          <include name="To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen"/>
+          <include name="To_validate_the_working_of_Edit_group_option_in_the_Secret_group_info_screen"/>
+          <include name="To_validate_the_working_of_All_media_option_in_the_Secret_group_info_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases -->
     </classes>

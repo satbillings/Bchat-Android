@@ -18,7 +18,7 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	}
 	
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='2 members']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='4 members']")
 	private WebElement MemberList;
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Group Info']")
@@ -53,6 +53,89 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	
 	@AndroidFindBy(accessibility="admin crown")
 	public WebElement CrownSymbol;
+	
+	//@AndroidFindBy(xpath = "//android.view.View[@index='0']")
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	private WebElement AllMediaOption;
+	
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]")
+	private WebElement DisappearingMessagesOption;
+	
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]")
+	private WebElement EditGroupOption;
+	
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.view.View[2]")
+	private WebElement NotifyForMentionOnlyOption;
+	
+	@AndroidFindBy(xpath = "//android.view.View[@index=''4]")
+	private WebElement LeaveGroupOption;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/cntGroupNameDisplay")
+	public WebElement GroupNameEditOption;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/edtGroupName")
+	public WebElement GroupNameEditTextBox;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/btnSaveGroupNameEdit")
+	public WebElement TickIcon;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/applyChangesBtn")
+	public WebElement ApplyChangesButton;
+	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Edit Group']")
+	private WebElement EditGroupScreenTitle;
+	
+	@AndroidFindBy(accessibility="Apply")
+	public WebElement ApplyOption;
+	
+	//@AndroidFindBy(id="io.beldex.bchat:id/contentView")
+	@AndroidFindBy(id="io.beldex.bchat:id/actionIndicatorImageView")
+	public WebElement ContactList;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/addButton")
+	public WebElement AddButton;
+	
+	public String getEditGroupScreenTitle() {
+		return EditGroupScreenTitle.getText();
+	}
+	
+	public void ClickEditGroupOption() {
+		EditGroupOption.click();	
+	}
+	
+	public void ClickAllMediaOption() {
+		AllMediaOption.click();	
+	}
+	
+	public void EditGroup(String value) {
+		GroupNameEditOption.click();
+		GroupNameEditTextBox.sendKeys(value);
+		TickIcon.click();
+		ApplyChangesButton.click();
+	}
+	
+	public void AddMemberToGroup() {
+		ApplyOption.click();
+		ContactList.click();
+		AddButton.click();
+		ApplyChangesButton.click();	
+	}
+	
+	public void ClickApplyOption() {
+		ApplyOption.click();	
+	} 
+	
+	public void ClickContactList() {
+		ContactList.click();	
+	} 
+	
+	public void ClickAddButton() {
+		AddButton.click();	
+	} 
+	
+	public void ClickApplyChangesButton() {
+		ApplyChangesButton.click();	
+	}
 	
 	public String getEmptyValueInEnterNameTextBox() {
 		return EmptyValueInEnterNameTextBox.getText();

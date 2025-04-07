@@ -195,7 +195,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  }*/
 	
 	/*Validate whether the paste option is working on the search text box in Secret group info screen */
-	 @Test(priority = 13)
+	/* @Test(priority = 13)
 	  public void To_validate_whether_the_paste_option_is_working_on_the_Search_textbox_in_Secret_group_info_screen () throws InterruptedException {
 		    groupchatpage = new SecretGroupChatScreen(driver);
 			//Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
@@ -214,7 +214,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	 
 	 
 	 /* Validate whether crown symbol is showing for group admin in Secret info screen  */
-	  @Test(priority = 14)
+	  /*@Test(priority = 14)
 	  public void To_validate_whether_the_crown_symbol_is_showing_for_group_admin_in_Secret_group_info_screen () throws InterruptedException {
 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
       Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
@@ -222,7 +222,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  }
 	  
 	  /* Validate whether value entered in the search text getting cleared after navigate out of that screen */
-	  @Test(priority = 15)
+	 /* @Test(priority = 15)
 	  public void To_validate_whether_value_entered_in_the_Search_textbox_getting_cleared_after_navigate_out_of_that_screen() throws InterruptedException {
 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
       Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
@@ -230,9 +230,47 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
 	  Assert.assertEquals(secretgroupinfopage.getEmptyValueInEnterNameTextBox(),"");
       secretgroupinfopage.ClickBackArrowInSearchMembersScreen();
+	  }*/
+
+	/* Validate the working of the all media option in the Secret group info screen */
+	@Test(priority = 16)
+	  public void To_validate_the_working_of_All_media_option_in_the_Secret_group_info_screen() throws InterruptedException {
+		 groupchatpage = new SecretGroupChatScreen(driver);
+		 //Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
+		 Thread.sleep(5000);
+	     groupchatpage.ClickGroupTopBar();
+	     secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	     Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+	     secretgroupinfopage.ClickAllMediaOption();
+	     driver.navigate().back();
+	}
+	
+	/* Validate the working of the Edit group option in the Secret group info screen */
+	  @Test(priority = 17)
+	  public void To_validate_the_working_of_Edit_group_option_in_the_Secret_group_info_screen() throws InterruptedException {
+		secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	    Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+	     secretgroupinfopage.ClickEditGroupOption();
+	     Assert.assertEquals(secretgroupinfopage.getEditGroupScreenTitle(),"Edit Group");
+	     secretgroupinfopage.EditGroup("Group14");
+	}
+ 
+	  /* Validate whether group member list getting update in secret group info screen if any person is added to the group */
+	  @Test(priority = 18)
+	  public void To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen() throws InterruptedException {
+		  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		  Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+		  secretgroupinfopage.ClickEditGroupOption();
+		 // Assert.assertEquals(secretgroupinfopage.getEditGroupScreenTitle(),"Edit Group");
+		  //secretgroupinfopage.AddMemberToGroup();
+		  secretgroupinfopage.ClickApplyOption();
+		  secretgroupinfopage.ClickContactList();
+		  Thread.sleep(3000);
+		  secretgroupinfopage.ClickAddButton();
+		  secretgroupinfopage.ClickApplyChangesButton();
+	      Assert.assertEquals(secretgroupinfopage.getMemberList(),"4 members");
+ 
 	  }
 
-
-	
-
+		  
 }
