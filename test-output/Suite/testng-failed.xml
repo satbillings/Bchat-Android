@@ -10,10 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="PreSetup"/>
-          <include name="To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen"/>
-          <include name="To_validate_the_working_of_Edit_group_option_in_the_Secret_group_info_screen"/>
-          <include name="To_validate_the_working_of_All_media_option_in_the_Secret_group_info_screen"/>
+          <include name="To_validate_the_working_of_the_Leave_group_option_in_secret_group_info_screen_To_validate_whether_group_memeber_list_getting_update_in_secret_group_info_screen_if_any_person_leave_from_group"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases -->
     </classes>

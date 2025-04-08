@@ -73,7 +73,7 @@ public class SeedScreen extends ActionsClass{
 	}
 	public void pasteSeedValue() {
 		SeedTextBox.click();
-		driver.setClipboardText("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		driver.setClipboardText("renting aimless answers reef incur liquid drunk ascend soil jukebox arbitrary greater village tavern initiate upper emerge history village tudor vegan skirting quick sarcasm tudor");
 	    btnPaste.click();
 	}
 	

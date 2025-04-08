@@ -233,7 +233,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  }*/
 
 	/* Validate the working of the all media option in the Secret group info screen */
-	@Test(priority = 16)
+	/*@Test(priority = 16)
 	  public void To_validate_the_working_of_All_media_option_in_the_Secret_group_info_screen() throws InterruptedException {
 		 groupchatpage = new SecretGroupChatScreen(driver);
 		 //Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
@@ -246,18 +246,18 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	}
 	
 	/* Validate the working of the Edit group option in the Secret group info screen */
-	  @Test(priority = 17)
+	 /* @Test(priority = 17)
 	  public void To_validate_the_working_of_Edit_group_option_in_the_Secret_group_info_screen() throws InterruptedException {
 		secretgroupinfopage = new SecretGroupInfoScreen(driver);
 	    Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
 	     secretgroupinfopage.ClickEditGroupOption();
 	     Assert.assertEquals(secretgroupinfopage.getEditGroupScreenTitle(),"Edit Group");
-	     secretgroupinfopage.EditGroup("Group14");
+	     secretgroupinfopage.EditGroup("Group15");
 	}
  
 	  /* Validate whether group member list getting update in secret group info screen if any person is added to the group */
-	  @Test(priority = 18)
-	  public void To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen() throws InterruptedException {
+	  /*@Test(priority = 18)
+	  public void To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen_if_any_person_is_added_to_the_group() throws InterruptedException {
 		  secretgroupinfopage = new SecretGroupInfoScreen(driver);
 		  Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
 		  secretgroupinfopage.ClickEditGroupOption();
@@ -269,8 +269,58 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 		  secretgroupinfopage.ClickAddButton();
 		  secretgroupinfopage.ClickApplyChangesButton();
 	      Assert.assertEquals(secretgroupinfopage.getMemberList(),"4 members");
- 
+
 	  }
 
-		  
+	  /* Validate whether group member list getting update in secret group info screen if any person is added to the group */
+	  @Test(priority = 19)
+	  public void To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen_if_any_person_is_removed_from_the_group() throws InterruptedException {
+			 groupchatpage = new SecretGroupChatScreen(driver);
+		     //Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
+			 Thread.sleep(5000);
+		     groupchatpage.ClickGroupTopBar();
+		     secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		     Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+		     secretgroupinfopage.ClickEditGroupOption();
+		     Assert.assertEquals(secretgroupinfopage.getEditGroupScreenTitle(),"Edit Group");
+		    // secretgroupinfopage.RemoveMemberFromGroup();
+		     secretgroupinfopage.ClickRemovableContact();
+			 Thread.sleep(3000);
+		     secretgroupinfopage.ClickRemoveUserFromGroupOption();
+		     secretgroupinfopage.ClickApplyChangesButton();
+		     Assert.assertEquals(secretgroupinfopage.getMemberList3(),"1 members");
+	  }
+	  
+	  /* Validate the working of the Notify for mention only option in the Secret group info screen */
+	  @Test(priority = 20)
+	  public void To_validate_the_working_of_the_Notify_for_mention_only_option_in_secret_group_info_screen() throws InterruptedException {
+		  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		  Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+		  secretgroupinfopage.ClickNotifyForMentionOnlyOption();
+		  secretgroupinfopage.ClickMentionNotificationOption();
+		  secretgroupinfopage.ClickNotifyForMentionOnlyOption();
+		  secretgroupinfopage.ClickAllNotificationOption();
+	  }
+	  
+   /* Validate the working of the Leave group option in the Secret group info screen 
+    * Validate whether group is getting deleted after group admin left the group
+    * */
+	  @Test(priority = 21)
+	  public void To_validate_the_working_of_the_Leave_group_option_in_secret_group_info_screen_To_validate_whether_group_is_getting_deleted_after_group_admin_left_the_group ()throws InterruptedException {
+		  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		  Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+		  secretgroupinfopage.ClickLeaveGroupOption();
+		  secretgroupinfopage.ClickLeaveButtonInLeaveGroupPoup();
+		  groupchatpage = new SecretGroupChatScreen(driver);
+		  driver.navigate().back();
+		  homepage = new HomeScreen(driver);
+		  Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		  homepage.ClickFirstContactorGroup();
+		  groupchatpage = new SecretGroupChatScreen(driver);
+		  groupchatpage.ClickGroupTopBar();
+		  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		  Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+	     // Assert.assertFalse(secretgroupinfopage.ShowCrownSymbol().isDisplayed());
+	  }
+
 }

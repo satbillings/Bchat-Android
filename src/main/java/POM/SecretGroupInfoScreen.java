@@ -21,6 +21,12 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='4 members']")
 	private WebElement MemberList;
 	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='3 members']")
+	private WebElement MemberList2;
+	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='1 members']")
+	private WebElement MemberList3;
+	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Group Info']")
 	private WebElement GroupInfoScreenTitle;
 	
@@ -67,7 +73,8 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.view.View[2]")
 	private WebElement NotifyForMentionOnlyOption;
 	
-	@AndroidFindBy(xpath = "//android.view.View[@index=''4]")
+	//@AndroidFindBy(xpath = "//android.view.View[@index=''4]")
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]")
 	private WebElement LeaveGroupOption;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/cntGroupNameDisplay")
@@ -95,8 +102,57 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/addButton")
 	public WebElement AddButton;
 	
+	@AndroidFindBy(xpath="//android.widget.LinearLayout[@index='1']")
+	//@AndroidFindBy(xpath="//android.widget.ImageView[@resource-id='io.beldex.bchat:id/actionIndicatorImageView']")
+	//@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/nameTextView\" and @text=\"check\"]")
+	public WebElement RemovableContact;
+		
+	@AndroidFindBy(id="io.beldex.bchat:id/removeFromGroup")
+	public WebElement RemoveUserFromGroupOption;
+	
+	@AndroidFindBy(xpath = "//android.view.View[@index='0']")
+	private WebElement AllNotificationOption;
+	
+	@AndroidFindBy(xpath = "//android.view.View[@index='1']")
+	private WebElement MentionNotificationOption;
+	
+	@AndroidFindBy(xpath = "//android.view.View[@index=''3]")
+	private WebElement OkbuttonInDisappearingMessagesPoup;
+	
+	//@AndroidFindBy(xpath = "//android.view.View[@index=''3]")
+	@AndroidFindBy(xpath = "//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	private WebElement LeaveButtonInLeaveGroupPoup;
+	
+	public void ClickLeaveGroupOption() {
+		LeaveGroupOption.click();	
+	}
+	
+	public void ClickLeaveButtonInLeaveGroupPoup() {
+		LeaveButtonInLeaveGroupPoup.click();	
+	}
+	
+	public void ClickOkbuttonInDisappearingMessagesPoup() {
+		OkbuttonInDisappearingMessagesPoup.click();	
+	}
+	
+	public void ClickMentionNotificationOption() {
+		MentionNotificationOption.click();	
+	}
+	
+	public void ClickAllNotificationOption() {
+		AllNotificationOption.click();	
+	}
+	
+	public void ClickDisappearingMessagesOption() {
+		DisappearingMessagesOption.click();	
+	}
+	
 	public String getEditGroupScreenTitle() {
 		return EditGroupScreenTitle.getText();
+	}
+	
+	public void ClickNotifyForMentionOnlyOption() {
+		NotifyForMentionOnlyOption.click();	
 	}
 	
 	public void ClickEditGroupOption() {
@@ -121,6 +177,19 @@ public class SecretGroupInfoScreen extends ActionsClass {
 		ApplyChangesButton.click();	
 	}
 	
+	public void RemoveMemberFromGroup() {
+		RemovableContact.click();
+		RemoveUserFromGroupOption.click();
+		ApplyChangesButton.click();	
+	}
+	
+	public void ClickRemovableContact() {
+		RemovableContact.click();	
+	} 
+	
+	public void ClickRemoveUserFromGroupOption() {
+		RemoveUserFromGroupOption.click();	
+	} 
 	public void ClickApplyOption() {
 		ApplyOption.click();	
 	} 
@@ -181,6 +250,14 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	 public String getMemberList() {
 			return MemberList.getText();
 		}
+	 
+	 public String getMemberList2() {
+			return MemberList2.getText();
+		}
+	 public String getMemberList3() {
+			return MemberList3.getText();
+		}
+	 
 	 
 	 public String getSearchMembersScreenTitle() {
 			return SearchMembersScreenTitle.getText();
