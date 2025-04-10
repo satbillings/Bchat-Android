@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
           <include name="PreSetup"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Secret_Group_Info_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

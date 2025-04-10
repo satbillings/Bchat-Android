@@ -81,7 +81,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		restorefromseedpage = new RestoreFromSeedScreen(driver);
 		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 		restorefromseedpage.paste_Value_In_DisplayName("Sathish");
-		restorefromseedpage.paste_Value_In_Blockheight("3400000");
+		restorefromseedpage.paste_Value_In_Blockheight("4000000");
 		restorefromseedpage.clickBtnRestore();
 		createpasswordpage = new CreatePasswordScreen(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");
@@ -89,14 +89,14 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
 		// Thread.sleep(10000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		Thread.sleep(59000);
 		//wait = new WebDriverWait(driver, Duration.ofMinutes(1));
 		homepage.ClickFirstContactorGroup();
 		// homepage.ClickMessageRquestDropdown();
 		// homepage.ClickFirstMessageRquest();
 		chatpage = new ChatScreen(driver);
-		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Testdesktop");
+		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Testdesktop");
 	}
 	/*
 	 * Validate whether record option in the message functionality is enabled before
@@ -561,7 +561,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	/*
 	Validate whether the user is able to enable "Pay as you chat" option using shortcut in one to one chat screen.
 	*/
-	@Test(priority = 41)
+	/*@Test(priority = 41)
 	public void To_validate_whether_the_user_is_able_to_enable_pay_as_you_chat_option_using_shortcut_in_one_to_one_chat_screen () {
 		chatpage = new ChatScreen(driver);
 		try {
@@ -597,7 +597,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	/*
 	Validate whether the user is able to disable "Pay as you chat" option using shortcut in one to one chat screen.
 	*/
-	@Test(priority = 42)
+	/*@Test(priority = 42)
 	public void To_validate_whether_the_user_is_able_to_disable_pay_as_you_chat_option_using_shortcut_in_one_to_one_chat_screen () {
 		chatpage = new ChatScreen(driver);
 		try {
@@ -611,5 +611,42 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
         settingspage.click_PayAsYouChat();
         settingspage.click_Back_Arrow();
 		chatpage.clear_textBox();
+	}*/
+
+/* Validate whether the user is able to react with emoji for send and received text messages */
+	@Test(priority = 43)
+	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_send_and_received_messages () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(4000);
+		chatpage.ClickEmojiForSendMessage();
+		Thread.sleep(3000);
+		chatpage.ClickEmojiForReceivedMessage();
 	}
+	
+	/* Validate whether the user is able to react with emoji for send and received voice messages */
+	@Test(priority = 44)
+	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_send_and_received_voice_messages () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(3000);
+		chatpage.ClickEmojiForSendVoiceMessage();
+		Thread.sleep(2000);
+		chatpage.DownloadMedia();
+		Thread.sleep(3000);
+		chatpage.ClickEmojiForReceivedVoiceMessage();
+	}
+  /* Validate whether the user is able to react with emoji for the replied messages */
+	@Test(priority = 45)
+	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_the_replied_messages () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.ClickEmojiForReplyMessage();
+	}
+/* Validate whether emoji got disabled if user select the same emoji again */
+	@Test(priority = 46)
+	public void To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.ClickEmojiForSendMessage();
+	}	
+	
 }

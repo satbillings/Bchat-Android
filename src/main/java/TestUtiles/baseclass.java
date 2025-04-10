@@ -70,7 +70,7 @@ public class baseclass {
 			//options.setCapability("appium:fullReset",true);
 			 options.setCapability("appium:autoGrantPermissions", true);
 			// options.setCapability("enforceXPath1",true);
-				options.setApp(System.getProperty("user.dir")+"\\Resources\\BChat Messenger.apk");
+				options.setApp(System.getProperty("user.dir")+"\\Resources\\Bchat-2.6.1-automation-test-arm64-v8a-emoji-reaction-release.apk");
 			
 		  	 options.setCapability("appium:appPackage", "io.beldex.bchat");	
 		  	 options.setCapability("appium:appActivity", "io.beldex.bchat.RoutingActivity");	

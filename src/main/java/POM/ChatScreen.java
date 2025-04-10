@@ -322,7 +322,44 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id ="io.beldex.bchat:id/deleteButton")
 	private WebElement DeleteButtonInAllMedia; 
 	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[1]")
+	private WebElement FirstSendMessage; 
 	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[2]")
+	private WebElement SecondReceivedMessage; 
+	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[3]")
+	private WebElement ThirdSendVoiceMessage; 
+	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[5]")
+	private WebElement FifthReceivedVoiceMessage; 
+	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[6]")
+	private WebElement SixthReplyMessage; 
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_1")
+	private WebElement FirstEmoji;
+	
+	public void ClickEmojiForSendMessage () {
+		   longPress(FirstSendMessage);
+		   FirstEmoji.click();
+	}
+	public void ClickEmojiForReceivedMessage () {
+		   longPress(SecondReceivedMessage);
+		   FirstEmoji.click();
+	}
+	public void ClickEmojiForSendVoiceMessage () {
+		   longPress(ThirdSendVoiceMessage);
+		   FirstEmoji.click();
+	}
+	public void ClickEmojiForReceivedVoiceMessage () {
+		   longPress(FifthReceivedVoiceMessage);
+		   FirstEmoji.click();
+	}
+	public void ClickEmojiForReplyMessage () {
+		   longPress(SixthReplyMessage);
+		   FirstEmoji.click();
+	}
 	public void MultiSelectMedia () {
 	   longPress(Media1);
 	   Media2.click();
