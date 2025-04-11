@@ -614,7 +614,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}*/
 
 /* Validate whether the user is able to react with emoji for send and received text messages */
-	@Test(priority = 43)
+	/*@Test(priority = 43)
 	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_send_and_received_messages () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(4000);
@@ -624,7 +624,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 	/* Validate whether the user is able to react with emoji for send and received voice messages */
-	@Test(priority = 44)
+	/*@Test(priority = 44)
 	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_send_and_received_voice_messages () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(3000);
@@ -635,18 +635,55 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.ClickEmojiForReceivedVoiceMessage();
 	}
   /* Validate whether the user is able to react with emoji for the replied messages */
-	@Test(priority = 45)
+	/*@Test(priority = 45)
 	public void To_validate_whether_the_user_is_able_to_react_with_emoji_for_the_replied_messages () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
 		chatpage.ClickEmojiForReplyMessage();
 	}
-/* Validate whether emoji got disabled if user select the same emoji again */
+
+	
+/* Validate whether the user is able to change reacted emoji */
 	@Test(priority = 46)
+	public void To_validate_whether_the_user_is_able_to_change_reacted_emoji() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(4000);
+		chatpage.ClickEmojiForThirdSendMessage();
+		Thread.sleep(4000);
+		chatpage.ChangeEmojiForThirdSendMessage();
+	}
+	
+ /* Validate the navigation to Reactions screen	
+  * Validate the working of the cancel icon in Reaction screen
+  * */
+	@Test(priority = 47)
+	public void To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(4000);
+		chatpage.ClickCloseIconForReactionPopup();
+	}
+	
+	/* Validate whether emoji got disabled if user select the same emoji again */
+	@Test(priority = 48)
 	public void To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
-		Thread.sleep(2000);
-		chatpage.ClickEmojiForSendMessage();
-	}	
+		Thread.sleep(3000);
+		chatpage.LongPressOnThirdMessage();
+		chatpage.ClickSecondEmoji();
+	}
+	
+  /* Validate the working of the tap to remove button in Reaction screen */
+	
+	@Test(priority = 49)
+	public void To_validate_the_working_of_the_Tap_to_Remove_button_in_Reaction_screen () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(3000);
+		chatpage.LongPressOnThirdMessage();
+		chatpage.ClickFirstEmoji();
+		Thread.sleep(3000);
+		chatpage.ClickEmojiReactionView1();
+		chatpage.ClickTapToRemoveButton();
+	}
+
 	
 }

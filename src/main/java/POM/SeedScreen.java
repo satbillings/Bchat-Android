@@ -73,7 +73,7 @@ public class SeedScreen extends ActionsClass{
 	}
 	public void pasteSeedValue() {
 		SeedTextBox.click();
-		driver.setClipboardText("cottage luxury glide joking kidneys legion azure hover amaze legion nifty governing fiat hornet lagoon snug irony etiquette tugs oust pact gymnast gymnast hitched pact");
+		driver.setClipboardText("gleeful amply stylishly necklace guys loincloth biology himself semifinal safety aisle haystack films icing ceiling aerial faked guide toxic popular ionic richly sifting system stylishly");
 	    btnPaste.click();
 	}
 	

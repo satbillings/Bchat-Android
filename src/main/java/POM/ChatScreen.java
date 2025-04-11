@@ -329,7 +329,10 @@ public class ChatScreen extends ActionsClass {
 	private WebElement SecondReceivedMessage; 
 	
 	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[3]")
-	private WebElement ThirdSendVoiceMessage; 
+	private WebElement ThirdSendMessage; 
+	
+	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[4]")
+	private WebElement FourthReceivedMessage; 
 	
 	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[5]")
 	private WebElement FifthReceivedVoiceMessage; 
@@ -337,8 +340,127 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[6]")
 	private WebElement SixthReplyMessage; 
 	
+	@AndroidFindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/emojiReactionsView\"])[1]")
+	private WebElement EmojiReactionView1;
+	
+	@AndroidFindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/emojiReactionsView\"])[2]")
+	private WebElement EmojiReactionView2;
+	
 	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_1")
 	private WebElement FirstEmoji;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_2")
+	private WebElement SecondEmoji;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/dismissImage")
+	private WebElement CloseIconForReactionPopup;
+	
+	@AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/reactions_bottom_view_recipient_recycler_all\"]/android.view.ViewGroup")
+	private WebElement TapToRemoveOptionForReactionPopup;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/reactions_bottom_view_tab_to_remove")
+	private WebElement TapToRemoveButton;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_3")
+	private WebElement ThirdEmoji;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_4")
+	private WebElement FourthEmoji;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/reaction_5")
+	private WebElement FifthEmoji;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/reaction_7_background")
+	private WebElement MoreEmojiButton;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/reactions_bottom_view_parent")
+	private WebElement reactionsScreen;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/reaction_count")
+	private WebElement ReactionsCount;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/dismissImage")
+	private WebElement cancelIconInreactions;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/reactions_pill_emoji")
+	private WebElement reactedEmoji;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/searchEditText")
+	private WebElement SearchEmojiTextBox;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/react_with_any_emoji_page_view")
+	private WebElement SuggestedEmojis;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"No results found\"]")
+	private WebElement emptyEmojiScreen;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search emoji']")
+	private WebElement SearchEmojiTextBoxPlaceholder;
+	
+	public void Set_Values_In_SearchEmoji_TextBox (String value) {
+		SearchEmojiTextBox.sendKeys(value);
+		}
+	 
+	 public void Paste_values_In_SearchEmoji_TextBox (String value) {
+			Copy_And_Paste_Values(value, SearchEmojiTextBox);
+		}
+	 
+	 public void Clear_EnterName_textbox () {
+		 SearchEmojiTextBox.clear();
+		}
+	
+	public void ClickSearchEmojiTextBox () {
+		SearchEmojiTextBox.click();
+	}
+	
+	public void ClickMoreEmojiButton () {
+		MoreEmojiButton.click();
+	}
+	
+	public String getSearchEmojiTextBoxPlaceholder () {
+		return SearchEmojiTextBoxPlaceholder.getText();
+	}
+	
+	public void ClickTapToRemoveButton () {
+		TapToRemoveButton.click();
+	}
+	
+	public void ClickEmojiReactionView1 () {
+		EmojiReactionView1.click();
+	}
+	
+	public void ClickFirstEmoji () {
+		FirstEmoji.click();
+	}
+	
+	public void LongPressOnThirdMessage() {
+		   longPress(ThirdSendMessage);
+	}
+	
+	public void LongPressOnFourthMessage() {
+		   longPress(FourthReceivedMessage);
+	}
+	
+	public void ClickSecondEmoji () {
+		SecondEmoji.click();
+	}
+	
+	public void ClickFirstEmojiReactionView () {
+		EmojiReactionView1.click();
+	}
+	
+	public void ClickSecondEmojiReactionView () {
+		EmojiReactionView2.click();
+	}
+	
+	public void ClickCloseIconForReactionPopup () {
+		EmojiReactionView1.click();
+		CloseIconForReactionPopup.click();
+	}
+	
+	public void ClickTapToRemoveOptionForReactionPopup () {
+		TapToRemoveOptionForReactionPopup.click();
+	}
 	
 	public void ClickEmojiForSendMessage () {
 		   longPress(FirstSendMessage);
@@ -348,10 +470,22 @@ public class ChatScreen extends ActionsClass {
 		   longPress(SecondReceivedMessage);
 		   FirstEmoji.click();
 	}
-	public void ClickEmojiForSendVoiceMessage () {
-		   longPress(ThirdSendVoiceMessage);
+	public void ClickEmojiForThirdSendMessage () {
+		   longPress(ThirdSendMessage);
 		   FirstEmoji.click();
 	}
+	
+	public void ChangeEmojiForThirdSendMessage () {
+		   longPress(ThirdSendMessage);
+		   SecondEmoji.click();
+	}
+	
+	
+	public void ClickEmojiForFourthReceivedMessage () {
+		   longPress(FourthReceivedMessage);
+		   FirstEmoji.click();
+	}
+	
 	public void ClickEmojiForReceivedVoiceMessage () {
 		   longPress(FifthReceivedVoiceMessage);
 		   FirstEmoji.click();
