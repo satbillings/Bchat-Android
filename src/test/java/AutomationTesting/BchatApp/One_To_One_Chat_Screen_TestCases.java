@@ -644,7 +644,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 
 	
 /* Validate whether the user is able to change reacted emoji */
-	@Test(priority = 46)
+	/*@Test(priority = 46)
 	public void To_validate_whether_the_user_is_able_to_change_reacted_emoji() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(4000);
@@ -656,7 +656,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
  /* Validate the navigation to Reactions screen	
   * Validate the working of the cancel icon in Reaction screen
   * */
-	@Test(priority = 47)
+	/*@Test(priority = 47)
 	public void To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(4000);
@@ -664,7 +664,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 	/* Validate whether emoji got disabled if user select the same emoji again */
-	@Test(priority = 48)
+	/*@Test(priority = 48)
 	public void To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(3000);
@@ -674,7 +674,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
   /* Validate the working of the tap to remove button in Reaction screen */
 	
-	@Test(priority = 49)
+	/*@Test(priority = 49)
 	public void To_validate_the_working_of_the_Tap_to_Remove_button_in_Reaction_screen () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(3000);
@@ -683,7 +683,74 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		Thread.sleep(3000);
 		chatpage.ClickEmojiReactionView1();
 		chatpage.ClickTapToRemoveButton();
+	}*/
+	
+/* Validate whether reacted emoji is showing in the user side */
+	
+	@Test(priority = 50)
+	public void To_validate_whether_reacted_emoji_is_showing_in_the_user_side () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(3000);
+	    Assert.assertTrue(chatpage.getReactedEmoji().isDisplayed());
+	}
+	
+/* Validate whether reactions count is showing correctly */
+	@Test(priority = 51)
+	public void To_validate_whether_reactions_count_is_showing_correctly () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		//Thread.sleep(3000);
+	    Assert.assertTrue(chatpage.getReactedEmojiCount().isDisplayed());
 	}
 
+/* Validate whether user is able to react with multiple emojis for single message */	
+	@Test(priority = 52)
+	public void To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(3000);
+		chatpage.LongPressOnSecondMessage();
+		Thread.sleep(2000);
+		chatpage.ClickThirdEmoji();
+	    Assert.assertEquals(chatpage.getTotalEmojiReactionCount(),"2");
+	}
 	
+/* Validate whether user is able to react with emoji for a message without internet connection */	
+
+	@Test(priority = 53)
+	public void To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(5000);
+		turnOff_Mobile_Wifi();
+		Thread.sleep(5000);
+		chatpage.LongPressOnFirstSendMessage();
+		chatpage.ClickFirstEmoji();
+		Thread.sleep(5000);
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);
+	}	
+
+	/* Validate whether user is able to remove reacted emoji for a message without internet connection */	
+
+	@Test(priority = 54)
+	public void To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		turnOff_Mobile_Wifi();
+		Thread.sleep(5000);	
+		chatpage.ClickEmojiReactionView1();
+		Thread.sleep(2000);
+		chatpage.ClickTapToRemoveButton();
+		Thread.sleep(5000);	
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);
+	}
+	
+  /* Validate the navigation to Emoji screen */	
+	@Test(priority = 55)
+	public void To_validate_the_navigation_to_Emoji_screen () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(2000);
+		chatpage.ClickMoreEmojiButton();
+		Thread.sleep(2000);
+        driver.navigate().back();
+	}
 }

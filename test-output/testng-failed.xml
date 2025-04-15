@@ -8,10 +8,11 @@
     <classes>
       <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
         <methods>
-          <include name="To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_the_user_is_able_to_change_reacted_emoji"/>
+          <include name="To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message"/>
+          <include name="To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection"/>
+          <include name="To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>

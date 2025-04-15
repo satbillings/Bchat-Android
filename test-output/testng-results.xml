@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-11T16:51:03 IST" name="Suite" finished-at="2025-04-11T16:55:36 IST" duration-ms="273643">
+  <suite started-at="2025-04-15T17:00:56 IST" name="Suite" finished-at="2025-04-15T17:07:22 IST" duration-ms="386024">
     <groups>
     </groups>
-    <test started-at="2025-04-11T16:51:03 IST" name="Test" finished-at="2025-04-11T16:55:36 IST" duration-ms="273643">
+    <test started-at="2025-04-15T17:00:56 IST" name="Test" finished-at="2025-04-15T17:07:22 IST" duration-ms="386024">
       <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:51:03 IST" name="Configure" finished-at="2025-04-11T16:51:18 IST" duration-ms="15591" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:00:56 IST" name="Configure" finished-at="2025-04-15T17:01:13 IST" duration-ms="16517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:51:18 IST" name="PreSetup" finished-at="2025-04-11T16:52:46 IST" duration-ms="87823" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:01:13 IST" name="PreSetup" finished-at="2025-04-15T17:03:01 IST" duration-ms="107707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_whether_the_user_is_able_to_change_reacted_emoji()[pri:46, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:52:46 IST" name="To_validate_whether_the_user_is_able_to_change_reacted_emoji" finished-at="2025-04-11T16:53:07 IST" duration-ms="20772" status="PASS">
+        <test-method signature="To_validate_whether_reacted_emoji_is_showing_in_the_user_side()[pri:50, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:03:01 IST" name="To_validate_whether_reacted_emoji_is_showing_in_the_user_side" finished-at="2025-04-15T17:03:08 IST" duration-ms="7412" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_is_able_to_change_reacted_emoji -->
-        <test-method signature="To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen()[pri:47, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:53:07 IST" name="To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen" finished-at="2025-04-11T16:54:02 IST" duration-ms="54860" status="PASS">
+        </test-method> <!-- To_validate_whether_reacted_emoji_is_showing_in_the_user_side -->
+        <test-method signature="To_validate_whether_reactions_count_is_showing_correctly()[pri:51, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:03:08 IST" name="To_validate_whether_reactions_count_is_showing_correctly" finished-at="2025-04-15T17:03:08 IST" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_navigation_to_Reaction_screen_To_validate_the_working_of_the_Cancel_icon_in_Reaction_screen -->
-        <test-method signature="To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again()[pri:48, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:54:02 IST" name="To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again" finished-at="2025-04-11T16:55:02 IST" duration-ms="60083" status="PASS">
+        </test-method> <!-- To_validate_whether_reactions_count_is_showing_correctly -->
+        <test-method signature="To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message()[pri:52, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:03:08 IST" name="To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message" finished-at="2025-04-15T17:03:20 IST" duration-ms="11969" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_emoji_got_disabled_if_user_select_the_same_emoji_again -->
-        <test-method signature="To_validate_the_working_of_the_Tap_to_Remove_button_in_Reaction_screen()[pri:49, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:55:02 IST" name="To_validate_the_working_of_the_Tap_to_Remove_button_in_Reaction_screen" finished-at="2025-04-11T16:55:36 IST" duration-ms="33722" status="PASS">
+        </test-method> <!-- To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message -->
+        <test-method signature="To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection()[pri:53, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:03:20 IST" name="To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection" finished-at="2025-04-15T17:05:18 IST" duration-ms="117281" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_working_of_the_Tap_to_Remove_button_in_Reaction_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-04-11T16:55:36 IST" name="closeApp" finished-at="2025-04-11T16:55:36 IST" duration-ms="734" status="PASS">
+        </test-method> <!-- To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection -->
+        <test-method signature="To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection()[pri:54, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:05:18 IST" name="To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection" finished-at="2025-04-15T17:07:07 IST" duration-ms="109613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection -->
+        <test-method signature="To_validate_the_navigation_to_Emoji_screen()[pri:55, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:07:07 IST" name="To_validate_the_navigation_to_Emoji_screen" finished-at="2025-04-15T17:07:21 IST" duration-ms="14148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_navigation_to_Emoji_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@61544ae6]" started-at="2025-04-15T17:07:21 IST" name="closeApp" finished-at="2025-04-15T17:07:22 IST" duration-ms="899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

@@ -376,14 +376,14 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/reactions_bottom_view_parent")
 	private WebElement reactionsScreen;
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/reaction_count")
+	@AndroidFindBy(id="io.beldex.bchat:id/total_emoji_count")
 	private WebElement ReactionsCount;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/dismissImage")
 	private WebElement cancelIconInreactions;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/reactions_pill_emoji")
-	private WebElement reactedEmoji;
+	private WebElement ReactedEmoji;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/searchEditText")
 	private WebElement SearchEmojiTextBox;
@@ -396,6 +396,21 @@ public class ChatScreen extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search emoji']")
 	private WebElement SearchEmojiTextBoxPlaceholder;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='2']")
+	private WebElement TotalEmojiReactionCount;
+	
+	public String getTotalEmojiReactionCount () {
+		return TotalEmojiReactionCount.getText();
+				}
+	
+	public WebElement getReactedEmoji () {
+		return ReactedEmoji;
+	}
+	
+	public WebElement getReactedEmojiCount () {
+		return ReactionsCount;
+				}
 	
 	public void Set_Values_In_SearchEmoji_TextBox (String value) {
 		SearchEmojiTextBox.sendKeys(value);
@@ -431,6 +446,18 @@ public class ChatScreen extends ActionsClass {
 	
 	public void ClickFirstEmoji () {
 		FirstEmoji.click();
+	}
+	
+	public void ClickThirdEmoji () {
+		ThirdEmoji.click();
+	}
+	
+	public void LongPressOnFirstSendMessage() {
+		   longPress(FirstSendMessage);
+	}
+	
+	public void LongPressOnSecondMessage() {
+		   longPress(SecondReceivedMessage);
 	}
 	
 	public void LongPressOnThirdMessage() {
