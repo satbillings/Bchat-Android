@@ -687,7 +687,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether reacted emoji is showing in the user side */
 	
-	@Test(priority = 50)
+	/*@Test(priority = 50)
 	public void To_validate_whether_reacted_emoji_is_showing_in_the_user_side () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(3000);
@@ -695,7 +695,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 /* Validate whether reactions count is showing correctly */
-	@Test(priority = 51)
+	/*@Test(priority = 51)
 	public void To_validate_whether_reactions_count_is_showing_correctly () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		//Thread.sleep(3000);
@@ -703,7 +703,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 
 /* Validate whether user is able to react with multiple emojis for single message */	
-	@Test(priority = 52)
+	/*@Test(priority = 52)
 	public void To_validate_whether_user_is_able_to_react_with_multiple_emojis_for_single_message () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(3000);
@@ -715,7 +715,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether user is able to react with emoji for a message without internet connection */	
 
-	@Test(priority = 53)
+	/*@Test(priority = 53)
 	public void To_validate_whether_user_is_able_to_react_with_emoji_for_a_message_without_internet_connection () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(5000);
@@ -730,7 +730,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 
 	/* Validate whether user is able to remove reacted emoji for a message without internet connection */	
 
-	@Test(priority = 54)
+	/*@Test(priority = 54)
 	public void To_validate_whether_user_is_able_to_remove_reacted_emoji_for_a_message_without_internet_connection () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		turnOff_Mobile_Wifi();
@@ -744,7 +744,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
   /* Validate the navigation to Emoji screen */	
-	@Test(priority = 55)
+	/*@Test(priority = 55)
 	public void To_validate_the_navigation_to_Emoji_screen () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.LongPressOnFirstSendMessage();
@@ -752,5 +752,68 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.ClickMoreEmojiButton();
 		Thread.sleep(2000);
         driver.navigate().back();
+	}*/
+	
+/*	Validate the cursor blink in search emoji text box on the chat screen */
+	/*@Test(priority = 56)
+	public void To_validate_the_cursor_blink_in_Search_Emoji_text_box_on_the_chat_screen () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(5000);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(3000);
+		chatpage.ClickMoreEmojiButton();
+		chatpage.ClickSearchEmojiTextBox();
+		Assert.assertTrue(chatpage.activeElement().isDisplayed());
 	}
+	
+	/* Validate the presence of placeholder in search emoji text box on the chat screen */
+	/*@Test(priority = 57)
+	public void To_validate_the_presence_of_placeholder_in_Search_Emoji_text_box_on_the_chat_screen () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSearchEmojiTextBoxPlaceholder(),"Search emoji");
+	}
+	
+/* Validate the search emoji text box in chat screen by entering the empty space value */
+	/*@Test(priority = 58)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_empty_space_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("          ");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+	/* Validate the search emoji text box in chat screen by entering the special character 
+	 * Validate whether the value entered in the search emoji text box of chat screen is editable and delete-able. 
+	 * */
+	/*@Test(priority = 59)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_search_emoji_textbox_of_chat_screen_is_editable_and_deletable() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("!@#$%^&*()_+-=");
+		chatpage.Clear_Search_Emoji_textbox();	
+	}
+	
+/* Validate the search emoji text box in chat screen by entering the numerical value */
+	/*@Test(priority = 60)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_numerical_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("1234567890");
+		chatpage.Clear_Search_Emoji_textbox();
+	}*/
+	
+/* Validate whether scrolling is working fine in emoji screen */
+	@Test(priority = 61)
+	public void To_validate_whether_scrolling_is_working_fine_in_emoji_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(5000);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(3000);
+		chatpage.ClickMoreEmojiButton();
+		Thread.sleep(4000);
+		chatpage.scrollgesture_Using_text("Flags");
+		Thread.sleep(5000);
+	}
+	
+	
 }

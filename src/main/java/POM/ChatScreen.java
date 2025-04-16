@@ -388,21 +388,32 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/searchEditText")
 	private WebElement SearchEmojiTextBox;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/clear_search_icon")
+	private WebElement CloseIconInSearchEmojiTextBox;
+	
 	@AndroidFindBy(id="io.beldex.bchat:id/react_with_any_emoji_page_view")
 	private WebElement SuggestedEmojis;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"No results found\"]")
 	private WebElement emptyEmojiScreen;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search emoji']")
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='Search emoji']")
 	private WebElement SearchEmojiTextBoxPlaceholder;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='No results found']")
+	private WebElement NoResultsFoundTextInEmojiScreen;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='2']")
 	private WebElement TotalEmojiReactionCount;
 	
+	public String getNoResultsFoundTextInEmojiScreen () {
+		return NoResultsFoundTextInEmojiScreen.getText();
+				}
+	
 	public String getTotalEmojiReactionCount () {
 		return TotalEmojiReactionCount.getText();
 				}
+	
 	
 	public WebElement getReactedEmoji () {
 		return ReactedEmoji;
@@ -420,12 +431,20 @@ public class ChatScreen extends ActionsClass {
 			Copy_And_Paste_Values(value, SearchEmojiTextBox);
 		}
 	 
-	 public void Clear_EnterName_textbox () {
+	 public void Clear_Search_Emoji_textbox() {
 		 SearchEmojiTextBox.clear();
 		}
 	
 	public void ClickSearchEmojiTextBox () {
 		SearchEmojiTextBox.click();
+	}
+	
+	public void ClickSuggestedEmojis () {
+		SuggestedEmojis.click();
+	}
+	
+	public void ClickCloseIconInSearchEmojiTextBox () {
+		CloseIconInSearchEmojiTextBox.click();
 	}
 	
 	public void ClickMoreEmojiButton () {
