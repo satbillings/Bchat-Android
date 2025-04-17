@@ -89,8 +89,6 @@ public class AccountSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Verifying...']")
 	private WebElement loadingAnimationScreen;
 	
-	
-	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Verified']")
 	private WebElement btnVerified;
 	
@@ -138,6 +136,45 @@ public class AccountSettingsScreen extends ActionsClass {
 
 	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Initial Release']")
 	private WebElement firstLogContent;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.view.View[1]")
+	private WebElement PictureEditOption;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.view.View[5]")
+	private WebElement CameraIcon;
+	
+	@AndroidFindBy(xpath="//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	private WebElement UploadPictureButton;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"com.android.intentresolver:id/resolver_item_icon\"])[1]")
+	private WebElement CameraOption;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"com.android.intentresolver:id/resolver_item_icon\"])[2]")
+	private WebElement GalleryOption;
+	
+	@AndroidFindBy(accessibility =",Item 1,Photo,,17 April 2025 at 10:14 am")
+	private WebElement PictureInGallery;
+	
+	@AndroidFindBy(accessibility ="Select")
+	private WebElement SelectIconInGallery;
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/crop_image_menu_crop")
+	private WebElement CropIcon;
+	
+	@AndroidFindBy(xpath ="//android.widget.ScrollView/android.view.View[1]")
+	private WebElement DoneButton;
+	
+	@AndroidFindBy(xpath ="//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	private WebElement RemovePictureButton;
+	
+	@AndroidFindBy(accessibility ="Close")
+	private WebElement CloseIconInProfilePicturePopup;
+	
+	@AndroidFindBy(id ="com.oplus.camera:id/shutter_button")
+	private WebElement CaptureButton;
+	
+	@AndroidFindBy(id ="com.oplus.camera:id/done_button")
+	private WebElement CaptureDoneButton;
 	
 	public void Click_back_arrow () {
 		btnBackArrow.click();

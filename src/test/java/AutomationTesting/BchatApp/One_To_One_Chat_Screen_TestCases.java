@@ -802,18 +802,59 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.Clear_Search_Emoji_textbox();
 	}*/
 	
-/* Validate whether scrolling is working fine in emoji screen */
+/* Validate the Search Emoji text box in chat screen by entering the alphabets both in upper case and lower case letter */
 	@Test(priority = 61)
-	public void To_validate_whether_scrolling_is_working_fine_in_emoji_screen() throws InterruptedException {
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(5000);
 		chatpage.LongPressOnFirstSendMessage();
 		Thread.sleep(3000);
 		chatpage.ClickMoreEmojiButton();
-		Thread.sleep(4000);
-		chatpage.scrollgesture_Using_text("Flags");
-		Thread.sleep(5000);
+		chatpage.ClickSearchEmojiTextBox();
+		chatpage.Set_Values_In_SearchEmoji_TextBox("ABCDEF");
+		chatpage.Clear_Search_Emoji_textbox();
+		chatpage.Set_Values_In_SearchEmoji_TextBox("abcdef");
+		chatpage.Clear_Search_Emoji_textbox();
 	}
+	
+/* Validate whether the user is able enter a lengthy value in the search emoji text box in chat screen */
+	@Test(priority = 62)
+	public void To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Search_Emoji_text_box_in_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+
+/* Validate the Search Emoji text box in chat screen by entering the valid value */
+	@Test(priority = 63)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_valid_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("Happy");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+/* Validate whether the paste option is working on the search emoji text box in chat screen */
+	@Test(priority = 64)
+	public void To_validate_whether_paste_option_is_working_on_the_Search_Emoji_text_box_in_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Paste_values_In_SearchEmoji_TextBox("Smile");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+/* Validate the working of close icon in search emoji text box on emoji screen */
+	@Test(priority = 65)
+	public void To_validate_working_of_Close_icon_in_Search_Emoji_text_box_in_Emoji_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_SearchEmoji_TextBox("Hi");
+		chatpage.ClickCloseIconInSearchEmojiTextBox();
+	}
+
+
+ 	
 	
 	
 }

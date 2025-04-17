@@ -1,89 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-16T15:16:27 IST" name="Suite" finished-at="2025-04-16T15:23:03 IST" duration-ms="395963">
+  <suite started-at="2025-04-17T11:23:32 IST" name="Suite" finished-at="2025-04-17T11:28:08 IST" duration-ms="276557">
     <groups>
     </groups>
-    <test started-at="2025-04-16T15:16:27 IST" name="Test" finished-at="2025-04-16T15:23:03 IST" duration-ms="395963">
+    <test started-at="2025-04-17T11:23:32 IST" name="Test" finished-at="2025-04-17T11:28:08 IST" duration-ms="276557">
       <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@35432107]" started-at="2025-04-16T15:16:27 IST" name="Configure" finished-at="2025-04-16T15:16:43 IST" duration-ms="16174" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:23:32 IST" name="Configure" finished-at="2025-04-17T11:23:49 IST" duration-ms="17266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@35432107]" started-at="2025-04-16T15:16:43 IST" name="PreSetup" finished-at="2025-04-16T15:19:01 IST" duration-ms="137864" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:23:49 IST" name="PreSetup" finished-at="2025-04-17T11:25:48 IST" duration-ms="118666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_whether_scrolling_is_working_fine_in_emoji_screen()[pri:61, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@35432107]" started-at="2025-04-16T15:19:01 IST" name="To_validate_whether_scrolling_is_working_fine_in_emoji_screen" finished-at="2025-04-16T15:23:01 IST" duration-ms="240090" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [822b35cf-e275-497f-bb94-752f2d59a1ca, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector()).scrollIntoView(text("Flags"));}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 822b35cf-e275-497f-bb94-752f2d59a1ca]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [822b35cf-e275-497f-bb94-752f2d59a1ca, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector()).scrollIntoView(text("Flags"));}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 822b35cf-e275-497f-bb94-752f2d59a1ca
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at TestUtiles.ActionsClass.scrollgesture_Using_text(ActionsClass.java:34)
-at AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases.To_validate_whether_scrolling_is_working_fine_in_emoji_screen(One_To_One_Chat_Screen_TestCases.java:814)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter()[pri:61, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:25:48 IST" name="To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter" finished-at="2025-04-17T11:27:04 IST" duration-ms="76440" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_scrolling_is_working_fine_in_emoji_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@35432107]" started-at="2025-04-16T15:23:02 IST" name="closeApp" finished-at="2025-04-16T15:23:03 IST" duration-ms="754" status="PASS">
+        </test-method> <!-- To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Search_Emoji_text_box_in_chat_screen()[pri:62, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:27:04 IST" name="To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Search_Emoji_text_box_in_chat_screen" finished-at="2025-04-17T11:27:49 IST" duration-ms="45050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Search_Emoji_text_box_in_chat_screen -->
+        <test-method signature="To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_valid_value()[pri:63, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:27:49 IST" name="To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_valid_value" finished-at="2025-04-17T11:27:55 IST" duration-ms="6092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_valid_value -->
+        <test-method signature="To_validate_whether_paste_option_is_working_on_the_Search_Emoji_text_box_in_chat_screen()[pri:64, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:27:55 IST" name="To_validate_whether_paste_option_is_working_on_the_Search_Emoji_text_box_in_chat_screen" finished-at="2025-04-17T11:28:02 IST" duration-ms="7290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_paste_option_is_working_on_the_Search_Emoji_text_box_in_chat_screen -->
+        <test-method signature="To_validate_working_of_Close_icon_in_Search_Emoji_text_box_in_Emoji_screen()[pri:65, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:28:03 IST" name="To_validate_working_of_Close_icon_in_Search_Emoji_text_box_in_Emoji_screen" finished-at="2025-04-17T11:28:07 IST" duration-ms="4845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_working_of_Close_icon_in_Search_Emoji_text_box_in_Emoji_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@a3d9978]" started-at="2025-04-17T11:28:07 IST" name="closeApp" finished-at="2025-04-17T11:28:08 IST" duration-ms="835" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
