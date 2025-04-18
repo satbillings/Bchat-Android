@@ -89,6 +89,13 @@ public class MenuScreen extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Forward']")
 	private WebElement ForwardScreenTitle;
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/profile_container")
+	private WebElement AccountSettingsOption;
+	
+	public void ClickAccountSettingsOption() {
+		AccountSettingsOption.click();
+	}
 	    
 	public void LongpressOnHelpOption () {
 		 longPress(optionHelp);

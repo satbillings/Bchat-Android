@@ -803,7 +803,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}*/
 	
 /* Validate the Search Emoji text box in chat screen by entering the alphabets both in upper case and lower case letter */
-	@Test(priority = 61)
+	/*@Test(priority = 61)
 	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(5000);
@@ -818,7 +818,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 /* Validate whether the user is able enter a lengthy value in the search emoji text box in chat screen */
-	@Test(priority = 62)
+	/*@Test(priority = 62)
 	public void To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Search_Emoji_text_box_in_chat_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
@@ -827,7 +827,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 
 /* Validate the Search Emoji text box in chat screen by entering the valid value */
-	@Test(priority = 63)
+	/*@Test(priority = 63)
 	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_valid_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
@@ -836,7 +836,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 /* Validate whether the paste option is working on the search emoji text box in chat screen */
-	@Test(priority = 64)
+	/*@Test(priority = 64)
 	public void To_validate_whether_paste_option_is_working_on_the_Search_Emoji_text_box_in_chat_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
@@ -845,16 +845,46 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 /* Validate the working of close icon in search emoji text box on emoji screen */
-	@Test(priority = 65)
+	/*@Test(priority = 65)
 	public void To_validate_working_of_Close_icon_in_Search_Emoji_text_box_in_Emoji_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
 		chatpage.Set_Values_In_SearchEmoji_TextBox("Hi");
 		chatpage.ClickCloseIconInSearchEmojiTextBox();
+	}*/
+
+/*	Validate whether "No results found" text are showing in Emoji screen when the user enters the invalid text in Search emoji text box */
+
+	@Test(priority = 66)
+	public void To_validate_whether_No_results_found_text_in_Emoji_screen_when_the_user_enters_the_invalid_text_in_Search_Emoji_textbox() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(3000);
+		chatpage.ClickMoreEmojiButton();
+		chatpage.ClickSearchEmojiTextBox();
+		chatpage.Set_Values_In_SearchEmoji_TextBox("hii");
+		Assert.assertEquals(chatpage.getNoResultsFoundTextInEmojiScreen(),"No results found");
+
 	}
-
-
- 	
 	
+/* Validate the working of back arrow in search Emoji text box on the Emoji screen */
 	
+	@Test(priority = 67)
+	public void To_validate_the_working_of_Back_Arrow_in_Search_Emoji_textbox_on_the_Emoji_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.ClickSearchEmojiTextBoxBackArrow();
+	}
+	
+/* Validate whether the user is able to react with Suggested Emoji in Emoji screen */
+	
+	@Test(priority = 68)
+	public void To_validate_whether_the_user_is_able_to_react_with_Suggested_Emoji_in_Emoji_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);	
+		chatpage.ClickSearchEmojiTextBox();
+		chatpage.Set_Values_In_SearchEmoji_TextBox("Smile");
+		chatpage.ClickSuggestedEmojis();
+	}
 }

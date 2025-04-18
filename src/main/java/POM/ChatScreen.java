@@ -400,11 +400,22 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.EditText[@text='Search emoji']")
 	private WebElement SearchEmojiTextBoxPlaceholder;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@text='No results found']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='No results found']")
 	private WebElement NoResultsFoundTextInEmojiScreen;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='2']")
 	private WebElement TotalEmojiReactionCount;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/back_to_emoji_icon")
+	private WebElement SearchEmojiTextBoxBackArrow;
+	
+	public void ClickSearchEmojiTextBoxBackArrow() {
+		SearchEmojiTextBoxBackArrow.click();
+	}
+	
+	public void ClickSuggestedEmojis () {
+		SuggestedEmojis.click();
+	}
 	
 	public String getNoResultsFoundTextInEmojiScreen () {
 		return NoResultsFoundTextInEmojiScreen.getText();
@@ -439,9 +450,6 @@ public class ChatScreen extends ActionsClass {
 		SearchEmojiTextBox.click();
 	}
 	
-	public void ClickSuggestedEmojis () {
-		SuggestedEmojis.click();
-	}
 	
 	public void ClickCloseIconInSearchEmojiTextBox () {
 		CloseIconInSearchEmojiTextBox.click();

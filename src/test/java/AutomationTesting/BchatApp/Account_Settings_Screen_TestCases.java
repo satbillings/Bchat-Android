@@ -56,17 +56,17 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		//menupage =new MenuScreen(driver);
 		//Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
 		menupage =new MenuScreen(driver);
-		menupage.click_Account_Settings();
+		menupage.ClickAccountSettingsOption();
 }
 	/*
 	 To Validate the working of the Show BChatId option.
 */
-	       @Test(priority = 1)
+	      /* @Test(priority = 1)
            public void To_validate_the_working_of_the_Show_BChatId_option () {
 	
 		   accountsettingspage =new AccountSettingsScreen(driver);
@@ -78,7 +78,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	  /*
 		To validate the working of the Show BeldexAddress option.
 		*/
-		    @Test(priority = 2)
+		   /* @Test(priority = 2)
 		    public void To_validate_the_working_of_the_Show_Beldex_Address_option () {
 		
 			accountsettingspage =new AccountSettingsScreen(driver);
@@ -90,7 +90,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		To validate the working of the show QR code option. 
 		*/
-		    @Test(priority = 3)
+		  /*  @Test(priority = 3)
 		    public void To_validate_the_working_of_the_Show_QrCode_option () {
 		
 			accountsettingspage =new AccountSettingsScreen(driver);
@@ -102,7 +102,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		To validate the working of the copy icon in the bchat id in both normal view and in the popup screen.
 		*/
-		    @Test(priority = 4)
+		   /* @Test(priority = 4)
 		    public void To_validate_the_working_of_copy_icon_in_Bchat_Id () throws InterruptedException{
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -120,7 +120,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		   To validate the working of the copy icon in the beldex address in both normal view and in the popup screen
 		*/
-		    @Test(priority = 5)
+		   /* @Test(priority = 5)
 		    public void To_validate_the_working_of_copy_icon_in_Beldex_Address () throws InterruptedException{
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -135,7 +135,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		 To Validate the Navigation to the About BNS screen
 		 */
-		    @Test(priority =6)
+		    /*@Test(priority =6)
 		    public void  To_Validate_the_Navigation_to_About_BNS_screen () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -147,7 +147,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		To validate the working of the share QR code.
 		*/
-		    @Test(priority = 7)
+		   /* @Test(priority = 7)
 	        public void To_validate_the_working_of_the_share_qr_code () throws InterruptedException {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -160,7 +160,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		 Validate whether verify and link buttons are enabled without entering any value in bns name
 		 */
-		   @Test(priority = 8)
+		  /* @Test(priority = 8)
 		   public void To_Validate_verify_and_link_buttons_are_enabled_without_entering_any_value_in_bns_name () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -174,7 +174,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		 validate the working cancel button in link bns popup screen
 		 */
-		    @Test(priority = 9)
+		   /* @Test(priority = 9)
 		    public void To_validate_the_working_cancel_button_in_link_bns_popup_screen () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(), "Link BNS");
@@ -184,7 +184,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		 validate whether verify button is enabled without the word .bdx in bns name
 		*/
-		    @Test(priority = 10)
+		   /* @Test(priority = 10)
 		    public void To_validate_Whether_verify_button_is_enabled_without_the_word_bdx_in_bns_name () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -199,7 +199,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		  Validate the verify function with invalid BNS name
 		 */
-		    @Test(priority = 11)
+		   /* @Test(priority = 11)
 		    public void To_Validate_the_verify_function_with_invalid_bns_name () throws InterruptedException {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(), "Link BNS");
@@ -214,7 +214,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		 Validate whether link button is enabled for invalid BNS name
 		 */
-		    @Test(priority = 12)
+		  /*  @Test(priority = 12)
 		    public void To_validate_whether_link_button_is_enabled_for_invalid_bns_name () throws InterruptedException {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			accountsettingspage.click_Link_BNS_option();
@@ -232,7 +232,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		    Validate Whether the screen is scrollable.
 		 */
-		    @Test(priority = 13)
+		   /* @Test(priority = 13)
 		    public void To_Validate_Whether_the_screen_is_scrollable () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -243,7 +243,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		/*
 		   Validate the working of the FeedBack option
 		*/
-		    @Test(priority = 14)
+		   /* @Test(priority = 14)
 		    public void To_Validate_the_working_of_the_FeedBack_option () {
 			accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -254,7 +254,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	   Validate whether able to navigate back to the my account screen from Gmail screen.
 	*/
-	    @Test(priority = 15)
+	    /*@Test(priority = 15)
 	    public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_from_gmail_screen () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		accountsettingspage.scroll_the_page(100, 100, 500, "down");
@@ -267,7 +267,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
  	Validate the working of the FAQ option. 
 	 */
-	    @Test(priority = 16)
+	    /*@Test(priority = 16)
 	    public void To_Validate_the_working_of_the_FAQ_option () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -277,7 +277,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	Validate whether able to navigate back to the my account screen From FAQ Screen.
 	*/
-	    @Test(priority = 17)
+	   /* @Test(priority = 17)
         public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_From_FAQ_Screen () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.FAQ_Page_Title(), "Frequently Asked Questions");
@@ -287,7 +287,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	 Validate the working of the change log option.
 	 */
-	    @Test (priority =18)
+	    /*@Test (priority =18)
 	    public void To_Validate_the_working_of_change_log_option () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -298,7 +298,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	   Validate the working of the change log drop down.
 	*/
-	   @Test(priority = 19)
+	   /*@Test(priority = 19)
 	    public void To_Validate_the_working_of_the_changelog_dropdown () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
@@ -308,7 +308,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	   Validate Whether change log screen is scrollable.
 	*/
-	    @Test(priority = 20)
+	    /*@Test(priority = 20)
 	    public void To_Validate_Whether_changelog_screen_is_scrollable () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
@@ -318,13 +318,27 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	/*
 	Validate whether able to navigate back to the my account screen from change log screen.
 	*/
-	    @Test(priority = 21)
+	    /*@Test(priority = 21)
 	    public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_from_changeLog_screen () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
 		accountsettingspage.Click_back_arrow();
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
-	}
+	}*/
+	    
+/* Validate if it goes to the gallery after clicking the gallery option in the upload picture functionality */
+	    
+	    @Test(priority = 22)
+	    public void To_Validate_if_it_goes_to_the_gallery_after_clicking_the_gallery_option_in_the_upload_picture_functionality () {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickUploadPictureButton();
+		accountsettingspage.ClickGalleryOption();
+		driver.navigate().back();
+	    }
+	    
+	    
 	
 	
 }

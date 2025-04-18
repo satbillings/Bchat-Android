@@ -176,6 +176,59 @@ public class AccountSettingsScreen extends ActionsClass {
 	@AndroidFindBy(id ="com.oplus.camera:id/done_button")
 	private WebElement CaptureDoneButton;
 	
+	public void ClickPictureEditOption () {
+		PictureEditOption.click();
+	}
+	
+	public void ClickCameraIcon () {
+		CameraIcon.click();
+	}
+	
+	public void ClickUploadPictureButton () {
+		UploadPictureButton.click();
+	}
+	
+	public void ClickCameraOption () {
+		CameraOption.click();
+	}
+	
+	public void ClickGalleryOption () {
+		GalleryOption.click();
+	}
+	
+	public void ClickPictureInGallery () {
+		PictureInGallery.click();
+	}
+	
+	public void ClickSelectIconInGallery () {
+		SelectIconInGallery.click();
+	}
+	
+	public void ClickCropIcon () {
+		CropIcon.click();
+	}
+	
+	public void ClickDoneButton () {
+		DoneButton.click();
+	}
+	
+	public void ClickRemovePictureButton () {
+		RemovePictureButton.click();
+	}
+	
+	public void ClickCloseIconInProfilePicturePopup () {
+		CloseIconInProfilePicturePopup.click();
+	}
+	
+	public void ClickCaptureButton () {
+		CaptureButton.click();
+	}
+	
+	public void ClickCaptureDoneButton () {
+		CaptureDoneButton.click();
+	}
+	
+	
 	public void Click_back_arrow () {
 		btnBackArrow.click();
 	}
