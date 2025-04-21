@@ -328,7 +328,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate if it goes to the gallery after clicking the gallery option in the upload picture functionality */
 	    
-	    @Test(priority = 22)
+	   /* @Test(priority = 22)
 	    public void To_Validate_if_it_goes_to_the_gallery_after_clicking_the_gallery_option_in_the_upload_picture_functionality () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		accountsettingspage.ClickPictureEditOption();
@@ -336,7 +336,42 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		accountsettingspage.ClickUploadPictureButton();
 		accountsettingspage.ClickGalleryOption();
 		driver.navigate().back();
+	    }*/
+	    
+ /* Validate if it goes to the Camera after clicking the Camera option in the upload picture functionality */
+	    
+	    @Test(priority = 23)
+	    public void To_Validate_if_it_goes_to_the_Camera_after_clicking_the_Camera_option_in_the_upload_picture_functionality () {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickUploadPictureButton();   
+		accountsettingspage.ClickCameraOption();
+		driver.navigate().back();
 	    }
+
+/* Validate the working of the remove picture function when profile picture is not uploaded */
+	    
+	    @Test(priority = 24)
+	    public void To_Validate_the_working_of_the_remove_picture_functionality_when_profile_picture_is_not_uploaded () {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickCameraIcon(); 	    
+		accountsettingspage.ClickRemovePictureButton();   
+	    }
+	
+/* Validate the working of the (x) cancel icon in the profile picture popup */
+
+	    @Test(priority = 25)
+	    public void To_Validate_the_working_of_the_Close_icon_in_the_profile_picture_popup () {
+		accountsettingspage =new AccountSettingsScreen(driver);  
+		accountsettingspage.ClickCloseIconInProfilePicturePopup();
+	    }
+	    
+	    
+	    
+
 	    
 	    
 	

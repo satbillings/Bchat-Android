@@ -176,6 +176,22 @@ public class AccountSettingsScreen extends ActionsClass {
 	@AndroidFindBy(id ="com.oplus.camera:id/done_button")
 	private WebElement CaptureDoneButton;
 	
+    public void ChangeProfilePictureMultipleTimes() throws InterruptedException {
+		
+		for(int i=0;i<4;i++) {
+		PictureEditOption.click();
+		CameraIcon.click();
+		UploadPictureButton.click();
+		CameraOption.click();
+		CaptureButton.click();
+        Thread.sleep(2000);
+		CaptureDoneButton.click();
+		CropIcon.click();
+        Thread.sleep(2000);
+		DoneButton.click();
+		}
+    }
+	
 	public void ClickPictureEditOption () {
 		PictureEditOption.click();
 	}

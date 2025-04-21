@@ -10,8 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="PreSetup"/>
-          <include name="To_Validate_if_it_goes_to_the_gallery_after_clicking_the_gallery_option_in_the_upload_picture_functionality"/>
+          <include name="To_Validate_the_working_of_the_Close_icon_in_the_profile_picture_popup"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
     </classes>
