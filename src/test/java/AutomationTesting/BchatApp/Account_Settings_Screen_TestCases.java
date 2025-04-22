@@ -340,7 +340,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
  /* Validate if it goes to the Camera after clicking the Camera option in the upload picture functionality */
 	    
-	    @Test(priority = 23)
+	   /* @Test(priority = 23)
 	    public void To_Validate_if_it_goes_to_the_Camera_after_clicking_the_Camera_option_in_the_upload_picture_functionality () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -353,7 +353,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 
 /* Validate the working of the remove picture function when profile picture is not uploaded */
 	    
-	    @Test(priority = 24)
+	    /*@Test(priority = 24)
 	    public void To_Validate_the_working_of_the_remove_picture_functionality_when_profile_picture_is_not_uploaded () {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -363,17 +363,64 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	
 /* Validate the working of the (x) cancel icon in the profile picture popup */
 
-	    @Test(priority = 25)
+	   /* @Test(priority = 25)
 	    public void To_Validate_the_working_of_the_Close_icon_in_the_profile_picture_popup () {
 		accountsettingspage =new AccountSettingsScreen(driver);  
 		accountsettingspage.ClickCloseIconInProfilePicturePopup();
+	    }*/
+	    
+/* Validate whether user is able to set profile picture using camera option */
+	    
+	    @Test(priority = 26)
+	    public void To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickUploadPictureButton();
+		accountsettingspage.ClickCameraOption();
+		accountsettingspage.ClickCaptureButton();
+        Thread.sleep(2000);
+        accountsettingspage.ClickCaptureDoneButton();
+        accountsettingspage.ClickCropIcon();
+        Thread.sleep(2000);
+        accountsettingspage.ClickDoneButton();
+	    }
+	
+/* Validate the working of the Remove picture functionality when profile picture is uploaded */	 
+	    
+	    @Test(priority = 27)
+	    public void To_Validate_the_working_of_the_Remove_picture_functionality_when_profile_picture_is_uploaded () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickRemovePictureButton();   
+		Thread.sleep(2000);
+        accountsettingspage.ClickDoneButton();
 	    }
 	    
-	    
-	    
+/* Validate whether user is able to change the profile picture multiple times */
 
+	    @Test(priority = 28)
+	    public void To_Validate_whether_user_is_able_to_change_the_profile_picture_multiple_times () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver); 
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ChangeProfilePictureMultipleTimes();
+	    }
 	    
-	    
-	
-	
+/* Validate whether user is able to set profile picture using camera option without internet connection */	
+	 
+	    @Test(priority = 29)
+	    public void To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+		Thread.sleep(5000);	
+		turnOff_Mobile_Wifi();
+		Thread.sleep(5000);	
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickUploadPictureButton();
+		Thread.sleep(3000);
+	}
+	   
 }

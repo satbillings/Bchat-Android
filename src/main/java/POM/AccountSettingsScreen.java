@@ -176,6 +176,26 @@ public class AccountSettingsScreen extends ActionsClass {
 	@AndroidFindBy(id ="com.oplus.camera:id/done_button")
 	private WebElement CaptureDoneButton;
 	
+	@AndroidFindBy(className = "android.widget.EditText")
+	private WebElement ProfileNameEditTextBox;
+	
+	public void ClickProfileNameEditTextBox () {
+		ProfileNameEditTextBox.click();
+	}
+	
+	public void ClearProfileNameEditTextBox () {
+		ProfileNameEditTextBox.clear();
+	}
+	
+	public void Set_Values_In_ProfileName_EditTextBox (String value) {
+		ProfileNameEditTextBox.sendKeys(value);
+		}
+	 
+	 public void Paste_values_In_ProfileName_EditTextBox (String value) {
+			Copy_And_Paste_Values(value, ProfileNameEditTextBox);
+		}
+	
+	
     public void ChangeProfilePictureMultipleTimes() throws InterruptedException {
 		
 		for(int i=0;i<4;i++) {
