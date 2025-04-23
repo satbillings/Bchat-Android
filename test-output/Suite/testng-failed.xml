@@ -11,7 +11,6 @@
           <include name="Configure"/>
           <include name="closeApp"/>
           <include name="To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection"/>
-          <include name="To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
     </classes>

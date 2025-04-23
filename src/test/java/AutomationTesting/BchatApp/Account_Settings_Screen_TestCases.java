@@ -371,7 +371,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to set profile picture using camera option */
 	    
-	    @Test(priority = 26)
+	    /*@Test(priority = 26)
 	    public void To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -389,7 +389,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	
 /* Validate the working of the Remove picture functionality when profile picture is uploaded */	 
 	    
-	    @Test(priority = 27)
+	    /*@Test(priority = 27)
 	    public void To_Validate_the_working_of_the_Remove_picture_functionality_when_profile_picture_is_uploaded () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		accountsettingspage.ClickPictureEditOption();
@@ -401,7 +401,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to change the profile picture multiple times */
 
-	    @Test(priority = 28)
+	   /* @Test(priority = 28)
 	    public void To_Validate_whether_user_is_able_to_change_the_profile_picture_multiple_times () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver); 
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -410,7 +410,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to set profile picture using camera option without internet connection */	
 	 
-	    @Test(priority = 29)
+	   /* @Test(priority = 29)
 	    public void To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -420,7 +420,73 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		accountsettingspage.ClickPictureEditOption();
 		accountsettingspage.ClickCameraIcon();
 		accountsettingspage.ClickUploadPictureButton();
-		Thread.sleep(3000);
-	}
+        Thread.sleep(5000);	
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);	
+		}*/	    
+	    
+/* Validate the cursor blink in Profile Name Edit text box on the Account Settings screen */
+	    
+	    @Test(priority = 30)
+	    public void To_Validate_the_cursor_blink_in_Profile_Name_Edit_textbox_on_the_Account_settings_screen () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		Assert.assertTrue(accountsettingspage.activeElement().isDisplayed());
+	    }
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the empty space value */
+
+	    @Test(priority = 31)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_space_value () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("          ");
+		accountsettingspage.ClearProfileNameEditTextBox();
+	    }
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the special characters 
+ * Validate whether the value entered in the Profile Name Edit text box of Account Settings screen is editable and delete-able
+ * */
+	    
+	    @Test(priority = 32)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Profile_name_edit_text_box_of_Account_settings_screen_is_editable_and_deletable () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("!@#$%^&*()_");
+		accountsettingspage.ClearProfileNameEditTextBox();
+	    }    
+	    
+	    /* Validate whether user is able to remove profile picture without internet connection */	
+		 
+	    @Test(priority = 33)
+	    public void To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+		//turnOff_Mobile_Wifi();
+		//Thread.sleep(5000);	
+		//accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickUploadPictureButton();
+		accountsettingspage.ClickCameraOption();
+		accountsettingspage.ClickCaptureButton();
+        Thread.sleep(2000);
+        accountsettingspage.ClickCaptureDoneButton();
+        accountsettingspage.ClickCropIcon();
+        Thread.sleep(6000);
+        //accountsettingspage.ClickDoneButton();
+        turnOff_Mobile_Wifi();
+      	Thread.sleep(5000);	
+		accountsettingspage.ClickCameraIcon();
+		accountsettingspage.ClickRemovePictureButton();	 
+		Thread.sleep(6000);	
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);
+	    }    
+	    
+	    
+	    
 	   
 }

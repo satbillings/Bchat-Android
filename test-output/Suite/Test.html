@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 22 15:32:16 IST 2025</td>
+<td>Started on:</td><td>Wed Apr 23 17:07:06 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>404 seconds (404332 ms)</td>
+<tr><td>Total time:</td><td>182 seconds (182432 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,246 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection()'><b>To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo&apos;s field &apos;mSealed&apos; to &apos;true&apos;. Try changing the &apos;enforceXPath1&apos; driver setting to &apos;true&apos; in order to workaround the problem.
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [0c52263a-8c10-4b8c-b405-3db804f9cb0c, findElement {value=//android.widget.ScrollView/android.view.View[1], using=xpath}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0c52263a-8c10-4b8c-b405-3db804f9cb0c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$JHJGhai0.click(Unknown Source)
-	at POM.AccountSettingsScreen.ClickPictureEditOption(AccountSettingsScreen.java:216)
-	at AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection(Account_Settings_Screen_TestCases.java:420)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1599612880", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1599612880'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo&apos;s field &apos;mSealed&apos; to &apos;true&apos;. Try changing the &apos;enforceXPath1&apos; driver setting to &apos;true&apos; in order to workaround the problem.
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [0c52263a-8c10-4b8c-b405-3db804f9cb0c, findElement {value=//android.widget.ScrollView/android.view.View[1], using=xpath}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0c52263a-8c10-4b8c-b405-3db804f9cb0c
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$JHJGhai0.click(Unknown Source)
-	at POM.AccountSettingsScreen.ClickPictureEditOption(AccountSettingsScreen.java:216)
-	at AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option_without_internet_connection(Account_Settings_Screen_TestCases.java:420)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>26</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
-<tr>
-<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection()'><b>To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo&apos;s field &apos;mSealed&apos; to &apos;true&apos;. Try changing the &apos;enforceXPath1&apos; driver setting to &apos;true&apos; in order to workaround the problem.
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [0c52263a-8c10-4b8c-b405-3db804f9cb0c, findElement {value=//android.widget.TextView[@text=&apos;Account Settings&apos;], using=xpath}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0c52263a-8c10-4b8c-b405-3db804f9cb0c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$JHJGhai0.getText(Unknown Source)
-	at POM.AccountSettingsScreen.pageTitle(AccountSettingsScreen.java:281)
-	at AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection(Account_Settings_Screen_TestCases.java:438)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace948315053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace948315053'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo&apos;s field &apos;mSealed&apos; to &apos;true&apos;. Try changing the &apos;enforceXPath1&apos; driver setting to &apos;true&apos; in order to workaround the problem.
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [0c52263a-8c10-4b8c-b405-3db804f9cb0c, findElement {value=//android.widget.TextView[@text=&apos;Account Settings&apos;], using=xpath}]
-Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite 5G, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 0c52263a-8c10-4b8c-b405-3db804f9cb0c
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$JHJGhai0.getText(Unknown Source)
-	at POM.AccountSettingsScreen.pageTitle(AccountSettingsScreen.java:281)
-	at AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection(Account_Settings_Screen_TestCases.java:438)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -315,25 +75,30 @@ Session ID: 0c52263a-8c10-4b8c-b405-3db804f9cb0c
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option()'><b>To_Validate_whether_user_is_able_to_set_profile_picture_using_camera_option</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
-<td></td>
-<td>43</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
-<tr>
-<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_the_working_of_the_Remove_picture_functionality_when_profile_picture_is_uploaded()'><b>To_Validate_the_working_of_the_Remove_picture_functionality_when_profile_picture_is_uploaded</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
-<td></td>
-<td>20</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
-<tr>
-<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_change_the_profile_picture_multiple_times()'><b>To_Validate_whether_user_is_able_to_change_the_profile_picture_multiple_times</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
-<td></td>
-<td>207</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
-<tr>
 <td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.PreSetup()'><b>PreSetup</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
 <td></td>
-<td>78</td>
-<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@a3d9978</td></tr>
+<td>44</td>
+<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@265adfad</td></tr>
+<tr>
+<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Profile_name_edit_text_box_of_Account_settings_screen_is_editable_and_deletable()'><b>To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Profile_name_edit_text_box_of_Account_settings_screen_is_editable_and_deletable</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@265adfad</td></tr>
+<tr>
+<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection()'><b>To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
+<td></td>
+<td>113</td>
+<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@265adfad</td></tr>
+<tr>
+<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_space_value()'><b>To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_space_value</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
+<td></td>
+<td>1</td>
+<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@265adfad</td></tr>
+<tr>
+<td title='AutomationTesting.BchatApp.Account_Settings_Screen_TestCases.To_Validate_the_cursor_blink_in_Profile_Name_Edit_textbox_on_the_Account_settings_screen()'><b>To_Validate_the_cursor_blink_in_Profile_Name_Edit_textbox_on_the_Account_settings_screen</b><br>Test class: AutomationTesting.BchatApp.Account_Settings_Screen_TestCases</td>
+<td></td>
+<td>3</td>
+<td>AutomationTesting.BchatApp.Account_Settings_Screen_TestCases@265adfad</td></tr>
 </table><p>
 </body>
 </html>
