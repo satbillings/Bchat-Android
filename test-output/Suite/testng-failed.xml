@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection"/>
+          <include name="To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_valid_name"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
     </classes>

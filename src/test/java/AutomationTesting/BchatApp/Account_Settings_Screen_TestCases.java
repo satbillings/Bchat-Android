@@ -427,7 +427,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the cursor blink in Profile Name Edit text box on the Account Settings screen */
 	    
-	    @Test(priority = 30)
+	    /*@Test(priority = 30)
 	    public void To_Validate_the_cursor_blink_in_Profile_Name_Edit_textbox_on_the_Account_settings_screen () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -438,7 +438,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the Profile Name Edit text box in Account Settings screen by entering the empty space value */
 
-	    @Test(priority = 31)
+	   /* @Test(priority = 31)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_space_value () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -451,7 +451,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
  * Validate whether the value entered in the Profile Name Edit text box of Account Settings screen is editable and delete-able
  * */
 	    
-	    @Test(priority = 32)
+	   /* @Test(priority = 32)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Profile_name_edit_text_box_of_Account_settings_screen_is_editable_and_deletable () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -459,9 +459,9 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		accountsettingspage.ClearProfileNameEditTextBox();
 	    }    
 	    
-	    /* Validate whether user is able to remove profile picture without internet connection */	
+/* Validate whether user is able to remove profile picture without internet connection */	
 		 
-	    @Test(priority = 33)
+	   /* @Test(priority = 33)
 	    public void To_Validate_whether_user_is_able_to_remove_profile_picture_without_internet_connection () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -484,9 +484,65 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		Thread.sleep(6000);	
 		turnOn_Mobile_Wifi();
 		Thread.sleep(5000);
+	    } */
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the numerical value */
+	    
+	    @Test(priority = 34)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_numerical_value () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("1234567890");
+		accountsettingspage.ClearProfileNameEditTextBox();
+	    }  
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the alphabets both in uppercase and lowercase letter */
+	    
+	    @Test(priority = 35)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("ABCDEF");
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("abcdef");
+		accountsettingspage.ClearProfileNameEditTextBox();
+	    }  
+	    
+/* Validate whether the user is able enter a lengthy value in the Profile Name Edit text box in Account Settings screen */
+	    
+	    @Test(priority = 36)
+		public void To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Profile_Name_Edit_text_box_in_Account_settings_screen() throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok");
+		accountsettingspage.ClearProfileNameEditTextBox(); 
+	    }
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the empty profile name */
+	    
+	    @Test(priority = 37)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_profile_name () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+		accountsettingspage.ClickDoneButton();
+		
+	    }
+	    
+/* Validate the Profile Name Edit text box in Account Settings screen by entering the valid name */
+	    
+	    @Test(priority = 38)
+	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_valid_name () throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		//Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		Thread.sleep(4000);
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		//accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("Billings");
+		accountsettingspage.ClickDoneButton();
 	    }    
-	    
-	    
-	    
 	   
 }

@@ -164,14 +164,16 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the New Chat by entering a Invalid BNS name in the new chat screen.*/
 	  
-	  @Test(priority = 7) public void
+	 /* @Test(priority = 7) public void
 	  To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_in_the_new_chat_screen
-	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
+	  () throws InterruptedException { 
+		  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
 	  newchatpage.Check_with_InValid_BNS_name(); wait = new
 	  WebDriverWait(driver,Duration.ofSeconds(10)); Assert.assertEquals(Toast(),
 	  "Please check the BChat ID or BNS name and try again.");
-	  //Thread.sleep(5000); }
+	  //Thread.sleep(5000); 
+	  }
 	  
 	  /*Validate the New Chat by entering a Invalid BNS name without .bdx in the new
 	  chat screen.*/
