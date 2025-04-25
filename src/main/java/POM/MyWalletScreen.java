@@ -161,9 +161,6 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='0.23 BRL']")
 	private WebElement BalanceCurrencyConversion;
 	
-	@AndroidFindBy(xpath="//android.widget.ScrollView/android.widget.ImageView[2]")
-	private WebElement ScanOptionInSendScreen;
-	
 	public String get_Available_Balance () {
     	return AvailableBalance.getText();
     }

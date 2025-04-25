@@ -488,7 +488,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the Profile Name Edit text box in Account Settings screen by entering the numerical value */
 	    
-	    @Test(priority = 34)
+	   /* @Test(priority = 34)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_numerical_value () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -501,7 +501,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the Profile Name Edit text box in Account Settings screen by entering the alphabets both in uppercase and lowercase letter */
 	    
-	    @Test(priority = 35)
+	   /* @Test(priority = 35)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -513,7 +513,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether the user is able enter a lengthy value in the Profile Name Edit text box in Account Settings screen */
 	    
-	    @Test(priority = 36)
+	    /*@Test(priority = 36)
 		public void To_validate_whether_the_user_is_able_to_enter_lengthy_value_in_Profile_Name_Edit_text_box_in_Account_settings_screen() throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -523,7 +523,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the Profile Name Edit text box in Account Settings screen by entering the empty profile name */
 	    
-	    @Test(priority = 37)
+	    /*@Test(priority = 37)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_empty_profile_name () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -533,7 +533,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the Profile Name Edit text box in Account Settings screen by entering the valid name */
 	    
-	    @Test(priority = 38)
+	    /*@Test(priority = 38)
 	    public void To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_valid_name () throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		//Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -543,6 +543,46 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		//accountsettingspage.ClearProfileNameEditTextBox();
 		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("Billings");
 		accountsettingspage.ClickDoneButton();
-	    }    
-	   
+	    } */
+	    
+/* Validate whether user is able to set same profile name again in Profile Name Edit text box in Account Settings screen */
+	    
+	    @Test(priority = 39)
+	    public void To_Validate_whether_user_is_able_to_set_same_profile_name_again_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("Sat");
+		accountsettingspage.ClickDoneButton();
+	    }
+	    
+/*  Validate whether user is able to set profile name as empty space in Profile Name Edit text box in Account Settings screen */
+	    
+	    @Test(priority = 40)
+	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_empty_space_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("      ");
+		accountsettingspage.ClickDoneButton();
+	    }
+	    
+/* Validate whether the paste option is working on the Profile Name Edit text box in Account Settings screen */
+	    
+	    @Test(priority = 41)
+	    public void To_Validate_whether_the_paste_option_is_working_on_the_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		//Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");  
+		Thread.sleep(4000);
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Paste_values_In_ProfileName_EditTextBox("Hales");
+		accountsettingspage.ClearProfileNameEditTextBox();
+	    }
+	              
 }

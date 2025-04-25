@@ -145,6 +145,12 @@ public void clickGesture (int x, int y) {
 	));
 }
 
+public void clickAs () {
+	driver.executeScript("mobile: clickGesture", ImmutableMap.of(
+			"x", 491, "y", 1710
+	   
+	));
+}
 
 /*
  * public void swipeGesture(WebElement Element, String direction) {

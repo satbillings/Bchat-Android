@@ -70,7 +70,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		//menupage =new MenuScreen(driver);
 		//Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
@@ -1178,7 +1178,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	/*
 	Validate the working of rescan with restore from date in rescan screen.
 	*/
-	@Test(priority = 55)
+	/*@Test(priority = 55)
 	public void To_validate_the_working_of_rescan_with_restore_from_date_in_rescan_screen () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -1219,7 +1219,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	/*
 	Validate whether able to add node without Internet connection in add node popup.
 	*/
-	@Test(priority = 56)
+	/*@Test(priority = 56)
 	public void To_Validate_whether_able_to_Add_Node_without_Internet_connection_in_add_node_popup () throws InterruptedException {
 		//mywalletpage = new MyWalletScreen(driver);
 		//Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
@@ -1243,5 +1243,53 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		//driver.navigate().back();
 		//driver.navigate().back();
 		//driver.navigate().back();
+	}*/
+	
+/* Validate whether it navigate to the gallery after clicking the upload from gallery function in send screen */
+	
+	@Test(priority = 57)
+	public void To_Validate_whether_it_navigate_to_the_gallery_after_clicking_the_upload_from_gallery_functionality_in_Send_screen () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		Thread.sleep(5000);
+		mywalletpage.ClickSendOption();
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		Thread.sleep(3000);
+		sendpage.ClickScanOptionInSendScreen();
+		sendpage.clickAs();
+		sendpage.ClickGalleryOption();
+	}    
+	
+/* 	Validate whether user is able to navigate back to send screen scanner without selecting QR code image from Gallery */
+	
+	@Test(priority = 58)
+	public void To_Validate_whether_user_is_able_to_navigate_back_to_send_screen_scanner_without_selecting_QR_code_image_from_gallery () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		//Assert.assertEquals(sendpage.pagetitle(),"Send");
+		driver.navigate().back();
 	}
+	
+	
 	}

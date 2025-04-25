@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Account_Settings_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_Profile_name_edit_text_box_in_Account_settings_screen_by_entering_the_valid_name"/>
+          <include name="To_Validate_whether_user_is_able_to_navigate_back_to_send_screen_scanner_without_selecting_QR_code_image_from_gallery"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

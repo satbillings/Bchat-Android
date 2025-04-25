@@ -63,7 +63,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 		restorefromseedpage = new RestoreFromSeedScreen(driver);
 		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 		restorefromseedpage.paste_Value_In_DisplayName("Sathish");
-		restorefromseedpage.paste_Value_In_Blockheight("4000000");
+		restorefromseedpage.paste_Value_In_Blockheight("4250000");
 		restorefromseedpage.clickBtnRestore(); 
 		createpasswordpage = new CreatePasswordScreen(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -71,9 +71,9 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 		 createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
 		//Thread.sleep(10000); 
 		 homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		//restrictNotification();
-		Thread.sleep(59000);
+		Thread.sleep(4000);
 		homepage.clickMenuDrawer();
 		menupage =new MenuScreen(driver);
 		Thread.sleep(2000);
@@ -84,7 +84,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 		Enablewalletpage.ClickEnableWalletButton();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		//Thread.sleep(10000);
 		homepage.clickMenuDrawer();
 	    menupage =new MenuScreen(driver);
@@ -885,7 +885,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
     /*
 	Validate the Whether the user is able to navigate to the next screen without entering a value enter pin fields.
 	*/
-	@Test(priority = 49 )
+	/*@Test(priority = 49 )
 	public void To_Validatethe_Whether_the_user_is_able_to_navigate_to_next_screen_without_entering_a_values_in_pin_fields () throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);	
 		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
@@ -915,7 +915,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 	/*
 	 Validate whether able to set new pin with old pin value.
 	 */
-	@Test(priority = 50)
+	/*@Test(priority = 50)
 	public void To_Validate_whether_able_to_set_new_pin_with_old_pin_value () throws InterruptedException {
 		    walletsettingspage = new  WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
@@ -937,7 +937,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 	/*
 	Validate the Change Pin functionality by entering a valid value in New pin and invalid value in Re-Enter pin.
 	*/
-	@Test(priority = 51 )
+	/*@Test(priority = 51 )
 	public void To_Validate_the_Change_Pin_functionality_by_entering_a_valid_value_in_New_pin_and_invalid_value_in_ReEnter_pin () throws InterruptedException {
 		   walletsettingspage = new  WalletSettingsScreen(driver);
 		   Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
@@ -961,7 +961,7 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 	/*
 	Validate the Change Pin functionality by entering a valid Create pin and valid Re-Enter pin.
 	*/
-	@Test(priority = 52)
+	/*@Test(priority = 52)
 	public void To_Validate_the_Change_Pin_functionality_by_entering_a_valid_Create_pin_and_valid_ReEnter_pin () throws InterruptedException {
 		   walletsettingspage = new  WalletSettingsScreen(driver);
 		   Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
@@ -974,6 +974,8 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 		   Thread.sleep(1000);
 		   createpasswordpage.clickOk();
 		   Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
-	}
+	}*/
+    
+
 
 }

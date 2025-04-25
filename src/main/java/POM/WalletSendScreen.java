@@ -85,6 +85,23 @@ public class WalletSendScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='0.013532 BDX']")
 	private WebElement SlowEstimatedFee;
 	
+	//@AndroidFindBy(id="io.beldex.bchat:id/uploadFromGallery_Layout")
+	//private WebElement UploadFromGalleryOption;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.widget.ImageView[2]")
+	private WebElement ScanOptionInSendScreen;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"oplus:id/resolver_item_icon\"])[1]")
+	private WebElement GalleryOption;
+	
+	public void ClickScanOptionInSendScreen () {
+		ScanOptionInSendScreen.click();
+	}
+	
+	public void ClickGalleryOption () {
+		GalleryOption.click();
+	}
+	
 	public String getFlashEstimatedFee () {
 		return FlashEstimatedFee.getText();
 	}
