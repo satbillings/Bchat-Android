@@ -94,6 +94,48 @@ public class WalletSendScreen extends ActionsClass {
 	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"oplus:id/resolver_item_icon\"])[1]")
 	private WebElement GalleryOption;
 	
+	@AndroidFindBy(accessibility=",Item 1,Photo,,28 April 2025 at 11:31 am")
+	private WebElement ValidQRcodeImage;
+	
+	@AndroidFindBy(accessibility=",Item 2,Photo,,28 April 2025 at 11:30 am")
+	private WebElement InValidQRcodeImage;
+	
+	@AndroidFindBy(accessibility=",Item 3,Photo,,28 April 2025 at 10:33 am")
+	private WebElement NonQRcodeImage;
+	
+	@AndroidFindBy(xpath="//android.widget.HorizontalScrollView[@resource-id=\"com.oneplus.gallery:id/tab_layout\"]/android.widget.LinearLayout/androidx.appcompat.app.ActionBar.Tab[2]")
+	private WebElement AlbumSection;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Recent']")
+	private WebElement RecentPhotosSection;
+	
+	@AndroidFindBy(accessibility ="Select")
+	private WebElement SelectIconInGallery;
+	
+	public void ClickSelectIconInGallery () {
+		SelectIconInGallery.click();
+	}
+	
+	public void ClickAlbumSection () {
+		AlbumSection.click();
+	}
+	
+	public void ClickRecentPhotosSection () {
+		RecentPhotosSection.click();
+	}
+	
+	public void ClickValidQRcodeImage () {
+		ValidQRcodeImage.click();
+	}
+	
+	public void ClickInValidQRcodeImage () {
+		InValidQRcodeImage.click();
+	}
+	
+	public void ClickNonQRcodeImage () {
+		NonQRcodeImage.click();
+	}
+	
 	public void ClickScanOptionInSendScreen () {
 		ScanOptionInSendScreen.click();
 	}

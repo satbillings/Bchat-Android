@@ -8,9 +8,11 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
+          <include name="To_Validate_the_working_of_scan_from_gallery_functionality_with_invalid_bchat_QR_code"/>
+          <include name="To_Validate_the_working_of_scan_from_gallery_functionality_by_selecting_the_non_QR_code_images_from_gallery"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_user_is_able_to_navigate_back_to_send_screen_scanner_without_selecting_QR_code_image_from_gallery"/>
+          <include name="To_Validate_the_working_of_scan_from_gallery_functionality_with_valid_bchat_QR_code_with_bdx_value_image"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
