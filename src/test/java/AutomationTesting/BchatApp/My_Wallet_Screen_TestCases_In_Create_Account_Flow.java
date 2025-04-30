@@ -1293,7 +1293,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* 	Validate the working of scan from gallery function with valid Bchat QR code with bdx value image */
 	
-	@Test(priority = 59)
+	/*@Test(priority = 59)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_valid_bchat_QR_code_with_bdx_value_image () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -1337,7 +1337,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 	/* 	Validate the working of scan from gallery function with invalid Bchat QR code */
 	
-	@Test(priority = 60)
+	/*@Test(priority = 60)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_invalid_bchat_QR_code () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -1357,7 +1357,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the working of scan from gallery function by selecting the non QR code images from gallery */
 	
-	@Test(priority = 61)
+	/*@Test(priority = 61)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_by_selecting_the_non_QR_code_images_from_gallery() throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -1372,7 +1372,98 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		Thread.sleep(2000);
 		sendpage.ClickSelectIconInGallery();
 		Thread.sleep(3000);
-	}    
+	}  */
+	
+/* Validate the working of scan from gallery function by selecting the non QR code images from gallery without internet connection */
+	
+	@Test(priority = 62)
+	public void To_Validate_the_working_of_scan_from_gallery_functionality_by_selecting_the_non_QR_code_images_from_gallery_without_internet_connection() throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		Thread.sleep(5000);
+		mywalletpage.ClickSendOption();
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.ClickScanOptionInSendScreen();
+		Thread.sleep(6000);
+		turnOff_Mobile_Wifi();
+      	Thread.sleep(6000);	
+		sendpage.clickAs();	
+		Thread.sleep(2000);
+		sendpage.ClickGalleryOption();
+		sendpage.ClickAlbumSection();
+		Thread.sleep(2000);
+		sendpage.ClickRecentPhotosSection();
+		Thread.sleep(4000);
+		sendpage.ClickNonQRcodeImage();
+		Thread.sleep(2000);
+		sendpage.ClickSelectIconInGallery();
+		Thread.sleep(6000);
+	}
+	
+/* 	Validate the working of scan from gallery function with invalid Bchat QR code without internet connection */
+	
+	@Test(priority = 63)
+	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_invalid_bchat_QR_code_without_internet_connection () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		//Assert.assertEquals(sendpage.pagetitle(),"Send");
+		//Thread.sleep(3000);
+		//sendpage.ClickScanOptionInSendScreen();
+		sendpage.clickAs();
+		sendpage.ClickGalleryOption();
+		sendpage.ClickAlbumSection();
+		Thread.sleep(2000);
+		sendpage.ClickRecentPhotosSection();
+		Thread.sleep(4000);
+		sendpage.ClickInValidQRcodeImage();
+		Thread.sleep(2000);
+		sendpage.ClickSelectIconInGallery();
+		//Thread.sleep(3000);
+	}    	
+	
+/* 	Validate the working of scan from gallery function with valid Bchat QR code with bdx value image without internet connection */
+	
+	@Test(priority = 64)
+	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_valid_bchat_QR_code_with_bdx_value_image_without_internet_connection () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		//Assert.assertEquals(sendpage.pagetitle(),"Send");
+		Thread.sleep(6000);
+		//sendpage.ClickScanOptionInSendScreen();
+		sendpage.clickAs();
+		sendpage.ClickGalleryOption();
+		sendpage.ClickAlbumSection();
+		Thread.sleep(2000);
+		sendpage.ClickRecentPhotosSection();
+		Thread.sleep(4000);
+		sendpage.ClickValidQRcodeImage();
+		Thread.sleep(2000);
+		sendpage.ClickSelectIconInGallery();
+		Thread.sleep(6000);
+		turnOn_Mobile_Wifi();
+      	Thread.sleep(6000);	
+	}    		
+	  
 	
 
 	
