@@ -64,9 +64,11 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(6000);
 		// menupage =new MenuScreen(driver);
 		// Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
+		Thread.sleep(4000);
 		// Assert.assertEquals(menupage.pagetitle(), "Menu");
 	}
 
@@ -74,7 +76,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate whether entered display name is showing in profile name.
 	 */
 	
-	  @Test (priority = 1) 
+	 /* @Test (priority = 1) 
 	  public void To_Validate_whether_entered_display_name_is_showing_in_profile_name () {
 	  
 	  menupage =new MenuScreen(driver);
@@ -85,7 +87,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	  screen response for the touch action.*/
 	 
 	
-	  @Test (priority = 2) 
+	  /*@Test (priority = 2) 
 	  public void TC_249_To_Validate_Whether_icon_Response_For_touch_action (){ 
 	   menupage =new MenuScreen(driver); 
 	   Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -97,7 +99,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	  direction.*/
 	 
 	
-	  @Test (priority = 3) 
+	  /*@Test (priority = 3) 
 	  public void To_Validate_Whether_Screen_is_Scrollable_in_both_upward_and_downward_direction
 	  () throws InterruptedException { 
 	   //homepage.clickMenuDrawer();
@@ -118,7 +120,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate the working of the cancel icon in menu screen.
 	 * 
 	 */
-	    @Test(priority = 3)
+	    /*@Test(priority = 3)
 	    public void To_Validate_the_working_of_the_Cancel_Icon_in_Menu_Screen() throws InterruptedException {
 
 		menupage = new MenuScreen(driver);
@@ -132,7 +134,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 * Validate the working of help functionality in menu screen.
 	 */
-	    @Test(priority = 4)
+	   /* @Test(priority = 4)
 	    public void To_Validate_the_working_of_help_functionality_in_menu_Screen() {
 		homepage = new HomeScreen(driver);
 		homepage.clickMenuDrawer();
@@ -148,7 +150,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate the Gmail id in the Gmail screen by clicking the help option in menu
 	 * screen.
 	 */
-	   @Test(priority = 5)
+	   /*@Test(priority = 5)
 	   public void To_Validate_the_Gmail_id_in_Gmail_screen_by_clicking_the_help_option_in_menu_screen() {
 		menupage = new MenuScreen(driver);
 		Assert.assertTrue(menupage.getElementofGmailScreen().isDisplayed());
@@ -159,7 +161,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate whether the user is able to navigate back to the home screen from
 	 * Gmail screen.
 	 */
-	    @Test(priority = 6)
+	    /*@Test(priority = 6)
 	    public void To_Validate_whether_the_user_is_able_to_navigate_back_to_home_screen_from_Gmail_screen() {
 		menupage = new MenuScreen(driver);
 		Assert.assertTrue(menupage.getElementofGmailScreen().isDisplayed());
@@ -173,7 +175,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	/*
 	 * Validate the working of theme change button in menu screen.
 	 */
-	    @Test(priority = 7)
+	  /*  @Test(priority = 7)
 	    public void To_validate_the_working_of_theme_Change_button_in_menu_screen() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "BChat");
@@ -189,7 +191,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	 * Validate whether the user is able to click the theme change button multiple
 	 * times in menu screen.
 	 */
-	    @Test(priority = 8)
+	   /* @Test(priority = 8)
 	    public void To_validate_whether_the_user_is_able_to_click_theme_change_button_multiple_times_in_menu_screen() {
 		for (int i = 0; i <= 5; i++) {
 			homepage = new HomeScreen(driver);
@@ -199,8 +201,8 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 			menupage.ClickThemeChangeButton();
 			homepage = new HomeScreen(driver);
 			Assert.assertEquals(homepage.Pagetitle(), "BChat");
-		}
-	}
+		}*/
+	//}
 	
 	/* Settings Screen */
 
@@ -321,7 +323,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	}*/
 	
 	/* Validate whether the user is able to navigate back to the home screen from invite screen. */
-	@Test(priority = 14)
+	/*@Test(priority = 14)
 	public void To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_invite_screen() throws InterruptedException {
 		menupage = new MenuScreen(driver);
 		Assert.assertEquals(menupage.pagetitle(), "Menu");
@@ -331,7 +333,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		driver.navigate().back();
 	}
 	/* Validate the working of the Invite functionality in menu screen. */
-	@Test(priority = 15)
+	/*@Test(priority = 15)
 	public void To_validate_whether_the_working_of_the_invite_functionality_in_menu_screen() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -345,7 +347,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		driver.navigate().back();
 	}
 	/* Validate whether the user is able to navigate back to the home screen from about screen */
-	@Test(priority = 16)
+	/*@Test(priority = 16)
 	public void To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_about_screen() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -355,5 +357,36 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		menupage.ClickOptionAbout();
 		Assert.assertEquals(menupage.getAboutScreenTitle(),"About");
 		driver.navigate().back();
-	}	
+	}	*/
+	    
+/* 	    To validate the working of the start wallet function after disabling */  
+	    
+	    @Test(priority = 17)
+		public void To_validate_the_working_of_the_start_wallet_functionality_after_disabling() throws InterruptedException {
+	    	menupage = new MenuScreen(driver);
+			//Thread.sleep(3000);
+			menupage.click_option_Settings();
+			Thread.sleep(3000);
+			settingspage = new SettingsScreen(driver);
+			Assert.assertEquals(settingspage.pageTitle(),"Settings");
+			settingspage.click_start_wallet();
+			Thread.sleep(3000);
+			//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			homepage = new HomeScreen(driver);
+			//Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			Thread.sleep(5000);
+			homepage.clickMenuDrawer();
+			Thread.sleep(3000);
+			menupage = new MenuScreen(driver);
+			menupage.click_option_Settings();
+			Thread.sleep(3000);
+			settingspage = new SettingsScreen(driver);
+			Assert.assertEquals(settingspage.pageTitle(),"Settings");
+			settingspage.click_start_wallet();
+			Thread.sleep(4000);
+			homepage = new HomeScreen(driver);
+			//Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	    }
 }

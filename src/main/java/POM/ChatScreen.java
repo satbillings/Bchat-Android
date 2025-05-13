@@ -409,6 +409,17 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/back_to_emoji_icon")
 	private WebElement SearchEmojiTextBoxBackArrow;
 	
+	@AndroidFindBy(xpath="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/viewPaymentCard\"])[1]")
+	private WebElement InChatPaymentCardView;
+	
+	public WebElement getInChatPaymentCardView () {
+		return InChatPaymentCardView;
+				}
+	
+	public void ClickInChatPaymentCardView() {
+		InChatPaymentCardView.click();
+	}
+	
 	public void ClickSearchEmojiTextBoxBackArrow() {
 		SearchEmojiTextBoxBackArrow.click();
 	}
@@ -493,6 +504,10 @@ public class ChatScreen extends ActionsClass {
 	
 	public void LongPressOnFourthMessage() {
 		   longPress(FourthReceivedMessage);
+	}
+	
+	public void ClickOnFourthMessage() {
+		   FourthReceivedMessage.click();
 	}
 	
 	public void ClickSecondEmoji () {
@@ -982,6 +997,14 @@ public class ChatScreen extends ActionsClass {
 			btnOkInPayAsYouChat.click();
 		}
 	
+	}
+	
+	public void LongPressBeldexIcon () {
+		longPress(beldexIcon);
+	}
+	
+	public void ClickOkButtonInPayAsYouChatPopup () {
+		btnOkInPayAsYouChat.click();
 	}
 	
 	public String tooltip () {

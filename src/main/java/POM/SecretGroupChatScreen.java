@@ -139,6 +139,13 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/layout_conversation")
 	private WebElement GroupTopBar;
 	
+	@AndroidFindBy(xpath="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/viewPaymentCard\"])[1]")
+	private WebElement InChatPaymentCardView;
+	
+	public WebElement getInChatPaymentCardView () {
+		return InChatPaymentCardView;
+				}
+	
 	public void ClickGroupTopBar () {
 		GroupTopBar.click();	
 	}

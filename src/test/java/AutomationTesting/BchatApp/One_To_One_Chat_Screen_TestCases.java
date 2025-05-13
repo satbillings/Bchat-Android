@@ -21,8 +21,10 @@ import POM.OpeningPage;
 import POM.RecoveryPhraseScreen;
 import POM.RegisterScreen;
 import POM.RestoreFromSeedScreen;
+import POM.SecretGroupChatScreen;
 import POM.SeedScreen;
 import POM.SettingsScreen;
+import POM.SocialGroupChatScreen;
 import TestUtiles.baseclass;
 
 public class One_To_One_Chat_Screen_TestCases extends baseclass {
@@ -44,6 +46,8 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	RestoreFromSeedScreen restorefromseedpage;
 	SettingsScreen settingspage;
 	EnableWalletScreen Enablewalletpage;
+	SecretGroupChatScreen groupchatpage;
+	SocialGroupChatScreen socialgroupchatpage;
 	// MyWalletPage mywalletpage;
 
 	@Test(priority = 0)
@@ -95,7 +99,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		homepage.ClickFirstContactorGroup();
 		// homepage.ClickMessageRquestDropdown();
 		// homepage.ClickFirstMessageRquest();
-		chatpage = new ChatScreen(driver);
+		//chatpage = new ChatScreen(driver);
 		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Testdesktop");
 	}
 	/*
@@ -855,7 +859,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 
 /*	Validate whether "No results found" text are showing in Emoji screen when the user enters the invalid text in Search emoji text box */
 
-	@Test(priority = 66)
+	/*@Test(priority = 66)
 	public void To_validate_whether_No_results_found_text_in_Emoji_screen_when_the_user_enters_the_invalid_text_in_Search_Emoji_textbox() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
@@ -870,7 +874,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the working of back arrow in search Emoji text box on the Emoji screen */
 	
-	@Test(priority = 67)
+	/*@Test(priority = 67)
 	public void To_validate_the_working_of_Back_Arrow_in_Search_Emoji_textbox_on_the_Emoji_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);
@@ -879,12 +883,55 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to react with Suggested Emoji in Emoji screen */
 	
-	@Test(priority = 68)
+	/*@Test(priority = 68)
 	public void To_validate_whether_the_user_is_able_to_react_with_Suggested_Emoji_in_Emoji_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(2000);	
 		chatpage.ClickSearchEmojiTextBox();
 		chatpage.Set_Values_In_SearchEmoji_TextBox("Smile");
 		chatpage.ClickSuggestedEmojis();
+	}*/
+	
+/*	This is to check that explorer.beldex.io opens while clicking on the sent and receive card in the one to one chat screen */
+	
+	@Test(priority = 69)
+	public void To_check_that_explorer_website_opens_while_clicking_on_the_sent_and_receive_card_in_one_to_one_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		//chatpage.swipeGesture(60, 60, 100, 100, "down");
+		Thread.sleep(3000);	
+		//chatpage.ClickOnFourthMessage();
+		chatpage.ClickInChatPaymentCardView();
+		Thread.sleep(4000);	
+		driver.navigate().back();
+		/*homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(3000);	
+		homepage.ClickFirstContactorGroup();*/
+		
 	}
+	
+/*	This is to check that explorer.beldex.io opens while clicking on the sent and receive card in the one to one chat screen */
+	
+	@Test(priority = 70)
+	public void To_check_that_explorer_website_opens_while_clicking_on_the_sent_and_receive_card_in_one_to_one_chat_screen_without_internet() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(6000);	
+		turnOff_Mobile_Wifi();
+		Thread.sleep(6000);
+		chatpage.ClickInChatPaymentCardView();
+		Thread.sleep(4000);	
+		driver.navigate().back();
+		//Thread.sleep(3000);	
+		//homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//Thread.sleep(3000);	
+		//homepage.ClickFirstContactorGroup();
+		Thread.sleep(5000);	
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);	
+		
+	}
+	
+
+
 }

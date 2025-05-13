@@ -44,6 +44,13 @@ public class SocialGroupChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/conversationSubtitleView")
 	private WebElement MemberCount;
 	
+	@AndroidFindBy(xpath="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/viewPaymentCard\"])[1]")
+	private WebElement InChatPaymentCardView;
+	
+	public WebElement getInChatPaymentCardView () {
+		return InChatPaymentCardView;
+				}
+	
 	public void ClickBackArrow () {
 		BackArrow.click();
 	}

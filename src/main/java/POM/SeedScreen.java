@@ -73,7 +73,7 @@ public class SeedScreen extends ActionsClass{
 	}
 	public void pasteSeedValue() {
 		SeedTextBox.click();
-		driver.setClipboardText("inline costume cactus devoid launching himself alkaline sample gels pool biscuit arrow goat edgy update vary boil pact sword foggy gymnast negative jabbed leopard boil");
+		driver.setClipboardText("sincerely drunk awakened anecdote software owed irony ritual rugged slug liquid equip syndrome coffee buzzer going vastness solved python kiwi acidic react fizzle gimmick anecdote");
 	    btnPaste.click();
 	}
 	

@@ -129,8 +129,12 @@ public class HomeScreen extends ActionsClass {
 	@AndroidFindBy(id="//android.widget.LinearLayout[@index='7']")
 	private WebElement EighthContactorGroup;
 	
-	@AndroidFindBy(id="//android.widget.LinearLayout[@index='1']")
+	//@AndroidFindBy(id="//android.widget.LinearLayout[@index='1']")
+	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[2]")
 	private WebElement SecondContactorGroup;
+	
+	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[4]")
+	private WebElement FourthContactorGroup;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/mute_icon")
 	public WebElement MentionsMuteIcon;
@@ -183,6 +187,10 @@ public class HomeScreen extends ActionsClass {
 		}
 	public void ClickFirstContactorGroup() {
 		FirstContactorGroup.click();
+	}
+	
+	public void ClickFourthContactorGroup() {
+		FourthContactorGroup.click();
 	}
 	
 	public void ClickMessageRquestDropdown() {
