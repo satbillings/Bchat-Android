@@ -1,25 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-13T18:01:39 IST" name="Suite" finished-at="2025-05-13T18:05:07 IST" duration-ms="207895">
+  <suite started-at="2025-05-15T19:01:52 IST" name="Suite" finished-at="2025-05-15T19:08:46 IST" duration-ms="414261">
     <groups>
     </groups>
-    <test started-at="2025-05-13T18:01:39 IST" name="Test" finished-at="2025-05-13T18:05:07 IST" duration-ms="207895">
+    <test started-at="2025-05-15T19:01:52 IST" name="Test" finished-at="2025-05-15T19:08:46 IST" duration-ms="414261">
       <class name="AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@35432107]" started-at="2025-05-13T18:01:39 IST" name="Configure" finished-at="2025-05-13T18:01:54 IST" duration-ms="15253" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:01:52 IST" name="Configure" finished-at="2025-05-15T19:02:12 IST" duration-ms="19963" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@35432107]" started-at="2025-05-13T18:01:54 IST" name="PreSetup" finished-at="2025-05-13T18:03:06 IST" duration-ms="71817" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:02:12 IST" name="PreSetup" finished-at="2025-05-15T19:03:40 IST" duration-ms="88528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_the_working_of_the_start_wallet_functionality_after_disabling()[pri:17, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@35432107]" started-at="2025-05-13T18:03:06 IST" name="To_validate_the_working_of_the_start_wallet_functionality_after_disabling" finished-at="2025-05-13T18:05:06 IST" duration-ms="120285" status="PASS">
+        <test-method signature="To_validate_the_working_of_my_wallet_functionality_when_start_wallet_is_disabled()[pri:18, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:03:40 IST" name="To_validate_the_working_of_my_wallet_functionality_when_start_wallet_is_disabled" finished-at="2025-05-15T19:05:24 IST" duration-ms="103436" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_working_of_the_start_wallet_functionality_after_disabling -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@35432107]" started-at="2025-05-13T18:05:06 IST" name="closeApp" finished-at="2025-05-13T18:05:07 IST" duration-ms="505" status="PASS">
+        </test-method> <!-- To_validate_the_working_of_my_wallet_functionality_when_start_wallet_is_disabled -->
+        <test-method signature="To_validate_the_working_of_the_Start_wallet_disable_functionality_by_navigating_from_one_to_one_chat_screen()[pri:19, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:05:24 IST" name="To_validate_the_working_of_the_Start_wallet_disable_functionality_by_navigating_from_one_to_one_chat_screen" finished-at="2025-05-15T19:06:02 IST" duration-ms="38409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_working_of_the_Start_wallet_disable_functionality_by_navigating_from_one_to_one_chat_screen -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_enable_Start_wallet_option_without_internet()[pri:20, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:06:02 IST" name="To_validate_whether_the_user_is_able_to_enable_Start_wallet_option_without_internet" finished-at="2025-05-15T19:08:03 IST" duration-ms="120772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_enable_Start_wallet_option_without_internet -->
+        <test-method signature="To_validate_whether_the_user_is_able_to_disable_Start_wallet_option_without_internet()[pri:21, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:08:03 IST" name="To_validate_whether_the_user_is_able_to_disable_Start_wallet_option_without_internet" finished-at="2025-05-15T19:08:44 IST" duration-ms="41349" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo's field 'mSealed' to 'true'. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem.
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ce1b5b19-1a2c-44f1-afdf-7525b16e9501, findElement {value=//android.widget.TextView[@text='Chats'], using=xpath}]
+Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ce1b5b19-1a2c-44f1-afdf-7525b16e9501]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot set AccessibilityNodeInfo's field 'mSealed' to 'true'. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem.
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ce1b5b19-1a2c-44f1-afdf-7525b16e9501, findElement {value=//android.widget.TextView[@text='Chats'], using=xpath}]
+Capabilities {appium:app: C:\Users\satbi\eclipse-work..., appium:appActivity: io.beldex.bchat.RoutingActi..., appium:appPackage: io.beldex.bchat, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\satbi\eclipse-work..., appActivity: io.beldex.bchat.RoutingActi..., appPackage: io.beldex.bchat, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: OnePlus Nord CE 3 Lite, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: ad5c6257}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: ad5c6257, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: ad5c6257, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: ad5c6257, appium:viewportRect: {height: 2293, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ce1b5b19-1a2c-44f1-afdf-7525b16e9501
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$1REKyGcS.getText(Unknown Source)
+at POM.HomeScreen.Pagetitle(HomeScreen.java:217)
+at AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases.To_validate_whether_the_user_is_able_to_disable_Start_wallet_option_without_internet(Menu_Drawer_Screen_TestCases.java:509)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_the_user_is_able_to_disable_Start_wallet_option_without_internet -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Menu_Drawer_Screen_TestCases@265adfad]" started-at="2025-05-15T19:08:45 IST" name="closeApp" finished-at="2025-05-15T19:08:46 IST" duration-ms="849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

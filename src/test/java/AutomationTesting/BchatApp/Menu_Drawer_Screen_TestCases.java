@@ -8,10 +8,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import POM.ChatScreen;
 import POM.CreatePINScreen;
+import POM.CreatePINScreen2;
 import POM.CreatePasswordScreen;
 import POM.CreateSecretGroupScreen;
 import POM.DisplayNameScreen;
+import POM.EnableWalletScreen;
 import POM.HomeScreen;
 import POM.JoinSocialGroupScreen;
 import POM.MenuScreen;
@@ -20,6 +23,8 @@ import POM.NoteToSelfChatScreen;
 import POM.OpeningPage;
 import POM.RecoveryPhraseScreen;
 import POM.RegisterScreen;
+import POM.RestoreFromSeedScreen;
+import POM.SeedScreen;
 import POM.SettingsScreen;
 import TestUtiles.baseclass;
 import io.appium.java_client.TouchAction;
@@ -36,11 +41,16 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	SettingsScreen settingspage;
 	CreatePINScreen createpinpage;
 	NoteToSelfChatScreen notetomyselfpage;
+	CreatePINScreen2 createpinpage2;
+	EnableWalletScreen Enablewalletpage;
+	ChatScreen chatpage;
+	SeedScreen seedpage;
+	RestoreFromSeedScreen restorefromseedpage;
 	WebDriverWait wait;
 
 	@Test(priority = 0)
 	public void PreSetup() throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		/*wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Openingpage = new OpeningPage(driver);
 		Openingpage.clickCreateAccount();
 		displaynamepage = new DisplayNameScreen(driver);
@@ -69,7 +79,29 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		// Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
 		Thread.sleep(4000);
-		// Assert.assertEquals(menupage.pagetitle(), "Menu");
+		// Assert.assertEquals(menupage.pagetitle(), "Menu");*/
+		
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Openingpage = new OpeningPage(driver);
+		Openingpage.clickSignIn();
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.pasteSeedValue();
+		seedpage.clickNext();
+		restorefromseedpage = new RestoreFromSeedScreen(driver);
+		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+		restorefromseedpage.paste_Value_In_DisplayName("Sathish");
+		restorefromseedpage.paste_Value_In_Blockheight("4000000");
+		restorefromseedpage.clickBtnRestore();
+		createpasswordpage = new CreatePasswordScreen(driver);
+		Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");
+		createpasswordpage.setValidPassword();
+		createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
+		// Thread.sleep(10000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(59000);
+		homepage.clickMenuDrawer();
 	}
 
 	/*
@@ -361,7 +393,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	    
 /* 	    To validate the working of the start wallet function after disabling */  
 	    
-	    @Test(priority = 17)
+	   /* @Test(priority = 17)
 		public void To_validate_the_working_of_the_start_wallet_functionality_after_disabling() throws InterruptedException {
 	    	menupage = new MenuScreen(driver);
 			//Thread.sleep(3000);
@@ -388,5 +420,86 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 			//Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	    }
+	    }*/
+	
+
+	
+/* To validate the working of the my wallet functionality when start wallet is disabled */
+	
+	@Test(priority = 18)
+	public void To_validate_the_working_of_my_wallet_functionality_when_start_wallet_is_disabled() throws InterruptedException {
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+    	menupage = new MenuScreen(driver);
+		Thread.sleep(4000);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		Thread.sleep(3000);
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+    	menupage = new MenuScreen(driver);
+    	menupage.click_option_Wallet();
+    	Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(), "Wallet");
+    	driver.navigate().back();
+	}
+	
+/* To validate the working of the start wallet disable function by navigating from one to one chat screen */
+	
+	@Test(priority = 19)
+	public void To_validate_the_working_of_the_Start_wallet_disable_functionality_by_navigating_from_one_to_one_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.LongPressBeldexIcon();
+		chatpage.ClickOkButtonInPayAsYouChatPopup();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		//Thread.sleep(3000);
+	}
+
+/* Validate whether the user is able to enable Start wallet option without internet */
+	
+	@Test(priority = 20)
+	public void To_validate_whether_the_user_is_able_to_enable_Start_wallet_option_without_internet() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(7000);
+		turnOff_Mobile_Wifi();
+		Thread.sleep(5000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+	}
+
+    	
 }

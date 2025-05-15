@@ -58,7 +58,7 @@ public class baseclass {
 			UiAutomator2Options options = new UiAutomator2Options();
 			
 			options.setCapability("appium:automationName", "UiAutomator2");	
-			 options.setCapability("appium:deviceName", "OnePlus Nord CE 3 Lite 5G");		 
+			 options.setCapability("appium:deviceName", "OnePlus Nord CE 3 Lite");		 
 			 options.setCapability("appium:platformName","Android");
 			 options.setCapability("appium:platformVersion","14");
 			 //options.setCapability("appium:newCommandTimeout","30000");
