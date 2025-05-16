@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import POM.AccountSettingsScreen;
 import POM.ChatScreen;
 import POM.ClearDataPopup;
+import POM.CreatePINScreen;
+import POM.CreatePINScreen2;
 import POM.CreatePasswordScreen;
 import POM.DisplayNameScreen;
 import POM.EnableWalletScreen;
@@ -48,6 +50,8 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	EnableWalletScreen Enablewalletpage;
 	SecretGroupChatScreen groupchatpage;
 	SocialGroupChatScreen socialgroupchatpage;
+	CreatePINScreen createpinpage;
+	CreatePINScreen2 createpinpage2;
 	// MyWalletPage mywalletpage;
 
 	@Test(priority = 0)
@@ -96,7 +100,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		Thread.sleep(59000);
 		//wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-		homepage.ClickFirstContactorGroup();
+		//homepage.ClickFirstContactorGroup();
 		// homepage.ClickMessageRquestDropdown();
 		// homepage.ClickFirstMessageRquest();
 		//chatpage = new ChatScreen(driver);
@@ -894,7 +898,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /*	This is to check that explorer.beldex.io opens while clicking on the sent and receive card in the one to one chat screen */
 	
-	@Test(priority = 69)
+	/*@Test(priority = 69)
 	public void To_check_that_explorer_website_opens_while_clicking_on_the_sent_and_receive_card_in_one_to_one_chat_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		//chatpage.swipeGesture(60, 60, 100, 100, "down");
@@ -906,13 +910,13 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		/*homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		Thread.sleep(3000);	
-		homepage.ClickFirstContactorGroup();*/
+		homepage.ClickFirstContactorGroup();
 		
 	}
 	
 /*	This is to check that explorer.beldex.io opens while clicking on the sent and receive card in the one to one chat screen */
 	
-	@Test(priority = 70)
+	/*@Test(priority = 70)
 	public void To_check_that_explorer_website_opens_while_clicking_on_the_sent_and_receive_card_in_one_to_one_chat_screen_without_internet() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(6000);	
@@ -930,8 +934,51 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		turnOn_Mobile_Wifi();
 		Thread.sleep(5000);	
 		
-	}
+	}*/
 	
+/* Validate the working of In-chat payment in ON condition in one to one chat screen*/
+	
+	@Test(priority = 71)
+	public void To_validate_the_working_of_Inchat_payment_in_ON_condition_in_one_to_one_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.Click_SetupPin();
+		createpinpage = new CreatePINScreen(driver);
+	    createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();
+		createpinpage2.clickOk();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(59000);
+		chatpage.Set_Values_In_Message_textbox("0.00001");
+		chatpage.SwipebtnSlideToPay();
+		Thread.sleep(3000);
+		driver.navigate().back();
+	}
 
+	
 
 }

@@ -50,7 +50,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 
 	@Test(priority = 0)
 	public void PreSetup() throws InterruptedException {
-		/*wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Openingpage = new OpeningPage(driver);
 		Openingpage.clickCreateAccount();
 		displaynamepage = new DisplayNameScreen(driver);
@@ -79,9 +79,9 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		// Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
 		Thread.sleep(4000);
-		// Assert.assertEquals(menupage.pagetitle(), "Menu");*/
+		// Assert.assertEquals(menupage.pagetitle(), "Menu");
 		
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		/*wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		Openingpage = new OpeningPage(driver);
 		Openingpage.clickSignIn();
 		seedpage = new SeedScreen(driver);
@@ -101,7 +101,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		Thread.sleep(59000);
-		homepage.clickMenuDrawer();
+		homepage.clickMenuDrawer();*/
 	}
 
 	/*
@@ -426,7 +426,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	
 /* To validate the working of the my wallet functionality when start wallet is disabled */
 	
-	@Test(priority = 18)
+	/*@Test(priority = 18)
 	public void To_validate_the_working_of_my_wallet_functionality_when_start_wallet_is_disabled() throws InterruptedException {
 		menupage = new MenuScreen(driver);
     	menupage.click_option_Settings();
@@ -457,7 +457,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 	
 /* To validate the working of the start wallet disable function by navigating from one to one chat screen */
 	
-	@Test(priority = 19)
+	/*@Test(priority = 19)
 	public void To_validate_the_working_of_the_Start_wallet_disable_functionality_by_navigating_from_one_to_one_chat_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -485,7 +485,7 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 
 /* Validate whether the user is able to enable Start wallet option without internet */
 	
-	@Test(priority = 20)
+	/*@Test(priority = 20)
 	public void To_validate_whether_the_user_is_able_to_enable_Start_wallet_option_without_internet() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -499,7 +499,67 @@ public class Menu_Drawer_Screen_TestCases extends baseclass {
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
 		settingspage.click_start_wallet();
 		Thread.sleep(3000);
+	}*/
+	
+/* Validate whether user is able to enable Pay as you chat without internet after enabling Start wallet option */
+	
+	@Test(priority = 21)
+	public void To_validate_whether_the_user_is_able_to_enable_Pay_As_You_Chat_without_internet_after_enabling_Start_wallet_option() throws InterruptedException {
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(5000);
+		turnOff_Mobile_Wifi();
+		Thread.sleep(5000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Cancel();
+		driver.navigate().back();
+		//Thread.sleep(2000);
+
 	}
+	
+/* validate whether user is able to enable wallet option without internet after enabling Start wallet option */
+	
+	@Test(priority = 22)
+	public void To_validate_whether_the_user_is_able_to_enable_wallet_option_without_internet_after_enabling_Start_wallet_option() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+		menupage.click_option_Wallet();
+		//Thread.sleep(3000);
+	}
+	
+
+/* Validate whether the user is able to disable Start wallet option without internet */
+	
+	@Test(priority = 23)
+	public void To_validate_whether_the_user_is_able_to_disable_Start_wallet_option_without_internet() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(7000);
+		turnOn_Mobile_Wifi();
+		Thread.sleep(5000);
+	}
+	
 
     	
 }

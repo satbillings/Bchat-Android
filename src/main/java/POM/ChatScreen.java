@@ -1014,4 +1014,11 @@ public class ChatScreen extends ActionsClass {
 	public WebElement Btn_Slide_to_pay () {
 		return btnSlideToPay;
 	}
+	
+	public void SwipebtnSlideToPay () {
+		longPress(btnSlideToPay);
+		swipeGesture(100, 100, 200, 200, "right");
+
+	}
+	
 }

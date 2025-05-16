@@ -1409,7 +1409,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		Thread.sleep(6000);
 		turnOff_Mobile_Wifi();
       	Thread.sleep(6000);	
-		sendpage.clickAs();	
+		sendpage.clickAs1();	
 		Thread.sleep(2000);
 		sendpage.ClickGalleryOption();
 		sendpage.ClickAlbumSection();
