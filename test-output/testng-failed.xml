@@ -8,9 +8,12 @@
     <classes>
       <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
         <methods>
+          <include name="To_validate_the_working_of_Inchat_payment_in_OFF_condition_in_one_to_one_chat_screen"/>
+          <include name="To_validate_whether_the_user_is_able_to_enable_Inchat_payment_after_entering_number_value_in_the_message_textbox"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_the_working_of_Inchat_payment_in_ON_condition_in_one_to_one_chat_screen"/>
+          <include name="To_Validate_if_already_entered_Inchat_payment_amount_is_present_in_the_message_text_box_after_navigating_back_to_the_home_screen_and_again_come_back_to_chat_screen"/>
+          <include name="To_validate_whether_the_user_is_able_to_disable_Inchat_payment_after_entering_number_value_in_the_message_textbox"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>

@@ -1015,6 +1015,14 @@ public class ChatScreen extends ActionsClass {
 		return btnSlideToPay;
 	}
 	
+	public void LongPressButtonSlideToPay () {
+		longPress(btnSlideToPay);
+	}
+	
+	public WebElement getBeldexIcon () {
+		return beldexIcon;
+	}
+	
 	public void SwipebtnSlideToPay () {
 		longPress(btnSlideToPay);
 		swipeGesture(100, 100, 200, 200, "right");

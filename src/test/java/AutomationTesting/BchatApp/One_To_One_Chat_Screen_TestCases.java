@@ -938,7 +938,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the working of In-chat payment in ON condition in one to one chat screen*/
 	
-	@Test(priority = 71)
+	/*@Test(priority = 71)
 	public void To_validate_the_working_of_Inchat_payment_in_ON_condition_in_one_to_one_chat_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -974,11 +974,134 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage = new ChatScreen(driver);
 		Thread.sleep(59000);
 		chatpage.Set_Values_In_Message_textbox("0.00001");
-		chatpage.SwipebtnSlideToPay();
+		chatpage.clear_textBox();
+		//chatpage.SwipebtnSlideToPay();
 		Thread.sleep(3000);
 		driver.navigate().back();
+	}*/
+	
+/* Validate the working of In-chat payment in OFF condition in one to one chat screen */
+	
+	@Test(priority = 72)
+	public void To_validate_the_working_of_Inchat_payment_in_OFF_condition_in_one_to_one_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.Click_SetupPin();
+		createpinpage = new CreatePINScreen(driver);
+	    createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();
+		createpinpage2.clickOk();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(59000);
+		chatpage.Set_Values_In_Message_textbox("0.00001");
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(5000);
+		chatpage.clear_textBox();
+		Thread.sleep(2000);
+		chatpage.Set_Values_In_Message_textbox("0.00001");		
+	}
+	
+/* Validate whether the user is able to enable In-chat payment after entering number value in the message text box */	
+
+	@Test(priority = 73)
+	public void To_validate_whether_the_user_is_able_to_enable_Inchat_payment_after_entering_number_value_in_the_message_textbox() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getBeldexIcon().isDisplayed());
+		Assert.assertTrue(chatpage.Btn_Slide_to_pay().isDisplayed());
+
 	}
 
-	
+	/* Validate whether the user is able to disable In-chat payment after entering number value in the message text box */	
 
+	@Test(priority = 74)
+	public void To_validate_whether_the_user_is_able_to_disable_Inchat_payment_after_entering_number_value_in_the_message_textbox() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(2000);
+		chatpage.LongPressBeldexIcon();
+		chatpage.ClickOkButtonInPayAsYouChatPopup();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Aravind");
+		Thread.sleep(2000);
+		//Assert.assertFalse(chatpage.Btn_Slide_to_pay().isDisplayed());
+	}
+	
+/* Validate if already entered In-chat payment amount is present in the message text box after navigating back to the home screen and again come back to chat screen */
+	
+	@Test(priority = 75)
+	public void To_Validate_if_already_entered_Inchat_payment_amount_is_present_in_the_message_text_box_after_navigating_back_to_the_home_screen_and_again_come_back_to_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Aravind");
+		chatpage.LongPressBeldexIcon();
+		chatpage.ClickOkButtonInPayAsYouChatPopup();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Aravind");
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "Aravind");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "0.00001");
+	}
+		
 }
