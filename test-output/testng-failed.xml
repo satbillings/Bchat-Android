@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_empty_space_value_in_the_message_text_box"/>
+          <include name="PreSetup"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>

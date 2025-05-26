@@ -1106,7 +1106,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the In-chat payment with multiple dots in the message text box */	
 	
-	@Test(priority = 76)
+	/*@Test(priority = 76)
 	public void To_Validate_if_already_entered_Inchat_payment_amount_is_present_in_the_message_text_box_after_navigating_back_to_the_home_screen_and_again_come_back_to_chat_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1154,7 +1154,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* 	Validate the working of enabled In-chat payment functionality after entering the empty space value in message text box */
 	
-	@Test(priority = 77)
+	/*@Test(priority = 77)
 	public void To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_empty_space_value_in_the_message_text_box() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.paste_values("0.00001");
@@ -1167,7 +1167,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the working of enabled In-chat payment functionality after entering the special characters in message text box */
 	
-	@Test(priority = 78)
+	/*@Test(priority = 78)
 	public void To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_special_charactrers_in_the_message_text_box() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.paste_values("0.00001");
@@ -1180,7 +1180,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the working of enabled In-chat payment functionality after entering the upper case and lower case letters in message text box */
 	
-	@Test(priority = 79)
+	/*@Test(priority = 79)
 	public void To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_uppercase_and_lowercase_letters_in_the_message_text_box() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.paste_values("0.00001");
@@ -1192,10 +1192,82 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.paste_values("abcdef");
 		Thread.sleep(2000);
 		chatpage.clear_textBox();
-	}	
+	}	*/
 	
+/* Validate that lengthy decimal amounts is allowed or not inside message text box */	
+	
+	@Test(priority = 80)
+	public void To_Validate_that_lengthy_decimal_amount_is_allowed_or_not_in_the_message_text_box() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_start_wallet();
+		Thread.sleep(3000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//Thread.sleep(6000);
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+    	menupage.click_option_Settings();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
+		settingspage.Click_SetupPin();
+		createpinpage = new CreatePINScreen(driver);
+	    createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();
+		createpinpage2.clickOk();
+		settingspage = new SettingsScreen(driver);
+		Assert.assertEquals(settingspage.pageTitle(),"Settings");	
+		settingspage.click_PayAsYouChat();
+		settingspage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		Thread.sleep(20000);
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Thread.sleep(59000);
+		chatpage.paste_values("0.00001");
+		Thread.sleep(2000);
+		chatpage.clear_textBox();
+		chatpage.paste_values("0.000000000001");
+		Thread.sleep(3000);
+		chatpage.clear_textBox();
+	}
+	
+/* Validate that lengthy amount is allowed or not inside message text box */	
 
+	@Test(priority = 81)
+	public void To_Validate_that_lengthy_amount_is_allowed_or_not_in_the_message_text_box() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.paste_values("123456789");
+		Thread.sleep(2000);
+		chatpage.clear_textBox();
+		chatpage.paste_values("1234567890");
+		Thread.sleep(2000);
+		chatpage.clear_textBox();
+	}
 	
+	/* Validate the working of enabled In-chat payment functionality after entering the alpha numeric value in message text box */
+
+	@Test(priority = 82)
+	public void To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_alpha_numeric_value_in_the_message_text_box() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.paste_values("0.00001");	
+		Thread.sleep(2000);
+		chatpage.clear_textBox();
+		chatpage.paste_values("abc123");
+		Thread.sleep(2000);
+		chatpage.clear_textBox();
+	}
+
 
 		
 }

@@ -412,6 +412,54 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/viewPaymentCard\"])[1]")
 	private WebElement InChatPaymentCardView;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/contactButton")
+	private WebElement ContactButton;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText")
+	private WebElement SearchContactTextBox;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Send Contact']")
+	private WebElement SendContactScreenTiltle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search Contact']")
+	private WebElement SearchContactTextBoxPlaeceholder;
+	
+	@AndroidFindBy(xpath="//android.widget.Button")
+	private WebElement SendContactScreenSendButton;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View")
+	private WebElement FirstContact;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View")
+	private WebElement SecondContact;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")
+	private WebElement ContactCheckbox;
+	
+	public void SelectFirstContact() {
+		FirstContact.click();
+	}
+	
+	public void SelectSecondContact() {
+		SecondContact.click();
+	}
+	
+	public void ClickContactCheckbox() {
+		ContactCheckbox.click();
+	}
+	
+	public WebElement getContactButton () {
+		return ContactButton;
+				}
+	
+	public void ClickContactButton() {
+		ContactButton.click();
+	}
+	
+	public String getSendContactScreenTiltle () {
+		return SendContactScreenTiltle.getText();
+	}
+	
 	public WebElement getInChatPaymentCardView () {
 		return InChatPaymentCardView;
 				}
