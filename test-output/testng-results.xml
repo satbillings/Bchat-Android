@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-26T12:45:45 IST" name="Suite" finished-at="2025-05-26T12:49:58 IST" duration-ms="253617">
+  <suite started-at="2025-05-27T11:47:53 IST" name="Suite" finished-at="2025-05-27T11:50:04 IST" duration-ms="131135">
     <groups>
     </groups>
-    <test started-at="2025-05-26T12:45:45 IST" name="Test" finished-at="2025-05-26T12:49:58 IST" duration-ms="253617">
+    <test started-at="2025-05-27T11:47:53 IST" name="Test" finished-at="2025-05-27T11:50:04 IST" duration-ms="131135">
       <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:45:45 IST" name="Configure" finished-at="2025-05-26T12:46:05 IST" duration-ms="20756" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:47:53 IST" name="Configure" finished-at="2025-05-27T11:48:14 IST" duration-ms="21656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:46:05 IST" name="PreSetup" finished-at="2025-05-26T12:47:32 IST" duration-ms="86316" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:48:14 IST" name="PreSetup" finished-at="2025-05-27T11:49:41 IST" duration-ms="86941" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_that_lengthy_decimal_amount_is_allowed_or_not_in_the_message_text_box()[pri:80, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:47:32 IST" name="To_Validate_that_lengthy_decimal_amount_is_allowed_or_not_in_the_message_text_box" finished-at="2025-05-26T12:49:28 IST" duration-ms="116399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_that_lengthy_decimal_amount_is_allowed_or_not_in_the_message_text_box -->
-        <test-method signature="To_Validate_that_lengthy_amount_is_allowed_or_not_in_the_message_text_box()[pri:81, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:49:28 IST" name="To_Validate_that_lengthy_amount_is_allowed_or_not_in_the_message_text_box" finished-at="2025-05-26T12:49:39 IST" duration-ms="10704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_that_lengthy_amount_is_allowed_or_not_in_the_message_text_box -->
-        <test-method signature="To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_alpha_numeric_value_in_the_message_text_box()[pri:82, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:49:39 IST" name="To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_alpha_numeric_value_in_the_message_text_box" finished-at="2025-05-26T12:49:53 IST" duration-ms="13962" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_alpha_numeric_value_in_the_message_text_box -->
-        <test-method signature="To_Validate_the_working_of_contact_sharing_icon_in_chat_screen()[pri:83, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:49:53 IST" name="To_Validate_the_working_of_contact_sharing_icon_in_chat_screen" finished-at="2025-05-26T12:49:58 IST" duration-ms="4874" status="PASS">
+        <test-method signature="To_Validate_the_working_of_contact_sharing_icon_in_chat_screen()[pri:83, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:49:41 IST" name="To_Validate_the_working_of_contact_sharing_icon_in_chat_screen" finished-at="2025-05-27T11:49:57 IST" duration-ms="15218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- To_Validate_the_working_of_contact_sharing_icon_in_chat_screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@265adfad]" started-at="2025-05-26T12:49:58 IST" name="closeApp" finished-at="2025-05-26T12:49:58 IST" duration-ms="544" status="PASS">
+        <test-method signature="To_Validate_whether_the_user_is_able_to_navigate_back_to_chat_screen_from_Send_Contact_screen()[pri:84, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:49:57 IST" name="To_Validate_whether_the_user_is_able_to_navigate_back_to_chat_screen_from_Send_Contact_screen" finished-at="2025-05-27T11:49:59 IST" duration-ms="2224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_the_user_is_able_to_navigate_back_to_chat_screen_from_Send_Contact_screen -->
+        <test-method signature="To_Validate_whether_the_contacts_of_users_are_showing_in_the_contact_sharing_list_in_Send_Contact_screen()[pri:85, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:49:59 IST" name="To_Validate_whether_the_contacts_of_users_are_showing_in_the_contact_sharing_list_in_Send_Contact_screen" finished-at="2025-05-27T11:50:03 IST" duration-ms="4401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_the_contacts_of_users_are_showing_in_the_contact_sharing_list_in_Send_Contact_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases@7a1a14a4]" started-at="2025-05-27T11:50:03 IST" name="closeApp" finished-at="2025-05-27T11:50:04 IST" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

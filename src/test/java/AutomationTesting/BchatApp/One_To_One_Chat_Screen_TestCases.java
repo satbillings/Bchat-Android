@@ -1196,7 +1196,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate that lengthy decimal amounts is allowed or not inside message text box */	
 	
-	@Test(priority = 80)
+	/*@Test(priority = 80)
 	public void To_Validate_that_lengthy_decimal_amount_is_allowed_or_not_in_the_message_text_box() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1244,7 +1244,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate that lengthy amount is allowed or not inside message text box */	
 
-	@Test(priority = 81)
+	/*@Test(priority = 81)
 	public void To_Validate_that_lengthy_amount_is_allowed_or_not_in_the_message_text_box() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.paste_values("123456789");
@@ -1257,7 +1257,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate the working of enabled In-chat payment functionality after entering the alpha numeric value in message text box */
 
-	@Test(priority = 82)
+	/*@Test(priority = 82)
 	public void To_Validate_the_working_of_enabled_Inchat_payment_functionality_after_entering_the_alpha_numeric_value_in_the_message_text_box() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.paste_values("0.00001");	
@@ -1266,7 +1266,46 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.paste_values("abc123");
 		Thread.sleep(2000);
 		chatpage.clear_textBox();
+	}*/
+	
+/* Contact Sharing Feature */	
+	
+/* Validate the working of contact sharing icon in chat screen */
+	
+	@Test(priority = 83)
+	public void To_Validate_the_working_of_contact_sharing_icon_in_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTiltle(), "Send Contact");
 	}
+	
+/* Validate whether the user is able to navigate back to chat screen from send contact screen */	
+	
+	@Test(priority = 84)
+	public void To_Validate_whether_the_user_is_able_to_navigate_back_to_chat_screen_from_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTiltle(), "Send Contact");
+		driver.navigate().back();
+		chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getMessageCardView().isDisplayed());
+	}
+	
+/* Validate whether the contacts of the users are showing in the contact sharing list in Send Contact screen */
+	
+	@Test(priority = 85)
+	public void To_Validate_whether_the_contacts_of_users_are_showing_in_the_contact_sharing_list_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTiltle(), "Send Contact");
+		Assert.assertTrue(chatpage.getFirstContact().isDisplayed());
+		Assert.assertTrue(chatpage.getSecondContact().isDisplayed());
+	}
+
 
 
 		

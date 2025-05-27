@@ -436,6 +436,10 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")
 	private WebElement ContactCheckbox;
 	
+	public void ClickSendContactScreenSendButton() {
+		SendContactScreenSendButton.click();
+	}
+	
 	public void SelectFirstContact() {
 		FirstContact.click();
 	}
@@ -452,6 +456,13 @@ public class ChatScreen extends ActionsClass {
 		return ContactButton;
 				}
 	
+	public WebElement getFirstContact () {
+		return FirstContact;
+				}
+	
+	public WebElement getSecondContact () {
+		return SecondContact;
+				}
 	public void ClickContactButton() {
 		ContactButton.click();
 	}
