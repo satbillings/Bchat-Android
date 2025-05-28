@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="PreSetup"/>
+          <include name="To_Validate_whether_the_user_is_able_to_share_contact_without_internet"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>

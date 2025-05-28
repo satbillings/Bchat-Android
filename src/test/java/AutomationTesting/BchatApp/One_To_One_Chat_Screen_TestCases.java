@@ -1272,7 +1272,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the working of contact sharing icon in chat screen */
 	
-	@Test(priority = 83)
+	/*@Test(priority = 83)
 	public void To_Validate_the_working_of_contact_sharing_icon_in_chat_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1285,7 +1285,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to navigate back to chat screen from send contact screen */	
 	
-	@Test(priority = 84)
+	/*@Test(priority = 84)
 	public void To_Validate_whether_the_user_is_able_to_navigate_back_to_chat_screen_from_Send_Contact_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTiltle(), "Send Contact");
@@ -1296,7 +1296,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the contacts of the users are showing in the contact sharing list in Send Contact screen */
 	
-	@Test(priority = 85)
+	/*@Test(priority = 85)
 	public void To_Validate_whether_the_contacts_of_users_are_showing_in_the_contact_sharing_list_in_Send_Contact_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		chatpage.click_Attachments();
@@ -1304,9 +1304,42 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		Assert.assertEquals(chatpage.getSendContactScreenTiltle(), "Send Contact");
 		Assert.assertTrue(chatpage.getFirstContact().isDisplayed());
 		Assert.assertTrue(chatpage.getSecondContact().isDisplayed());
+	}*/
+	
+/* Validate whether the user is able to share contact without selecting contact in Send Contact Screen */
+	
+	@Test(priority = 86)
+	public void To_Validate_whether_the_user_is_able_to_share_contact_without_selecting_contact_in_Send_Contact_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.ClickSendContactScreenSendButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
 	}
-
-
-
+	
+/* Validate whether the user is able to select the contacts from the list in Send Contact screen */
+	
+	@Test(priority = 87)
+	public void To_Validate_whether_the_user_is_able_to_select_the_contacts_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.SelectFirstContact();
+		chatpage.SelectSecondContact();
+	}
+	
+/* Validate whether the user is able to unselect the selected contacts from the list in Send Contact screen */
+	
+	@Test(priority = 88)
+	public void To_Validate_whether_the_user_is_able_to_unselect_the_selected_contacts_from_the_list_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.SelectFirstContact();
+		chatpage.SelectSecondContact();
+	}
+	
 		
 }

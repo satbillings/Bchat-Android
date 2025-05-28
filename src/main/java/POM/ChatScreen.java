@@ -419,7 +419,7 @@ public class ChatScreen extends ActionsClass {
 	private WebElement SearchContactTextBox;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Send Contact']")
-	private WebElement SendContactScreenTiltle;
+	private WebElement SendContactScreenTitle;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search Contact']")
 	private WebElement SearchContactTextBoxPlaeceholder;
@@ -434,7 +434,26 @@ public class ChatScreen extends ActionsClass {
 	private WebElement SecondContact;
 	
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")
-	private WebElement ContactCheckbox;
+	private WebElement FirstContactCheckbox;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View")
+	private WebElement SecondContactCheckbox;
+	
+	public void Set_Values_In_Search_Contact_TextBox (String value) {
+		SearchContactTextBox.sendKeys(value);
+		}
+	
+	public void Paste_Values_In_Search_Contact_TextBox (String value) {
+		Copy_And_Paste_Values(value, SearchContactTextBox);
+	}
+	
+	public String getSearchContactTextboxPlaceholder () {
+		return SearchContactTextBoxPlaeceholder.getText();
+	}
+	
+	public WebElement getContactCheckboxStatus () {
+		return FirstContactCheckbox;
+				}
 	
 	public void ClickSendContactScreenSendButton() {
 		SendContactScreenSendButton.click();
@@ -448,8 +467,12 @@ public class ChatScreen extends ActionsClass {
 		SecondContact.click();
 	}
 	
-	public void ClickContactCheckbox() {
-		ContactCheckbox.click();
+	public void ClickFirstContactCheckbox() {
+		FirstContactCheckbox.click();
+	}
+	
+	public void ClickSecondContactCheckbox() {
+		SecondContactCheckbox.click();
 	}
 	
 	public WebElement getContactButton () {
@@ -467,8 +490,8 @@ public class ChatScreen extends ActionsClass {
 		ContactButton.click();
 	}
 	
-	public String getSendContactScreenTiltle () {
-		return SendContactScreenTiltle.getText();
+	public String getSendContactScreenTitle () {
+		return SendContactScreenTitle.getText();
 	}
 	
 	public WebElement getInChatPaymentCardView () {
