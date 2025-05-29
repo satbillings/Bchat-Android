@@ -133,6 +133,9 @@ public class HomeScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[2]")
 	private WebElement SecondContactorGroup;
 	
+	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[3]")
+	private WebElement ThirdContactorGroup;
+	
 	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout[4]")
 	private WebElement FourthContactorGroup;
 	
@@ -150,6 +153,10 @@ public class HomeScreen extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='aravind']")
 	private WebElement SearchedContact;
+	
+	public void ClickThirdContactorGroup() {
+		ThirdContactorGroup.click();
+	}
 	
 	public String getSearchedContact () {
 		return SearchedContact.getText();

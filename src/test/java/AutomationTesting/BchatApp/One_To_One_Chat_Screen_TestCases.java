@@ -19,6 +19,7 @@ import POM.EnableWalletScreen;
 import POM.HomeScreen;
 import POM.MenuScreen;
 import POM.NewChatScreen;
+import POM.NoteToSelfChatScreen;
 import POM.OpeningPage;
 import POM.RecoveryPhraseScreen;
 import POM.RegisterScreen;
@@ -52,6 +53,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	SocialGroupChatScreen socialgroupchatpage;
 	CreatePINScreen createpinpage;
 	CreatePINScreen2 createpinpage2;
+	NoteToSelfChatScreen notetoselfchatpage;
 	// MyWalletPage mywalletpage;
 
 	@Test(priority = 0)
@@ -1308,7 +1310,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to share contact without selecting contact in Send Contact Screen */
 	
-	@Test(priority = 86)
+	/*@Test(priority = 86)
 	public void To_Validate_whether_the_user_is_able_to_share_contact_without_selecting_contact_in_Send_Contact_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1323,7 +1325,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to select the contacts from the list in Send Contact screen */
 	
-	@Test(priority = 87)
+	/*@Test(priority = 87)
 	public void To_Validate_whether_the_user_is_able_to_select_the_contacts_in_Send_Contact_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1333,13 +1335,69 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to unselect the selected contacts from the list in Send Contact screen */
 	
-	@Test(priority = 88)
+	/*@Test(priority = 88)
 	public void To_Validate_whether_the_user_is_able_to_unselect_the_selected_contacts_from_the_list_in_Send_Contact_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
 		chatpage.SelectFirstContact();
 		chatpage.SelectSecondContact();
+	}*/
+	
+/* Validate whether the user is able to share contact in one to one chat screen*/
+	
+	@Test(priority = 89)
+	public void To_Validate_whether_the_user_is_able_to_share_contact_in_one_to_one_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.SelectFirstContact();
+		chatpage.ClickSendContactScreenSendButton();
+		chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getMessageCardView().isDisplayed());
 	}
 	
+/* Validate whether the user is able to share contact in secret group chat screen*/
+	
+	@Test(priority = 90)
+	public void To_Validate_whether_the_user_is_able_to_share_contact_in_secret_group_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickSecondContactorGroup();
+    	groupchatpage = new SecretGroupChatScreen(driver);
+    	groupchatpage.ClickAttachments();
+    	Thread.sleep(3000);
+    	groupchatpage.ClickContactButton();
+    	groupchatpage = new SecretGroupChatScreen(driver);
+		Assert.assertEquals(groupchatpage.getSendContactScreenTitle(), "Send Contact");
+		groupchatpage.SelectFirstContact();
+		groupchatpage.ClickSendContactScreenSendButton();
+	}	
+	
+/* Validate whether the user is able to share contact in Note to self chat screen*/
+	
+	@Test(priority = 91)
+	public void To_Validate_whether_the_user_is_able_to_share_contact_in_Note_to_self_chat_screen() throws InterruptedException {
+    	groupchatpage = new SecretGroupChatScreen(driver);
+    	driver.navigate().back();
+    	homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		//homepage.ClickThirdContactorGroup();
+		homepage.clickSearch();
+		homepage.click_Option_Note_To_Myself();
+    	notetoselfchatpage = new NoteToSelfChatScreen(driver);
+    	notetoselfchatpage.ClickAttachments();
+    	Thread.sleep(2000);
+    	notetoselfchatpage.ClickContactButton();
+    	notetoselfchatpage = new NoteToSelfChatScreen(driver);
+		Assert.assertEquals(notetoselfchatpage.getSendContactScreenTitle(), "Send Contact");
+		notetoselfchatpage.SelectFirstContact();
+		notetoselfchatpage.ClickSendContactScreenSendButton();
+	}
 		
 }

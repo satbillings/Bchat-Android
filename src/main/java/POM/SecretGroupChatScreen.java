@@ -142,6 +142,38 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(xpath="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/viewPaymentCard\"])[1]")
 	private WebElement InChatPaymentCardView;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/contactButton")
+	private WebElement ContactButton;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Send Contact']")
+	private WebElement SendContactScreenTitle;
+	
+	@AndroidFindBy(xpath="//android.widget.Button")
+	private WebElement SendContactScreenSendButton;
+	
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View")
+	private WebElement FirstContact;
+	
+	public void ClickAttachments() {
+		btnattachments.click();
+	}
+	
+	public void ClickSendContactScreenSendButton() {
+		SendContactScreenSendButton.click();
+	}
+	
+	public String getSendContactScreenTitle () {
+		return SendContactScreenTitle.getText();
+	}
+	
+	public void ClickContactButton() {
+		ContactButton.click();
+	}
+	
+	public void SelectFirstContact() {
+		FirstContact.click();
+	}
+	
 	public WebElement getInChatPaymentCardView () {
 		return InChatPaymentCardView;
 				}
