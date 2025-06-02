@@ -439,6 +439,28 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View")
 	private WebElement SecondContactCheckbox;
 	
+	@AndroidFindBy(xpath="//android.widget.EditText[@text=\"test\"]/android.view.View/android.view.View")
+	private WebElement SearchContactTextboxWithText;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText/android.view.View/android.view.View[2]")
+	private WebElement SearchContactTextboxWithoutText;
+	
+	public WebElement getSearchContactTextboxWithText () {
+		return SearchContactTextboxWithText;
+				}
+	
+	public WebElement getSearchContactTextboxWithoutText () {
+		return SearchContactTextboxWithoutText;
+				}
+	
+	public void ClickSearchContactTextBox() {
+		SearchContactTextBox.click();
+	}
+	
+	public void ClearSearchContactTextBox() {
+		SearchContactTextBox.clear();
+	}
+	
 	public void Set_Values_In_Search_Contact_TextBox (String value) {
 		SearchContactTextBox.sendKeys(value);
 		}
