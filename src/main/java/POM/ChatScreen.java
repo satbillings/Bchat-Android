@@ -445,6 +445,13 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.EditText/android.view.View/android.view.View[2]")
 	private WebElement SearchContactTextboxWithoutText;
 	
+	@AndroidFindBy(accessibility ="clear")
+	private WebElement SearchContactTextboxCloseIcon;
+	
+	public void ClickSearchContactTextBoxCloseIcon() {
+		SearchContactTextboxCloseIcon.click();
+	}
+	
 	public WebElement getSearchContactTextboxWithText () {
 		return SearchContactTextboxWithText;
 				}

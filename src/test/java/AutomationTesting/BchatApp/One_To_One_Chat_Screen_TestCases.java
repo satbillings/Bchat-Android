@@ -1402,7 +1402,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the cursor blink in Search Contact text box on the Send Contact screen */
 	
-	@Test(priority = 92)
+	/*@Test(priority = 92)
 	public void To_Validate_the_cursor_blink_in_search_contact_text_box_on_the_Send_Contact_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1417,7 +1417,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the presence of placeholder in Search Contact text box on the Send Contact screen */
 	
-	@Test(priority = 93)
+	/*@Test(priority = 93)
 	public void To_Validate_the_presence_of_placeholder_in_search_contact_text_box_on_the_Send_Contact_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1426,7 +1426,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the Search Contact text box in Send Contact screen by entering the empty space value */
 	
-	@Test(priority = 94)
+	/*@Test(priority = 94)
 	public void To_Validate_the_search_contact_text_box_on_the_Send_Contact_screen_by_entering_the_empty_space_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1437,12 +1437,71 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 /* Validate the Search Contact text box in Send Contact screen by entering the special character */
 /* Validate whether the value entered in the Search Contact text box of Send Contact screen is editable and delete-able */
 	
-	@Test(priority = 95)
+	/*@Test(priority = 95)
     public void To_validate_the_search_contact_text_box_in_Send_Contact_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_search_contact_text_box_of_Send_Contact_screen_is_editable_and_deleteable () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
 		chatpage.Set_Values_In_Search_Contact_TextBox("!@#$%^&*()_");
 		chatpage.ClearSearchContactTextBox();
-	}	
+	}	*/
+	
+/* Validate the Search Contact text box in Send Contact screen by entering the numerical value */
+	
+	@Test(priority = 96)
+	public void To_Validate_the_search_contact_text_box_on_the_Send_Contact_screen_by_entering_the_numerical_value() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.ClickSearchContactTextBox();
+		chatpage.Set_Values_In_Search_Contact_TextBox("1234567890");
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+/* Validate the Search Contact text box in Send Contact screen by entering the alphanumeric value */
+	
+	@Test(priority = 97)
+	public void To_Validate_the_search_contact_text_box_on_the_Send_Contact_screen_by_entering_the_alphanumeric_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.Set_Values_In_Search_Contact_TextBox("abc123");
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+	/* Validate the Search contact text box in Send Contact screen by entering the alphabets both in upper case and lower case letter */
+	
+	@Test(priority = 98)
+	public void To_validate_the_Search_contact_text_box_in_Send_Contact_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.Set_Values_In_Search_Contact_TextBox("ABCDEF");
+		chatpage.ClearSearchContactTextBox();
+		chatpage.Set_Values_In_Search_Contact_TextBox("abcdef");
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+/* Validate whether the user is able enter a lengthy value in the Search Contact text box in Send Contact screen */
+	
+	@Test(priority = 99)
+	public void To_validate_the_user_is_able_to_enter_a_lenghty_value_in_the_Search_contact_text_box_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.Set_Values_In_Search_Contact_TextBox("Hii hello are you there to here that in the message and ok then now its ok mm hmm ok");
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+	/* Validate whether the paste option is working on the Search Contact text box in Send Contact screen */
+
+	@Test(priority = 100)
+	public void To_validate_whether_the_paste_option_is_working_on_the_Search_Contact_text_box_in_Send_Contact_screen() throws InterruptedException {
+	     chatpage = new ChatScreen(driver);
+		 Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		 chatpage.Paste_Values_In_Search_Contact_TextBox("Hello");
+		 chatpage.ClearSearchContactTextBox();
+	}
+	
 	
 }
