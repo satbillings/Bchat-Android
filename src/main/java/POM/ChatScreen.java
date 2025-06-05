@@ -442,7 +442,7 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.EditText[@text=\"test\"]/android.view.View/android.view.View")
 	private WebElement SearchContactTextboxWithText;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText/android.view.View/android.view.View[2]")
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='']/android.view.View/android.view.View[2]")
 	private WebElement SearchContactTextboxWithoutText;
 	
 	@AndroidFindBy(accessibility ="clear")
