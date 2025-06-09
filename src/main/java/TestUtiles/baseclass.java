@@ -58,12 +58,12 @@ public class baseclass {
 			UiAutomator2Options options = new UiAutomator2Options();
 			
 			options.setCapability("appium:automationName", "UiAutomator2");	
-			 options.setCapability("appium:deviceName", "Oneplus Nord CE 3 Lite");		 
+			 options.setCapability("appium:deviceName", "Samsung Galaxy A06");		 
 			 options.setCapability("appium:platformName","Android");
 			 options.setCapability("appium:platformVersion","14");
 			 //options.setCapability("appium:newCommandTimeout","30000");
 
-			options.setCapability("udid","ad5c6257");
+			options.setCapability("udid","R83Y30JA7NZ");
 			//options.setCapability("noReset", "true");
 
 			 options.setCapability("appium:ignoreHiddenApiPolicyError", true);

@@ -285,6 +285,14 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[3]']")
 	private WebElement GifMessage2;
 	
+	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[6]']")
+	@AndroidFindBy(xpath="(//androidx.compose.ui.platform.ComposeView[@resource-id=\"io.beldex.bchat:id/contactView\"])[3]/android.view.View/android.view.View")
+	private WebElement SharedContactMessage;
+	
+	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[5]']")
+	@AndroidFindBy(xpath="(//androidx.cardview.widget.CardView[@resource-id=\"io.beldex.bchat:id/messageContentView\"])[5]/android.widget.LinearLayout")
+	private WebElement NormalMessage;
+	
 	@AndroidFindBy(accessibility ="Forward")
 	private WebElement ForwardOption;
 	
@@ -447,6 +455,43 @@ public class ChatScreen extends ActionsClass {
 	
 	@AndroidFindBy(accessibility ="clear")
 	private WebElement SearchContactTextboxCloseIcon;
+	
+	@AndroidFindBy(xpath="//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	private WebElement ChatButtonInChatWithContactPopup;
+	
+	@AndroidFindBy(xpath="//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	private WebElement CancelButtonInChatWithContactPopup;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Do you want to chat with this contact now?']")
+	private WebElement ChatWithContactPopupContent;
+	
+	public void LongPressOnNormalMessage() {
+		longPress(NormalMessage);
+	}
+	
+	public void ClickReplyOptionForNormalMessage() {
+		replyoption.click();
+	}
+	
+	public String getChatWithContactPopupContent () {
+		return ChatWithContactPopupContent.getText();
+				}
+	
+	public void ClickSharedContactMessage() {
+		SharedContactMessage.click();
+	}
+	
+	public void ClickChatButtonInChatWithContactPopup() {
+		ChatButtonInChatWithContactPopup.click();
+	}
+	
+	public void ClickCancelButtonInChatWithContactPopup() {
+		CancelButtonInChatWithContactPopup.click();
+	}
+	
+	public WebElement getSharedContactMessage () {
+		return SharedContactMessage;
+				}
 	
 	public void ClickSearchContactTextBoxCloseIcon() {
 		SearchContactTextboxCloseIcon.click();

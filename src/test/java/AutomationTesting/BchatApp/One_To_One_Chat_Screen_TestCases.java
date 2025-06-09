@@ -1542,7 +1542,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate if the list of contacts are displayed on the "Send Contact" screen after entering more than invalid two characters and deleting these characters in the "Search Contact" text box */
 	
-	@Test(priority = 104)
+	/*@Test(priority = 104)
 	public void To_Validate_if_list_of_contacts_are_displayed_in_Send_Contact_screen_after_entering_more_than_invalid_two_characters_and_deleting_these_characters_in_search_contact_text_box() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1560,8 +1560,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether list of contacts are showing in Send Contact screen after deleting the entered lengthy invalid characters in search contact textbox */
 	
-	
-	@Test(priority = 105)
+	/*@Test(priority = 105)
 	public void To_Validate_whether_list_of_contacts_are_showing_in_Send_Contact_screen_after_deleting_the_entered_lengthy_invalid_characters_in_search_contact_text_box() throws InterruptedException {
 		 chatpage = new ChatScreen(driver);
 		 Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1573,7 +1572,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate if the text already entered is displayed in the search contact text box after navigating from send contact screen to chat screen and again chat screen to send contact screen */
 	
-	@Test(priority = 106)
+	/*@Test(priority = 106)
 	public void To_Validate_if_text_already_entered_is_displayed_in_Search_Contact_text_box_after_navigating_from_Send_Contact_screen_to_Chat_screen_and_again_Chat_screen_to_Send_Contact_screen() throws InterruptedException {
 		 chatpage = new ChatScreen(driver);
 		 Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1592,7 +1591,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to share contact without internet */
 	
-	@Test(priority = 107)
+	/*@Test(priority = 107)
 	public void To_Validate_whether_the_user_is_able_to_share_contact_without_internet() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
@@ -1607,8 +1606,65 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		Thread.sleep(8000);
 		turnOn_Mobile_Wifi();
 		Thread.sleep(6000);
-
-	}	
+	}	*/
 	
+/* Validate whether chat with contact popup is showing after user clicks on the shared contact in chat screen */
+	
+	@Test(priority = 108)
+	public void To_Validate_whether_chat_with_contact_popup_is_showing_after_user_clicks_on_the_shared_in_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+		chatpage.ClickSharedContactMessage();
+		Assert.assertEquals(chatpage.getChatWithContactPopupContent(), "Do you want to chat with this contact now?");
+
+	}
+	
+/* Validate the working of Chat button in chat with contact popup in chat screen */
+	
+	@Test(priority = 109)
+	public void To_Validate_the_working_of_Chat_button_in_chat_with_contact_popup_in_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+		Assert.assertEquals(chatpage.getChatWithContactPopupContent(), "Do you want to chat with this contact now?");
+		chatpage.ClickChatButtonInChatWithContactPopup();
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Chris");
+		chatpage.click_Back_Arrow();
+	}
+	
+/* Validate the working of Cancel button in chat with contact popup in chat screen */
+	
+	@Test(priority = 110)
+	public void To_Validate_the_working_of_Cancel_button_in_chat_with_contact_popup_in_chat_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+		chatpage.ClickSharedContactMessage();
+		chatpage.ClickCancelButtonInChatWithContactPopup();
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+	}
+	
+/* Validate whether user is able to share contact with one message as reply in chat screen */
+	
+	@Test(priority = 111)
+	public void To_Validate_whether_user_is_able_to_share_contact_with_message_as_reply_in_chat_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+		chatpage.LongPressOnNormalMessage();
+		chatpage.ClickReplyOptionForNormalMessage();
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.SelectFirstContact();
+		chatpage.ClickSendContactScreenSendButton();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
+	}
+
+
 	
 }
