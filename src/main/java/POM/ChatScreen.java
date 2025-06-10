@@ -289,6 +289,10 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="(//androidx.compose.ui.platform.ComposeView[@resource-id=\"io.beldex.bchat:id/contactView\"])[3]/android.view.View/android.view.View")
 	private WebElement SharedContactMessage;
 	
+	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[6]']")
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@content-desc=\"Send Message Tail View\"])[4]")
+	private WebElement FullSharedContactMessage;
+
 	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/expirationTimerViewContainer\"])[5]']")
 	@AndroidFindBy(xpath="(//androidx.cardview.widget.CardView[@resource-id=\"io.beldex.bchat:id/messageContentView\"])[5]/android.widget.LinearLayout")
 	private WebElement NormalMessage;
@@ -465,11 +469,47 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Do you want to chat with this contact now?']")
 	private WebElement ChatWithContactPopupContent;
 	
+	@AndroidFindBy(accessibility ="Delete message")
+	private WebElement DeleteOptionForSharedContactMessage;
+	
+	@AndroidFindBy(id ="io.beldex.bchat:id/deleteForEveryoneTextView")
+	private WebElement DeleteForEveryoneOptionForSharedContactMessage;
+	
+	@AndroidFindBy(accessibility ="Reply to message")
+	private WebElement ReplyOptionForSharedContactMessage;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Chris']")
+	private WebElement BlockedContactInList;
+	
+	public String getBlockedContactInList () {
+		return BlockedContactInList.getText();
+				}
+	
+	public void ClickReplyOptionForSharedContact() {
+		ReplyOptionForSharedContactMessage.click();
+	}
+	
+	public void ClickDeleteOptionForSharedContactMessage() {
+		DeleteOptionForSharedContactMessage.click();
+	}
+	
+	public void ClickDeleteForEveryoneOptionForSharedContactMessage() {
+		DeleteForEveryoneOptionForSharedContactMessage.click();
+	}
+	
 	public void LongPressOnNormalMessage() {
 		longPress(NormalMessage);
 	}
 	
+	public void LongPressOnSharedContactMessage() {
+		longPress(FullSharedContactMessage);
+	}
+	
 	public void ClickReplyOptionForNormalMessage() {
+		replyoption.click();
+	}
+	
+	public void ClickReplyOptionForSharedContactMessage() {
 		replyoption.click();
 	}
 	
