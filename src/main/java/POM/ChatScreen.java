@@ -224,6 +224,9 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='off']")
 	private WebElement TimerSelectoff;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='1 week']")
+	private WebElement TimerSelect1week;
+	
 	@AndroidFindBy(id="io.beldex.bchat:id/bodyTextView")
 	private WebElement FirstMessageCard;
 	
@@ -478,11 +481,25 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(accessibility ="Reply to message")
 	private WebElement ReplyOptionForSharedContactMessage;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Chris']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='contactshare']")
 	private WebElement BlockedContactInList;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='contactsharing']")
+	private WebElement ArchivedContactInList;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='No Contact Found']")
+	private WebElement NoContactFoundTextInSendContactScreen;
+	
+	public String getNoContactFoundTextInSendContactScreen () {
+		return NoContactFoundTextInSendContactScreen.getText();
+				}
 	
 	public String getBlockedContactInList () {
 		return BlockedContactInList.getText();
+				}
+	
+	public String getArchivedContactInList () {
+		return ArchivedContactInList.getText();
 				}
 	
 	public void ClickReplyOptionForSharedContact() {
@@ -917,11 +934,12 @@ public class ChatScreen extends ActionsClass {
 		DisappearingMessagesOption.click();
 		//longPress(TimerSelectoff);
 		//swipeGesture(950, 2260 , 100, 150, "up");
-		//clickGesture(1005, 180);
+		clickGesture(357, 625);
 		//swipeGesture(100, 100, 200, 200, "UP");
 		//scroll_the_page(800, 1500, 150, "down");
-		//scrollgesture_Using_text("5 seconds");
-		scrollgesture_Using_WebElement(TimerSelectoff);
+		//scrollgesture_Using_text("1 week");
+		//scrollgesture_Using_WebElement(TimerSelectoff);
+		//clickAs1();
 		OkButtonInPopup.click();
 	}
 	

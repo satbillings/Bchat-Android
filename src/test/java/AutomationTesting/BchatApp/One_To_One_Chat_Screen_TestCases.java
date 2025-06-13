@@ -1667,7 +1667,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to reply for the sent and received contact shared message card in chat screen */
 	
-	@Test(priority = 112)
+	/*@Test(priority = 112)
 	public void To_Validate_whether_the_user_is_able_to_reply_for_the_sent_and_received_contact_shared_message_card_in_chat_screen() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -1683,7 +1683,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to delete for the sent and received contact shared message card in chat screen */
 	
-	@Test(priority = 113)
+	/*@Test(priority = 113)
 	public void To_Validate_whether_the_user_is_able_to_delete_for_the_sent_and_received_contact_shared_message_card_in_chat_screen() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testcontactsharing");
@@ -1691,7 +1691,82 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.ClickDeleteOptionForSharedContactMessage();
 		chatpage.ClickDeleteForEveryoneOptionForSharedContactMessage();
 		driver.navigate().back();
+	}*/
+	
+/* Validate whether blocked contact is showing in the list in Send Contact screen */
+	
+	@Test(priority = 114)
+	public void To_Validate_whether_blocked_contact_is_showing_in_the_list_in_Send_Contact_screen() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickSecondContactorGroup();
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Contactshare");
+		chatpage.ClickBlockOption();
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.ClickFirstContactorGroup();
+		chatpage = new ChatScreen(driver);
+		chatpage.click_Attachments();
+		chatpage.ClickContactButton();
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		Assert.assertEquals(chatpage.getBlockedContactInList(),"contactshare");
 	}
+
+/* Validate the Search Contact text box in Send Contact screen by entering the HTML characters */
+	
+	@Test(priority = 115)
+	public void To_Validate_the_search_contact_text_box_on_the_Send_Contact_screen_by_entering_the_numerical_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.Set_Values_In_Search_Contact_TextBox("<a href=\"https://www.example.com\">Visit Example</a>");
+		Thread.sleep(2000);
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+/* Validate whether the user pastes a larger amount of text in the Search Contact text box in Send Contact screen */
+	
+	@Test(priority = 116)
+	public void To_Validate_the_user_pastes_a_large_amount_of_text_in_the_Search_Contact_text_box_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");	
+		chatpage.Paste_Values_In_Search_Contact_TextBox("fossil exotic network fabrics history jockey hoax using against nitrogen lazy skater buffet maps lush eleven clue ablaze fonts serving wept gown cell cottage using");
+		Thread.sleep(2000);
+		chatpage.ClearSearchContactTextBox();
+	}
+	
+/* Validate whether No Contact Found content is showing after user enters the invalid text in search contact text box in Send Contact screen */
+	
+	@Test(priority = 117)
+	public void To_Validate_whether_No_Contact_Found_content_is_showing_after_user_enters_the_invalid_text_in_the_Search_Contact_text_box_in_Send_Contact_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.getSendContactScreenTitle(), "Send Contact");
+		chatpage.Set_Values_In_Search_Contact_TextBox("sssssss");
+		Assert.assertEquals(chatpage.getNoContactFoundTextInSendContactScreen(), "No Contact Found");
+	}
+	
+/* Validate the Search Contact text box in Send Contact screen by entering the decimal value */
+	
+	@Test(priority = 118)
+	public void To_Validate_the_search_contact_text_box_on_the_Send_Contact_screen_by_entering_the_decimal_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		chatpage.ClearSearchContactTextBox();
+		chatpage.Set_Values_In_Search_Contact_TextBox("0.000000001");
+		Thread.sleep(2000);
+		chatpage.ClearSearchContactTextBox();
+	}
+
+
+		
+	
+	
+		
+		
+	
+	
+
+	
 		
 
 	

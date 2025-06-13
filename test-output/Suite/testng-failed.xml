@@ -10,8 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_the_user_is_able_to_reply_for_the_sent_and_received_contact_shared_message_card_in_chat_screen"/>
-          <include name="To_Validate_whether_the_user_is_able_to_delete_for_the_sent_and_received_contact_shared_message_card_in_chat_screen"/>
+          <include name="To_Validate_whether_the_send_and_received_contact_shared_message_got_disappeared_when_disappearing_message_is_set"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>

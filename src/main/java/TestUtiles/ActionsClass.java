@@ -147,7 +147,7 @@ public void clickGesture (int x, int y) {
 
 public void clickAs1 () {
 	driver.executeScript("mobile: clickGesture", ImmutableMap.of(
-			"x", 491, "y", 1710
+			"x", 357, "y", 625
 	   
 	));
 }
