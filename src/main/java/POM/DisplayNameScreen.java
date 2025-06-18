@@ -70,6 +70,10 @@ public class DisplayNameScreen extends ActionsClass {
 		TxtBoxDisplayName.clear();
 	}
 	
+	public void Set_Values_In_DisplayName_Textbox (String value) {
+		TxtBoxDisplayName.sendKeys(value);
+		}
+	
    public void pasteDisplayName(String DisplayName) {
 	  // txtboxDisplayName.
 	   Copy_And_Paste_Values(DisplayName, TxtBoxDisplayName);
