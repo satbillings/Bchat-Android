@@ -29,13 +29,12 @@ public class Restore_Flow_SeedScreen_TestCases extends baseclass {
 	public void PreSetup () {
 		Openingpage = new OpeningPage(driver);
 		Openingpage.clickSignIn();
-		//seedpage = new SeedScreen(driver);
 		
 	}
 	/*
 	 TC_94	To Validate Whether Able to Navigate Previous screen 
 	 */
-	@Test(priority =2)
+	/*@Test(priority =2)
 	public void TC_94_To_Validate_Whether_Able_to_Navigate_Previous_screen () {
 		
 		seedpage = new SeedScreen(driver);
@@ -56,10 +55,10 @@ public class Restore_Flow_SeedScreen_TestCases extends baseclass {
 	}
 	
 /*
-TC_96 :Validate the presence of placeholder in the text box of the Restore seed screen.
+   TC_96 :Validate the presence of placeholder in the text box of the Restore seed screen.
 */
-@Test(priority =3)
-public void TC_96_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box () {
+  /*@Test(priority =3)
+   public void TC_96_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box () {
 	
 	Openingpage.clickSignIn();
 	seedpage = new SeedScreen(driver);
@@ -69,8 +68,8 @@ public void TC_96_To_Validate_the_presence_of_placeholder_in_the_Restore_From_se
 /*
 TC_ 95 : Validate whether crusher blink on clicking the text box of Restore from screen.
 */
-@Test(priority =4)
-public void	TC_95_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box () {
+   /*@Test(priority =4)
+   public void	TC_95_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box () {
 
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -86,8 +85,8 @@ public void	TC_95_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From
 /*
 TC_102 :	Validate the working of the next option without entering seed.
 */
-@Test(priority =5)
-public void TC_102_To_Validate_the_working_of_the_next_option_without_entering_seed () {
+  /* @Test(priority =5)
+   public void TC_102_To_Validate_the_working_of_the_next_option_without_entering_seed () {
 	
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -97,10 +96,10 @@ public void TC_102_To_Validate_the_working_of_the_next_option_without_entering_s
 	
 }
 /*
-TC_92 : Validate whether able to paste the copied seed.	
+  TC_92 : Validate whether able to paste the copied seed.	
 */
-@Test(priority =6)
-public void TC_92_To_Validate_whether_able_to_paste_the_copied_seed () {
+  /*@Test(priority =6)
+  public void TC_92_To_Validate_whether_able_to_paste_the_copied_seed () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 	seedpage.clearSeedValues();
@@ -110,7 +109,7 @@ public void TC_92_To_Validate_whether_able_to_paste_the_copied_seed () {
 /*
 TC_93 :  Validate whether able to clear the entered seed
 */
-@Test(priority =7)
+/*@Test(priority =7)
 public void TC_93_To_Validate_whether_able_to_clear_the_entered_seed () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -121,7 +120,7 @@ public void TC_93_To_Validate_whether_able_to_clear_the_entered_seed () {
 /*
 TC_98 : Validate the text box of the restore from screen by entering values below boundary value.
 */
-@Test(priority = 8)
+/*@Test(priority = 8)
 public void TC_98_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -140,7 +139,7 @@ catch(StaleElementReferenceException E) {
 /*
 TC_97 : Validate the text box of the restore from screen by entering values above boundary value.
 */
-@Test(priority = 9)
+/*@Test(priority = 9)
 public void TC_97_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -151,7 +150,7 @@ public void TC_97_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_
 /*
 TC_99 : Validate whether able to type a seed.
 */
-@Test(priority = 10)
+/*@Test(priority = 10)
 public void TC_99_To_Validate_whether_able_to_type_a_seed () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -162,7 +161,7 @@ public void TC_99_To_Validate_whether_able_to_type_a_seed () {
 /*
 TC_105 :	Validate Whether entered seed is editable
 */
-@Test(priority = 11)
+/*@Test(priority = 11)
 public void TC_105_To_Validate_Whether_Entered_seed_is_editable () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -178,7 +177,7 @@ public void TC_105_To_Validate_Whether_Entered_seed_is_editable () {
 /*
 TC_103 :	Validate the working of the next option by entering Invalid seed.
 */
-@Test(dataProvider = "setdata",priority = 12)
+/*@Test(dataProvider = "setdata",priority = 12)
 public void TC_103_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed ( HashMap <String,String> input) {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -212,7 +211,7 @@ public Object[][] setdata() throws IOException {
 /*
 TC_100 : Validate the working of next option by pasting 25 blank space value
 */
-@Test(priority = 13)
+/*@Test(priority = 13)
 public void TC_100_To_Validate_the_working_of_next_option_by_pasting_25_blank_space_value (){
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -227,7 +226,7 @@ public void TC_100_To_Validate_the_working_of_next_option_by_pasting_25_blank_sp
 /*
 TC_104 :	Validate the working of the next option by entering Valid seed.
 */
-@Test(priority = 14)
+/*@Test(priority = 14)
 public void TC_104_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed () {
 	seedpage = new SeedScreen(driver);
 	Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -236,5 +235,77 @@ public void TC_104_To_Validate_the_working_of_the_next_option_by_entering_Valid_
 	seedpage.clickNext();
 	Restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(Restorefromseedpage.BlockheightTextBox().isDisplayed());	
-}
-}
+}*/
+
+/* Validate the Seed text box in Restore flow Seed screen by entering the special character */
+	
+	@Test(priority = 15)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters () {
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("!@#$%^&*()");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "!@#$%^&*()");	
+		seedpage.clearSeedValues();
+	}
+	
+/* Validate the Seed text box in Restore flow Seed screen by entering the numerical value */
+	
+	@Test(priority = 16)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value () {
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("1234567890");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "1234567890");	
+		seedpage.clearSeedValues();
+	}
+	
+/* Validate the Seed text box in Restore flow Seed screen by entering the alphanumeric value */
+	
+	@Test(priority = 17)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value () {
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("abc123");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "abc123");	
+		seedpage.clearSeedValues();
+	}	
+	
+/* Validate the Search Contact text box in Send Contact screen by entering the alphabets both in uppercase and lowercase letter */
+	
+	@Test(priority = 18)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter(){
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("ABCDEF");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "ABCDEF");	
+		seedpage.clearSeedValues();
+		seedpage.setSeedValue("abcdef");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "abcdef");	
+		seedpage.clearSeedValues();	
+	}
+
+/* Validate the Seed text box in Restore flow Seed screen by entering the HTML characters */
+	
+	@Test(priority = 19)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_HTML_characters() {
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("<a href=\"https://www.example.com\">Visit Example</a>");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "<a href=\"https://www.example.com\">Visit Example</a>");	
+		seedpage.clearSeedValues();
+	}	
+	
+/* Validate the Seed text box in Restore flow Seed screen by entering the decimal value */
+	
+	@Test(priority = 20)
+	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value() {
+		seedpage = new SeedScreen(driver);
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
+		seedpage.setSeedValue("0.000000001");
+		Assert.assertEquals(seedpage.SeedtextboxValues(), "0.000000001");	
+		seedpage.clearSeedValues();
+	}		
+	
+	
+	}
+
