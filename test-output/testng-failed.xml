@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_the_send_and_received_contact_shared_message_got_disappeared_when_disappearing_message_is_set"/>
+          <include name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

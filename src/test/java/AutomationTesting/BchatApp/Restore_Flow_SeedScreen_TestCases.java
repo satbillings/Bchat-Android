@@ -270,7 +270,7 @@ public void TC_104_To_Validate_the_working_of_the_next_option_by_entering_Valid_
 		seedpage.clearSeedValues();
 	}	
 	
-/* Validate the Search Contact text box in Send Contact screen by entering the alphabets both in uppercase and lowercase letter */
+/* Validate the Seed text box in Restore flow Seed screen by entering the alphabets both in uppercase and lowercase letter */
 	
 	@Test(priority = 18)
 	public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter(){

@@ -126,6 +126,10 @@ public class RestoreFromSeedScreen extends ActionsClass {
     	txtboxDisplayName.clear();
     	txtboxBlockheight.clear();
     }
+    
+    public void ClearValueInDisplayNameTextBox () {
+    	txtboxDisplayName.clear();
+    }
  
     public WebElement CheckFutureDate() {
     	

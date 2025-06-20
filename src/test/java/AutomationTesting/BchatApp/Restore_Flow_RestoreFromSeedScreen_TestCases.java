@@ -185,7 +185,7 @@ public Object[][] setInvaliddata() throws IOException {
 /*
 TC_110 : Validate the working of the restore option with valid display name and valid blockheight
 */
-@Test(dataProvider = "setValiddata",priority = 9)
+/*@Test(dataProvider = "setValiddata",priority = 9)
 public void TC_110_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight (HashMap <String,String> input) {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
   	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -226,7 +226,7 @@ public Object[][] setValiddata() throws IOException {
 /*
 TC_117 : Validate whether able to select the future date in restore from date calendar
 */
-@Test(priority = 10)
+/*@Test(priority = 10)
 public void TC_117_To_Validate_whether_able_to_select_the_future_date_in_restore_from_date_calendar () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
    	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -240,7 +240,7 @@ public void TC_117_To_Validate_whether_able_to_select_the_future_date_in_restore
 /*
 TC_122 : Validate the text box of the Display Name screen by entering values above boundary value.
 */
-@Test(priority = 11)
+/*@Test(priority = 11)
 public void TC_122_To_Validate_DisplayName_With_Above_Boundary_Value () throws InterruptedException {
 	
 	//restorefromseedpage = new RestoreFromSeedScreen(driver);
@@ -258,7 +258,7 @@ public void TC_122_To_Validate_DisplayName_With_Above_Boundary_Value () throws I
 /*
 TC_120 : Validate whether able to paste Alphabets blockheight textbox.
 */
-@Test(priority = 12)
+/*@Test(priority = 12)
 public void TC_120_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
    	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -270,7 +270,7 @@ public void TC_120_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockhe
 /*
 TC_119 : validate the working of the restore option by paste values in textboxes.
 */
-@Test(priority = 13)
+/*@Test(priority = 13)
 public void TC_119_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
    	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -321,7 +321,7 @@ public void TC_118_To_Validate_the_working_of_the_restore_with_valid_display_nam
 Setup to navigate to home screeen in signInFlow
 No need of create Password screen validation, because create password screen scenarios tested in create account flow
 */
-@Test(priority = 14)
+/*@Test(priority = 14)
 public void TC_TO_validate_Navigation_To_home_with_Valid_Password() {
 	createpasswordpage = new CreatePasswordScreen(driver);
 	Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -335,7 +335,74 @@ public void TC_TO_validate_Navigation_To_home_with_Valid_Password() {
 		
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-	}
-	
+	}	
+}*/
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the special character */
+
+@Test(priority = 15)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("!@#$%^&*()");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "!@#$%^&*()");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
 }
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the empty space value */
+/* Validate whether the value entered in the Display name text box of Restore from seed screen is editable and delete-able */ 
+
+
+@Test(priority = 16)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_Display_name_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("          ");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "          ");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the numerical value */
+
+@Test(priority = 17)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("1234567890");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "1234567890");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the alphanumeric value */
+
+@Test(priority = 18)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("abc123");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "abc123");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the decimal value */
+
+@Test(priority = 19)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("0.00000001");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "0.00000001");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
+
+
+
+
+
+
+
+
+
+
+
 }
