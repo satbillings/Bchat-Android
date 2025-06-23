@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value"/>
+          <include name="To_Validate_the_block_height_text_box_in_Restore_flow_Restore_from_Seed_screen_by_entering_the_more_than_9_digit_numeric_valueTo_validate_whether_the_value_entered_in_the_block_height_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases -->
     </classes>

@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T13:07:13 IST" name="Suite" finished-at="2025-06-20T13:07:55 IST" duration-ms="41815">
+  <suite started-at="2025-06-23T16:47:28 IST" name="Suite" finished-at="2025-06-23T16:48:20 IST" duration-ms="51592">
     <groups>
     </groups>
-    <test started-at="2025-06-20T13:07:13 IST" name="Test" finished-at="2025-06-20T13:07:55 IST" duration-ms="41815">
+    <test started-at="2025-06-23T16:47:28 IST" name="Test" finished-at="2025-06-23T16:48:20 IST" duration-ms="51592">
       <class name="AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:13 IST" name="Configure" finished-at="2025-06-20T13:07:32 IST" duration-ms="19150" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:47:28 IST" name="Configure" finished-at="2025-06-23T16:47:49 IST" duration-ms="20243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="preSetup()[pri:1, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:32 IST" name="preSetup" finished-at="2025-06-20T13:07:38 IST" duration-ms="5565" status="PASS">
+        <test-method signature="preSetup()[pri:1, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:47:49 IST" name="preSetup" finished-at="2025-06-23T16:47:54 IST" duration-ms="5620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters()[pri:15, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:38 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters" finished-at="2025-06-20T13:07:41 IST" duration-ms="3217" status="PASS">
+        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter()[pri:20, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:47:54 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter" finished-at="2025-06-23T16:48:01 IST" duration-ms="7190" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters -->
-        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_Display_name_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable()[pri:16, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:41 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_Display_name_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable" finished-at="2025-06-20T13:07:45 IST" duration-ms="3634" status="PASS">
+        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter -->
+        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_HTML_characters()[pri:21, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:01 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_HTML_characters" finished-at="2025-06-23T16:48:05 IST" duration-ms="3745" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_Display_name_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable -->
-        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value()[pri:17, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:45 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value" finished-at="2025-06-20T13:07:48 IST" duration-ms="2930" status="PASS">
+        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_HTML_characters -->
+        <test-method signature="To_Validate_the_user_pastes_a_large_amount_of_text_in_the_Display_name_text_box_in_Restore_flow_Restore_from_Seed_screen()[pri:22, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:05 IST" name="To_Validate_the_user_pastes_a_large_amount_of_text_in_the_Display_name_text_box_in_Restore_flow_Restore_from_Seed_screen" finished-at="2025-06-23T16:48:10 IST" duration-ms="4533" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value -->
-        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value()[pri:18, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:48 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value" finished-at="2025-06-20T13:07:51 IST" duration-ms="3613" status="PASS">
+        </test-method> <!-- To_Validate_the_user_pastes_a_large_amount_of_text_in_the_Display_name_text_box_in_Restore_flow_Restore_from_Seed_screen -->
+        <test-method signature="To_Validate_the_block_height_text_box_in_Restore_flow_Restore_from_Seed_screen_by_entering_the_more_than_9_digit_numeric_valueTo_validate_whether_the_value_entered_in_the_block_height_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable()[pri:23, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:10 IST" name="To_Validate_the_block_height_text_box_in_Restore_flow_Restore_from_Seed_screen_by_entering_the_more_than_9_digit_numeric_valueTo_validate_whether_the_value_entered_in_the_block_height_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable" finished-at="2025-06-23T16:48:16 IST" duration-ms="6431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value -->
-        <test-method signature="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value()[pri:19, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:51 IST" name="To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value" finished-at="2025-06-20T13:07:54 IST" duration-ms="3040" status="PASS">
+        </test-method> <!-- To_Validate_the_block_height_text_box_in_Restore_flow_Restore_from_Seed_screen_by_entering_the_more_than_9_digit_numeric_valueTo_validate_whether_the_value_entered_in_the_block_height_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable -->
+        <test-method signature="To_validate_the_working_of_Restore_from_date_button_in_Restore_from_Seed_screen()[pri:24, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:16 IST" name="To_validate_the_working_of_Restore_from_date_button_in_Restore_from_Seed_screen" finished-at="2025-06-23T16:48:18 IST" duration-ms="1757" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@35432107]" started-at="2025-06-20T13:07:54 IST" name="closeApp" finished-at="2025-06-20T13:07:55 IST" duration-ms="605" status="PASS">
+        </test-method> <!-- To_validate_the_working_of_Restore_from_date_button_in_Restore_from_Seed_screen -->
+        <test-method signature="To_validate_the_working_of_Restore_from_height_button_in_Restore_from_Seed_screen()[pri:25, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:18 IST" name="To_validate_the_working_of_Restore_from_height_button_in_Restore_from_Seed_screen" finished-at="2025-06-23T16:48:19 IST" duration-ms="1143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_working_of_Restore_from_height_button_in_Restore_from_Seed_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Restore_Flow_RestoreFromSeedScreen_TestCases@7b420819]" started-at="2025-06-23T16:48:19 IST" name="closeApp" finished-at="2025-06-23T16:48:20 IST" duration-ms="856" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

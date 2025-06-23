@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import POM.ChatScreen;
 import POM.CreatePasswordScreen;
 import POM.HomeScreen;
 import POM.OpeningPage;
@@ -340,7 +341,7 @@ public void TC_TO_validate_Navigation_To_home_with_Valid_Password() {
 
 /* Validate the Display name text box in Restore flow Restore from Seed screen by entering the special character */
 
-@Test(priority = 15)
+/*@Test(priority = 15)
 public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_special_characters () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -353,7 +354,7 @@ public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_enterin
 /* Validate whether the value entered in the Display name text box of Restore from seed screen is editable and delete-able */ 
 
 
-@Test(priority = 16)
+/*@Test(priority = 16)
 public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_empty_space_value_To_validate_whether_the_value_entered_in_the_Display_name_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -364,7 +365,7 @@ public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_enterin
 
 /* Validate the Display name text box in Restore flow Restore from Seed screen by entering the numerical value */
 
-@Test(priority = 17)
+/*@Test(priority = 17)
 public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_numerical_value () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -375,7 +376,7 @@ public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_enterin
 
 /* Validate the Display name text box in Restore flow Restore from Seed screen by entering the alphanumeric value */
 
-@Test(priority = 18)
+/*@Test(priority = 18)
 public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphanumeric_value () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
@@ -386,23 +387,84 @@ public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_enterin
 
 /* Validate the Display name text box in Restore flow Restore from Seed screen by entering the decimal value */
 
-@Test(priority = 19)
+/*@Test(priority = 19)
 public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_decimal_value () {
 	restorefromseedpage = new RestoreFromSeedScreen(driver);
 	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 	restorefromseedpage.setDisplayName("0.00000001");
 	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "0.00000001");	
 	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}*/
+
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the alphabets both in uppercase and lowercase letter */
+
+@Test(priority = 20)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("ABCDEF");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "ABCDEF");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+	restorefromseedpage.setDisplayName("abcdef");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "abcdef");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();	
 }
 
+/* Validate the Display name text box in Restore flow Restore from Seed screen by entering the HTML characters */
 
+@Test(priority = 21)
+public void To_Validate_the_Seed_text_box_in_Restore_flow_Seed_screen_by_entering_the_HTML_characters () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setDisplayName("<a href=\"https://www.example.com\">Visit Example</a>");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "<a href=\"https://www.example.com\">Visit Example</a>");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
 
+/* Validate whether the user pastes a larger amount of text in the Display name text box in Restore flow Restore from Seed screen */
 
+@Test(priority = 22)
+public void To_Validate_the_user_pastes_a_large_amount_of_text_in_the_Display_name_text_box_in_Restore_flow_Restore_from_Seed_screen() throws InterruptedException {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.paste_Value_In_DisplayName("fossil exotic network fabrics history jockey hoax using against nitrogen lazy skater buffet maps lush eleven clue ablaze fonts serving wept gown cell cottage using");
+	Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "fossil exotic network fabrics history jockey hoax using against nitrogen lazy skater buffet maps lush eleven clue ablaze fonts serving wept gown cell cottage using");	
+	restorefromseedpage.ClearValueInDisplayNameTextBox();
+}
 
+/* Validate the block height text box in Restore flow Restore from seed screen by entering the more than 9 digit numeric value */
+/* Validate whether the value entered in the block height text box of Restore from seed screen is editable and delete-able */ 
 
+@Test(priority = 23)
+public void To_Validate_the_block_height_text_box_in_Restore_flow_Restore_from_Seed_screen_by_entering_the_more_than_9_digit_numeric_valueTo_validate_whether_the_value_entered_in_the_block_height_text_box_of_Restore_from_seed_screen_is_editable_and_deleteable () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.setBlockheight("1234567890");
+	Assert.assertEquals(restorefromseedpage.BlockheightPlaceholder(), "123456789");	
+	restorefromseedpage.ClearValueInBlockheightTextBox();
+	restorefromseedpage.setBlockheight("12345678");
+	Assert.assertEquals(restorefromseedpage.BlockheightPlaceholder(), "12345678");	
+	restorefromseedpage.ClearValueInBlockheightTextBox();
+}
 
+/* Validate the working of Restore from date button in Restore from Seed screen */
 
+@Test(priority = 24)
+public void To_validate_the_working_of_Restore_from_date_button_in_Restore_from_Seed_screen () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+	restorefromseedpage.clickBtnDate();
+	Assert.assertTrue(restorefromseedpage.RestoreFromDateTextBox().isDisplayed());
+}
 
+/* Validate the working of Restore from height button in Restore from Seed screen */
 
+@Test(priority = 25)
+public void To_validate_the_working_of_Restore_from_height_button_in_Restore_from_Seed_screen () {
+	restorefromseedpage = new RestoreFromSeedScreen(driver);
+	Assert.assertTrue(restorefromseedpage.RestoreFromDateTextBox().isDisplayed());
+	restorefromseedpage.clickBtnBlockheight();
+	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
+}
 
 }

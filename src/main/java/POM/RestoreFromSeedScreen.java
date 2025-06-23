@@ -79,6 +79,10 @@ public class RestoreFromSeedScreen extends ActionsClass {
         return txtboxBlockheight;
 	}
 	
+	public WebElement RestoreFromDateTextBox () {
+        return txtboxRestreFromDate;
+	}
+	
 	public void clickOk() {
 		btnOk.click();
 	}
@@ -129,6 +133,10 @@ public class RestoreFromSeedScreen extends ActionsClass {
     
     public void ClearValueInDisplayNameTextBox () {
     	txtboxDisplayName.clear();
+    }
+    
+    public void ClearValueInBlockheightTextBox () {
+    	txtboxBlockheight.clear();
     }
  
     public WebElement CheckFutureDate() {
