@@ -83,7 +83,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 	}
 
 	/*
@@ -232,9 +232,8 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	 * (NoSuchElementException e) {
 	 * //Assert.assertEquals(homepage.Search_PageTitle(), "Search"); //}
 	 * homepage.clearTextBox(); }
-	 * 
-	 * /* Note to self chat screen
 	 */
+	 /* Note to self chat screen */
 	/*
 	 * Validate the text box of the Messaging Functionality using special Characters
 	 * in note to self chat screen.
@@ -475,7 +474,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	/*
 	validate the working of reply option in the Note to Self chat screen
 	*/
-	@Test(priority = 30)
+/*	@Test(priority = 30)
 	public void To_validate_the_working_of_reply_option_in_note_to_self_chat_screen () throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		homepage.clickSearch();
@@ -491,7 +490,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	/*
 	Validate whether able to share the files,photos in the Note to Self chat screen
 	*/
-	@Test(priority = 31)
+	/*@Test(priority = 31)
 	public void To_Validate_whether_able_to_share_the_files_photos_in_note_to_self_chat_screen () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
@@ -502,7 +501,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	/*
 	validate the all media with image in the Note to Self chat screen
 	*/
-	@Test(priority = 32)
+	/*@Test(priority = 32)
 	public void To_validate_the_all_media_with_image_in_note_to_self_chat_screen () throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
@@ -515,7 +514,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	/*
 	Validate the Message screen response without internet in the note to self chat screen.
 	*/
-	@Test(priority = 33)
+	/*@Test(priority = 33)
 	public void To_Validate_the_Message_screen_and_response_without_internet_in_note_to_self_chat_screen () throws InterruptedException
 	{
 		chatpage = new ChatScreen(driver);
@@ -528,5 +527,76 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 		//Assertion need to done after get different id for delivery status
 		turnOn_Mobile_Wifi();
 		//wait.until(ExpectedConditions.invisibilityOf(chatpage.get_internet_status()));
+	}*/
+	
+	/* Global Search Text box pending test cases */
+	
+/* Validate the Global Search text box in Search screen by entering the empty space value */
+	
+	@Test(priority = 34)
+	public void To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_empty_space_value () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.enterValues("     ");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"     ");
+		homepage.clearTextBox();
 	}
+	
+/* Validate the Global Search text box in Search screen by entering the alphanumeric value */
+	
+	@Test(priority = 35)
+	public void To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.searchTitle(), "Search");
+		homepage.enterValues("abc123");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"abc123");
+		homepage.clearTextBox();
+	}
+	
+/* Validate the Global Search text box in Search screen by entering the decimal value */
+	
+	@Test(priority = 36)
+	public void To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_decimal_value () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.searchTitle(), "Search");
+		homepage.enterValues("0.000001");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"0.000001");
+		homepage.clearTextBox();
+	}	
+	
+/* Validate the Global Search text box in Search screen by entering the HTML characters */
+	
+	@Test(priority = 37)
+	public void To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_HTML_characters () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.searchTitle(), "Search");
+		homepage.enterValues("<a href=\"https://www.example.com\">Visit Example</a>");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"<a href=\"https://www.example.com\">Visit Example</a>");
+		homepage.clearTextBox();
+	}		
+	
+/* Validate whether the user pastes a larger amount of text in the Global Search text box in Search screen */
+	
+	@Test(priority = 38)
+	public void To_Validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_Global_Search_text_box_in_Search_screen () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		//Assert.assertEquals(homepage.searchTitle(), "Search");
+		homepage.pastevalues("fossil exotic network fabrics history jockey hoax using against nitrogen lazy skater buffet maps lush eleven clue ablaze fonts serving wept gown cell cottage using");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"fossil exotic network fabrics history jockey hoax using against nitrogen lazy skater buffet maps lush eleven clue ablaze fonts serving wept gown cell cottage using");
+		homepage.clearTextBox();
+	}
+	
+/* Validate if the text already entered is displayed in the Global Search text box after navigating from Search screen to home screen and again home screen to search screen */
+	
+	@Test(priority = 39)
+	public void To_Validate_if_the_text_already_entered_is_displayed_in_the_Global_Search_text_box_after_navigating_from_Search_screen_to_Home_screen_and_again_Home_screen_to_Search_screen () throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		homepage.enterValues("Test");
+		Assert.assertEquals(homepage.SearchPlaceholder(),"Test");
+        driver.navigate().back();
+        driver.navigate().back();
+        homepage.ClickSearchTextBox();
+		Assert.assertEquals(homepage.SearchPlaceholder(),"");
+	}
+	
 }

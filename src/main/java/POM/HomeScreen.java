@@ -216,6 +216,10 @@ public class HomeScreen extends ActionsClass {
 		optionNoteToMyself.click();
 	}
 	
+	public WebElement OptionNoteToMyselfInSearchScreen () {
+		return optionNoteToMyself;
+	}
+	
 	public void clickok() {
 		buttonOk.click();
 	}
@@ -270,6 +274,14 @@ public String SearchPlaceholder () {
 	return textboxSearch.getText();
 }
 
+public WebElement SearchTextBox () {
+	return textboxSearch;
+}
+
+public void ClickBackArrowInSearchScreen () {
+	btnBackArrow.click();
+}
+
 public void ClickCancel() {
 	btncancel.click();
 }
@@ -284,6 +296,10 @@ public void pastevalues(String text) {
 
 public void clearTextBox () {
 	textboxSearch.clear();
+}
+
+public void ClickSearchTextBox () {
+	textboxplacholder.click();
 }
 
 public void enterValues (String text){
