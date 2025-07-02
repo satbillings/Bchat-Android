@@ -6,20 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
         <methods>
-          <include name="To_Validate_if_the_text_already_entered_is_displayed_in_the_Global_Search_text_box_after_navigating_from_Search_screen_to_Home_screen_and_again_Home_screen_to_Search_screen"/>
-          <include name="PreSetup"/>
-          <include name="To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_alphanumeric_value"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validatethe_working_of_Back_arrow_icon_in_the_Global_Search_screen"/>
-          <include name="To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_decimal_value"/>
-          <include name="To_Validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_Global_Search_text_box_in_Search_screen"/>
-          <include name="To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_HTML_characters"/>
-          <include name="To_Validate_the_Global_Search_text_box_in_Search_screen_by_entering_the_empty_space_value"/>
+          <include name="To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.New_Chat_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

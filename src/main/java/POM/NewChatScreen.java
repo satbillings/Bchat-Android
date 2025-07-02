@@ -252,7 +252,30 @@ public class NewChatScreen extends ActionsClass {
 		SearchTextBox.clear();
 	}
 	
+	public void EnterBchatIDOrBNSNameTextBox(String value) {
+		BchatIDOrBNSNameTextBox.sendKeys(value);
+	}
+	public void PasteValuesInBchatIDOrBNSNameTextBox (String value) {
+		Copy_And_Paste_Values(value, BchatIDOrBNSNameTextBox);
+	}
+	public void ClickBchatIDOrBNSNameTextBox () {
+		BchatIDOrBNSNameTextBox.click();
+	}
+	public void ClearBchatIDOrBNSNameTextBox () {
+		BchatIDOrBNSNameTextBox.clear();
+	}
 	
+	public String getValuesFromBchatIDOrBNSNameTextBox() {
+		return BchatIDOrBNSNameTextBox.getText();
+		
+	}
+	
+	public String getValuesFromSearchTextBox() {
+		return SearchTextBox.getText();
+		
+	}
+	
+
 	public void EnterValidTextInSearchTextBox(){
 		SearchTextBox.sendKeys("Aravind");
 	}

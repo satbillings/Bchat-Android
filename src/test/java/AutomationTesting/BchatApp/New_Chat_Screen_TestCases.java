@@ -95,7 +95,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 */
 
 	
-	  @Test(priority = 1) public void
+	/*  @Test(priority = 1) public void
 	  To_Validate_whether_able_to_navigate_back_to_home_screen_from_new_chat_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -106,7 +106,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	/*  Validate the working of your bchat id option in the new chat screen */
 	  
 	  
-	  @Test(priority = 2) public void
+	 /* @Test(priority = 2) public void
 	  To_Validate_the_working_of_your_bchatId_option_in_new_chat_screen () {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -117,7 +117,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether able to copy BChat id and beldex address*/
 	  
 	  
-	  @Test(priority = 3) public void
+	  /*@Test(priority = 3) public void
 	  To_validate_whether_able_to_copy_BChatId_and_beldexAddress_in_my_account_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -130,7 +130,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate the working of the share button QR code Functionality*/
 	  
 	  
-	  @Test(priority = 4) public void
+	 /* @Test(priority = 4) public void
 	  To_Validate_Working_of_Share_QR_code_functionality_in_my_account_screen () {
 	  myaccountpage =new MyAccountScreen(driver);
 	  Assert.assertEquals(myaccountpage.getPageTitle(),"My Account");
@@ -144,7 +144,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate Whether Let's Bchat button is enable without enter a value in the
 	  Enter BChat ID field in the new chat screen.*/
 	  
-	  @Test(priority = 5) public void
+	  /*@Test(priority = 5) public void
 	  To_Validate_Whether_Lets_Bchat_button_is_enable_without_enter_a_value_in_BChatID_field_in_the_new_chat_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -153,7 +153,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the New Chat by entering a Invalid BChat ID in the new chat screen*/
 	  
-	  @Test(priority = 6) public void
+	  /*@Test(priority = 6) public void
 	  To_Validate_the_NewChat_by_entering_a_Invalid_BChat_ID_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -178,7 +178,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate the New Chat by entering a Invalid BNS name without .bdx in the new
 	  chat screen.*/
 	  
-	  @Test(priority = 8) public void
+	 /* @Test(priority = 8) public void
 	  To_Validate_the_NewChat_by_entering_a_Invalid_BNS_name_without_bdx_in_the_new_chat_screen
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -188,7 +188,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the new chat with empty space value in the new chat screen */
 	  
-	  @Test(priority = 9) public void
+	  /*@Test(priority = 9) public void
 	  To_validate_the_new_chat_with_empty_space_value_in_the_new_chat_screen () {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -199,7 +199,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate the new chat with special characters in the new chat screen*/
 	  
 	  
-	  @Test(priority = 10) public void
+	 /* @Test(priority = 10) public void
 	  To_validate_the_new_chat_with_special_characters_in_the_new_chat_screen () {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat"); wait = new
@@ -211,7 +211,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 /* Validate the new chat function without internet connection in the new chat
 	  screen*/
 	  
-	  @Test(priority = 11) public void
+	 /* @Test(priority = 11) public void
 	  To_validate_the_new_chat_function_without_internet_connection_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -224,7 +224,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate whether able to paste values in the text box in the new chat screen.*/
 	  
-	  @Test(priority = 12) public void
+	 /* @Test(priority = 12) public void
 	  To_validate_whether_able_to_paste_values_in_text_box_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -238,7 +238,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the New Chat by entering a valid BChat ID in the new chat screen.*/
 	  
-	  @Test(priority = 13) public void
+	  /*@Test(priority = 13) public void
 	  To_Validate_the_New_Chat_by_entering_a_valid_BChat_ID_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -252,7 +252,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the New Chat by entering a valid BNS name in the new chat screen.*/
 	  
-	  @Test(priority = 14) public void
+	  /*@Test(priority = 14) public void
 	  To_Validate_the_New_Chat_by_entering_a_valid_BNS_name_in_the_new_chat_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -265,7 +265,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the working of upload from gallery option with valid QR code image.*/
 	  
-	  @Test(priority = 15) public void
+	 /* @Test(priority = 15) public void
 	  To_Validate_the_working_of_upload_from_gallery_option_with_valid_QR_code_image
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -278,7 +278,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the working of upload from gallery option with normal QR code image.*/
 	  
-	  @Test(priority = 16) public void
+	  /*@Test(priority = 16) public void
 	  To_validate_the_working_of_upload_from_gallery_option_with_normal_QR_code_image
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -291,7 +291,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate the working of upload from gallery option with invalid QR code
 	  image.*/
 	  
-	  @Test(priority = 17) public void
+	  /*@Test(priority = 17) public void
 	  To_validate_the_working_of_upload_from_gallery_option_with_invalid_QR_code_image
 	  () { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New Chat");
@@ -304,7 +304,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the working of close icon in search text box in new screen*/
 	  
-	  @Test(priority = 18) public void
+	  /*@Test(priority = 18) public void
 	  To_validate_the_working_of_close_icon_in_search_textbox_in_new_Screen() {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -315,7 +315,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate whether the search option is able to open and close in new screen*/
 	  
-	  @Test(priority = 19) public void
+	  /*@Test(priority = 19) public void
 	  To_validate_whether_the_search_option_is_able_to_open_and_close_in_new_screen
 	  (){ newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -325,7 +325,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the presence of placeholder in search text box on the new screen*/
 	  
-	  @Test(priority = 20) public void
+	  /*@Test(priority = 20) public void
 	  To_validate_the_presence_of_placeholder_in_search_textbox_on_the_new_screen()
 	  { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -335,7 +335,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the cursor blink in search text box on the new screen*/
 	  
-	  @Test(priority = 21) public void
+	 /* @Test(priority = 21) public void
 	  To_validate_the_cursor_blink_in_search_textbox_on_the_new_screen() {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -344,7 +344,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the search text box in new screen by entering the valid value*/
 	  
-	  @Test(priority = 22) public void
+	  /*@Test(priority = 22) public void
 	  To_validate_the_search_textbox_in_new_Screen_by_entering_the_valid_value()
 	  throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -356,7 +356,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  editable and delete-able.*/
 	  
 	  
-	  @Test(priority = 23) public void
+	 /* @Test(priority = 23) public void
 	  To_validate_the_search_textbox_in_new_Screen_by_entering_the_special_character_And_To_validate_whether_the_value_entered_in_the_search_textbox_of_new_screen_is_editable_and_deleteable
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -366,7 +366,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the search text box in new screen by entering the space value*/
 	  
-	  @Test(priority = 24) public void
+	  /*@Test(priority = 24) public void
 	  To_validate_the_search_textbox_in_new_Screen_by_entering_the_space_value()
 	  throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -376,7 +376,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	  /*Validate the search text box in new screen by entering the numerical value*/
 	  
-	  @Test(priority = 25) public void
+	 /* @Test(priority = 25) public void
 	  To_validate_the_search_textbox_in_new_Screen_by_entering_the_numerical_value(
 	  ) throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -387,7 +387,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 /* Validate the search text box in new screen by entering the alphabets both in
 	  upper case and lower case*/
 	  
-	  @Test(priority = 26) public void
+	 /* @Test(priority = 26) public void
 	  To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -399,7 +399,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	 /* Validate whether the paste option is working on the search text box in new
 	  screen.*/
 	  
-	  @Test(priority = 27) public void
+	 /* @Test(priority = 27) public void
 	  To_validate_whether_paste_option_is_working_on_the_search_textbox_in_new_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -410,7 +410,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether the user is able enter a lengthy value in the search text
 	  box in new screen*/
 	  
-	  @Test(priority = 28) public void
+	  /*@Test(priority = 28) public void
 	  To_Validate_whether_the_user_is_able_to_enter_a_lengthy_value_in_search_textbox_in_new_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -422,7 +422,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether the user is able to navigate back to the home screen from
 	  invite friend screen.*/
 	  
-	  @Test(priority = 29) public void
+	 /* @Test(priority = 29) public void
 	  To_validate_whether_the_user_is_able_to_navigate_back_to_the_home_screen_from_invite_friend_screen
 	  () throws InterruptedException { newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
@@ -432,7 +432,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  
 	 /* Validate the working of the Invite friend functionality in new screen.*/
 	  
-	  @Test(priority = 30) public void
+	 /* @Test(priority = 30) public void
 	  To_validate_whether_the_working_of_the_invite_friend_functionality_in_new_screen
 	  () { homepage = new HomeScreen(driver);
 	  Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
@@ -448,7 +448,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether the user is able to navigate to secret group screen by
 	  clicking the secret group option in new screen*/
 	  
-	  @Test(priority = 31) public void
+	/*  @Test(priority = 31) public void
 	  To_validate_whether_the_user_is_able_to_navigate_to_secret_group_screen_by_clicking_the_secret_group_option_in_new_screen
 	  () { homepage = new HomeScreen(driver);
 	  Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
@@ -462,7 +462,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether the user is able to navigate to social group screen by
 	  clicking the social group option in new screen*/
 	  
-	  @Test(priority = 32) public void
+	 /* @Test(priority = 32) public void
 	  To_validate_whether_the_user_is_able_to_navigate_to_social_group_screen_by_clicking_the_social_group_option_in_new_screen
 	  () { homepage = new HomeScreen(driver);
 	  Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
@@ -476,7 +476,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  /*Validate whether the user is able to navigate to Note to self chat screen by
 	  clicking the Note to Self option in new screen*/
 	  
-	  @Test(priority = 33) public void
+	 /* @Test(priority = 33) public void
 	  To_validate_whether_the_user_is_able_to_navigate_to_Note_to_Self_chat_screen_by_clicking_the_Note_to_Self_option_in_new_screen
 	  () { homepage = new HomeScreen(driver);
 	  Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
@@ -490,7 +490,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	  to one to one chat screen or secret group chat screen by clicking the contact
 	  name or group name in new screen*/
 	  
-	  @Test(priority = 34) public void
+	 /* @Test(priority = 34) public void
 	  To_validate_whether_the_user_is_able_to_navigate_to_one_to_one_chat_screen_or_secret_group_chat_screen_by_clicking_the_contact_name_or_group_name_in_new_screen
 	  () { homepage = new HomeScreen(driver);
 	  Assert.assertEquals(homepage.Pagetitle(), "Chats"); homepage.OpenNewScreen();
@@ -504,12 +504,71 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate whether user is able to open scan QR screen and navigation back to new screen from scan QR screen */
 	
-	  @Test(priority = 35) 
+	 /* @Test(priority = 35) 
 	  public void To_validate_whether_the_user_is_able_to_open_Scan_QR_screen_and_navigation_back_to_new_screen_from_Scan_QR_screen () {
 	  newchatpage = new NewChatScreen(driver);
 	  Assert.assertEquals(newchatpage.Pagetitle(),"New");
 	  newchatpage.ClickQRCodeIcon();
 	  Assert.assertEquals(newchatpage.getScanQRScreenTitle(),"Scan QR");
 	  driver.navigate().back();
-	  }
+	  }*/
+	
+/* Validate the Search text box in New screen by entering the alphanumeric value */
+	
+	 @Test(priority = 36) 
+	 public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphanumeric_value() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	     newchatpage.ClickSearchIcon(); 
+	     newchatpage.ClickSearchTextBox();
+	     newchatpage.EnterSearchValue("abc123"); 
+		 Assert.assertEquals(newchatpage.getValuesFromSearchTextBox(),"abc123");
+	     driver.navigate().back();
+	     Thread.sleep(2000); 
+	     newchatpage.ClearSearchTextBox(); 
+	     }
+
+	 /* Validate the Search text box in New screen by entering the decimal value */
+		
+	 @Test(priority = 37) 
+	 public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_decimal_value() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	     //newchatpage.ClickSearchIcon(); 
+	     newchatpage.ClickSearchTextBox();
+	     newchatpage.EnterSearchValue("0.00001"); 
+		 Assert.assertEquals(newchatpage.getValuesFromSearchTextBox(),"0.00001");
+	     driver.navigate().back();
+	     Thread.sleep(2000); 
+	     newchatpage.ClearSearchTextBox(); 
+	     }
+	 
+	 /* Validate the Search text box in New screen by entering the HTML value */
+		
+	 @Test(priority = 38) 
+	 public void To_validate_the_search_textbox_in_new_Screen_by_entering_the_HTML_value() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New");
+	    // newchatpage.ClickSearchIcon(); 
+	     newchatpage.ClickSearchTextBox();
+	     newchatpage.EnterSearchValue("<a href=\"https://www.example.com\">Visit Example</a>"); 
+		 Assert.assertEquals(newchatpage.getValuesFromSearchTextBox(),"<a href=\"https://www.example.com\">Visit Example</a>");
+	     driver.navigate().back();
+	     Thread.sleep(3000); 
+	     newchatpage.ClearSearchTextBox(); 
+	     } 	
+	 
+	 /*Validate whether the user pastes a larger amount of text in the Search text box in New screen*/
+		
+	 @Test(priority = 39) 
+	 public void To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
+	     newchatpage.PasteValuesInSearchTextbox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		 Assert.assertEquals(newchatpage.getValuesFromSearchTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		 //driver.navigate().back();
+	     Thread.sleep(2000); 
+	     newchatpage.ClearSearchTextBox(); 
+	 }
+
 }

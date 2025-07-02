@@ -55,6 +55,7 @@ public ActionsClass(AndroidDriver driver) {
 	));
 		}while(canScrollMore); 
 	}
+	
 	public void click(WebElement button) {
 		button.click();
 	}

@@ -41,9 +41,14 @@ public class RegisterScreen extends ActionsClass {
 		BackButton.click();
 	}
 	
+	//public void clickNext() {
+	//	super.click(NextButton);
+	//}
+	
 	public void clickNext() {
-		super.click(NextButton);
+		NextButton.click();
 	}
+	
 	//Hey hi, welcome to BChat!
 	public String getdisplayName() {
 	String displayName =TextWithDisplayName.getText().substring(4, 7);
