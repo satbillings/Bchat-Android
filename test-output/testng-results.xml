@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T13:32:03 IST" name="Suite" finished-at="2025-07-02T13:34:07 IST" duration-ms="123421">
+  <suite started-at="2025-07-03T15:14:58 IST" name="Suite" finished-at="2025-07-03T15:17:02 IST" duration-ms="124171">
     <groups>
     </groups>
-    <test started-at="2025-07-02T13:32:03 IST" name="Test" finished-at="2025-07-02T13:34:07 IST" duration-ms="123421">
+    <test started-at="2025-07-03T15:14:58 IST" name="Test" finished-at="2025-07-03T15:17:02 IST" duration-ms="124171">
       <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:32:03 IST" name="Configure" finished-at="2025-07-02T13:32:21 IST" duration-ms="17551" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:14:58 IST" name="Configure" finished-at="2025-07-03T15:15:16 IST" duration-ms="17457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:32:21 IST" name="PreSetup" finished-at="2025-07-02T13:33:45 IST" duration-ms="83846" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:15:16 IST" name="PreSetup" finished-at="2025-07-03T15:16:41 IST" duration-ms="85152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphanumeric_value()[pri:36, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:33:45 IST" name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphanumeric_value" finished-at="2025-07-02T13:33:52 IST" duration-ms="7036" status="PASS">
+        <test-method signature="To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_closing_and_open_the_search_text_box_in_New_screen()[pri:40, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:16:41 IST" name="To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_closing_and_open_the_search_text_box_in_New_screen" finished-at="2025-07-03T15:16:48 IST" duration-ms="6834" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_new_Screen_by_entering_the_alphanumeric_value -->
-        <test-method signature="To_validate_the_search_textbox_in_new_Screen_by_entering_the_decimal_value()[pri:37, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:33:52 IST" name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_decimal_value" finished-at="2025-07-02T13:33:56 IST" duration-ms="4357" status="PASS">
+        </test-method> <!-- To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_closing_and_open_the_search_text_box_in_New_screen -->
+        <test-method signature="To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_going_to_home_screen_from_New_screen_and_returning_to_New_screen_from_home_screen()[pri:41, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:16:48 IST" name="To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_going_to_home_screen_from_New_screen_and_returning_to_New_screen_from_home_screen" finished-at="2025-07-03T15:16:55 IST" duration-ms="7142" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_new_Screen_by_entering_the_decimal_value -->
-        <test-method signature="To_validate_the_search_textbox_in_new_Screen_by_entering_the_HTML_value()[pri:38, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:33:56 IST" name="To_validate_the_search_textbox_in_new_Screen_by_entering_the_HTML_value" finished-at="2025-07-02T13:34:01 IST" duration-ms="5261" status="PASS">
+        </test-method> <!-- To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_going_to_home_screen_from_New_screen_and_returning_to_New_screen_from_home_screen -->
+        <test-method signature="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_alphanumeric_value()[pri:42, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:16:55 IST" name="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_alphanumeric_value" finished-at="2025-07-03T15:16:59 IST" duration-ms="4304" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_search_textbox_in_new_Screen_by_entering_the_HTML_value -->
-        <test-method signature="To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen()[pri:39, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:34:01 IST" name="To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen" finished-at="2025-07-02T13:34:06 IST" duration-ms="4684" status="PASS">
+        </test-method> <!-- To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_alphanumeric_value -->
+        <test-method signature="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_decimal_value_To_validate_whether_the_value_entered_in_the_Chat_ID_or_BNS_Name_textbox_of_New_screen_is_editable_and_deleteable()[pri:43, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:16:59 IST" name="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_decimal_value_To_validate_whether_the_value_entered_in_the_Chat_ID_or_BNS_Name_textbox_of_New_screen_is_editable_and_deleteable" finished-at="2025-07-03T15:17:01 IST" duration-ms="1619" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@6581dc0a]" started-at="2025-07-02T13:34:06 IST" name="closeApp" finished-at="2025-07-02T13:34:07 IST" duration-ms="643" status="PASS">
+        </test-method> <!-- To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_decimal_value_To_validate_whether_the_value_entered_in_the_Chat_ID_or_BNS_Name_textbox_of_New_screen_is_editable_and_deleteable -->
+        <test-method signature="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters()[pri:44, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:17:01 IST" name="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters" finished-at="2025-07-03T15:17:02 IST" duration-ms="967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.New_Chat_Screen_TestCases@39de3d36]" started-at="2025-07-03T15:17:02 IST" name="closeApp" finished-at="2025-07-03T15:17:02 IST" duration-ms="635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

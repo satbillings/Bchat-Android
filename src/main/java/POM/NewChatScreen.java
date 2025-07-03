@@ -32,7 +32,8 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[@index='0']")
 	private WebElement plusicon;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='0']")
+	//@AndroidFindBy(xpath="//android.view.View[@index='0']")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 	private WebElement Newchatoption;
 	
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[7]/android.view.View[2]/android.widget.Button")
@@ -106,13 +107,26 @@ public class NewChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='aravind']")
 	private WebElement ContactAndGroupList;
 	
+	@AndroidFindBy(xpath="//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	private WebElement CancelButtonInNewChatPopup;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='New Chat']")
+	private WebElement NewChatPopupTitle;
+	
 	public WebElement getContactAndGroupList() {
 		return ContactAndGroupList;
 	}
 	
+	public String getNewChatPopupTitle() {
+		return NewChatPopupTitle.getText();
+	}
 
 	public void ClickQRCodeIcon() {
 		QRCodeIcon.click();
+    }
+	
+	public void ClickCancelButtonInNewChatPopup() {
+		CancelButtonInNewChatPopup.click();
     }
 	
 	public void ClickContactorGroup() {
@@ -238,6 +252,11 @@ public class NewChatScreen extends ActionsClass {
 	public void ClickSearchIcon () {
 		Searchoption.click();
 	}
+	
+	public void ClickNewChatOption () {
+		Newchatoption.click();
+	}
+	
 	public void EnterSearchValue(String value) {
 		//SearchTextBox.click();
 		SearchTextBox.sendKeys(value);
@@ -252,7 +271,7 @@ public class NewChatScreen extends ActionsClass {
 		SearchTextBox.clear();
 	}
 	
-	public void EnterBchatIDOrBNSNameTextBox(String value) {
+	public void EnterValuesInBchatIDOrBNSNameTextBox(String value) {
 		BchatIDOrBNSNameTextBox.sendKeys(value);
 	}
 	public void PasteValuesInBchatIDOrBNSNameTextBox (String value) {

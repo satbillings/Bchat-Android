@@ -8,9 +8,10 @@
     <classes>
       <class name="AutomationTesting.BchatApp.New_Chat_Screen_TestCases">
         <methods>
+          <include name="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_decimal_value_To_validate_whether_the_value_entered_in_the_Chat_ID_or_BNS_Name_textbox_of_New_screen_is_editable_and_deleteable"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_search_text_box_in_New_Screen"/>
+          <include name="To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.New_Chat_Screen_TestCases -->
     </classes>
