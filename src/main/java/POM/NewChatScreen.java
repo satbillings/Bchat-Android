@@ -137,6 +137,10 @@ public class NewChatScreen extends ActionsClass {
 		SecretGroupOption.click();
     }
 	
+	public void ClickPlusIcon() {
+		plusicon.click();
+    }
+	
 	public void ClickSocialGroupOption() {
 		SocialGroupOption.click();
     }

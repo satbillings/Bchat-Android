@@ -261,7 +261,7 @@ public class HomeScreen extends ActionsClass {
 
 public void OpenNewSecretGroup() {
 	groupsIcon.click();
-	btnSecretGroup.click();
+	//btnSecretGroup.click();
 	}
 
 public void OpenJoinSocialGroup() {

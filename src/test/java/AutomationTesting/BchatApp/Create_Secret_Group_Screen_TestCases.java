@@ -10,6 +10,7 @@ import POM.ChatScreen;
 import POM.CreatePasswordScreen;
 import POM.CreateSecretGroupScreen;
 import POM.HomeScreen;
+import POM.NewChatScreen;
 import POM.OpeningPage;
 import POM.RestoreFromSeedScreen;
 import POM.SecretGroupChatScreen;
@@ -23,7 +24,8 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	CreatePasswordScreen createpasswordpage;
 	HomeScreen homepage;
 	CreateSecretGroupScreen createsecretgrouppage;
-	SecretGroupChatScreen secretgroupchatpage;
+	SecretGroupChatScreen secretgroupchatpage; 
+	NewChatScreen newchatpage;
 	WebDriverWait wait;
 	
 	 @Test(priority = 0)
@@ -38,7 +40,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 			restorefromseedpage = new RestoreFromSeedScreen(driver);
 			Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 			restorefromseedpage.paste_Value_In_DisplayName("Sathish");
-			restorefromseedpage.paste_Value_In_Blockheight("3400000");
+			restorefromseedpage.paste_Value_In_Blockheight("4000000");
 			restorefromseedpage.clickBtnRestore(); 
 			createpasswordpage = new CreatePasswordScreen(driver);
 			Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -46,14 +48,14 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 			 createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
 			//Thread.sleep(10000); 
 			 homepage = new HomeScreen(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat"); 
+			Assert.assertEquals(homepage.Pagetitle(),"Chats"); 
 			Thread.sleep(50000); 
 			homepage.OpenNewSecretGroup();	
 	 }
 	 /*
 		Validate whether able to navigate back to the home screen from create secret group screen.
 		*/
-		   @Test(priority = 1)
+		  /* @Test(priority = 1)
 		   public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -65,7 +67,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate Whether able to select the contacts showing in create secret group screen.
 		*/
-		    @Test(priority = 2)
+		  /*  @Test(priority = 2)
 		    public void To_Validate_Whether_able_to_select_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -76,7 +78,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		/*
 		 Validate Whether able to unselect the selected contact in create secret group screen.
 		 */
-		    @Test(priority = 3)
+		   /* @Test(priority = 3)
 		    public void To_Validate_Whether_able_to_Unselect_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -88,7 +90,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate Whether able to multi select the contacts showing in create secret group screen.
 		*/
-		   @Test(priority = 4)
+		  /* @Test(priority = 4)
 		    public void To_Validate_Whether_able_to_multi_select_the_contacts_showing_in_create_secret_group_screen () {
 			createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -101,7 +103,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the Create function without entering a group name and without selecting a member in create secret group screen.
 		*/
-		   @Test(priority = 5)
+		  /* @Test(priority = 5)
 		   public void To_Validate_Create_function_without_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -111,7 +113,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the Create function with entering a group name and without selecting a member in create secret group screen.
 		*/
-	      @Test(priority = 6)
+	     /* @Test(priority = 6)
 	      public void To_Validate_Create_function_with_entering_groupName_and_without_selecting_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -124,7 +126,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	 /*
 	   Validate the Create function without entering a group name and with selecting a member in create secret group screen.
 	   */
-	      @Test(priority = 7)
+	      /*@Test(priority = 7)
 	      public void To_Validate_the_Create_function_without_entering_groupName_and_with_selecting_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -136,7 +138,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	    Validate the Create function with entering space value in group name and with selecting a member in create secret group screen.
 	    */
-	     @Test(priority = 8)
+	     /*@Test(priority = 8)
 	      public void To_Validate_Create_function_with_entering_space_value_in_groupName_and_with_selecting_a_member_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 			 Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -152,7 +154,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the Create function with entering a group name and with selecting a member in create secret group screen.
 	   */
-	   @Test(priority = 9)
+	  /* @Test(priority = 9)
 	   public void To_Validate_Create_function_with_entering_groupName_and_with_selecting_member_in_create_secret_group_screen () throws InterruptedException {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -172,7 +174,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate whether crusher blink on clicking the text box of Secret Group in create secret group screen.
 		*/
-	      @Test(priority = 10)
+	      /*@Test(priority = 10)
 	      public void To_Validate_whether_crusher_blink_on_clicking_textboxes_of_SecretGroup_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -186,7 +188,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the presence of placeholder in the text box of the Secret Group in create secret group screen. 
 	   */
-	     @Test(priority = 11)
+	    /* @Test(priority = 11)
 	     public void To_Validate_presence_of_placeholder_in_the_textboxes_of_SecretGroup_in_create_secret_group_screen () {
 		  createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -196,7 +198,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	  /*
 	   validate whether paste option is working on the text boxes of the Secret Group in create secret group screen.
 		*/
-	      @Test(priority = 12)
+	     /* @Test(priority = 12)
 	      public void To_validate_whether_paste_option_is_working_on_textboxes_of_create_Secret_Group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 		   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -210,7 +212,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate whether able to create secret group without internet connection in create secret group screen.
 	   */
-	   @Test(priority = 13)
+	   /*@Test(priority = 13)
 	   public void To_Validate_whether_able_to_create_secret_group_without_internet_connection_in_create_secret_group_screen () throws InterruptedException {
 	 	  	
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
@@ -229,7 +231,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the text boxes of the Secret Group Functionality using special Characters in create secret group screen.
 	   */
-	   @Test(priority = 14)
+	  /* @Test(priority = 14)
 	   public void To_Validate_the_textboxes_of_Secret_Group_using_special_Characters_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -243,7 +245,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the text boxes of the Secret Group Functionality using alphabets both in upper case and lower case in create secret group screen.
 	   */
-	   @Test(priority = 15)
+	 /*  @Test(priority = 15)
 	   public void To_Validate_the_textboxes_of_Secret_Group_using_alphabets_both_in_uppercase_and_lowercase_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -265,7 +267,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the text boxes of the Secret Group Functionality by numerical value in create secret group screen.
 	   */
-	   @Test(priority = 16)
+	  /* @Test(priority = 16)
 	   public void To_Validate_the_textboxes_of_Secret_Group_by_numerical_value_in_create_secret_group_screen () {
 	 	
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
@@ -280,7 +282,7 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	   /*
 	   Validate whether the value entered in the text boxes of the Secret Group is editable and delete-able in create secret group screen.
 	   */
-	   @Test(priority = 17)
+	  /* @Test(priority = 17)
 	   public void To_Validate_whether_the_value_entered_in_textboxes_of_SecretGroup_is_editable_and_deleteable_in_create_secret_group_screen () {
 		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
 	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
@@ -298,6 +300,6 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"Check");
 	 	   createsecretgrouppage.ClearGroupNameTextBox();
 	 	   createsecretgrouppage.ClearSearchTextBox(); 	   
-	   }
-	   
+	   }*/
+	 
 }

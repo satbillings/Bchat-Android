@@ -20,10 +20,12 @@ public class CreateSecretGroupScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Secret Group']")
 	private WebElement PageTitle;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='3']")
+	//@AndroidFindBy(xpath="//android.widget.EditText[@index='3']")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]")
 	private WebElement GroupNameTextBox;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='4']")
+	//@AndroidFindBy(xpath="//android.widget.EditText[@index='4']")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]")
 	private WebElement SearchTextBox;
 	
 	//@AndroidFindBy(xpath="//android.view.View[@index='0']")

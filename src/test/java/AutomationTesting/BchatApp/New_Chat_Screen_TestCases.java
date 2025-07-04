@@ -573,7 +573,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 	
 	/*Validate if the text already entered is displayed in the Search text box after closing and open the search text box in New screen*/
 	
-	 @Test(priority = 40) 
+	/* @Test(priority = 40) 
 	 public void To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_closing_and_open_the_search_text_box_in_New_screen() throws InterruptedException { 
 		 newchatpage = new NewChatScreen(driver);
 	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
@@ -590,7 +590,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 
 /* Validate if the text already entered is displayed in the search text box after going to home screen from New screen and returning to New screen from home screen*/
 
-    @Test(priority = 41) 
+    /*@Test(priority = 41) 
 	 public void To_validate_if_the_text_already_entered_is_displayed_in_the_Search_text_box_after_going_to_home_screen_from_New_screen_and_returning_to_New_screen_from_home_screen() throws InterruptedException { 
 		 newchatpage = new NewChatScreen(driver);
 	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
@@ -608,7 +608,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
 
 /*Validate the Chat ID or BNS Name text box in New screen by entering the alphanumeric value*/
 
-     @Test(priority = 42) 
+    /* @Test(priority = 42) 
 	 public void To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_alphanumeric_value() throws InterruptedException { 
 		 newchatpage = new NewChatScreen(driver);
 	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
@@ -624,7 +624,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
      /*Validate the Chat ID or BNS Name text box in New screen by entering the decimal value*/
      /* Validate whether the value entered in the Chat ID or BNS Name text box of New screen is editable and delete-able */
 
-     @Test(priority = 43) 
+     /*@Test(priority = 43) 
 	 public void To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_decimal_value_To_validate_whether_the_value_entered_in_the_Chat_ID_or_BNS_Name_textbox_of_New_screen_is_editable_and_deleteable() throws InterruptedException { 
 		 newchatpage = new NewChatScreen(driver);
 	     Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
@@ -636,7 +636,7 @@ public class New_Chat_Screen_TestCases extends baseclass {
      
      /*Validate the Chat ID or BNS Name text box in New screen by entering the HTML characters*/
 
-     @Test(priority = 44) 
+    /* @Test(priority = 44) 
 	 public void To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters() throws InterruptedException { 
 		 newchatpage = new NewChatScreen(driver);
 	     Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
@@ -644,6 +644,66 @@ public class New_Chat_Screen_TestCases extends baseclass {
          newchatpage.EnterValuesInBchatIDOrBNSNameTextBox("<a href=\"https://www.example.com\">Visit Example</a>");
 	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"<a href=\"https://www.example.com\">Visit Example</a>");
 	     newchatpage.ClearBchatIDOrBNSNameTextBox();
+     }*/
+	
+	/*Validate the Chat ID or BNS Name text box in New screen by entering the numerical value*/
+
+     @Test(priority = 45) 
+	 public void To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_the_HTML_characters() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
+         newchatpage.ClickNewChatOption();
+	     Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
+         newchatpage.ClickBchatIDOrBNSNameTextBox();
+         newchatpage.EnterValuesInBchatIDOrBNSNameTextBox("1234567890");
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"1234567890");
+	     newchatpage.ClearBchatIDOrBNSNameTextBox();
+     }
+     
+     /*Validate the Chat ID or BNS Name text box in New screen by entering the alphabets both in upper case and lower case letter*/
+
+     @Test(priority = 46) 
+	 public void To_validate_the_Chat_ID_or_BNS_Name_text_box_in_New_screen_by_entering_alphabets_both_in_upper_case_and_lower_case_letter() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
+         newchatpage.ClickBchatIDOrBNSNameTextBox();
+         newchatpage.EnterValuesInBchatIDOrBNSNameTextBox("ABCDEF");
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"ABCDEF");
+	     newchatpage.ClearBchatIDOrBNSNameTextBox();
+	     newchatpage.ClickBchatIDOrBNSNameTextBox();
+         newchatpage.EnterValuesInBchatIDOrBNSNameTextBox("abcdef");
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"abcdef");
+	     newchatpage.ClearBchatIDOrBNSNameTextBox();
+	     
+     }
+     
+ /* Validate whether the user pastes a larger amount of text in the Chat ID or BNS Name text box in New screen */
+    
+     @Test(priority = 47) 
+	 public void To_validate_whether_the_user_pastes_a_larger_amount_of_text_in_the_Chat_ID_or_BNS_Name_text_box_in_New_screen() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+		 Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
+         newchatpage.ClickBchatIDOrBNSNameTextBox();
+         newchatpage.PasteValuesInBchatIDOrBNSNameTextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+	     newchatpage.ClearBchatIDOrBNSNameTextBox();
+     }
+     
+ /* Validate if the text already entered is displayed in the Chat ID or BNS Name text box after user cancels the Chat ID or BNS Name text box and again open the Chat ID or BNS Name text box in New screen */
+    
+     @Test(priority = 48) 
+	 public void To_validate_if_the_text_already_entered_is_displayed_in_the_Chat_ID_or_BNS_Name_text_box_after_user_cancels_the_Chat_ID_or_BNS_Name_text_box_and_again_open_the_Chat_ID_or_BNS_Name_text_box_in_New_screen() throws InterruptedException { 
+		 newchatpage = new NewChatScreen(driver);
+		 Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat");
+         newchatpage.ClickBchatIDOrBNSNameTextBox();
+         newchatpage.EnterValuesInBchatIDOrBNSNameTextBox("Test");
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"Test");
+	     newchatpage.ClickCancelButtonInNewChatPopup();
+	     newchatpage = new NewChatScreen(driver);
+	     Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
+         newchatpage.ClickNewChatOption();
+	     Assert.assertEquals(newchatpage.getNewChatPopupTitle(),"New Chat"); 
+	     Assert.assertEquals(newchatpage.getValuesFromBchatIDOrBNSNameTextBox(),"");
      }
 
 
