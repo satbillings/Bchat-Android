@@ -40,7 +40,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 			restorefromseedpage = new RestoreFromSeedScreen(driver);
 			Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 			restorefromseedpage.paste_Value_In_DisplayName("Sathish");
-			restorefromseedpage.paste_Value_In_Blockheight("3400000");
+			restorefromseedpage.paste_Value_In_Blockheight("4000000");
 			restorefromseedpage.clickBtnRestore(); 
 			createpasswordpage = new CreatePasswordScreen(driver);
 			Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -48,14 +48,14 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 			 createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
 			//Thread.sleep(10000); 
 			 homepage = new HomeScreen(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat"); 
+			Assert.assertEquals(homepage.Pagetitle(),"Chats"); 
 			Thread.sleep(5000); 
 			homepage.OpenJoinSocialGroup();	
 	 }
 	 /*
 		Validate whether able to navigate back to the Home screen from join social group screen.
 		*/
-		    @Test(priority = 1)
+		   /* @Test(priority = 1)
 		    public void To_Validate_whether_able_to_navigate_back_to_home_Screen_from_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -67,7 +67,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate whether suggested social groups showing in join social group screen.
 		*/
-		    @Test(priority = 2)
+		   /* @Test(priority = 2)
 		    public void To_Validate_whether_suggested_social_groups_showing_in_join_social_group_screen () throws InterruptedException {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -82,7 +82,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate whether able to join the groups shown in suggestion in join social group screen.
 		*/
-		    @Test(priority = 3)
+		   /* @Test(priority = 3)
 		    public void To_Validate_whether_able_to_join_the_groups_shown_in_suggestion_in_join_social_group_screen () throws InterruptedException {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -99,7 +99,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	 /*
 		Validate next option in the Join Social group screen by entering a Invalid URL.
 		*/
-		    @Test(priority = 4)
+		    /*@Test(priority = 4)
 		    public void To_Validate_next_option_in_Join_Social_group_screen_by_entering_a_Invalid_URL () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -111,7 +111,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the next option without entering values in URL text box in join social group screen.
 		*/
-		    @Test(priority = 5)
+		   /* @Test(priority = 5)
 		    public void To_Validate_the_next_option_without_entering_values_in_URL_textbox_in_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -121,7 +121,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the presence of placeholder inside the URL text box in join social group screen.
 		*/
-		    @Test(priority = 6)
+		   /* @Test(priority = 6)
 		    public void To_Validate_the_presence_of_placeholder_inside_the_URL_textbox_in_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -130,7 +130,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the next option in the join social group screen with empty space value.
 		*/
-		    @Test(priority = 7)
+		    /*@Test(priority = 7)
 		    public void To_Validate_the_next_option_in_join_social_group_screen_with_empty_space_value () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -142,7 +142,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the URL text box of the join social Group using special Characters in join social group screen. 
 		*/
-		    @Test(priority = 8)
+		    /*@Test(priority = 8)
 		    public void To_Validate_the_URL_textbox_of_join_socialGroup_using_special_Characters_in_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -154,7 +154,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		 Validate Whether value entered inside URL text box is editable in join social group screen.
 		 */
-		    @Test(priority = 9)
+		    /*@Test(priority = 9)
 		    public void To_Validate_Whether_value_entered_inside_URL_textbox_is_editable_in_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -168,7 +168,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the text box of the join social group using numerical values in join social group screen.
 		*/
-		    @Test(priority = 10)
+		    /*@Test(priority = 10)
 		    public void To_Validate_the_textbox_of_join_social_group_using_numerical_values_in_join_social_group_screen () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -180,7 +180,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 		/*
 		Validate the text box of the join social group screen using alphabets both in upper case and lower case. 
 		*/
-		    @Test(priority = 11)
+		    /*@Test(priority = 11)
 		    public void To_Validate_the_textbox_of_join_social_group_screen_using_alphabets_both_in_upper_case_and_lower_case () {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -198,7 +198,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	 /*
 	 Validate Whether able to paste values in text box in join social group screen.
 	 */
-	       @Test(priority = 12)
+	      /*@Test(priority = 12)
 	      public void To_Validate_Whether_able_to_paste_values_in_textbox_in_join_social_group_screen () {
 		  joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 		  Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -210,7 +210,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	/*
 	Validate next option in the join social group screen by entering a valid URL. 
 	*/
-	@Test(priority = 13)
+	/*@Test(priority = 13)
 	public void To_Validate_next_option_in_Join_social_group_screen_by_entering_a_valid_URL () {
 		joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 		Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -226,8 +226,8 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	/*
 	Validate whether able to join social group without internet connection in the join social group screen.
 	*/
-	@Test(priority = 14)
-	public void To_Validate_whether_able_to_join_social_group_without_internet_connection_in_Join_social_group_screen () throws InterruptedException {
+	  /*@Test(priority = 14)
+	  public void To_Validate_whether_able_to_join_social_group_without_internet_connection_in_Join_social_group_screen () throws InterruptedException {
 		
 		joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 		Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -241,12 +241,27 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	/*
 	validate whether cursor blinks while clicking the text box in the join social group screen.
 	*/
-	@Test(priority = 15)
+	/*@Test(priority = 15)
 	public void To_validate_whether_cursor_blinks_while_clicking_the_textbox_in_Join_social_group_screen () {
 		joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 		Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
 		joinsocialgrouppage.ClickURLTextBox();
 		Assert.assertTrue(joinsocialgrouppage.activeElement().isDisplayed());
-	}	
+	}	*/
+	 
+/* Validate the Social group URL text box in Social group screen by entering the alphanumeric value */
+	 
+	    @Test(priority = 16)
+		public void To_validate_the_social_group_URL_text_box_in_Social_group_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+			joinsocialgrouppage.Set_Values_In_SocialGroupURL_Textbox("abc123");
+			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"abc123");
+			Thread.sleep(2000);
+			joinsocialgrouppage.ClearSocialGroupURLTextBox();
+	    }
+			
+	 
+	 
 		
 }

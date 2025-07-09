@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Create_Secret_Group_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Join_Social_Group_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen_by_entering_the_alphanumeric_value"/>
+          <include name="To_validate_the_social_group_URL_text_box_in_Social_group_screen_by_entering_the_alphanumeric_value"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Create_Secret_Group_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Join_Social_Group_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

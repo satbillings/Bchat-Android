@@ -43,7 +43,8 @@ public class JoinSocialGroupScreen extends ActionsClass{
 	//@AndroidFindBy(xpath="//android.view.View[@index='2']")
 	private WebElement BelnetGroup;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='0']")
+	//@AndroidFindBy(xpath="//android.widget.EditText[@index='0']")
+	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement SocialGroupURLTextBox;
 	
 	@AndroidFindBy(xpath="//android.view.View[@index='1']")

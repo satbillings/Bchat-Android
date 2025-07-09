@@ -302,4 +302,88 @@ public class Create_Secret_Group_Screen_TestCases extends baseclass {
 	 	   createsecretgrouppage.ClearSearchTextBox(); 	   
 	   }*/
 	 
+	 /* Validate the Group name and Search contact text boxes in Secret group screen by entering the alphanumeric value */
+		
+	   @Test(priority = 18)
+	   public void To_Validate_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen_by_entering_the_alphanumeric_value() {
+		   newchatpage = new NewChatScreen(driver);
+		   Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
+		   newchatpage.ClickSecretGroupOption();
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");	 
+	 	   createsecretgrouppage.Set_Values_In_GroupName_Textbox("abc123");
+	 	   createsecretgrouppage.Set_Values_In_Search_Textbox("abc123");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"abc123");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"abc123");
+	 	   createsecretgrouppage.ClearGroupNameTextBox();
+	 	   createsecretgrouppage.ClearSearchTextBox();
+	   }
+	   
+/* Validate the Group name and Search contact text boxes in Secret group screen by entering the decimal value */
+		
+	   @Test(priority = 19)
+	   public void To_Validate_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen_by_entering_the_decimal_value() {
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");	 
+	 	   createsecretgrouppage.Set_Values_In_GroupName_Textbox("0.000001");
+	 	   createsecretgrouppage.Set_Values_In_Search_Textbox("0.000001");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"0.000001");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"0.000001");
+	 	   createsecretgrouppage.ClearGroupNameTextBox();
+	 	   createsecretgrouppage.ClearSearchTextBox();
+	   }      
+
+/* Validate the Group name and Search contact text boxes in Secret group screen by entering the HTML value */
+		
+	   @Test(priority = 20)
+	   public void To_Validate_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen_by_entering_the_HTML_value() {
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");	 
+	 	   createsecretgrouppage.Set_Values_In_GroupName_Textbox("<a href=\"https://www.example.com\">Visit Example</a>");
+	 	   createsecretgrouppage.Set_Values_In_Search_Textbox("<a href=\"https://www.example.com\">Visit Example</a>");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"<a href=\"https://www.example.com\">Visit Example</a>");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"<a href=\"https://www.example.com\">Visit Example</a>");
+	 	   createsecretgrouppage.ClearGroupNameTextBox();
+	 	   createsecretgrouppage.ClearSearchTextBox();
+	   } 
+	   
+/* Validate whether the user pastes a larger amount of text in the Group name and Search contact text boxes in Secret group screen */
+	   
+	   @Test(priority = 21)
+	   public void To_Validate_the_user_pastes_a_larger_amount_of_text_in_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen() {
+		   createsecretgrouppage = new CreateSecretGroupScreen(driver);
+	 	   Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");	 
+	 	  createsecretgrouppage.PasteValues_In_GroupNameTextBox("Test");
+	 	   createsecretgrouppage.PasteValues_In_SearchTextBox("Test");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"Test");
+	 	   Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"Test");
+	 	   createsecretgrouppage.ClearGroupNameTextBox();
+	 	   createsecretgrouppage.ClearSearchTextBox();
+	   }       
+	   
+/* Validate if the text already entered is displayed in the Group name and Search contact text boxes in Secret group screen after user navigates to home screen and come back to this screen */
+
+       @Test(priority = 22)
+       public void To_Validate_if_the_text_already_entered_is_displayed_in_the_Group_name_and_Search_contact_text_boxes_in_Secret_group_screen_after_user_navigates_to_home_screen_and_come_back_to_this_screen() {
+	       createsecretgrouppage = new CreateSecretGroupScreen(driver);
+ 	        Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+            createsecretgrouppage.Set_Values_In_GroupName_Textbox("Test");
+ 	        createsecretgrouppage.Set_Values_In_Search_Textbox("Test");
+ 	        Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"Test");
+ 	        Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"Test");
+ 	       createsecretgrouppage.ClickBackArrow();
+           // driver.navigate().back();
+           // driver.navigate().back();
+            homepage = new HomeScreen(driver);
+	        Assert.assertEquals(homepage.Pagetitle(), "Chats");
+	        homepage.OpenNewSecretGroup();
+            newchatpage = new NewChatScreen(driver);
+	        Assert.assertEquals(newchatpage.Pagetitle(),"New"); 
+	        newchatpage.ClickSecretGroupOption();
+	        createsecretgrouppage = new CreateSecretGroupScreen(driver);
+ 	        Assert.assertEquals(createsecretgrouppage.getPageTitle(),"Secret Group");
+            Assert.assertEquals(createsecretgrouppage.get_Values_From_GroupNameTextBox(),"");
+ 	        Assert.assertEquals(createsecretgrouppage.get_Values_From_SearchTextBox(),"");
+}   
+	 
 }
