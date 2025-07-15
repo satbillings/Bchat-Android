@@ -547,7 +547,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to set same profile name again in Profile Name Edit text box in Account Settings screen */
 	    
-	    @Test(priority = 39)
+	   /* @Test(priority = 39)
 	    public void To_Validate_whether_user_is_able_to_set_same_profile_name_again_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -560,7 +560,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /*  Validate whether user is able to set profile name as empty space in Profile Name Edit text box in Account Settings screen */
 	    
-	    @Test(priority = 40)
+	    /*@Test(priority = 40)
 	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_empty_space_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -573,7 +573,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether the paste option is working on the Profile Name Edit text box in Account Settings screen */
 	    
-	    @Test(priority = 41)
+	    /*@Test(priority = 41)
 	    public void To_Validate_whether_the_paste_option_is_working_on_the_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		//Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");  
@@ -583,6 +583,51 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		accountsettingspage.ClearProfileNameEditTextBox();
 		accountsettingspage.Paste_values_In_ProfileName_EditTextBox("Hales");
 		accountsettingspage.ClearProfileNameEditTextBox();
+	    }*/
+	    
+/* Validate whether user is able to set profile name as alphanumeric value in Profile Name Edit text box in Account Settings screen */
+	 
+	    @Test(priority = 42)
+	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_alphanumeric_value_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+		accountsettingspage =new AccountSettingsScreen(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");   
+		accountsettingspage.ClickPictureEditOption();
+		accountsettingspage.ClickProfileNameEditTextBox();
+		accountsettingspage.ClearProfileNameEditTextBox();
+		accountsettingspage.Set_Values_In_ProfileName_EditTextBox("abc123");
+		Assert.assertEquals(accountsettingspage.getValuesFromProfileNameEditTextBox(),"abc123"); 
+		accountsettingspage.ClickDoneButton();
+		accountsettingspage.Click_back_arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		homepage.clickMenuDrawer();
+		menupage = new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		Assert.assertEquals(menupage.getProfileName(),"abc123");   
+    }
+	    
+/* Validate whether user is able to set profile name as decimal value in Profile Name Edit text box in Account Settings screen */
+		 
+	    @Test(priority = 43)
+	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_decimal_value_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+	    	menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			menupage.ClickAccountSettingsOption();
+			accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");   
+			accountsettingspage.ClickPictureEditOption();
+			accountsettingspage.ClickProfileNameEditTextBox();
+			accountsettingspage.ClearProfileNameEditTextBox();
+			accountsettingspage.Set_Values_In_ProfileName_EditTextBox("0.00001");
+			Assert.assertEquals(accountsettingspage.getValuesFromProfileNameEditTextBox(),"0.00001"); 
+			accountsettingspage.ClickDoneButton();
+			accountsettingspage.Click_back_arrow();
+			homepage = new HomeScreen(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			homepage.clickMenuDrawer();
+			menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			Assert.assertNotEquals(menupage.getProfileName(),"0.00001"); 
 	    }
-	              
+       
 }

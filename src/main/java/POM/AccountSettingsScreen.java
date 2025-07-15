@@ -187,6 +187,11 @@ public class AccountSettingsScreen extends ActionsClass {
 		ProfileNameEditTextBox.clear();
 	}
 	
+	public String getValuesFromProfileNameEditTextBox () {
+		return ProfileNameEditTextBox.getText();
+		
+	}
+	
 	public void Set_Values_In_ProfileName_EditTextBox (String value) {
 		ProfileNameEditTextBox.sendKeys(value);
 		}

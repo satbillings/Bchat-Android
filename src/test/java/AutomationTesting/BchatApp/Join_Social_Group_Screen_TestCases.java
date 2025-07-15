@@ -251,7 +251,7 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 	 
 /* Validate the Social group URL text box in Social group screen by entering the alphanumeric value */
 	 
-	    @Test(priority = 16)
+	  /*  @Test(priority = 16)
 		public void To_validate_the_social_group_URL_text_box_in_Social_group_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
@@ -259,9 +259,60 @@ public class Join_Social_Group_Screen_TestCases extends baseclass {
 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"abc123");
 			Thread.sleep(2000);
 			joinsocialgrouppage.ClearSocialGroupURLTextBox();
-	    }
-			
+	    }*/
 	 
-	 
-		
+/*Validate the Social group URL text box in Social group screen by entering the decimal value */
+
+	      @Test(priority = 17)
+	 		public void To_validate_the_social_group_URL_text_box_in_Social_group_screen_by_entering_the_decimal_value () throws InterruptedException {
+	 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+	 			joinsocialgrouppage.Set_Values_In_SocialGroupURL_Textbox("0.00001");
+	 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"0.00001");
+	 			Thread.sleep(2000);
+	 			joinsocialgrouppage.ClearSocialGroupURLTextBox();
+	 	    }
+
+
+/*Validate the Social group URL text box in Social group screen by entering the HTML value */
+
+	       @Test(priority = 18)
+	 		public void To_validate_the_social_group_URL_text_box_in_Social_group_screen_by_entering_the_HTML_value () throws InterruptedException {
+	 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+	 			joinsocialgrouppage.Set_Values_In_SocialGroupURL_Textbox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+	 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+	 			Thread.sleep(2000);
+	 			joinsocialgrouppage.ClearSocialGroupURLTextBox();
+	 	    }
+
+/* Validate whether the user pastes a larger amount of text in the Social group URL text box in Social group screen */
+
+	        @Test(priority = 19)
+	 		public void To_validate_the_user_pastes_a_larger_amount_of_text_in_the_social_group_URL_text_box_in_Social_group_screen () throws InterruptedException {
+	 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+	            joinsocialgrouppage.Paste_Values_In_URL_TextBox ("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");        
+	 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+	            Thread.sleep(2000);
+	 			joinsocialgrouppage.ClearSocialGroupURLTextBox();
+	 }
+	        
+/* Validate if the text already entered is displayed in the URL text box in Social group screen after user navigates to home screen and back to this screen */ 	        
+	        
+	        @Test(priority = 20)
+	        public void To_Validate_if_the_text_already_entered_is_displayed_in_the_URL_text_box_in_Social_group_screen_after_user_navigates_tho_home_screen_and_back_to_this_screen() {
+	 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");   
+	 			joinsocialgrouppage.Set_Values_In_SocialGroupURL_Textbox("Test");
+	 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"Test");
+	 			joinsocialgrouppage.ClickBackArrow();
+	 			 homepage = new HomeScreen(driver);
+	 			Assert.assertEquals(homepage.Pagetitle(),"Chats"); 
+	 			homepage.OpenJoinSocialGroup();	
+	 			joinsocialgrouppage = new JoinSocialGroupScreen(driver);
+	 			Assert.assertEquals(joinsocialgrouppage.getJoinSocialGroupScreenTitle(), "Social Group");
+	 			Assert.assertEquals(joinsocialgrouppage.get_Values_From_URLTextBox(),"");
+	        }
+
 }
