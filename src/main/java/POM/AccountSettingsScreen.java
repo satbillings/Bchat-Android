@@ -70,6 +70,9 @@ public class AccountSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Link BNS']")
 	private WebElement LinkBNSPopupScreenTitle;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Enter BNS name']")
+	private WebElement PlaceholderOfBNSNameTextBox;
+	
 	@AndroidFindBy(xpath="//android.widget.EditText[@index='4']")
 	private WebElement textBoxBNSName;
 
@@ -187,10 +190,25 @@ public class AccountSettingsScreen extends ActionsClass {
 		ProfileNameEditTextBox.clear();
 	}
 	
+	public void ClearBNSNameTextBox () {
+		textBoxBNSName.clear();
+	}
+	
 	public String getValuesFromProfileNameEditTextBox () {
 		return ProfileNameEditTextBox.getText();
 		
 	}
+	
+	public String getPlaceholderOfBNSNameTextBox () {
+		return PlaceholderOfBNSNameTextBox.getText();
+		
+	}
+	
+	public String getValuesFromBNSNameTextBox () {
+		return textBoxBNSName.getText();
+		
+	}
+	
 	
 	public void Set_Values_In_ProfileName_EditTextBox (String value) {
 		ProfileNameEditTextBox.sendKeys(value);
@@ -355,6 +373,10 @@ public class AccountSettingsScreen extends ActionsClass {
     public void Enter_Value_In_BNS_Name_field (String Value) {
     	//textBoxBNSName.click();
     	textBoxBNSName.sendKeys(Value);
+    }
+    
+    public void ClickBNSNameTextBox () {
+    	textBoxBNSName.click();
     }
     
     public void click_Verify_Button () {

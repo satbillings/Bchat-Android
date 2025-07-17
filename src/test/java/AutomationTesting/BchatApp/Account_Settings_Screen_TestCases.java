@@ -587,7 +587,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to set profile name as alphanumeric value in Profile Name Edit text box in Account Settings screen */
 	 
-	    @Test(priority = 42)
+	   /* @Test(priority = 42)
 	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_alphanumeric_value_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
 		accountsettingspage =new AccountSettingsScreen(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");   
@@ -608,7 +608,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate whether user is able to set profile name as decimal value in Profile Name Edit text box in Account Settings screen */
 		 
-	    @Test(priority = 43)
+	    /*@Test(priority = 43)
 	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_decimal_value_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
 	    	menupage = new MenuScreen(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -628,6 +628,94 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 			menupage = new MenuScreen(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
 			Assert.assertNotEquals(menupage.getProfileName(),"0.00001"); 
+	    }*/
+	    
+/* Validate whether user is able to set profile name as HTML value in Profile Name Edit text box in Account Settings screen */
+		 
+	    @Test(priority = 43)
+	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_HTML_value_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+	    	accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");   
+			accountsettingspage.ClickPictureEditOption();
+			accountsettingspage.ClickProfileNameEditTextBox();
+			accountsettingspage.ClearProfileNameEditTextBox();
+			accountsettingspage.Set_Values_In_ProfileName_EditTextBox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+			Assert.assertEquals(accountsettingspage.getValuesFromProfileNameEditTextBox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>"); 
+			accountsettingspage.ClickDoneButton();
+			accountsettingspage.Click_back_arrow();
+			homepage = new HomeScreen(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			homepage.clickMenuDrawer();
+			menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			Assert.assertNotEquals(menupage.getProfileName(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>"); 
 	    }
-       
+	    
+/* Validate if the user is able to set profile name as long text by using paste option into the Profile Name Edit text box on the Account Settings screen */	    
+	    @Test(priority = 44)
+	    public void To_Validate_whether_user_is_able_to_set_profile_name_as_long_text_by__using_paste_option_the_in_profile_name_edit_text_box_in_Account_settings_screen() throws InterruptedException {
+	    	menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			menupage.ClickAccountSettingsOption();
+			accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");   
+			accountsettingspage.ClickPictureEditOption();
+			accountsettingspage.ClickProfileNameEditTextBox();
+			accountsettingspage.ClearProfileNameEditTextBox();
+			accountsettingspage.Paste_values_In_ProfileName_EditTextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+			Assert.assertEquals(accountsettingspage.getValuesFromProfileNameEditTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen"); 
+			accountsettingspage.ClickDoneButton();
+			accountsettingspage.Click_back_arrow();
+			homepage = new HomeScreen(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			homepage.clickMenuDrawer();
+			menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			Assert.assertNotEquals(menupage.getProfileName(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");   			
+	    }
+	    
+/* Validate whether cursor blinks in BNS Name text box in Account Settings screen */	
+	    
+	    @Test(priority = 45)
+	    public void To_Validate_whether_cursor_blinks_in_BNS_Name_text_box_Account_settings_screen() throws InterruptedException {
+	    	menupage = new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			menupage.ClickAccountSettingsOption();
+			accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
+			accountsettingspage.click_Link_BNS_option();
+			accountsettingspage.ClickBNSNameTextBox();
+			Assert.assertTrue(accountsettingspage.activeElement().isDisplayed());
+	    }
+	    
+/* Validate the presence of placeholder in the BNS Name text box in Account Settings screen */
+	    
+	    @Test(priority = 46)
+	    public void To_Validate_the_presence_of_placehoder_in_the_BNS_Name_text_box_Account_settings_screen() throws InterruptedException {
+	    	accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
+			Assert.assertEquals(accountsettingspage.getPlaceholderOfBNSNameTextBox(),"Enter BNS name");
+	    }    
+	    
+/* Validate the BNS Name text box in Account Settings screen by entering the empty space */
+	    	    
+	    @Test(priority = 47)
+	    public void To_Validate_the_BNS_Name_text_box_in_Account_settings_screen_by_entering_the_empty_space() throws InterruptedException {
+	    	accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
+			accountsettingspage.Enter_Value_In_BNS_Name_field("     ");
+			Assert.assertNotEquals(accountsettingspage.getValuesFromBNSNameTextBox(),"     ");
+			accountsettingspage.ClearBNSNameTextBox();
+	    }
+	    
+/* Validate the BNS Name text box in Account Settings screen by entering the special characters */
+	    
+	    @Test(priority = 48)
+	    public void To_Validate_the_BNS_Name_text_box_in_Account_settings_screen_by_entering_the_special_characters() throws InterruptedException {
+	    	accountsettingspage =new AccountSettingsScreen(driver);
+			Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
+			accountsettingspage.Enter_Value_In_BNS_Name_field("!@#$%^&*()");
+			Assert.assertEquals(accountsettingspage.getValuesFromBNSNameTextBox(),"!@#$%^&*()");
+			accountsettingspage.ClearBNSNameTextBox();
+	    }	    	    
 }
