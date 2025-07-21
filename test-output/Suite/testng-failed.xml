@@ -8,9 +8,9 @@
     <classes>
       <class name="AutomationTesting.BchatApp.Account_Settings_Screen_TestCases">
         <methods>
+          <include name="To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_HTML_value"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_BNS_Name_text_box_in_Account_settings_screen_by_entering_the_empty_space"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
     </classes>

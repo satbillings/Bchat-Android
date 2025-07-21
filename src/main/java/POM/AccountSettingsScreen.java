@@ -217,6 +217,10 @@ public class AccountSettingsScreen extends ActionsClass {
 	 public void Paste_values_In_ProfileName_EditTextBox (String value) {
 			Copy_And_Paste_Values(value, ProfileNameEditTextBox);
 		}
+	 
+	 public void Paste_values_In_BNS_Name_TextBox (String value) {
+			Copy_And_Paste_Values(value, textBoxBNSName);
+		}
 	
 	
     public void ChangeProfilePictureMultipleTimes() throws InterruptedException {
