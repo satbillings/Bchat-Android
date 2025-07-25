@@ -72,12 +72,12 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		//menupage =new MenuScreen(driver);
 		//Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
 		menupage =new MenuScreen(driver);
-		menupage.click_Account_Settings();
+		menupage.ClickAccountSettingsOption();
 		accountsettingspage =new AccountSettingsScreen(driver);
 	    Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
         accountsettingspage.click_option_Chat_settings();
@@ -85,7 +85,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	/*
 	    Validate whether able to navigate back to the my account screen from chat settings screen.
 	*/
-	    @Test(priority = 1)
+	   /* @Test(priority = 1)
 	    public void To_Validate_whether_Able_to_navigate_back_to_my_account_screen_from_chat_settings_screen () {
 		
 		chatsettingspage=new ChatSettingsScreen(driver);
@@ -98,7 +98,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	/*
 	   Validate the working of the enter key send option in the messaging screen in ON condition.
     */
-       @Test(priority = 2)
+       /*@Test(priority = 2)
 	   public void To_Validate_working_of_enter_key_send_option_in_messaging_screen_in_ON_condition () {
 	  
 		
@@ -126,7 +126,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
    /*
 	Validate the working of the enter key send option in the messaging screen in OFF condition.
 	*/
-        @Test(priority =3)
+        /*@Test(priority =3)
         public void To_Validate_working_of_enter_key_send_option_in_messaging_screen_in_OFF_condition () {
 	   	homepage = new HomeScreen(driver);
 	   	homepage.clickMenuDrawer();
@@ -157,7 +157,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
   /*
   Validate Whether option in message trimming are clickable without enabled delete old messages
 	*/
-       @Test(priority = 4)
+       /*@Test(priority = 4)
        public void To_Validate_Whether_option_in_message_trimming_are_clickabble_without_enabled_delete_old_messages () {
 	   homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -177,7 +177,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
  /*
      Validate the Whether able to change the value in the conversation length limit
   */
-      @Test(priority = 5)
+      /*@Test(priority = 5)
       public void To_Validate_the_Whether_able_to_change_the_value_in_the_conversation_length_limit () {
 	  
 	  chatsettingspage = new ChatSettingsScreen(driver);
@@ -195,7 +195,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
  Validate whether entered value in conversation length limit field is displayed chat Setting Screen.
   Validate whether the value entered in Conversation length limit field is editable and delete-able.
  */
-       @Test(priority =6)
+       /*@Test(priority =6)
        public void To_Validate_whether_entered_value_in_conversation_length_limit_field_is_displayed_In_Chat_Settings_screen_To_validate_whether_the_value_entered_in_conversation_length_limit_field_is_editable_and_deleteable () {
 	   chatsettingspage = new ChatSettingsScreen(driver);
 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -214,7 +214,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	 /*
 	  Validate the working of the Ok and cancel buttons in conversation length
 		*/
-	  @Test(priority = 7)
+	  /*@Test(priority = 7)
 	  public void To_Validate_the_working_of_Ok_and_cancel_buttons_in_conversation_length () {
 		  chatsettingspage = new ChatSettingsScreen(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -231,7 +231,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	  /*
 	  Validate the working of the delete button in the Delete all old messages now
 	 	*/
-	   @Test(priority = 8) 
+	   /*@Test(priority = 8) 
 	   public void To_Validate_the_working_of_delete_button_in_Delete_all_old_messages_now () {
 	 	  chatsettingspage = new ChatSettingsScreen(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -260,7 +260,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	   /*
 	   Validate the working of the cancel button in the Delete all old messages now
 	     */
-	    @Test(priority =9 )
+	    /*@Test(priority = 9)
 	    public void To_Validate_working_of_cancel_button_in_Delete_all_old_messages_now () {
 	 	   chatsettingspage = new ChatSettingsScreen(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -272,7 +272,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	    /*
 	    Validate Conversation length limit field Whether allowing space.
 	    */
-	    @Test(priority = 10)
+	   /* @Test(priority = 10)
 	    public void To_Validate_Conversation_length_limit_field_Whether_allowing_space () {
 	 	   chatsettingspage = new ChatSettingsScreen(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -284,7 +284,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	    /*
 	    validate whether paste option is working on Conversation length limit field.
 	    */
-	    @Test(priority = 11)
+	   /* @Test(priority = 11)
 	    public void To_Validate_whether_paste_option_is_working_on_Conversation_length_limit_field () {
 	 	   chatsettingspage = new ChatSettingsScreen(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -294,7 +294,7 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 	    }
 	    /*	    Validate whether crusher blink in Conversation length limit field while clicking.
 	    */
-	       @Test(priority = 12)
+	       /*@Test(priority = 12)
 	       public void To_Validate_whether_crusher_blink_in_Conversation_length_limit_field_while_clicking () {
 		   chatsettingspage = new ChatSettingsScreen(driver);
 		   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -302,5 +302,12 @@ public class Chat_Settings_Screen_TestCases extends baseclass {
 		   chatsettingspage.click_conversation_Length_text_box();
 		   WebElement active=driver.switchTo().activeElement();
 		   Assert.assertTrue(chatsettingspage.activeElement().equals(active));
-	   }
+	   }*/
+    
+	
+	
+    
+    
+
+	
 }

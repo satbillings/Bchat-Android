@@ -35,7 +35,8 @@ public class ChatSettingsScreen extends ActionsClass {
 	private WebElement SwipebtnDelteOld;
 	
 	@AndroidFindBy(id="android:id/summary")
-	private WebElement optionConersationLength ;
+	//@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recycler_view\"]/android.widget.LinearLayout[5]/android.widget.RelativeLayout")
+	private WebElement optionConversationLength ;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Trim all conversations now']")
 	private WebElement optionTrimConversation;
@@ -65,7 +66,7 @@ public class ChatSettingsScreen extends ActionsClass {
 	
 	
 	public void click_Option_Conversation_Length () {
-		optionConersationLength.click();
+		optionConversationLength.click();
 	}
 	
 	public void click_option_Trim_conversation () {
@@ -103,7 +104,23 @@ public class ChatSettingsScreen extends ActionsClass {
 		btnOkInConversationPopup.click();
 		
 	}
-
+	
+	public void Set_Value_In_Conversation_Length_Limit_TextBox (String value) {
+		ConversationLengthTextbox.sendKeys(value);
+	}
+	
+	 public void Paste_values_In_ProfileName_EditTextBox (String value) {
+			Copy_And_Paste_Values(value, ConversationLengthTextbox);
+		}
+	 
+	 public void ClearConversationLengthLimitTextbox () {
+		 ConversationLengthTextbox.click();
+		}
+	 
+	 public String getValuesFromConversationLengthLimitTextbox () {
+			return ConversationLengthTextbox.getText();
+		}
+	 
 	public void set_Space_Inbetween_Values () {
 	
 		ConversationLengthTextbox.clear();

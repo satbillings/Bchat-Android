@@ -6,13 +6,19 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Account_Settings_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases">
         <methods>
-          <include name="To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_HTML_value"/>
+          <include name="To_Validate_the_presence_of_placeholder_in_Search_text_box_in_Note_to_self_chat_screen"/>
+          <include name="PreSetup"/>
           <include name="Configure"/>
           <include name="closeApp"/>
+          <include name="To_Validate_the_message_text_box_in_Note_to_self_chat_screen_by_entering_the_decimal_value"/>
+          <include name="To_Validate_if_text_that_was_already_entered_is_displayed_in_message_text_box_in_Note_to_self_chat_screen_after_navigation_to_home_screen_and_back_to_this_screen"/>
+          <include name="To_Validate_the_message_text_box_in_Note_to_self_chat_screen_by_entering_the_alphanumeric_value"/>
+          <include name="To_Validate_whether_the_cursor_blinks_in_Search_text_box_in_Note_to_self_chat_screen"/>
+          <include name="To_Validate_the_message_text_box_in_Note_to_self_chat_screen_by_entering_the_HTML_value"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Account_Settings_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -100,6 +100,9 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/search_query")
 	private WebElement searchtextbox;
 	
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='Search']")
+	private WebElement SearchTextBoxPlaceholder;
+	
 	@AndroidFindBy(id="io.beldex.bchat:id/searchDown")
 	private WebElement searchdownarrow;
 	
@@ -1077,6 +1080,30 @@ public class ChatScreen extends ActionsClass {
 		   Searchoption.click();
 		   searchtextbox.sendKeys(value);
 		}
+	public void ClickSearchOption () {
+		Searchoption.click();
+	}
+	
+	public void Paste_Values_In_Search_Textbox (String value) {
+		   Copy_And_Paste_Values(value, searchtextbox);
+	}
+	
+	public String getValuesFromSearchTextBox () {
+		 return searchtextbox.getText();
+	}
+	
+	public void ClearSearchTextBox () {
+		searchtextbox.clear();
+	}
+	
+	public void ClickSearchTextBox () {
+		searchtextbox.click();
+	}
+	
+	public String getSearchTextBoxPlaceholder () {
+		 return SearchTextBoxPlaceholder.getText();
+	}
+	
 	public WebElement Element_Down_arrow () {
 		return searchdownarrow;
 	}
@@ -1121,6 +1148,10 @@ public class ChatScreen extends ActionsClass {
 	
 	public void Set_Values_In_Message_textbox (String value) {
 	   messageTextbox.sendKeys(value);
+	}
+	
+	public String getValuesFromMessageTextBox() {
+		return messageTextbox.getText();
 	}
 	
 	public void click_Send_Button () {

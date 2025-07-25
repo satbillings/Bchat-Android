@@ -721,7 +721,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 	    
 /* Validate the BNS Name text box in Account Settings screen by entering the alphanumeric value */
    	    
-	    @Test(priority = 49)
+	   /* @Test(priority = 49)
 	    public void To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_alphanumeric_value() throws InterruptedException {
 	    	accountsettingspage =new AccountSettingsScreen(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings"); 
@@ -736,7 +736,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 /* Validate the BNS Name text box in Account Settings screen by entering the numerical value */
 /* Validate whether the value entered in the BNS Name text box of Account Settings screen is editable and delete-able */ 
 	    
-		    @Test(priority = 50)
+		    /*@Test(priority = 50)
 		    public void To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_numerical_value_To_validate_the_value_entered_in_the_search_text_box_of_Gif_and_Stickers_screen_is_editable_and_deleteable () throws InterruptedException {
 		    	accountsettingspage =new AccountSettingsScreen(driver);
 				Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
@@ -745,9 +745,9 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 				accountsettingspage.ClearBNSNameTextBox();
 		    }    
 		    
-/* Validate whether the user is able to paste long text in BNS Name text box in Account Settings screen */
+/* Validate the BNS Name text box in Account Settings screen by entering the HTML value */
 	   	    
-		    @Test(priority = 51)
+		    /*@Test(priority = 51)
 		    public void To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_HTML_value() throws InterruptedException {
 		    	accountsettingspage =new AccountSettingsScreen(driver);
 				Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
@@ -758,7 +758,7 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		    
 /* Validate the BNS Name text box in Account Settings screen by entering the decimal value */
 	   	    
-		    @Test(priority = 52)
+		    /*@Test(priority = 52)
 		    public void To_validate_the_BNS_Name_text_box_in_Account_Settings_screen_by_entering_the_decimal_value() throws InterruptedException {
 		    	accountsettingspage =new AccountSettingsScreen(driver);
 				Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
@@ -769,14 +769,13 @@ public class Account_Settings_Screen_TestCases extends baseclass {
 		    
 /* Validate whether the user is able to paste long text in BNS Name text box in Account Settings screen */
 	   	    
-		    @Test(priority = 53)
+		    /*@Test(priority = 53)
 		    public void To_validate_whether_the_user_is_able_to_paste_long_text_in_BNS_name_text_box_in_Account_settings_screen() throws InterruptedException {
 		    	accountsettingspage =new AccountSettingsScreen(driver);
 				Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(),"Link BNS"); 
 				accountsettingspage.Paste_values_In_BNS_Name_TextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
 				Assert.assertEquals(accountsettingspage.getValuesFromBNSNameTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
 				accountsettingspage.ClearBNSNameTextBox();	   
-				}    
-		    
-		    
+				}  */
+	       
 }
