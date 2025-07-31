@@ -1080,6 +1080,10 @@ public class ChatScreen extends ActionsClass {
 		   Searchoption.click();
 		   searchtextbox.sendKeys(value);
 		}
+	
+	public void EnterValuesInSearchTextbox (String value) {
+		   searchtextbox.sendKeys(value);
+	}
 	public void ClickSearchOption () {
 		Searchoption.click();
 	}
