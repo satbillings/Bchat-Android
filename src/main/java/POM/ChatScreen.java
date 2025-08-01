@@ -106,7 +106,8 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/searchDown")
 	private WebElement searchdownarrow;
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/close_search")
+	//@AndroidFindBy(id="io.beldex.bchat:id/close_search")
+	@AndroidFindBy(xpath="//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/close_search\"]")
 	private WebElement Searchcloseicon;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/noMatchesFoundTextview")

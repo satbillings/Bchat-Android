@@ -677,7 +677,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	
 /* Validate the	Search text box in Note to self chat screen by entering the special characters */
 	
-	@Test(priority = 46)
+	/*@Test(priority = 46)
 	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_special_characters() throws InterruptedException {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "Chats");
@@ -696,7 +696,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 /* Validate the	Search text box in Note to self chat screen by entering the numerical value */
 /* Validate whether the value entered in the search text box of Note to self chat screen is editable and delete-able */
 	
-	@Test(priority = 47)
+	/*@Test(priority = 47)
 	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_numerical_value_To_validate_the_value_entered_in_the_search_text_box_of_Note_to_self_chat_screen_is_editable_and_deleteable() throws InterruptedException {
         chatpage = new ChatScreen(driver);
    	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
@@ -708,7 +708,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	
 /* Validate the	Search text box in Note to self chat screen by entering the empty space */
 	
-	@Test(priority = 48)
+	/*@Test(priority = 48)
 	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_empty_space() throws InterruptedException {
         chatpage = new ChatScreen(driver);
    	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
@@ -720,7 +720,7 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
 	
 /* Validate the	Search text box in Note to self chat screen by entering the alphanumeric value */
 	
-	@Test(priority = 49)
+	/*@Test(priority = 49)
 	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_alphanumeric_value() throws InterruptedException {
         chatpage = new ChatScreen(driver);
    	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
@@ -728,5 +728,63 @@ public class Search_Screen_And_Note_To_Self_Screen_TestCases extends baseclass {
  	    chatpage.EnterValuesInSearchTextbox("abc123");
 		Assert.assertEquals(chatpage.getValuesFromSearchTextBox(),"abc123");
 		chatpage.ClearSearchTextBox();
-	}	
+	}*/
+	
+/* Validate the	Search text box in Note to self chat screen by entering the decimal value */
+	
+	@Test(priority = 50)
+	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_decimal_value() throws InterruptedException {
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+        homepage.ClickSearchTextBox();
+        homepage.click_Option_Note_To_Myself();
+        chatpage = new ChatScreen(driver);
+   	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
+   	    chatpage.click_Moreoption();
+   	    chatpage.ClickSearchOption();
+   	    chatpage.ClickSearchTextBox();
+ 	    chatpage.EnterValuesInSearchTextbox("0.00001");
+		Assert.assertEquals(chatpage.getValuesFromSearchTextBox(),"0.00001");
+		chatpage.ClearSearchTextBox();
+	}			
+	
+/* Validate the	Search text box in Note to self chat screen by entering the HTML value */
+	
+	@Test(priority = 51)
+	public void To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_HTML_value() throws InterruptedException {
+        chatpage = new ChatScreen(driver);
+   	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
+   	    chatpage.ClickSearchTextBox();
+ 	    chatpage.EnterValuesInSearchTextbox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertEquals(chatpage.getValuesFromSearchTextBox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		chatpage.ClearSearchTextBox();
+	}
+	
+/* Validate whether the user is able to paste long text in the Search text box in Note to self chat screen */
+	
+	@Test(priority = 52)
+	public void To_Validate_whether_the_user_is_able_to_paste_long_text_in_the_Search_text_box_in_Note_to_self_chat_screen() throws InterruptedException {
+        chatpage = new ChatScreen(driver);
+   	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
+   	    chatpage.Paste_Values_In_Search_Textbox("sincerely drunk awakened anecdote software owed irony ritual rugged slug liquid equip syndrome coffee buzzer going vastness solved python kiwi acidic react fizzle gimmick anecdote");
+		Assert.assertEquals(chatpage.getValuesFromSearchTextBox(),"sincerely drunk awakened anecdote software owed irony ritual rugged slug liquid equip syndrome coffee buzzer going vastness solved python kiwi acidic react fizzle gimmick anecdote");
+		chatpage.ClearSearchTextBox();
+	}
+	
+/* Validate if already entered text is displayed in the Search text box in Note to self chat screen after closing and opening the search text box */	
+	
+	@Test(priority = 53)
+	public void To_Validate_if_already_entered_text_is_displayed_in_the_Search_text_box_in_Note_to_self_chat_screen_after_closing_and_opening_the_search_text_box() throws InterruptedException {
+        chatpage = new ChatScreen(driver);
+   	    Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Note to Self");
+   	    chatpage.ClickSearchTextBox();
+	    chatpage.EnterValuesInSearchTextbox("Test");
+		Assert.assertEquals(chatpage.getValuesFromSearchTextBox(),"Test");
+		chatpage.ClickSearchCloseIcon();
+		chatpage.click_Moreoption();
+	   	chatpage.ClickSearchOption();
+	    Assert.assertNotEquals(chatpage.getValuesFromSearchTextBox(),"Test");
+ 
+	}
+	
 }

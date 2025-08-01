@@ -10,7 +10,7 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_Search_text_box_in_Note_to_self_chat_screen_by_entering_the_numerical_value_To_validate_the_value_entered_in_the_search_text_box_of_Note_to_self_chat_screen_is_editable_and_deleteable"/>
+          <include name="To_Validate_if_already_entered_text_is_displayed_in_the_Search_text_box_in_Note_to_self_chat_screen_after_closing_and_opening_the_search_text_box"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases -->
     </classes>
