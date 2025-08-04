@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_if_already_entered_text_is_displayed_in_the_Search_text_box_in_Note_to_self_chat_screen_after_closing_and_opening_the_search_text_box"/>
+          <include name="To_Validate_the_Message_text_box_on_the_one_to_one_chat_screen_by_entering_the_alphanumeric_value"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Search_Screen_And_Note_To_Self_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

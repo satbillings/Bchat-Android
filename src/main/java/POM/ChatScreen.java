@@ -341,7 +341,8 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(id ="io.beldex.bchat:id/deleteButton")
 	private WebElement DeleteButtonInAllMedia; 
 	
-	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[1]")
+	//@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[1]")
+	@AndroidFindBy(xpath ="(//android.view.ViewGroup[@resource-id=\"io.beldex.bchat:id/mainContainer\"])[1]")
 	private WebElement FirstSendMessage; 
 	
 	@AndroidFindBy(xpath ="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/messageInnerContainer\"])[2]")
@@ -651,6 +652,10 @@ public class ChatScreen extends ActionsClass {
 	
 	public String getTotalEmojiReactionCount () {
 		return TotalEmojiReactionCount.getText();
+				}
+	
+	public String getValuesFromSearchEmojiTextBox () {
+		return SearchEmojiTextBox.getText();
 				}
 	
 	
