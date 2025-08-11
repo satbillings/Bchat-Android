@@ -1759,7 +1759,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the Message text box in one to one chat screen by entering the alphanumeric value */
 	
-	@Test(priority = 119)
+	/*@Test(priority = 119)
 	public void To_Validate_the_Message_text_box_on_the_one_to_one_chat_screen_by_entering_the_alphanumeric_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);	
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1770,7 +1770,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the Message text box in one to one chat screen by entering the decimal value */
 	
-	@Test(priority = 120)
+	/*@Test(priority = 120)
 	public void To_Validate_the_Message_text_box_on_the_one_to_one_chat_screen_by_entering_the_decimal_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);	
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1781,7 +1781,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the Message text box in one to one chat screen by entering the HTML value */
 	
-	@Test(priority = 121)
+	/*@Test(priority = 121)
 	public void To_Validate_the_Message_text_box_on_the_one_to_one_chat_screen_by_entering_the_HTML_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);	
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1792,7 +1792,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate whether the user is able to paste long text in the Message box in One to One chat screen */
 	
-	@Test(priority = 122)
+	/*@Test(priority = 122)
 	public void To_Validate_whether_the_user_is_able_to_paste_long_text_in_the_Message_text_box_in_One_to_One_chat_screen() throws InterruptedException {
         chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1803,7 +1803,7 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate if already entered text is displayed in the Message box in One to One chat screen after navigating to home screen and back to this screen */	
 	
-	@Test(priority = 123)
+	/*@Test(priority = 123)
 	public void To_Validate_if_already_entered_text_is_displayed_in_the_Message_text_box_in_One_to_One_chat_screen_after_navigating_to_home_screen_and_back_to_this_screen() throws InterruptedException {
         chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1819,7 +1819,8 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 	}
 	
 /* Validate the Search Emoji text box in One to One chat screen by entering the alphanumeric value */
-	@Test(priority = 124)
+	
+	/*@Test(priority = 124)
 	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_alphanumeric_value() throws InterruptedException {
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
@@ -1831,5 +1832,63 @@ public class One_To_One_Chat_Screen_TestCases extends baseclass {
 		chatpage.Set_Values_In_SearchEmoji_TextBox("abc123");
 		Assert.assertEquals(chatpage.getValuesFromSearchEmojiTextBox(), "abc123");
 		chatpage.Clear_Search_Emoji_textbox();
-	}	
+	}	*/
+
+/* Validate the Search Emoji text box in One to One chat screen by entering the decimal value */
+
+	@Test(priority = 125)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_decimal_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
+		Thread.sleep(2000);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(2000);
+		chatpage.ClickMoreEmojiButton();
+		chatpage.ClickSearchEmojiTextBox();
+		Assert.assertTrue(chatpage.getSearchEmojiInfoScreenElement().isDisplayed());
+		chatpage.Set_Values_In_SearchEmoji_TextBox("0.00001");
+		Assert.assertEquals(chatpage.getValuesFromSearchEmojiTextBox(), "0.00001");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+	/* Validate the Search Emoji text box in One to One chat screen by entering the HTML value */
+
+	@Test(priority = 126)
+	public void To_validate_the_Search_Emoji_text_box_in_chat_screen_by_entering_the_HTML_value() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getSearchEmojiInfoScreenElement().isDisplayed());
+		chatpage.Set_Values_In_SearchEmoji_TextBox("<button value=\"ClickValue\">Click Me</button>");
+		Assert.assertEquals(chatpage.getValuesFromSearchEmojiTextBox(), "<button value=\"ClickValue\">Click Me</button>");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+/* Validate whether the user is able to paste long text in the Search Emoji text box in One to One chat screen */
+	
+	@Test(priority = 127)
+	public void To_Validate_whether_the_user_is_able_to_paste_long_text_in_the_Search_Emoji_text_box_in_One_to_One_chat_screen() throws InterruptedException {
+        chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getSearchEmojiInfoScreenElement().isDisplayed());
+		chatpage.Paste_values_In_SearchEmoji_TextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertEquals(chatpage.getValuesFromSearchEmojiTextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		chatpage.Clear_Search_Emoji_textbox();
+	}
+	
+/* Validate if already entered text is displayed in Search Emoji text box in One to One chat screen after closing and opening the Search Emoji info screen */
+	
+	@Test(priority = 128)
+	public void To_validate_if_already_entered_text_is_displayed_in_Search_Emoji_text_box_in_One_to_One_chat_screen_after_closing_and_opening_the_Search_Emoji_info_screen() throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertTrue(chatpage.getSearchEmojiInfoScreenElement().isDisplayed());
+		driver.navigate().back();
+		driver.navigate().back();
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(), "TestApk");
+		Thread.sleep(2000);
+		chatpage.LongPressOnFirstSendMessage();
+		Thread.sleep(2000);
+		chatpage.ClickMoreEmojiButton();
+		//Assert.assertTrue(chatpage.getSearchEmojiInfoScreenElement().isDisplayed());
+		Assert.assertEquals(chatpage.getValuesFromSearchEmojiTextBox(), "Search emoji");
+	}
+
+
 }

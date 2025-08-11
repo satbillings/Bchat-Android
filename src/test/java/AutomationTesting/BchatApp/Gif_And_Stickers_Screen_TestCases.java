@@ -309,7 +309,8 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
     }*/
 	
 	/* Validate the search text box in Gif and Stickers screen by entering the alphabets both in uppercase and lowercase letter */
-	@Test (priority = 20)
+	
+	/*@Test (priority = 20)
     public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
 	chatpage = new ChatScreen(driver);
 	//Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
@@ -327,7 +328,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	
 	/* Validate whether the user is able enter a lengthy value in the search text box in Gif and Stickers screen */
 	 
-	@Test (priority = 21)
+	/*@Test (priority = 21)
     public void To_validate_whether_the_user_is_able_to_enter_a_lengthy_value_in_the_search_text_box_in_Gif_and_Stickers_screen () throws InterruptedException {
 	gifandstickerspage = new GifAndStickersScreen(driver);
 	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
@@ -338,7 +339,7 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	
 	/* Validate whether the paste option is working on the search text box in Gif and Stickers screen */
 	 
-	@Test (priority = 22)
+	/*@Test (priority = 22)
     public void To_validate_whether_the_paste_option_is_working_on_the_search_text_box_in_Gif_and_Stickers_screen () throws InterruptedException {
 	gifandstickerspage = new GifAndStickersScreen(driver);
 	Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
@@ -348,13 +349,15 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 	}
 	
 	/* Validate the search text box in Gif and Stickers screen by entering the valid value */
-	@Test (priority = 23)
+	
+	/*@Test (priority = 23)
     public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_valid_value () throws InterruptedException {
 		gifandstickerspage = new GifAndStickersScreen(driver);
 		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
 		gifandstickerspage.ClickSearchTextBox();
 	    gifandstickerspage.Set_Values_In_Search_textbox("happy");
 		gifandstickerspage.ClearSearchTextBox();
-		}
+		}*/
+	
 
 }

@@ -81,6 +81,10 @@ public class GifAndStickersScreen extends ActionsClass {
 		return SearchPlaceHolder.getText();
 	}
 	
+	public String getValuesFromSearchTextBox() {
+		return SearchTextBox.getText();
+	}
+	
 	public void ClickGif () {
 		Gif.click();	
 	}

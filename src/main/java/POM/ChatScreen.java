@@ -495,6 +495,9 @@ public class ChatScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='No Contact Found']")
 	private WebElement NoContactFoundTextInSendContactScreen;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/emoji_grid_header_title\" and @text=\"Smileys and People\"]")
+	private WebElement SearchEmojiInfoScreenElement;
+	
 	public String getNoContactFoundTextInSendContactScreen () {
 		return NoContactFoundTextInSendContactScreen.getText();
 				}
@@ -661,6 +664,9 @@ public class ChatScreen extends ActionsClass {
 	
 	public WebElement getReactedEmoji () {
 		return ReactedEmoji;
+	}
+	public WebElement getSearchEmojiInfoScreenElement () {
+		return SearchEmojiInfoScreenElement;
 	}
 	
 	public WebElement getReactedEmojiCount () {
