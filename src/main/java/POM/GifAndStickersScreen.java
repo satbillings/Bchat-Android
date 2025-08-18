@@ -49,7 +49,8 @@ public class GifAndStickersScreen extends ActionsClass {
 	@AndroidFindBy(xpath ="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/thumbnail\"])[1]")
 	private WebElement Stickers;
 	
-	@AndroidFindBy(xpath ="//android.widget.EditText[@resource-id=\"io.beldex.bchat:id/search_view\"]")
+	//@AndroidFindBy(xpath ="//android.widget.EditText[@resource-id=\"io.beldex.bchat:id/search_view\"]")
+	@AndroidFindBy(className ="android.widget.EditText")
 	private WebElement SearchTextBox;
 	
 	@AndroidFindBy(xpath ="(//android.widget.ImageView[@content-desc='Media message'])[3]")

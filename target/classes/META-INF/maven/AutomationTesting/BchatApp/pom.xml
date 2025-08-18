@@ -23,7 +23,13 @@
 <dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
-    <version>9.5.0</version>
+    <version>10.0.0</version>
+</dependency>
+
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -38,13 +44,13 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-support</artifactId>
-    <version>4.20.0</version>
+    <version>4.34.0</version>
 </dependency>
 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.34.0</version> <!-- or upgrade to 4.20.0 if you like -->
+    <version>4.35.0</version> <!-- or upgrade to 4.20.0 if you like -->
 </dependency>
 	 
 	  <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->

@@ -290,6 +290,34 @@ public class SecretGroupChatScreen extends ActionsClass{
 		ApplyChangesButton.click();
 		}
 	
+	public void ClickMoreOption() {
+		MoreOption.click();
+	}
+	public void ClickEditGroupOption() {
+		EditGroupOption.click();
+	}
+	public void ClickGroupNameEditIcon() {
+		GroupNameEditIcon.click();
+	}
+	
+	public void SetValuesInGroupNameEditTextBox (String value) {
+		GroupNameEditTextBox.sendKeys(value);
+	}
+	
+	public void ClickGroupNameEditTextBox() {
+		GroupNameEditTextBox.click();
+	}
+	
+	public void ClearGroupNameEditTextBox() {
+		GroupNameEditTextBox.clear();
+	}
+	
+	 public void PasteValuesInGroupNameEditTextBox (String value) {
+			Copy_And_Paste_Values(value, GroupNameEditTextBox);
+		}
+	 public String getValuesFromGroupNameEditTextBox() {
+			return GroupNameEditTextBox.getText();
+		}
 	
 	 public String getRemovedMemberContent() {
 			return RemovedMemberContent.getText();

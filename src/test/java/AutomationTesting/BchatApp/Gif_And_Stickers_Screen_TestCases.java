@@ -359,5 +359,73 @@ public class Gif_And_Stickers_Screen_TestCases extends baseclass {
 		gifandstickerspage.ClearSearchTextBox();
 		}*/
 	
+/* Validate the search text box in Gif and Stickers screen by entering the alphanumeric value */
+	
+	@Test (priority = 24)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testapk");
+		chatpage.ClickAttachmentsIcon();
+		chatpage.ClickGifOption();
+	    chatpage.ClickOkButtonInSearchGifPopup(); 
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+		gifandstickerspage.ClickSearchTextBox();
+	    gifandstickerspage.Set_Values_In_Search_textbox("abc123");
+		Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"abc123");
+		gifandstickerspage.ClearSearchTextBox();
+	}
+	
+/* Validate the search text box in Gif and Stickers screen by entering the HTML value */
+	
+	@Test (priority = 25)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_HTML_value () throws InterruptedException {
+		gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	    gifandstickerspage.Set_Values_In_Search_textbox("<button value=\\\"ClickValue\\\">Click Me</button>");
+		Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"<button value=\\\"ClickValue\\\">Click Me</button>");
+		gifandstickerspage.ClearSearchTextBox();
+	}
+
+/* Validate the search text box in Gif and Stickers screen by entering the decimal value */
+	
+	@Test (priority = 26)
+    public void To_validate_the_search_text_box_in_Gif_and_Stickers_screen_by_entering_the_decimal_value () throws InterruptedException {
+	     gifandstickerspage = new GifAndStickersScreen(driver);
+		 Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	     gifandstickerspage.Set_Values_In_Search_textbox("0.00001");
+		 Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"0.00001");
+		 gifandstickerspage.ClearSearchTextBox();
+	}
+
+/* Validate whether the user is able to paste long text in Search text box in Gif and Stickers screen */
+	   	    
+	@Test(priority = 27)
+	public void To_validate_whether_the_user_is_able_to_paste_long_text_in_Search_text_box_in_Gif_and_Stickers_screen() throws InterruptedException {
+        gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS"); 
+	    gifandstickerspage.Paste_Values_In_Search_TextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		gifandstickerspage.ClearSearchTextBox();
+	}
+	
+/* Validate if already entered text is displayed in Search text box in Gif and Stickers screen after navigating to chat screen and back to this screen */
+	
+	@Test(priority = 28)
+	public void To_validate_if_already_entered_text_is_displayed_in_Search_text_box_in_Gif_and_Stickers_screen_after_navigating_to_chat_screen_and_back_to_this_screen() throws InterruptedException {
+        gifandstickerspage = new GifAndStickersScreen(driver);
+		Assert.assertEquals(gifandstickerspage.getGifTitle(),"GIFS");
+		gifandstickerspage.Set_Values_In_Search_textbox("Test");
+		Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"Test");
+        gifandstickerspage.ClickBackArrow();
+        chatpage = new ChatScreen(driver);
+		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Testapk");
+		chatpage.ClickAttachmentsIcon();
+		chatpage.ClickGifOption();
+		Assert.assertEquals(gifandstickerspage.getValuesFromSearchTextBox(),"Search");
+}
+	
+	
+	
 
 }

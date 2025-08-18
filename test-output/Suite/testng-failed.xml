@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_if_already_entered_text_is_displayed_in_Search_Emoji_text_box_in_One_to_One_chat_screen_after_closing_and_opening_the_Search_Emoji_info_screen"/>
+          <include name="To_validate_if_already_entered_text_is_displayed_in_Search_text_box_in_Gif_and_Stickers_screen_after_navigating_to_chat_screen_and_back_to_this_screen"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.One_To_One_Chat_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Gif_And_Stickers_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
