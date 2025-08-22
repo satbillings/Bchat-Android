@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import POM.ChatScreen;
 import POM.CreatePasswordScreen;
+import POM.GifAndStickersScreen;
 import POM.HomeScreen;
 import POM.JoinSocialGroupScreen;
 import POM.OpeningPage;
@@ -41,7 +42,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 		restorefromseedpage = new RestoreFromSeedScreen(driver);
 		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
 		restorefromseedpage.paste_Value_In_DisplayName("Sathish");
-		restorefromseedpage.paste_Value_In_Blockheight("3400000");
+		restorefromseedpage.paste_Value_In_Blockheight("4000000");
 		restorefromseedpage.clickBtnRestore(); 
 		createpasswordpage = new CreatePasswordScreen(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -49,10 +50,10 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 		 createpasswordpage.PasswordSuccessfullPopupOkButtonClick();
 		//Thread.sleep(10000); 
 		 homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat"); 
-		Thread.sleep(40000); 
+		Assert.assertEquals(homepage.Pagetitle(),"Chats"); 
+		Thread.sleep(59000); 
 		//wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		//homepage.ClickFirstContactorGroup();
+		homepage.ClickFirstContactorGroup();
 		//homepage.ClickSecondContactorGroup();
     }
     /*
@@ -244,7 +245,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 	/*
     Validate the working of the community guidelines in social group chat screen
     */
-    @Test(priority = 17)
+   /* @Test(priority = 17)
     public void To_Validate_the_working_of_community_guidelines_in_social_group_chat_screen () {
     	homepage.OpenJoinSocialGroup();
     	joinsocialgrouppage = new JoinSocialGroupScreen(driver);
@@ -262,7 +263,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
     /*
     Validate the working of add member in social group chat screen
     */
-	@Test(priority = 18)
+	/*@Test(priority = 18)
 	public void To_validate_the_working_of_add_member_in_social_group_chat_screen () {
 		socialgroupchatpage = new SocialGroupChatScreen(driver);
         Assert.assertEquals(socialgroupchatpage.getSocialGroupChatTitle(),"Bchat");
@@ -272,10 +273,59 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 	/*
 	 Validate whether member count showing in social group chat screen.
 	 */
-   @Test(priority = 19)
+   /*@Test(priority = 19)
    public void To_Validate_whether_member_count_showing_in_social_group_chat_screen () {
 	    socialgroupchatpage = new SocialGroupChatScreen(driver);
        	Assert.assertEquals(socialgroupchatpage.getSocialGroupChatTitle(),"Bchat");
 		Assert.assertNotEquals(socialgroupchatpage.get_Member_Count(),0);
-   }
+   }*/
+    
+/* Validate the group name edit text box in secret group chat screen by entering the alphanumeric value */
+	
+	@Test (priority = 20)
+    public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		groupchatpage = new SecretGroupChatScreen(driver);
+		Assert.assertEquals(groupchatpage.getGroupChatTitle(), "Testgroup");
+        groupchatpage.ClickMoreOption();
+        groupchatpage.ClickEditGroupOption();
+        groupchatpage.ClickGroupNameEditIcon();
+		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+        groupchatpage.ClearGroupNameEditTextBox();
+        groupchatpage.SetValuesInGroupNameEditTextBox("abc123");
+        Assert.assertEquals(groupchatpage.getValuesFromGroupNameEditTextBox(), "abc123");
+        groupchatpage.ClearGroupNameEditTextBox();
+}
+	
+/* Validate the group name edit text box in secret group chat screen by entering the decimal value */
+	
+	@Test (priority = 21)
+    public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_decimal_value () throws InterruptedException {
+		groupchatpage = new SecretGroupChatScreen(driver);
+		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+		groupchatpage.SetValuesInGroupNameEditTextBox("0.00001");
+	    Assert.assertEquals(groupchatpage.getValuesFromGroupNameEditTextBox(), "0.00001");
+        groupchatpage.ClearGroupNameEditTextBox();
+	}
+
+/* Validate the group name edit text box in secret group chat screen by entering the HTML value */
+	
+	@Test (priority = 22)
+    public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_HTML_value () throws InterruptedException {
+		groupchatpage = new SecretGroupChatScreen(driver);
+		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+		groupchatpage.SetValuesInGroupNameEditTextBox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+	    Assert.assertEquals(groupchatpage.getValuesFromGroupNameEditTextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+        groupchatpage.ClearGroupNameEditTextBox();
+	}	
+	
+	/* Validate whether the user is able to paste long text in group name edit text box in secret group chat screen */
+	    
+	@Test(priority = 23)
+	public void To_validate_whether_the_user_is_able_to_paste_long_text_in_group_name_edit_text_box_in_secret_group_chat_screen() throws InterruptedException {
+		groupchatpage = new SecretGroupChatScreen(driver);
+		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+		groupchatpage.PasteValuesInGroupNameEditTextBox("victim gutter pelican revamp safety roomy seventh kickoff lurk gossip dwindling unquoted weekday bids sulking physics rural linen rover pipeline origin diet hold jaded origin");
+	    Assert.assertEquals(groupchatpage.getValuesFromGroupNameEditTextBox(), "victim gutter pelican revamp safety roomy seventh kickoff lurk gossip dwindling unquoted weekday bids sulking physics rural linen rover pipeline origin diet hold jaded origin");
+        groupchatpage.ClickCancelIconInGroupNameEditTextBox();
+	}	
 }

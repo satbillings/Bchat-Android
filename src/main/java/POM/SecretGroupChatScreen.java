@@ -58,11 +58,27 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/addButton")
 	public WebElement AddButton;
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/lblGroupNameEditImageview")
+	//@AndroidFindBy(id="io.beldex.bchat:id/lblGroupNameEditImageview")
+	@AndroidFindBy(id="io.beldex.bchat:id/lblGroupNameDisplay")
 	public WebElement GroupNameEditIcon;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/edtGroupName")
 	public WebElement GroupNameEditTextBox;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/btnCancelGroupNameEdit")
+	private WebElement CancelIconInGroupNameEditTextBox;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/searchContact")
+	public WebElement SearchContactTextBox;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText[@text='Search Contact']")
+	public WebElement SearchContactTextBoxPlaceHolder;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Select Contacts']")
+	private WebElement SelectContactsScreenTitle;
+	
+	@AndroidFindBy(accessibility="Navigate up")
+	public WebElement SelectContactsScreenBackArrow;
 	
 	@AndroidFindBy(accessibility="Navigate up")
 	public WebElement CloseIconInEditGroupScreen;
@@ -108,6 +124,9 @@ public class SecretGroupChatScreen extends ActionsClass{
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Delete for everyone']")
 	private WebElement optionDeleteForEveryone;
+	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Edit Group']")
+	private WebElement EditGroupScreenTitle;
 	
 	@AndroidFindBy(xpath = "io.beldex.bchat:id/deleteForMeTextView")
 	private WebElement OptionDeleteForMe;
@@ -158,12 +177,20 @@ public class SecretGroupChatScreen extends ActionsClass{
 		btnattachments.click();
 	}
 	
+	public void ClickApplyOption() {
+		ApplyOption.click();
+	}
+	
 	public void ClickSendContactScreenSendButton() {
 		SendContactScreenSendButton.click();
 	}
 	
 	public String getSendContactScreenTitle () {
 		return SendContactScreenTitle.getText();
+	}
+	
+	public String getEditGroupScreenTitle () {
+		return EditGroupScreenTitle.getText();
 	}
 	
 	public void ClickContactButton() {
@@ -308,6 +335,10 @@ public class SecretGroupChatScreen extends ActionsClass{
 		GroupNameEditTextBox.click();
 	}
 	
+	public void ClickCancelIconInGroupNameEditTextBox() {
+		CancelIconInGroupNameEditTextBox.click();
+	}
+	
 	public void ClearGroupNameEditTextBox() {
 		GroupNameEditTextBox.clear();
 	}
@@ -318,7 +349,30 @@ public class SecretGroupChatScreen extends ActionsClass{
 	 public String getValuesFromGroupNameEditTextBox() {
 			return GroupNameEditTextBox.getText();
 		}
-	
+	 public void SetValuesInSearchContactTextBox (String value) {
+		 SearchContactTextBox.sendKeys(value);
+		}
+		
+		public void ClickSearchContactTextBox() {
+			SearchContactTextBox.click();
+		}
+		
+		public void ClearSearchContactTextBox() {
+			SearchContactTextBox.clear();
+		}
+		
+		 public void PasteValuesInSearchContactTextBox (String value) {
+				Copy_And_Paste_Values(value, SearchContactTextBox);
+			}
+		 public String getValuesFromSearchContactTextBox() {
+				return SearchContactTextBox.getText();
+			}
+		 public String getValuesFromSearchContactTextBoxPlaceHolder() {
+				return SearchContactTextBoxPlaceHolder.getText();
+			}
+		 public String getSelectContactsScreenTitle() {
+				return SelectContactsScreenTitle.getText();
+			}
 	 public String getRemovedMemberContent() {
 			return RemovedMemberContent.getText();
 		}
