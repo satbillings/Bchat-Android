@@ -367,7 +367,7 @@ public class SecretGroupChatScreen extends ActionsClass{
 		 public String getValuesFromSearchContactTextBox() {
 				return SearchContactTextBox.getText();
 			}
-		 public String getValuesFromSearchContactTextBoxPlaceHolder() {
+		 public String getSearchContactTextBoxPlaceHolder() {
 				return SearchContactTextBoxPlaceHolder.getText();
 			}
 		 public String getSelectContactsScreenTitle() {

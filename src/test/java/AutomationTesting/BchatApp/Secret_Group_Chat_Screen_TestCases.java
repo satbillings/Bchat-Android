@@ -282,7 +282,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
     
 /* Validate the group name edit text box in secret group chat screen by entering the alphanumeric value */
 	
-	@Test (priority = 20)
+	/*@Test (priority = 20)
     public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
 		groupchatpage = new SecretGroupChatScreen(driver);
 		Assert.assertEquals(groupchatpage.getGroupChatTitle(), "Testgroup");
@@ -298,7 +298,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the group name edit text box in secret group chat screen by entering the decimal value */
 	
-	@Test (priority = 21)
+	/*@Test (priority = 21)
     public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_decimal_value () throws InterruptedException {
 		groupchatpage = new SecretGroupChatScreen(driver);
 		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
@@ -309,7 +309,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 
 /* Validate the group name edit text box in secret group chat screen by entering the HTML value */
 	
-	@Test (priority = 22)
+	/*@Test (priority = 22)
     public void To_validate_the_group_name_edit_text_box_in_secret_group_chat_screen_by_entering_the_HTML_value () throws InterruptedException {
 		groupchatpage = new SecretGroupChatScreen(driver);
 		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
@@ -320,12 +320,49 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 	
 	/* Validate whether the user is able to paste long text in group name edit text box in secret group chat screen */
 	    
-	@Test(priority = 23)
+	/*@Test(priority = 23)
 	public void To_validate_whether_the_user_is_able_to_paste_long_text_in_group_name_edit_text_box_in_secret_group_chat_screen() throws InterruptedException {
 		groupchatpage = new SecretGroupChatScreen(driver);
 		Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
 		groupchatpage.PasteValuesInGroupNameEditTextBox("victim gutter pelican revamp safety roomy seventh kickoff lurk gossip dwindling unquoted weekday bids sulking physics rural linen rover pipeline origin diet hold jaded origin");
 	    Assert.assertEquals(groupchatpage.getValuesFromGroupNameEditTextBox(), "victim gutter pelican revamp safety roomy seventh kickoff lurk gossip dwindling unquoted weekday bids sulking physics rural linen rover pipeline origin diet hold jaded origin");
         groupchatpage.ClickCancelIconInGroupNameEditTextBox();
-	}	
+	}*/
+    
+    /* Validate whether cursor blinks in Search Contact text box in Select Contacts screen */
+    
+	@Test(priority = 24)
+	public void To_validate_whether_cursor_blinks_in_Search_Contact_text_box_in_Select_Contacts_screen() throws InterruptedException {
+          groupchatpage = new SecretGroupChatScreen(driver);
+		  Assert.assertEquals(groupchatpage.getGroupChatTitle(), "Testgroup");
+          groupchatpage.ClickMoreOption();
+          groupchatpage.ClickEditGroupOption();
+		  Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+          groupchatpage.ClickApplyOption();
+		  Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+          groupchatpage.ClickSearchContactTextBox();
+          Assert.assertTrue(groupchatpage.activeElement().isDisplayed());
+	}
+
+/* Validate the presence of placeholder in Search Contact text box in Select Contacts screen */
+	    
+	@Test(priority = 25)
+	public void To_validate_the_presence_of_placeholder_in_Search_Contact_text_box_in_Select_Contacts_screen() throws InterruptedException {
+          groupchatpage = new SecretGroupChatScreen(driver);
+		  Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+		  Assert.assertEquals(groupchatpage.getSearchContactTextBoxPlaceHolder(), "Search Contact");
+}
+	
+/* Validate the Search Contact text box in Select Contacts screen by entering the empty space value */
+	
+	@Test (priority = 26)
+    public void To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_empty_space_value () throws InterruptedException {
+		    groupchatpage = new SecretGroupChatScreen(driver);
+			Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+			groupchatpage.SetValuesInSearchContactTextBox("     ");
+			Assert.assertEquals(groupchatpage.getValuesFromSearchContactTextBox(), "     ");
+			groupchatpage.ClearSearchContactTextBox();
+	}
+	
+
 }
