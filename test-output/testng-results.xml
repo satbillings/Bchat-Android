@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-28T17:44:05 IST" name="Suite" finished-at="2025-08-28T17:46:06 IST" duration-ms="121392">
+  <suite started-at="2025-09-03T12:34:31 IST" name="Suite" finished-at="2025-09-03T12:37:05 IST" duration-ms="154656">
     <groups>
     </groups>
-    <test started-at="2025-08-28T17:44:05 IST" name="Test" finished-at="2025-08-28T17:46:06 IST" duration-ms="121392">
+    <test started-at="2025-09-03T12:34:31 IST" name="Test" finished-at="2025-09-03T12:37:05 IST" duration-ms="154656">
       <class name="AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:44:05 IST" name="Configure" finished-at="2025-08-28T17:44:25 IST" duration-ms="20214" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:34:31 IST" name="Configure" finished-at="2025-09-03T12:35:22 IST" duration-ms="50788" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:44:25 IST" name="PreSetup" finished-at="2025-08-28T17:45:53 IST" duration-ms="87588" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:35:22 IST" name="PreSetup" finished-at="2025-09-03T12:36:47 IST" duration-ms="85428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_validate_whether_cursor_blinks_in_Search_Contact_text_box_in_Select_Contacts_screen()[pri:24, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:45:53 IST" name="To_validate_whether_cursor_blinks_in_Search_Contact_text_box_in_Select_Contacts_screen" finished-at="2025-08-28T17:46:02 IST" duration-ms="9475" status="PASS">
+        <test-method signature="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_numerical_value()[pri:27, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:36:47 IST" name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_numerical_value" finished-at="2025-09-03T12:36:58 IST" duration-ms="10571" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_cursor_blinks_in_Search_Contact_text_box_in_Select_Contacts_screen -->
-        <test-method signature="To_validate_the_presence_of_placeholder_in_Search_Contact_text_box_in_Select_Contacts_screen()[pri:25, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:46:02 IST" name="To_validate_the_presence_of_placeholder_in_Search_Contact_text_box_in_Select_Contacts_screen" finished-at="2025-08-28T17:46:03 IST" duration-ms="872" status="PASS">
+        </test-method> <!-- To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_numerical_value -->
+        <test-method signature="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_Search_Contact_text_box_of_Select_Contacts_screen_is_editable_and_deleteable()[pri:28, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:36:58 IST" name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_Search_Contact_text_box_of_Select_Contacts_screen_is_editable_and_deleteable" finished-at="2025-09-03T12:37:00 IST" duration-ms="2681" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_presence_of_placeholder_in_Search_Contact_text_box_in_Select_Contacts_screen -->
-        <test-method signature="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_empty_space_value()[pri:26, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:46:03 IST" name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_empty_space_value" finished-at="2025-08-28T17:46:06 IST" duration-ms="2462" status="PASS">
+        </test-method> <!-- To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_Search_Contact_text_box_of_Select_Contacts_screen_is_editable_and_deleteable -->
+        <test-method signature="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_alphanumeric_value()[pri:29, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:37:00 IST" name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_alphanumeric_value" finished-at="2025-09-03T12:37:05 IST" duration-ms="4349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_empty_space_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-08-28T17:46:06 IST" name="closeApp" finished-at="2025-08-28T17:46:06 IST" duration-ms="723" status="PASS">
+        </test-method> <!-- To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_alphanumeric_value -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases@77128536]" started-at="2025-09-03T12:37:05 IST" name="closeApp" finished-at="2025-09-03T12:37:05 IST" duration-ms="780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

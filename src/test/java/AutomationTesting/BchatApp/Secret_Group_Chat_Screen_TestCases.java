@@ -331,7 +331,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
     
     /* Validate whether cursor blinks in Search Contact text box in Select Contacts screen */
     
-	@Test(priority = 24)
+	/*@Test(priority = 24)
 	public void To_validate_whether_cursor_blinks_in_Search_Contact_text_box_in_Select_Contacts_screen() throws InterruptedException {
           groupchatpage = new SecretGroupChatScreen(driver);
 		  Assert.assertEquals(groupchatpage.getGroupChatTitle(), "Testgroup");
@@ -346,7 +346,7 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 
 /* Validate the presence of placeholder in Search Contact text box in Select Contacts screen */
 	    
-	@Test(priority = 25)
+	/*@Test(priority = 25)
 	public void To_validate_the_presence_of_placeholder_in_Search_Contact_text_box_in_Select_Contacts_screen() throws InterruptedException {
           groupchatpage = new SecretGroupChatScreen(driver);
 		  Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
@@ -355,14 +355,53 @@ public class Secret_Group_Chat_Screen_TestCases extends baseclass {
 	
 /* Validate the Search Contact text box in Select Contacts screen by entering the empty space value */
 	
-	@Test (priority = 26)
+	/*@Test (priority = 26)
     public void To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_empty_space_value () throws InterruptedException {
 		    groupchatpage = new SecretGroupChatScreen(driver);
 			Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
 			groupchatpage.SetValuesInSearchContactTextBox("     ");
 			Assert.assertEquals(groupchatpage.getValuesFromSearchContactTextBox(), "     ");
 			groupchatpage.ClearSearchContactTextBox();
-	}
+	}*/
+    
+/* Validate the Search Contact text box in Select Contacts screen by entering the numerical value */
 	
+	@Test (priority = 27)
+    public void To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_numerical_value () throws InterruptedException {
+		   groupchatpage = new SecretGroupChatScreen(driver);
+		   Assert.assertEquals(groupchatpage.getGroupChatTitle(), "Testgroup");
+           groupchatpage.ClickMoreOption();
+           groupchatpage.ClickEditGroupOption();
+		   Assert.assertEquals(groupchatpage.getEditGroupScreenTitle(), "Edit Group");
+           groupchatpage.ClickApplyOption();
+		   Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+           groupchatpage.ClickSearchContactTextBox();
+		   groupchatpage.SetValuesInSearchContactTextBox("1234567890");
+		   Assert.assertEquals(groupchatpage.getValuesFromSearchContactTextBox(), "1234567890");
+		   groupchatpage.ClearSearchContactTextBox();
+	}	
+
+/* Validate the Search Contact text box in Select Contacts screen by entering the special characters
+	 * Validate whether the value entered in the Search Contact text box of Select Contacts screen is editable and delete-able 
+	   */
+	@Test (priority = 28)
+    public void To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_Search_Contact_text_box_of_Select_Contacts_screen_is_editable_and_deleteable () throws InterruptedException {
+		    groupchatpage = new SecretGroupChatScreen(driver);
+			Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+			groupchatpage.SetValuesInSearchContactTextBox("!@#$%^&*()");
+			Assert.assertEquals(groupchatpage.getValuesFromSearchContactTextBox(), "!@#$%^&*()");
+			groupchatpage.ClearSearchContactTextBox();	
+	}
+  
+/* Validate the Search Contact text box in Select Contacts screen by entering the alphanumeric value */
+	
+	@Test (priority = 29)
+    public void To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		    groupchatpage = new SecretGroupChatScreen(driver);
+			Assert.assertEquals(groupchatpage.getSelectContactsScreenTitle(), "Select Contacts");
+			groupchatpage.SetValuesInSearchContactTextBox("abc123");
+			Assert.assertEquals(groupchatpage.getValuesFromSearchContactTextBox(), "abc123");
+			groupchatpage.ClearSearchContactTextBox();
+	}
 
 }

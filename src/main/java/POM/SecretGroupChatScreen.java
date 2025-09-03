@@ -173,6 +173,41 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View")
 	private WebElement FirstContact;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/searchAndClearImageview")
+	private WebElement CancelIconInSearchContactTextBox;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/actionIndicatorImageView\"])[1]")
+	private WebElement FirstContactCheckboxInSelectContactsScreen;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/actionIndicatorImageView\"])[2]")
+	private WebElement SecondContactCheckboxInSelectContactsScreen;
+	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[1]")
+	private WebElement FirstContactInSelectContactsScreen;
+	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[2]")
+	private WebElement SecondContactInSelectContactsScreen;
+	
+	public void ClickCancelIconInSearchContactTextBox() {
+		CancelIconInSearchContactTextBox.click();
+	}
+	
+	public void ClickFirstContactCheckboxInSelectContactsScreen() {
+		FirstContactCheckboxInSelectContactsScreen.click();
+	}
+	
+	public void ClickSecondContactCheckboxInSelectContactsScreen() {
+		SecondContactCheckboxInSelectContactsScreen.click();
+	}
+	
+	 public WebElement getFirstContactInSelectContactsScreen() {
+			return FirstContactInSelectContactsScreen;
+		}
+	 
+	 public WebElement getSecondContactInSelectContactsScreen() {
+			return SecondContactInSelectContactsScreen;
+		}	
+	 
 	public void ClickAttachments() {
 		btnattachments.click();
 	}
