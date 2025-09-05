@@ -8,12 +8,14 @@
     <classes>
       <class name="AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases">
         <methods>
+          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_HTML_value"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_alphanumeric_value"/>
-          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_numerical_value"/>
-          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_special_characters_To_validate_the_value_entered_in_the_Search_Contact_text_box_of_Select_Contacts_screen_is_editable_and_deleteable"/>
-          <include name="PreSetup"/>
+          <include name="To_validate_if_already_entered_text_is_displayed_in_Search_Contact_text_box_in_Select_Contacts_screen_after_navigating_to_Edit_Group_screen_and_back_to_this_screen"/>
+          <include name="To_validate_whether_the_user_is_able_to_paste_long_text_in_Search_Contact_text_box_in_Select_Contacts_screen"/>
+          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_valid_search_value"/>
+          <include name="To_validate_the_Search_Contact_textbox_in_Select_Contacts_screen_by_entering_the_alphabets_both_in_uppercase_and_lowercase_letter"/>
+          <include name="To_validate_the_Search_Contact_text_box_in_Select_Contacts_screen_by_entering_the_decimal_value"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.Secret_Group_Chat_Screen_TestCases -->
     </classes>

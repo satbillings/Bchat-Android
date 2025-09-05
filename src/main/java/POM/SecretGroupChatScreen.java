@@ -188,6 +188,13 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[2]")
 	private WebElement SecondContactInSelectContactsScreen;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='testapk']")
+	private WebElement ContactNameInSelectContactsScreen;
+	
+	public String getContactNameInSelectContactsScreen() {
+		return ContactNameInSelectContactsScreen.getText();
+	}
+	
 	public void ClickCancelIconInSearchContactTextBox() {
 		CancelIconInSearchContactTextBox.click();
 	}
