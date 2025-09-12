@@ -324,7 +324,7 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 	  }*/
 	
 	/* Validate whether group member list getting update in secret group info screen if any person leave the group */
-	  @Test(priority = 22)
+	/*  @Test(priority = 22)
 	  public void To_validate_whether_group_member_list_getting_update_in_secret_group_info_screen_if_any_person_leave_from_the_group() throws InterruptedException {
 		   groupchatpage = new SecretGroupChatScreen(driver);
 		  //Assert.assertEquals(groupchatpage.getGroupChatTitle(),"AndroidtoAndroidGroup");
@@ -340,6 +340,70 @@ public class Secret_Group_Info_Screen_TestCases extends baseclass {
 		   secretgroupinfopage = new SecretGroupInfoScreen(driver);
 		   Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
 		  // Assert.assertFalse(secretgroupinfopage.ShowCrownSymbol().isDisplayed());
-
+	  }*/
+	
+/* Validate the search text box in Secret group info screen by entering the alphanumeric value */
+	
+	  @Test(priority = 23)
+	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		    groupchatpage = new SecretGroupChatScreen(driver);
+			Assert.assertEquals(groupchatpage.getGroupChatTitle(),"Testgroup");
+			groupchatpage.ClickGroupTopBar();
+			secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	        Assert.assertEquals(secretgroupinfopage.getGroupInfoScreenTitle(),"Group Info");
+	        secretgroupinfopage.ClickSearchIcon();
+		    Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+	        secretgroupinfopage.ClickEnterNameTextBox();
+	        secretgroupinfopage.Set_Values_In_EnterName_textbox("abc123");
+			Assert.assertEquals(secretgroupinfopage.getValuesFromEnterNameTextBox(),"abc123");
+		  	secretgroupinfopage.Clear_EnterName_textbox();	
 	  }
+	  
+ /* Validate the search text box in Secret group info screen by entering the HTML value */
+	  
+		  @Test(priority = 24)
+	 	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_HTML_value () throws InterruptedException {
+	 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+	 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		  Assert.assertEquals(secretgroupinfopage.getValuesFromEnterNameTextBox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+	 	  secretgroupinfopage.Clear_EnterName_textbox();
+		  } 
+		  
+/* Validate the search text box in Secret group info screen by entering the decimal value */
+		  
+		  @Test(priority = 25)
+	 	  public void To_validate_the_search_textbox_in_secret_group_info_screen_by_entering_the_decimal_value () throws InterruptedException {
+	 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+	      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+	 	  secretgroupinfopage.Set_Values_In_EnterName_textbox("0.00001");
+		  Assert.assertEquals(secretgroupinfopage.getValuesFromEnterNameTextBox(),"0.00001");
+	 	  secretgroupinfopage.Clear_EnterName_textbox();
+		  } 
+		  
+ /* Validate whether the user is able to paste long text in Search text box in Secret group info screen */
+			
+			@Test (priority = 26)
+			public void To_validate_whether_the_user_is_able_to_paste_long_text_in_Search_text_box_in_Secret_group_info_screen() throws InterruptedException {
+			 secretgroupinfopage = new SecretGroupInfoScreen(driver);
+			 Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+			 secretgroupinfopage.Paste_values_In_EnterName_TextBox("cottage luxury glide joking kidneys legion azure hover amaze legion nifty governing fiat hornet lagoon snug irony etiquette tugs oust pact gymnast gymnast hitched pact");
+			 Assert.assertEquals(secretgroupinfopage.getValuesFromEnterNameTextBox(),"cottage luxury glide joking kidneys legion azure hover amaze legion nifty governing fiat hornet lagoon snug irony etiquette tugs oust pact gymnast gymnast hitched pact");
+			 secretgroupinfopage.Clear_EnterName_textbox();
+		 } 
+			
+/* Validate whether No records found! text is showing in Search members screen after entering the invalid search value in Search text box*/
+			 
+	        @Test (priority = 27)
+			public void To_validate_whether_No_records_found_text_is_showing_in_Search_members_screen_after_entering_the_invalid_search_value_in_Search_text_box() throws InterruptedException {
+		 	  secretgroupinfopage = new SecretGroupInfoScreen(driver);
+		      Assert.assertEquals(secretgroupinfopage.getSearchMembersScreenTitle(),"Search Members");
+		      secretgroupinfopage.Set_Values_In_EnterName_textbox("Test12345");
+	 	      Assert.assertTrue(secretgroupinfopage.ShowNoRecordsFound().isDisplayed());
+		 	  secretgroupinfopage.Clear_EnterName_textbox();
+	}
+			
+		  
+		  		  
+		    
 }

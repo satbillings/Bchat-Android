@@ -182,11 +182,19 @@ public class SecretGroupChatScreen extends ActionsClass{
 	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/actionIndicatorImageView\"])[2]")
 	private WebElement SecondContactCheckboxInSelectContactsScreen;
 	
-	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[1]")
+	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[1]")
+	@AndroidFindBy(xpath="(//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout)[1]")
 	private WebElement FirstContactInSelectContactsScreen;
 	
-	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[2]")
+	//@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"io.beldex.bchat:id/contentView\"])[2]")
+	@AndroidFindBy(xpath="(//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/recyclerView\"]/android.widget.LinearLayout)[2]")
 	private WebElement SecondContactInSelectContactsScreen;
+	
+	//@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/rvUserList\"]/android.widget.LinearLayout[1]")
+	//private WebElement FirstContactInEditGroupScreen;
+	
+	//@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView[@resource-id=\"io.beldex.bchat:id/rvUserList\"]/android.widget.LinearLayout[2]")
+	//private WebElement SecondContactInEditGroupScreen;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='testapk']")
 	private WebElement ContactNameInSelectContactsScreen;

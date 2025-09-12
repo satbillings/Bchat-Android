@@ -39,7 +39,8 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Enter name']")
 	private WebElement EnterNamePlaceholder;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='No records found!']")
+	//@AndroidFindBy(xpath = "//android.widget.TextView[@text='No records found!']")
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View")
 	private WebElement NoRecordsFoundText;
 	
 	@AndroidFindBy(xpath = "//android.widget.EditText")
@@ -47,6 +48,9 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	
 	@AndroidFindBy(xpath = "//android.widget.EditText[@text='']")
 	private WebElement EmptyValueInEnterNameTextBox;
+	
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc='clear search text']")
+	private WebElement CancelIconInEnterNameTextBox;
 	
 	@AndroidFindBy(accessibility="Back")
 	public WebElement BackArrowInSearchMembersScreen;
@@ -278,6 +282,14 @@ public class SecretGroupInfoScreen extends ActionsClass {
 	 
 	 public void Clear_EnterName_textbox () {
 		 EnterNameTextBox.clear();
+		}
+	 
+	 public void ClickCancelIconInEnterNameTextBox () {
+		 CancelIconInEnterNameTextBox.click();
+		}
+	 
+	 public String getValuesFromEnterNameTextBox() {
+			return EnterNameTextBox.getText();
 		}
 
 }

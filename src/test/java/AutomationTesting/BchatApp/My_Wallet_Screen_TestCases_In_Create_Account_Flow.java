@@ -1430,7 +1430,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		//Assert.assertEquals(sendpage.pagetitle(),"Send");
 		//Thread.sleep(3000);
 		//sendpage.ClickScanOptionInSendScreen();
-		sendpage.clickAs();
+		sendpage.clickAs1();
 		sendpage.ClickGalleryOption();
 		sendpage.ClickAlbumSection();
 		Thread.sleep(2000);
@@ -1450,7 +1450,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		//Assert.assertEquals(sendpage.pagetitle(),"Send");
 		Thread.sleep(6000);
 		//sendpage.ClickScanOptionInSendScreen();
-		sendpage.clickAs();
+		sendpage.clickAs1();
 		sendpage.ClickGalleryOption();
 		sendpage.ClickAlbumSection();
 		Thread.sleep(2000);
