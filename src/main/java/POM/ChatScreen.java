@@ -679,7 +679,7 @@ public class ChatScreen extends ActionsClass {
 	 
 	 public void Paste_values_In_SearchEmoji_TextBox (String value) {
 			Copy_And_Paste_Values(value, SearchEmojiTextBox);
-		}
+		}	
 	 
 	 public void Clear_Search_Emoji_textbox() {
 		 SearchEmojiTextBox.clear();

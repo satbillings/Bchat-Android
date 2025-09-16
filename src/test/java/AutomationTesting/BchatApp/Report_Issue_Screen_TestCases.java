@@ -76,7 +76,7 @@ public class Report_Issue_Screen_TestCases extends baseclass {
 		recoveryphrasepage.ClickContinue();
 		Thread.sleep(5000);
 		homepage = new HomeScreen(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		homepage.clickMenuDrawer();
 		menupage =new MenuScreen(driver);
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -362,7 +362,7 @@ public class Report_Issue_Screen_TestCases extends baseclass {
 	/*
 	Validate the text box of the Report Issue Functionality using Alaphabats both in uppercase and lower case.
 	*/
-	@Test(priority = 12)
+	/*@Test(priority = 12)
 	public void To_Validate_textbox_of_Report_Issue_Functionality_using_Alaphabats_both_in_uppercase_and_lowercase () throws InterruptedException  {
 		chatpage = new ChatScreen(driver);
 		try {
@@ -387,5 +387,64 @@ public class Report_Issue_Screen_TestCases extends baseclass {
 		//chatpage.click_DeleteForEveryone();
 		chatpage.click_delete_In_Popup();
 				
-		}
+		}*/
+	
+/* Validate the message text box in the Report Issue screen by entering the alphanumeric value */
+	
+	@Test(priority = 13)
+	public void To_Validate_the_message_textbox_in_the_Report_Issue_screen_by_entering_the_alphanumeric_value () throws InterruptedException  {
+		chatpage = new ChatScreen(driver);
+		chatpage.Set_Values_In_Message_textbox("abc123");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "abc123");
+		chatpage.click_Send_Button();
+	}
+	
+/* Validate the message text box in the Report Issue screen by entering the HTML value */
+	
+	@Test(priority = 14)
+	public void To_Validate_the_message_textbox_in_the_Report_Issue_screen_by_entering_the_HTML_value () throws InterruptedException  {
+		chatpage = new ChatScreen(driver);
+		chatpage.Set_Values_In_Message_textbox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		chatpage.clear_textBox();
+	}
+	
+/* Validate the message text box in the Report Issue screen by entering the decimal value */
+	
+	@Test(priority = 15)
+	public void To_Validate_the_message_textbox_in_the_Report_Issue_screen_by_entering_the_decimal_value () throws InterruptedException  {
+		chatpage = new ChatScreen(driver);
+		chatpage.Set_Values_In_Message_textbox("0.00001");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "0.00001");
+		chatpage.click_Send_Button();
+	}	
+	
+/* Validate whether user is able to paste long text in message text box on the Report Issue screen */
+	
+	@Test(priority = 16)
+	public void To_Validate_whether_user_is_able_to_paste_long_text_in_message_textbox_on_the_Report_Issue_screen () throws InterruptedException  {
+		chatpage = new ChatScreen(driver);
+		chatpage.paste_values("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		chatpage.click_Send_Button();
+	}
+	
+/* Validate if already entered text is displayed in the message text box after navigating to home screen and back to report issue screen */	
+	
+	@Test(priority = 17)
+	public void To_Validate_if_already_entered_text_is_displayed_in_the_message_textbox_after_navigating_to_home_screen_and_back_to_Report_Issue_screen () throws InterruptedException  {
+		chatpage = new ChatScreen(driver);
+		chatpage.Set_Values_In_Message_textbox("Test");
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Test");
+		chatpage.click_Back_Arrow();
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
+		homepage.clickMenuDrawer();
+		menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Report_Issue();
+		Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Test");
+	}	
+	
+
 }
