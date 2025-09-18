@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AutomationTesting.BchatApp.Report_Issue_Screen_TestCases">
+      <class name="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases">
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_if_already_entered_text_is_displayed_in_the_message_textbox_after_navigating_to_home_screen_and_back_to_Report_Issue_screen"/>
+          <include name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen"/>
         </methods>
-      </class> <!-- AutomationTesting.BchatApp.Report_Issue_Screen_TestCases -->
+      </class> <!-- AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

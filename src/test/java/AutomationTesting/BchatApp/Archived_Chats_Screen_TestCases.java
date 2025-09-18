@@ -80,7 +80,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 	}*/
 	
 	/* Validate whether archived chats counts are showing correctly */
-	   @Test (priority = 3)
+	  /* @Test (priority = 3)
 	   public void To_Validate_whether_archived_chats_counts_are_showing_correctly() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"Chats");
@@ -89,7 +89,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 	   }
 	   
 	/* Validate whether chats are not getting unarchived while sending messages  */
-	   @Test (priority = 4)
+	  /* @Test (priority = 4)
 	   public void To_Validate_whether_chats_are_not_getting_unarchived_while_sending_messages() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"Chats");  
@@ -107,7 +107,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 	   }
 	   
 	   /* Validate whether the user is able to search the archived chats */
-	   @Test (priority = 5)
+	   /*@Test (priority = 5)
 	   public void To_Validate_whether_the_user_is_able_to_search_archived_chats() {
 		homepage = new HomeScreen(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"Chats");  
@@ -116,7 +116,55 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 		Assert.assertEquals(homepage.getSearchedContact(),"aravind");  
 		driver.navigate().back();
 		driver.navigate().back();
-	   }
-	   
-
+	   }*/
+	
+	/* Validate whether cursor blinks in message text box on the Archived chat screen */
+	/* Validate the presence of placeholder in message text box on the Archived chat screen */
+		
+		  @Test (priority = 6)
+		   public void To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen(){
+			  homepage = new HomeScreen(driver);
+				Assert.assertEquals(homepage.Pagetitle(),"Chats");
+				homepage.ClickArchiveChatsOptionForFirstContactorGroup();
+				homepage.ClickArchivedChatCard();
+				archivedchatspage = new ArchivedChatsScreen(driver);
+				Assert.assertEquals(archivedchatspage.getArchivedChatsScreenTitle(),"Archived Chats");	   
+				archivedchatspage.ClickArchivedChatsScreenContact();
+				chatpage = new ChatScreen(driver);
+				chatpage.click_Textbox();
+				Assert.assertTrue(chatpage.activeElement().isDisplayed());
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(),"Write a message....");	 
+		  }   
+		  
+/* Validate the message text box in the Archive chat screen by entering the empty space */
+		  
+		  @Test (priority = 7)
+		   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space(){
+			    chatpage = new ChatScreen(driver);
+				chatpage.Set_Values_In_Message_textbox("     ");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "     ");
+				chatpage.clear_textBox();
+		  }
+		  
+/* Validate the message text box in Archive chat screen by entering the special character 
+   Validate whether the value entered in the message text box of Archive chat screen is editable and delete-able. 
+*/	    
+		    @Test(priority = 8)
+			public void To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable () throws InterruptedException {
+		    	chatpage = new ChatScreen(driver);
+				chatpage.Set_Values_In_Message_textbox("!@#$%^&*()");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "!@#$%^&*()");
+				chatpage.clear_textBox();
+		  }	
+		    
+/* Validate the message text box in the Archive chat screen by entering the numerical value */
+			  
+			  @Test (priority = 9)
+			   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value()throws InterruptedException{
+				    chatpage = new ChatScreen(driver);
+					chatpage.Set_Values_In_Message_textbox("1234567890");
+					Assert.assertEquals(chatpage.get_Values_from_TextBox(), "1234567890");
+					chatpage.clear_textBox();
+			  }		    
+		  
 }

@@ -23,15 +23,15 @@ public class ArchivedChatsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='io.beldex.bchat:id/title' and @text='Unarchive Chat']")
 	private WebElement UnarchiveChatOption;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='aravind']")
-	private WebElement ArchivedChatsScreenContact;
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='testgroup']")
+	private WebElement ArchivedChatsScreenContactorGroup;
 	
 	public void ClickUnarchiveChatOption() {
 		UnarchiveChatOption.click();
 	}
 	
 	public void ClickArchivedChatsScreenContact() {
-		ArchivedChatsScreenContact.click();
+		ArchivedChatsScreenContactorGroup.click();
 	}
 	
 	
