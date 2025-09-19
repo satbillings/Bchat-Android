@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\satbi\eclipse-workspace\BchatApp\ArchivedChatsScreenTestNG.xml</span>
+                    <span>C:\Users\satbi\eclipse-workspace\BchatApp\MyWalletScreenRestoreFlowTestNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow" class="method navigator-link" hash-for-method="To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space">To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,27 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases" class="method navigator-link" hash-for-method="PreSetup">PreSetup</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases" class="method navigator-link" hash-for-method="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen">To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases" class="method navigator-link" hash-for-method="To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases" class="method navigator-link" hash-for-method="To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases" class="method navigator-link" hash-for-method="To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable">To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow" class="method navigator-link" hash-for-method="PreSetup">PreSetup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -139,10 +133,61 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space">
+                  </a> <!-- To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space -->
+                  <span class="method-name">To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.view.View[@index=&apos;6&apos;]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wua7x0Jr.click(Unknown Source)
+	at POM.MyWalletScreen.ClickSendOption(MyWalletScreen.java:339)
+	at AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow.To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space(My_Wallet_Screen_TestCases_In_Restore_Account_Flow.java:987)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4aa11206 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[@index=&apos;6&apos;]})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 33 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases</span>
+              <span class="class-name">AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -152,40 +197,12 @@
                   <span class="method-name">PreSetup</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen">
-                  </a> <!-- To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen -->
-                  <span class="method-name">To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space">
-                  </a> <!-- To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space -->
-                  <span class="method-name">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value">
-                  </a> <!-- To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value -->
-                  <span class="method-name">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable">
-                  </a> <!-- To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable -->
-                  <span class="method-name">To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\satbi\eclipse-workspace\BchatApp\ArchivedChatsScreenTestNG.xml</span>
+            <span class="header-content">C:\Users\satbi\eclipse-workspace\BchatApp\MyWalletScreenRestoreFlowTestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,7 +214,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases&quot;/&gt;
+      &lt;class name=&quot;AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -237,32 +254,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'PreSetup')
-data.setCell(0, 2, 'AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases')
-data.setCell(0, 3, 85529);
+data.setCell(0, 1, 'To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space')
+data.setCell(0, 2, 'AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow')
+data.setCell(0, 3, 121725);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen')
-data.setCell(1, 2, 'AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases')
-data.setCell(1, 3, 14716);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable')
-data.setCell(2, 2, 'AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases')
-data.setCell(2, 3, 4552);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value')
-data.setCell(3, 2, 'AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases')
-data.setCell(3, 3, 4543);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space')
-data.setCell(4, 2, 'AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases')
-data.setCell(4, 3, 3761);
+data.setCell(1, 1, 'PreSetup')
+data.setCell(1, 2, 'AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow')
+data.setCell(1, 3, 51071);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -288,34 +293,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">AutomationTesting.BchatApp.Archived_Chats_Screen_TestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Configure</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">PreSetup</span>
-                <span class="method-start">16937 ms</span>
+                <span class="method-start">24886 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen</span>
-                <span class="method-start">102498 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space</span>
-                <span class="method-start">117217 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable</span>
-                <span class="method-start">120981 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value</span>
-                <span class="method-start">125539 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space</span>
+                <span class="method-start">75974 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">130096 ms</span>
+                <span class="method-start">198244 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

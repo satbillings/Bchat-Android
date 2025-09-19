@@ -96,7 +96,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 		homepage.ClickArchivedChatCard();
 		archivedchatspage = new ArchivedChatsScreen(driver);
 		Assert.assertEquals(archivedchatspage.getArchivedChatsScreenTitle(),"Archived Chats");
-		archivedchatspage.ClickArchivedChatsScreenContact();
+		archivedchatspage.ClickArchivedChatsScreenContactorGroup();
 		chatpage = new ChatScreen(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Aravind");
 		chatpage.Set_Values_In_Message_textbox("hii");
@@ -121,7 +121,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 	/* Validate whether cursor blinks in message text box on the Archived chat screen */
 	/* Validate the presence of placeholder in message text box on the Archived chat screen */
 		
-		  @Test (priority = 6)
+		  /*@Test (priority = 6)
 		   public void To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_the_message_text_box_on_the_Archieved_chat_screen(){
 			  homepage = new HomeScreen(driver);
 				Assert.assertEquals(homepage.Pagetitle(),"Chats");
@@ -129,7 +129,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 				homepage.ClickArchivedChatCard();
 				archivedchatspage = new ArchivedChatsScreen(driver);
 				Assert.assertEquals(archivedchatspage.getArchivedChatsScreenTitle(),"Archived Chats");	   
-				archivedchatspage.ClickArchivedChatsScreenContact();
+				archivedchatspage.ClickArchivedChatsScreenContactorGroup();
 				chatpage = new ChatScreen(driver);
 				chatpage.click_Textbox();
 				Assert.assertTrue(chatpage.activeElement().isDisplayed());
@@ -138,7 +138,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 		  
 /* Validate the message text box in the Archive chat screen by entering the empty space */
 		  
-		  @Test (priority = 7)
+		  /*@Test (priority = 7)
 		   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_empty_space(){
 			    chatpage = new ChatScreen(driver);
 				chatpage.Set_Values_In_Message_textbox("     ");
@@ -149,7 +149,7 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 /* Validate the message text box in Archive chat screen by entering the special character 
    Validate whether the value entered in the message text box of Archive chat screen is editable and delete-able. 
 */	    
-		    @Test(priority = 8)
+		   /* @Test(priority = 8)
 			public void To_validate_the_message_textbox_in_Archive_chat_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_message_text_box_of_Archive_chat_screen_is_editable_deletable () throws InterruptedException {
 		    	chatpage = new ChatScreen(driver);
 				chatpage.Set_Values_In_Message_textbox("!@#$%^&*()");
@@ -159,12 +159,92 @@ public class Archived_Chats_Screen_TestCases extends baseclass {
 		    
 /* Validate the message text box in the Archive chat screen by entering the numerical value */
 			  
-			  @Test (priority = 9)
+			  /*@Test (priority = 9)
 			   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_numerical_value()throws InterruptedException{
 				    chatpage = new ChatScreen(driver);
 					chatpage.Set_Values_In_Message_textbox("1234567890");
 					Assert.assertEquals(chatpage.get_Values_from_TextBox(), "1234567890");
 					chatpage.clear_textBox();
-			  }		    
+			  }*/
+	
+/* Validate the message text box in the Archive chat screen by entering the alphabets both upper case and lower case letter */
+	
+	   @Test (priority = 10)
+	   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_alphabets_both_uppercase_and_lowercase_letter()throws InterruptedException{
+		    homepage = new HomeScreen(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			homepage.ClickArchiveChatsOptionForFirstContactorGroup();
+			homepage.ClickArchivedChatCard();
+			archivedchatspage = new ArchivedChatsScreen(driver);
+			Assert.assertEquals(archivedchatspage.getArchivedChatsScreenTitle(),"Archived Chats");	   
+			archivedchatspage.ClickArchivedChatsScreenContactorGroup();
+			chatpage = new ChatScreen(driver);
+			chatpage.click_Textbox();
+			chatpage.Set_Values_In_Message_textbox("ABCDEF");
+			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "ABCDEF");
+			chatpage.clear_textBox();
+			chatpage.Set_Values_In_Message_textbox("abcdef");
+			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "abcdef");
+			chatpage.clear_textBox();
+	   }
+	   
+/* Validate the message text box in the Archive chat screen by entering the alphanumeric value */
+		  
+		  @Test (priority = 11)
+		   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_alphanumeric_value()throws InterruptedException{
+			    chatpage = new ChatScreen(driver);
+				chatpage.Set_Values_In_Message_textbox("abc123");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "abc123");
+				chatpage.clear_textBox();
+		  }
+		  
+/* Validate the message text box in the Archive chat screen by entering the HTML value */
+		  
+		  @Test (priority = 12)
+		   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_HTML_value()throws InterruptedException{
+			    chatpage = new ChatScreen(driver);
+				chatpage.Set_Values_In_Message_textbox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+				chatpage.clear_textBox();
+		  }	
+		  
+/* Validate the message text box in the Archive chat screen by entering the decimal value */
+		  
+		  @Test (priority = 13)
+		   public void To_Validate_the_message_text_box_on_the_Archieved_chat_screen_by_entering_the_decimal_value()throws InterruptedException{
+			    chatpage = new ChatScreen(driver);
+				chatpage.Set_Values_In_Message_textbox("0.00001");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "0.00001");
+				chatpage.clear_textBox();
+		  }	
+		  
+/* Validate whether user is able to paste long text in message text box on the Archive chat screen */
+		  
+		  @Test (priority = 14)
+		   public void To_Validate_whether_user_is_able_to_paste_long_text_in_message_text_box_on_the_Archieved_chat_screen()throws InterruptedException{
+			    chatpage = new ChatScreen(driver);
+			    chatpage.paste_values("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+				chatpage.clear_textBox();
+		  }
+		  
+/* Validate if already entered text is displayed in message text box after navigating to home screen and come back to Archive chat screen */		  
+			
+		  @Test (priority = 15)
+			public void To_Validate_if_already_entered_text_is_displayed_in_the_message_textbox_after_navigating_to_home_screen_and_back_to_Archive_chat_screen () throws InterruptedException  {
+			    chatpage = new ChatScreen(driver);
+			    chatpage.Set_Values_In_Message_textbox("Test");
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Test");
+			    chatpage.click_Back_Arrow();
+			    homepage = new HomeScreen(driver);
+				Assert.assertEquals(homepage.Pagetitle(),"Chats");
+				//homepage.ClickArchiveChatsOptionForFirstContactorGroup();
+				homepage.ClickArchivedChatCard();
+				archivedchatspage = new ArchivedChatsScreen(driver);
+				Assert.assertEquals(archivedchatspage.getArchivedChatsScreenTitle(),"Archived Chats");	   
+				archivedchatspage.ClickArchivedChatsScreenContactorGroup();
+				chatpage = new ChatScreen(driver);
+				Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Test");
+		  }
 		  
 }

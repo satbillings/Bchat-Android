@@ -30,7 +30,7 @@ public class ArchivedChatsScreen extends ActionsClass {
 		UnarchiveChatOption.click();
 	}
 	
-	public void ClickArchivedChatsScreenContact() {
+	public void ClickArchivedChatsScreenContactorGroup() {
 		ArchivedChatsScreenContactorGroup.click();
 	}
 	

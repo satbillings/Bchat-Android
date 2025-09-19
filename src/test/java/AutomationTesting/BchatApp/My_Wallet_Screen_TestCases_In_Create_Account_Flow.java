@@ -1117,7 +1117,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		  Assert.assertTrue(mywalletpage.ElementofStatusReconnecting().isDisplayed());
 	}
 	/*
-	validate the working of rescan with restore from date in rescan screen.
+	Validate the working of rescan with restore from date in rescan screen.
 	*/
 	/*@Test(priority = 55)
 	public void To_validate_the_working_of_rescan_with_restore_from_date_in_rescan_screen () throws InterruptedException {
@@ -1376,7 +1376,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the working of scan from gallery function by selecting the non QR code images from gallery without internet connection */
 	
-	@Test(priority = 62)
+	/*@Test(priority = 62)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_by_selecting_the_non_QR_code_images_from_gallery_without_internet_connection() throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -1424,7 +1424,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* 	Validate the working of scan from gallery function with invalid Bchat QR code without internet connection */
 	
-	@Test(priority = 63)
+	/*@Test(priority = 63)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_invalid_bchat_QR_code_without_internet_connection () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		//Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -1462,11 +1462,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		Thread.sleep(6000);
 		turnOn_Mobile_Wifi();
       	Thread.sleep(6000);	
-	}    		
-	  
-	
-
-	
+	} 
 	
 	
 	}

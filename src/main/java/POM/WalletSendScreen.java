@@ -192,6 +192,12 @@ public class WalletSendScreen extends ActionsClass {
 		AddressTextBox.sendKeys(value);
 	}
 	
+	public String getValuesFromAddressTextBox() {
+		return AddressTextBox.getText();
+	}
+	
+	
+	
 	public void Set_Slow_inPriority () {
 		transactionpriorityDropdown.click();
 		optionSlow.click();
@@ -212,6 +218,10 @@ public class WalletSendScreen extends ActionsClass {
 	
 	public void click_Address_textbox () {
 		AddressTextBox.click();
+	}
+	
+	public void Clear_Address_textbox () {
+		AddressTextBox.clear();
 	}
 	
 	public String get_priority_value () {
