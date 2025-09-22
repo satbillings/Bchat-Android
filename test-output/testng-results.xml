@@ -1,96 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T19:06:15 IST" name="Suite" finished-at="2025-09-19T19:09:34 IST" duration-ms="198850">
+  <suite started-at="2025-09-22T17:02:31 IST" name="Suite" finished-at="2025-09-22T17:05:13 IST" duration-ms="161956">
     <groups>
     </groups>
-    <test started-at="2025-09-19T19:06:15 IST" name="Test" finished-at="2025-09-19T19:09:34 IST" duration-ms="198850">
-      <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow@54e7df6a]" started-at="2025-09-19T19:06:15 IST" name="Configure" finished-at="2025-09-19T19:06:40 IST" duration-ms="24881" status="PASS">
+    <test started-at="2025-09-22T17:02:31 IST" name="Test" finished-at="2025-09-22T17:05:13 IST" duration-ms="161956">
+      <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:02:31 IST" name="Configure" finished-at="2025-09-22T17:02:51 IST" duration-ms="19806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow@54e7df6a]" started-at="2025-09-19T19:06:40 IST" name="PreSetup" finished-at="2025-09-19T19:07:31 IST" duration-ms="51071" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:02:51 IST" name="PreSetup" finished-at="2025-09-22T17:03:37 IST" duration-ms="46791" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space()[pri:53, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow@54e7df6a]" started-at="2025-09-19T19:07:31 IST" name="To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space" finished-at="2025-09-19T19:09:32 IST" duration-ms="121725" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@index='6']})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@index='6']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
-at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wua7x0Jr.click(Unknown Source)
-at POM.MyWalletScreen.ClickSendOption(MyWalletScreen.java:339)
-at AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow.To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space(My_Wallet_Screen_TestCases_In_Restore_Account_Flow.java:987)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4aa11206 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[@index='6']})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: driver.version: RemoteWebDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_special_characters_in_the_amount_text_box_in_wallet_receive_screen()[pri:65, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:03:37 IST" name="To_Validate_whether_user_is_able_to_paste_special_characters_in_the_amount_text_box_in_wallet_receive_screen" finished-at="2025-09-22T17:05:03 IST" duration-ms="85848" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow@54e7df6a]" started-at="2025-09-19T19:09:33 IST" name="closeApp" finished-at="2025-09-19T19:09:34 IST" duration-ms="594" status="PASS">
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_special_characters_in_the_amount_text_box_in_wallet_receive_screen -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_upper_case_letter_in_the_amount_text_box_in_wallet_receive_screen()[pri:66, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:05:03 IST" name="To_Validate_whether_user_is_able_to_paste_upper_case_letter_in_the_amount_text_box_in_wallet_receive_screen" finished-at="2025-09-22T17:05:06 IST" duration-ms="2734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_upper_case_letter_in_the_amount_text_box_in_wallet_receive_screen -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_alphanumeric_value_in_the_amount_text_box_in_wallet_receive_screen()[pri:67, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:05:06 IST" name="To_Validate_whether_user_is_able_to_paste_alphanumeric_value_in_the_amount_text_box_in_wallet_receive_screen" finished-at="2025-09-22T17:05:08 IST" duration-ms="2203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_alphanumeric_value_in_the_amount_text_box_in_wallet_receive_screen -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_HTML_value_in_the_amount_text_box_in_wallet_receive_screen()[pri:68, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:05:08 IST" name="To_Validate_whether_user_is_able_to_paste_HTML_value_in_the_amount_text_box_in_wallet_receive_screen" finished-at="2025-09-22T17:05:10 IST" duration-ms="2231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_HTML_value_in_the_amount_text_box_in_wallet_receive_screen -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_long_text_in_the_amount_text_box_in_wallet_receive_screen()[pri:69, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:05:10 IST" name="To_Validate_whether_user_is_able_to_paste_long_text_in_the_amount_text_box_in_wallet_receive_screen" finished-at="2025-09-22T17:05:12 IST" duration-ms="1714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_long_text_in_the_amount_text_box_in_wallet_receive_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-09-22T17:05:12 IST" name="closeApp" finished-at="2025-09-22T17:05:13 IST" duration-ms="591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Restore_Account_Flow -->
+      </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

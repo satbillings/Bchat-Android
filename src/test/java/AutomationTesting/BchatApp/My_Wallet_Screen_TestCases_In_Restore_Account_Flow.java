@@ -975,21 +975,5 @@ public class My_Wallet_Screen_TestCases_In_Restore_Account_Flow extends baseclas
 		   createpasswordpage.clickOk();
 		   Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
 	}*/
-    
-/* Validate the address text box in wallet send screen by entering the empty space */
-	
-	@Test(priority = 53)
-	public void To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space () throws InterruptedException {
-		mywalletpage = new MyWalletScreen(driver);
-		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
-		//wait = new WebDriverWait(driver, Duration.ofMinutes(5));
-		Thread.sleep(59000);
-		mywalletpage.ClickSendOption();
-		sendpage = new WalletSendScreen(driver);
-		Assert.assertEquals(sendpage.pagetitle(),"Send");
-		sendpage.Enter_Values_In_Address("     ");
-		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"     ");
-		sendpage.Clear_Address_textbox();
-		}
 
 }

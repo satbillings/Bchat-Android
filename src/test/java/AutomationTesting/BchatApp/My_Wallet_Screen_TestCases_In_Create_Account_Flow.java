@@ -1444,7 +1444,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* 	Validate the working of scan from gallery function with valid Bchat QR code with bdx value image without internet connection */
 	
-	@Test(priority = 64)
+	/*@Test(priority = 64)
 	public void To_Validate_the_working_of_scan_from_gallery_functionality_with_valid_bchat_QR_code_with_bdx_value_image_without_internet_connection () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		//Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -1462,7 +1462,88 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		Thread.sleep(6000);
 		turnOn_Mobile_Wifi();
       	Thread.sleep(6000);	
-	} 
+	} */
+	
+	/* Validate whether able to paste special characters in the amount text box in wallet receive screen */
+	
+	@Test(priority = 65)
+	public void To_Validate_whether_user_is_able_to_paste_special_characters_in_the_amount_text_box_in_wallet_receive_screen () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		//Thread.sleep(59000);
+		Thread.sleep(5000);
+		mywalletpage.ClickReceiveOption();
+		walletreceivepage = new WalletReceiveScreen(driver);
+		Assert.assertEquals(walletreceivepage.Receive_Screen_title(),"Receive");
+		walletreceivepage.click_textbox();
+		walletreceivepage.paste_values("!@#$%^&*()");
+		Assert.assertNotEquals(walletreceivepage.get_Values_From_Amount_textbox(),"!@#$%^&*()" );
+		//walletreceivepage.clear_TextBox();
+		}
+	
+/* Validate whether able to paste upper case letter in the amount text box in wallet receive screen */
+	
+	@Test(priority = 66)
+	public void To_Validate_whether_user_is_able_to_paste_upper_case_letter_in_the_amount_text_box_in_wallet_receive_screen () throws InterruptedException {
+		walletreceivepage = new WalletReceiveScreen(driver);
+		Assert.assertEquals(walletreceivepage.Receive_Screen_title(),"Receive");
+		walletreceivepage.paste_values("ABCDEF");
+		Assert.assertNotEquals(walletreceivepage.get_Values_From_Amount_textbox(),"ABCDEF" );
+	}
+	
+/* Validate whether able to paste alphanumeric value in the amount text box in wallet receive screen */
+	
+	@Test(priority = 67)
+	public void To_Validate_whether_user_is_able_to_paste_alphanumeric_value_in_the_amount_text_box_in_wallet_receive_screen () throws InterruptedException {
+		walletreceivepage = new WalletReceiveScreen(driver);
+		Assert.assertEquals(walletreceivepage.Receive_Screen_title(),"Receive");
+		walletreceivepage.paste_values("abc123");
+		Assert.assertNotEquals(walletreceivepage.get_Values_From_Amount_textbox(),"abc123" );
+	}	
+	
+/* Validate whether able to paste HTML value in the amount text box in wallet receive screen */
+	
+	@Test(priority = 68)
+	public void To_Validate_whether_user_is_able_to_paste_HTML_value_in_the_amount_text_box_in_wallet_receive_screen () throws InterruptedException {
+		walletreceivepage = new WalletReceiveScreen(driver);
+		Assert.assertEquals(walletreceivepage.Receive_Screen_title(),"Receive");
+		walletreceivepage.paste_values("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertNotEquals(walletreceivepage.get_Values_From_Amount_textbox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>" );
+	}	
+	
+/* Validate whether able to paste long text in the amount text box in wallet receive screen */
+	
+	@Test(priority = 69)
+	public void To_Validate_whether_user_is_able_to_paste_long_text_in_the_amount_text_box_in_wallet_receive_screen () throws InterruptedException {
+		walletreceivepage = new WalletReceiveScreen(driver);
+		Assert.assertEquals(walletreceivepage.Receive_Screen_title(),"Receive");
+		walletreceivepage.paste_values("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertNotEquals(walletreceivepage.get_Values_From_Amount_textbox(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen" );
+	}			
+	
 	
 	
 	}

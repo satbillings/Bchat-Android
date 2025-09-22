@@ -37,11 +37,15 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[@index='5']")
 	private WebElement ScanOption;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='6']")
+	@AndroidFindBy(xpath="//android.view.View[@index='10']")
 	//@AndroidFindBy(accessibility  = "Send")
 	private WebElement SendOption;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='7']")
+	//@AndroidFindBy(xpath="//android.view.View[@index='6']")
+	//@AndroidFindBy(accessibility  = "Send")
+	//public WebElement SendOpt;
+	
+	@AndroidFindBy(xpath="//android.view.View[@index='11']")
 	private WebElement ReceiveOption;
 	
 	@AndroidFindBy(xpath="//android.view.View[@index='8']")
