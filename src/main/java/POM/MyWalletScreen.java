@@ -41,7 +41,7 @@ public class MyWalletScreen extends ActionsClass {
 	//@AndroidFindBy(accessibility  = "Send")
 	private WebElement SendOption;
 	
-	//@AndroidFindBy(xpath="//android.view.View[@index='6']")
+	//@AndroidFindBy(xpath="//android.view.View[@index='10']")
 	//@AndroidFindBy(accessibility  = "Send")
 	//public WebElement SendOpt;
 	

@@ -335,6 +335,18 @@ public class WalletSettingsScreen extends ActionsClass {
       textBoxNodeAddress.sendKeys(value);	
     }
     
+    public String getValuesFromNodeAddressTextBox () {
+    	return textBoxNodeAddress.getText();
+    }
+    
+    public void ClickNodeAddressTextBox (){
+        textBoxNodeAddress.click();	
+      }
+    
+    public void ClearNodeAddressTextBox (){
+        textBoxNodeAddress.clear();	
+      }   
+    
     public void Enter_NodePort (String value) {
 		textBoxNodePort.sendKeys(value);
 	}

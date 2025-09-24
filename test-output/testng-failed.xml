@@ -8,9 +8,11 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_the_address_text_box_in_wallet_send_screen_by_entering_the_empty_space"/>
+          <include name="To_Validate_whether_user_is_able_to_paste_characters_in_the_amount_text_box_in_wallet_send_screen"/>
           <include name="Configure"/>
           <include name="closeApp"/>
+          <include name="To_Validate_whether_user_is_able_to_paste_empty_space_in_the_amount_text_box_in_wallet_send_screen"/>
+          <include name="To_Validate_whether_user_is_able_to_paste_special_characters_in_the_amount_text_box_in_wallet_send_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
