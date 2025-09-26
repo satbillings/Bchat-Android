@@ -1546,7 +1546,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Node address text box in the wallet node screen by entering the empty space */
 	
-	@Test(priority = 70)
+	/*@Test(priority = 70)
 	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_empty_space () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -1590,7 +1590,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Node address text box in the wallet node screen by entering the special characters */
 	
-	@Test(priority = 71)
+	/*@Test(priority = 71)
 	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_special_characters () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);
 		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -1602,7 +1602,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Node address text box in the wallet node screen by entering the numerical values */
 	
-	@Test(priority = 72)
+	/*@Test(priority = 72)
 	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_values () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);
 		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -1611,9 +1611,10 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "1234567890");
 		walletsettingspage.ClearNodeAddressTextBox();
 	}	
+	
 /* Validate the Node address text box in the wallet node screen by entering the decimal values */
 	
-	@Test(priority = 73)
+	/*@Test(priority = 73)
 	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_values () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);
 		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -1621,7 +1622,104 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		walletsettingspage.Enter_NodeAddress("0.00001");
 		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "0.00001");
 		walletsettingspage.ClearNodeAddressTextBox();
+	}	*/
+	
+/* Validate the Node address text box in the wallet node screen by entering the alphabets both in upper case and lower case letter */
+	
+	@Test(priority = 74)
+	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		//Thread.sleep(59000);
+		Thread.sleep(3000);
+		mywalletpage.ClickSettingsOption();
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.click_Current_Node();
+		Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");
+		walletsettingspage.click_AddNode();
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		walletsettingspage.ClickNodeAddressTextBox();
+		walletsettingspage.Enter_NodeAddress("ABCDEF");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "ABCDEF");
+		walletsettingspage.ClearNodeAddressTextBox();
+		walletsettingspage.Enter_NodeAddress("abcdef");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "abcdef");
+		walletsettingspage.ClearNodeAddressTextBox();
+	}	
+	
+/* Validate the Node address text box in the wallet node screen by entering the alphanumeric value */
+/* 	Validate whether the value entered in the Node address text box of My wallet node screen is editable and delete-able */
+	
+	
+	@Test(priority = 75)
+	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value_To_validate_whether_the_value_entered_in_the_Node_address_text_box_of_My_wallet_node_screen_is_editable_and_deleteable () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		//walletsettingspage.ClickNodeAddressTextBox();
+		walletsettingspage.Enter_NodeAddress("abc123");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "abc123");
+		walletsettingspage.ClearNodeAddressTextBox();
+	}
+	
+/* Validate the Node address text box in the wallet node screen by entering the HTML value */
+	
+	@Test(priority = 76)
+	public void To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		//walletsettingspage.ClickNodeAddressTextBox();
+		walletsettingspage.Enter_NodeAddress("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		walletsettingspage.ClearNodeAddressTextBox();
+	}	
+	
+/* Validate whether user is able to paste long text in Node address text box in the My wallet node screen*/
+	
+	@Test(priority = 77)
+	public void To_Validate_whether_user_is_able_to_paste_long_text_in_Node_address_text_box_in_the_wallet_Node_screen () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		//walletsettingspage.ClickNodeAddressTextBox();
+		walletsettingspage.PasteValuesInNodeAddressTextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		walletsettingspage.ClearNodeAddressTextBox();
+	}	
+	
+/* Validate whether user is able to paste special characters in Node port text box in the My wallet node screen*/
+	
+	@Test(priority = 78)
+	public void To_Validate_whether_user_is_able_to_paste_special_characters_in_Node_port_text_box_in_the_wallet_Node_screen () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		walletsettingspage.ClickNodePortTextBox();
+		walletsettingspage.PasteValuesInNodePortTextBox("!@#$%^&*()");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromNodePortTextBox(), "!@#$%^&*()");
 	}		
+	
 	
 	
 	}

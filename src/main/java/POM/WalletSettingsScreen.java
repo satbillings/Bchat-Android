@@ -339,6 +339,10 @@ public class WalletSettingsScreen extends ActionsClass {
     	return textBoxNodeAddress.getText();
     }
     
+    public String getValuesFromNodePortTextBox () {
+    	return textBoxNodePort.getText();
+    }
+    
     public void ClickNodeAddressTextBox (){
         textBoxNodeAddress.click();	
       }
@@ -350,6 +354,14 @@ public class WalletSettingsScreen extends ActionsClass {
     public void Enter_NodePort (String value) {
 		textBoxNodePort.sendKeys(value);
 	}
+    
+    public void ClickNodePortTextBox (){
+    	textBoxNodePort.click();	
+      }
+    
+    public void ClearNodePortTextBox (){
+    	textBoxNodePort.clear();	
+      }   
     
     public void Enter_NodeName (String value){
         textBoxNodeName.sendKeys(value);	
@@ -504,6 +516,14 @@ public class WalletSettingsScreen extends ActionsClass {
     
     public void paste_Values_In_Searchtextbox (String value) {
     	Copy_And_Paste_Values(value, SearchTextBox);
+    }
+    
+    public void PasteValuesInNodeAddressTextBox(String value) {
+    	Copy_And_Paste_Values(value, textBoxNodeAddress);
+    }
+    
+    public void PasteValuesInNodePortTextBox(String value) {
+    	Copy_And_Paste_Values(value, textBoxNodePort);
     }
     
     public void click_closeIcon_In_searchtextbox () {
