@@ -166,6 +166,20 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Slow']")
 	private WebElement SlowPriority;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Node address']")
+	private WebElement NodeAddressTextBoxPlaceholder;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Node port']")
+	private WebElement NodePortTextBoxPlaceholder;
+	
+	public String getNodeAddressTextBoxPlaceholder () {
+    	return NodeAddressTextBoxPlaceholder.getText();
+    }
+	
+	public String getNodePortTextBoxPlaceholder () {
+    	return NodePortTextBoxPlaceholder.getText();
+    }
+	
 	 public void ClickBRLCurrency () {
 		 optionCurrency.click();
 		 BRLCurrency.click();
