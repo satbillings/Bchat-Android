@@ -172,12 +172,28 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Node port']")
 	private WebElement NodePortTextBoxPlaceholder;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Node name (Optional)']")
+	private WebElement NodeNameTextBoxPlaceholder;
+	
+	
 	public String getNodeAddressTextBoxPlaceholder () {
     	return NodeAddressTextBoxPlaceholder.getText();
     }
 	
 	public String getNodePortTextBoxPlaceholder () {
     	return NodePortTextBoxPlaceholder.getText();
+    }
+	
+	public String getNodeNameTextBoxPlaceholder () {
+    	return NodeNameTextBoxPlaceholder.getText();
+    }
+	
+	public String getUserNameTextBoxPlaceholder () {
+    	return textBoxUsername.getText();
+    }
+	
+	public String getPasswordTextBoxPlaceholder () {
+    	return textBoxPassword.getText();
     }
 	
 	 public void ClickBRLCurrency () {
@@ -345,9 +361,17 @@ public class WalletSettingsScreen extends ActionsClass {
     	return SuccessMsg.getText();
     }
     
-    public void Enter_NodeAddress (String value){
-      textBoxNodeAddress.sendKeys(value);	
+    public void SetValuesInNodeNameTextBox (String value){
+      textBoxNodeName.sendKeys(value);	
     }
+    
+    public void SetValuesInUserNameTextBox (String value){
+        textBoxUsername.sendKeys(value);	
+      }
+    
+    public void SetValuesInPasswordTextBox (String value){
+        textBoxPassword.sendKeys(value);	
+      } 
     
     public String getValuesFromNodeAddressTextBox () {
     	return textBoxNodeAddress.getText();
@@ -357,6 +381,18 @@ public class WalletSettingsScreen extends ActionsClass {
     	return textBoxNodePort.getText();
     }
     
+    public String getValuesFromNodeNameTextBox () {
+    	return textBoxNodeName.getText();
+    }
+    
+    public String getValuesFromUserNameTextBox () {
+    	return textBoxUsername.getText();
+    }
+    
+    public String getValuesFromPasswordTextBox () {
+    	return textBoxPassword.getText();
+    } 
+    
     public void ClickNodeAddressTextBox (){
         textBoxNodeAddress.click();	
       }
@@ -364,6 +400,30 @@ public class WalletSettingsScreen extends ActionsClass {
     public void ClearNodeAddressTextBox (){
         textBoxNodeAddress.clear();	
       }   
+    
+    public void ClickNodeNameTextBox (){
+        textBoxNodeName.click();	
+      }
+    
+    public void ClearNodeNameTextBox (){
+        textBoxNodeName.clear();	
+      } 
+    
+    public void ClickUserNameTextBox (){
+        textBoxUsername.click();	
+      }
+    
+    public void ClearUserNameTextBox (){
+    	textBoxUsername.clear();	
+      } 
+    
+    public void ClickPasswordTextBox (){
+        textBoxPassword.click();	
+      }
+    
+    public void ClearPasswordTextBox (){
+    	textBoxPassword.clear();	
+      } 
     
     public void Enter_NodePort (String value) {
 		textBoxNodePort.sendKeys(value);
@@ -538,6 +598,18 @@ public class WalletSettingsScreen extends ActionsClass {
     
     public void PasteValuesInNodePortTextBox(String value) {
     	Copy_And_Paste_Values(value, textBoxNodePort);
+    }
+    
+    public void PasteValuesInNodeNameTextBox(String value) {
+    	Copy_And_Paste_Values(value, textBoxNodeName);
+    }
+    
+    public void PasteValuesInUserNameTextBox(String value) {
+    	Copy_And_Paste_Values(value, textBoxUsername);
+    }
+    
+    public void PasteValuesInPasswordTextBox(String value) {
+    	Copy_And_Paste_Values(value, textBoxPassword);
     }
     
     public void click_closeIcon_In_searchtextbox () {

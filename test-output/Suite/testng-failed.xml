@@ -8,12 +8,9 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter"/>
+          <include name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_Name_text_box_on_the_wallet_Node_screen"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_whether_user_is_able_to_paste_in_Node_address_text_box_in_the_wallet_Node_screen"/>
-          <include name="To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value_To_validate_whether_the_value_entered_in_the_Node_address_text_box_of_My_wallet_node_screen_is_editable_and_deleteable"/>
-          <include name="To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
