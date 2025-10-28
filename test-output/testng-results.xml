@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-27T17:16:14 IST" name="Suite" finished-at="2025-10-27T17:17:51 IST" duration-ms="97139">
+  <suite started-at="2025-10-28T18:04:40 IST" name="Suite" finished-at="2025-10-28T18:06:20 IST" duration-ms="100425">
     <groups>
     </groups>
-    <test started-at="2025-10-27T17:16:14 IST" name="Test" finished-at="2025-10-27T17:17:51 IST" duration-ms="97139">
+    <test started-at="2025-10-28T18:04:40 IST" name="Test" finished-at="2025-10-28T18:06:20 IST" duration-ms="100425">
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:16:14 IST" name="Configure" finished-at="2025-10-27T17:16:33 IST" duration-ms="18727" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:04:40 IST" name="Configure" finished-at="2025-10-28T18:05:00 IST" duration-ms="20488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:16:33 IST" name="PreSetup" finished-at="2025-10-27T17:17:19 IST" duration-ms="46131" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:05:00 IST" name="PreSetup" finished-at="2025-10-28T18:05:45 IST" duration-ms="44565" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_address_text_box_on_the_wallet_Node_screen()[pri:84, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:17:19 IST" name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_address_text_box_on_the_wallet_Node_screen" finished-at="2025-10-27T17:17:48 IST" duration-ms="29228" status="PASS">
+        <test-method signature="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_special_characters()[pri:87, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:05:45 IST" name="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_special_characters" finished-at="2025-10-28T18:06:14 IST" duration-ms="29266" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_address_text_box_on_the_wallet_Node_screen -->
-        <test-method signature="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_Name_text_box_on_the_wallet_Node_screen()[pri:85, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:17:48 IST" name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_Name_text_box_on_the_wallet_Node_screen" finished-at="2025-10-27T17:17:50 IST" duration-ms="1474" status="PASS">
+        </test-method> <!-- To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_special_characters -->
+        <test-method signature="To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_value_To_validate_whether_the_value_entered_in_the_Node_address_text_box_of_My_wallet_node_screen_is_editable_and_deleteable()[pri:88, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:06:14 IST" name="To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_value_To_validate_whether_the_value_entered_in_the_Node_address_text_box_of_My_wallet_node_screen_is_editable_and_deleteable" finished-at="2025-10-28T18:06:15 IST" duration-ms="1124" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Node_Name_text_box_on_the_wallet_Node_screen -->
-        <test-method signature="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_empty_space_value()[pri:86, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:17:50 IST" name="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_empty_space_value" finished-at="2025-10-27T17:17:51 IST" duration-ms="938" status="PASS">
+        </test-method> <!-- To_Validate_the_Node_address_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_value_To_validate_whether_the_value_entered_in_the_Node_address_text_box_of_My_wallet_node_screen_is_editable_and_deleteable -->
+        <test-method signature="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter()[pri:89, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:06:15 IST" name="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter" finished-at="2025-10-28T18:06:17 IST" duration-ms="2103" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_empty_space_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-10-27T17:17:51 IST" name="closeApp" finished-at="2025-10-27T17:17:51 IST" duration-ms="611" status="PASS">
+        </test-method> <!-- To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter -->
+        <test-method signature="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value()[pri:90, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:06:17 IST" name="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value" finished-at="2025-10-28T18:06:19 IST" duration-ms="1137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value -->
+        <test-method signature="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_value()[pri:91, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:06:19 IST" name="To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_value" finished-at="2025-10-28T18:06:20 IST" duration-ms="1081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_the_Node_Name_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_value -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@32c4e8b2]" started-at="2025-10-28T18:06:20 IST" name="closeApp" finished-at="2025-10-28T18:06:20 IST" duration-ms="633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
