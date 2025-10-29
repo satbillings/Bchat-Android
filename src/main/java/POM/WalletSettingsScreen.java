@@ -175,6 +175,11 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Node name (Optional)']")
 	private WebElement NodeNameTextBoxPlaceholder;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Username (Optional)']")
+	private WebElement UserNameTextBoxPlaceholder;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Password (Optional)']")
+	private WebElement PasswordTextBoxPlaceholder;
 	
 	public String getNodeAddressTextBoxPlaceholder () {
     	return NodeAddressTextBoxPlaceholder.getText();
@@ -189,11 +194,11 @@ public class WalletSettingsScreen extends ActionsClass {
     }
 	
 	public String getUserNameTextBoxPlaceholder () {
-    	return textBoxUsername.getText();
+    	return UserNameTextBoxPlaceholder.getText();
     }
 	
 	public String getPasswordTextBoxPlaceholder () {
-    	return textBoxPassword.getText();
+    	return PasswordTextBoxPlaceholder.getText();
     }
 	
 	 public void ClickBRLCurrency () {
