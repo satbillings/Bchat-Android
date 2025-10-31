@@ -10,7 +10,8 @@
         <methods>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_User_name_text_box_on_the_wallet_Node_screen"/>
+          <include name="To_Validate_whether_user_is_able_to_paste_long_text_in_User_name_text_box_in_the_wallet_Node_screen"/>
+          <include name="To_Validate_the_User_name_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
