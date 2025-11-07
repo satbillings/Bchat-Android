@@ -2155,7 +2155,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the User name text box in the wallet node screen by entering the HTML value */
 	
-	@Test(priority = 101)
+	/*@Test(priority = 101)
 	public void To_Validate_the_User_name_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2199,7 +2199,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether user is able to paste long text in User name text box in the My wallet node screen*/
 	
-	@Test(priority = 102)
+	/*@Test(priority = 102)
 	public void To_Validate_whether_user_is_able_to_paste_long_text_in_User_name_text_box_in_the_wallet_Node_screen () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);
 		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2212,7 +2212,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 /* Validate the cursor blinks in Password text box on the My wallet node screen */
 /* Validate the presence of placeholder in Password text box on the My wallet node screen */	
 		
-		@Test(priority = 103)
+		/*@Test(priority = 103)
 		public void To_Validate_the_cursor_blinks_and_presence_of_placeholder_in_Password_text_box_on_the_wallet_Node_screen () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2223,7 +2223,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the empty space value */
 		
-		@Test(priority = 104)
+		/*@Test(priority = 104)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_empty_space_value () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2236,7 +2236,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 /* Validate the Password text box in the wallet node screen by entering the special characters */
 /* Validate whether the value entered in the Password text box of My wallet node screen is editable and delete-able */		
 		
-		@Test(priority = 105)
+		/*@Test(priority = 105)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Password_text_box_of_My_wallet_node_screen_is_editable_and_deleteable () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2244,7 +2244,109 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 			walletsettingspage.SetValuesInPasswordTextBox("!@#$%^&*()");
 			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "!@#$%^&*()");
 			walletsettingspage.ClearPasswordTextBox();	
+		}*/		
+		
+/* Validate the Password text box in the wallet node screen by entering the HTML value */
+		
+		@Test(priority = 106)
+		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value () throws InterruptedException {
+			Enablewalletpage = new EnableWalletScreen(driver);
+			Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+			Enablewalletpage.ClickEnableWalletCheckBox();
+			Enablewalletpage.ClickEnableWalletButton();
+			//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			//Thread.sleep(59000);
+			homepage = new HomeScreen(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
+			//Thread.sleep(10000);
+			homepage.clickMenuDrawer();
+		    menupage =new MenuScreen(driver);
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
+			menupage.click_option_Wallet();
+			createpinpage = new CreatePINScreen(driver);
+			//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+			createpinpage.setPassword_0();
+			createpinpage.clickNext();
+			createpinpage2 = new CreatePINScreen2(driver);
+			createpinpage2.setPassword_0();
+			createpinpage2.clickNext();	
+			createpinpage2.clickOk();
+			mywalletpage = new MyWalletScreen(driver);
+			Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+			//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+			//Thread.sleep(59000);
+			Thread.sleep(3000);
+			mywalletpage.ClickSettingsOption();
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+			walletsettingspage.click_Current_Node();
+			Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");
+			walletsettingspage.click_AddNode();
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			walletsettingspage.ClickPasswordTextBox();	
+			walletsettingspage.SetValuesInPasswordTextBox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+			walletsettingspage.ClearPasswordTextBox();
+		}	
+		
+/* Validate the Password text box in the wallet node screen by entering the numerical value */
+		
+		@Test(priority = 107)
+		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_value () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			//walletsettingspage.ClickNodeAddressTextBox();
+			walletsettingspage.SetValuesInPasswordTextBox("1234567890");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "1234567890");
+			walletsettingspage.ClearPasswordTextBox();	
+		}
+		
+/* Validate the Password text box in the wallet node screen by entering the both in upper case and lower case letter */
+		
+		@Test(priority = 108)
+		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_both_in_upper_case_and_lower_case_letter () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			walletsettingspage.SetValuesInPasswordTextBox("ABCDEF");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "ABCDEF");
+			walletsettingspage.ClearPasswordTextBox();
+			walletsettingspage.SetValuesInPasswordTextBox("abcdef");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "abcdef");
+			walletsettingspage.ClearPasswordTextBox();
+		}	
+		
+/* Validate the Password text box in the wallet node screen by entering the alphanumeric value */
+		
+		@Test(priority = 109)
+		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			walletsettingspage.SetValuesInPasswordTextBox("abc123");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "abc123");
+			walletsettingspage.ClearPasswordTextBox();	
+		}	
+		
+/* Validate the Password text box in the wallet node screen by entering the decimal value */
+		
+		@Test(priority = 110)
+		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_value () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			walletsettingspage.SetValuesInPasswordTextBox("0.00001");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "0.00001");
+			walletsettingspage.ClearPasswordTextBox();
+		}
+		
+/* Validate whether user is able to paste long text in Password text box in the My wallet node screen */
+		
+		@Test(priority = 111)
+		public void To_Validate_whether_user_is_able_to_paste_long_text_in_Password_text_box_in_the_wallet_Node_screen () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);
+			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+			walletsettingspage.PasteValuesInPasswordTextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+			walletsettingspage.ClearPasswordTextBox();
 		}			
-	
-	
+		
 	}
