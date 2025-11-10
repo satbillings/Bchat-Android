@@ -81,6 +81,9 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Test']")
 	private WebElement btnTest;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Cancel']")
+	private WebElement CancelButton;
+	
 	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.Button")
 	private WebElement btnCancelInAddNode;
 	
@@ -124,6 +127,9 @@ public class WalletSettingsScreen extends ActionsClass {
 	
 	@AndroidFindBy(className = "android.widget.EditText")
 	private WebElement SearchTextBox;
+	
+	@AndroidFindBy(className = "android.widget.EditText")
+	private WebElement SearchCurrencyTextBox;
 	
 	@AndroidFindBy(xpath="//android.view.View[@index='3']")
 	private WebElement ElementInCurrencypopup;
@@ -181,8 +187,29 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Password (Optional)']")
 	private WebElement PasswordTextBoxPlaceholder;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Currency']")
+	private WebElement CurrencyPopupTitle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search Currency']")
+	private WebElement SearchCurrencyTextBoxPlaceholder;
+	
+	@AndroidFindBy(className = "android.widget.Button")
+	private WebElement SearchIconInSearchCurrencyPopup;
+	
+	public WebElement getSearchIconInSearchCurrencyPopup () {
+    	return SearchIconInSearchCurrencyPopup;
+    }
+	
+	public String getCurrencyPopupTitle () {
+    	return CurrencyPopupTitle.getText();
+    }
+	
 	public String getNodeAddressTextBoxPlaceholder () {
     	return NodeAddressTextBoxPlaceholder.getText();
+    }
+	
+	public String getSearchCurrencyTextBoxPlaceholder () {
+    	return SearchCurrencyTextBoxPlaceholder.getText();
     }
 	
 	public String getNodePortTextBoxPlaceholder () {
@@ -200,6 +227,10 @@ public class WalletSettingsScreen extends ActionsClass {
 	public String getPasswordTextBoxPlaceholder () {
     	return PasswordTextBoxPlaceholder.getText();
     }
+	
+	public void Click_Cancel_Button_In_Add_Node_Popup() {
+		 CancelButton.click();
+	 }
 	
 	 public void ClickBRLCurrency () {
 		 optionCurrency.click();
@@ -366,6 +397,12 @@ public class WalletSettingsScreen extends ActionsClass {
     	return SuccessMsg.getText();
     }
     
+    
+    
+    public void SetValuesInSearchCurrencyTextBox (String value){
+        SearchTextBox.sendKeys(value);	
+      }
+    
     public void SetValuesInNodeNameTextBox (String value){
       textBoxNodeName.sendKeys(value);	
     }
@@ -396,7 +433,19 @@ public class WalletSettingsScreen extends ActionsClass {
     
     public String getValuesFromPasswordTextBox () {
     	return textBoxPassword.getText();
+    }
+    
+    public String getValuesFromSearchCurrencyTextBox () {
+    	return SearchTextBox.getText();
     } 
+    
+    public void ClickSearchCurrencyTextBox (){
+        SearchTextBox.click();	
+      }
+    
+    public void ClearSearchCurrencyTextBox (){
+        SearchTextBox.clear();	
+      }
     
     public void ClickNodeAddressTextBox (){
         textBoxNodeAddress.click();	
@@ -595,6 +644,10 @@ public class WalletSettingsScreen extends ActionsClass {
     
     public void paste_Values_In_Searchtextbox (String value) {
     	Copy_And_Paste_Values(value, SearchTextBox);
+    }
+    
+    public void pasteValuesInSearchCurrencytextbox (String value) {
+    	Copy_And_Paste_Values(value, SearchCurrencyTextBox);
     }
     
     public void PasteValuesInNodeAddressTextBox(String value) {

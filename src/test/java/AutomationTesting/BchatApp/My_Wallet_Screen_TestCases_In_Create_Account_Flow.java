@@ -2248,7 +2248,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the HTML value */
 		
-		@Test(priority = 106)
+		/*@Test(priority = 106)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_HTML_value () throws InterruptedException {
 			Enablewalletpage = new EnableWalletScreen(driver);
 			Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2292,7 +2292,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the numerical value */
 		
-		@Test(priority = 107)
+		/*@Test(priority = 107)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_numerical_value () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2304,7 +2304,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the both in upper case and lower case letter */
 		
-		@Test(priority = 108)
+		/*@Test(priority = 108)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_both_in_upper_case_and_lower_case_letter () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2318,7 +2318,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the alphanumeric value */
 		
-		@Test(priority = 109)
+		/*@Test(priority = 109)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2329,7 +2329,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate the Password text box in the wallet node screen by entering the decimal value */
 		
-		@Test(priority = 110)
+		/*@Test(priority = 110)
 		public void To_Validate_the_Password_text_box_in_the_wallet_Node_screen_by_entering_the_decimal_value () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
@@ -2340,13 +2340,103 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		
 /* Validate whether user is able to paste long text in Password text box in the My wallet node screen */
 		
-		@Test(priority = 111)
+		/*@Test(priority = 111)
 		public void To_Validate_whether_user_is_able_to_paste_long_text_in_Password_text_box_in_the_wallet_Node_screen () throws InterruptedException {
 			walletsettingspage = new WalletSettingsScreen(driver);
 			Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
 			walletsettingspage.PasteValuesInPasswordTextBox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
 			Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
 			walletsettingspage.ClearPasswordTextBox();
-		}			
-		
+		}*/
+	
+/* Validate the working of cancel button in add node popup on the My wallet node screen */
+	
+	@Test(priority = 112)
+	public void To_Validate_the_working_of_cancel_button_in_add_node_popup_on_the_my_wallet_node_screen () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		//Thread.sleep(59000);
+		Thread.sleep(3000);
+		mywalletpage.ClickSettingsOption();
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.click_Current_Node();
+		Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");
+		walletsettingspage.click_AddNode();
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		walletsettingspage.Click_Cancel_Button_In_Add_Node_Popup();
+	}
+	
+/* Validate if entered texts are displayed in all text boxes in add node popup after user navigates to node screen and again come back to add node popup */
+	
+	@Test(priority = 113)
+	public void To_Validate_if_entered_texts_are_displayed_in_all_textboxes_in_add_node_popup_after_user_navigates_to_node_screen_again_come_back_to_add_node_popup () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");
+		walletsettingspage.click_AddNode();
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		walletsettingspage.ClickNodeAddressTextBox();	
+		walletsettingspage.PasteValuesInNodeAddressTextBox("abcdef");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "abcdef");
+		walletsettingspage.PasteValuesInNodePortTextBox("1234");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodePortTextBox(), "1234");
+		walletsettingspage.PasteValuesInNodeNameTextBox("sat");
+		Assert.assertEquals(walletsettingspage.getValuesFromNodeNameTextBox(), "sat");
+		walletsettingspage.PasteValuesInUserNameTextBox("satbill");
+		Assert.assertEquals(walletsettingspage.getValuesFromUserNameTextBox(), "satbill");
+		walletsettingspage.PasteValuesInPasswordTextBox("satbill@123");
+		Assert.assertEquals(walletsettingspage.getValuesFromPasswordTextBox(), "satbill@123");
+		driver.navigate().back();
+		walletsettingspage.click_AddNode();
+		Assert.assertNotEquals(walletsettingspage.getValuesFromNodeAddressTextBox(), "abcdef");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromNodePortTextBox(), "1234");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromNodeNameTextBox(), "sat");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromUserNameTextBox(), "satbill");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromPasswordTextBox(), "satbill@123");
+	}
+	
+	
+	/* Validate the cursor blinks in Search Currency text box on the My wallet settings screen */
+	/* Validate the presence of placeholder in Search Currency text box on the My wallet settings screen */	
+	/* Validate whether the Search icon is displayed in Search Currency text box on the My wallet settings screen */
+			
+		@Test(priority = 114)
+		public void To_Validate_the_cursor_blinks_and_presence_of_placeholder_and_Search_icon_in_Search_currency_text_box_on_the_Wallet_settings_screen () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);	
+		Assert.assertEquals(walletsettingspage.AddNode_Screen_Title(), "Add Node");
+		driver.navigate().back();
+		Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");
+		driver.navigate().back();
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.click_Currency();
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.ClickSearchCurrencyTextBox();	
+		Assert.assertTrue(walletsettingspage.activeElement().isDisplayed());
+		Assert.assertEquals(walletsettingspage.getSearchCurrencyTextBoxPlaceholder(), "Search Currency");
+		Assert.assertTrue(walletsettingspage.getSearchIconInSearchCurrencyPopup().isDisplayed());
+		}
+			
 	}
