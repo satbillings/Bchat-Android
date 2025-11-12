@@ -196,6 +196,13 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement SearchIconInSearchCurrencyPopup;
 	
+	@AndroidFindBy(className = "android.widget.ImageView")
+	private WebElement CloseIconInCurrencyPopup;
+	
+	public void ClickCloseIconInCurrencyPopup () {
+		closeIcon.click();
+    }
+	
 	public WebElement getSearchIconInSearchCurrencyPopup () {
     	return SearchIconInSearchCurrencyPopup;
     }

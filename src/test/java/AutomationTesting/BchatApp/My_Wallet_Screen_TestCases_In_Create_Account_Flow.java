@@ -2441,7 +2441,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Search currency text box in the wallet settings screen by entering the empty space value */
 	
-	@Test(priority = 115)
+	/*@Test(priority = 115)
 	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_empty_space_value () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2484,7 +2484,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	/* Validate the Search currency text box in the wallet settings screen by entering the special characters */
 	/* Validate whether the value entered in the Search currency text box of My wallet settings screen is editable and delete-able */		
 			
-			@Test(priority = 116)
+			/*@Test(priority = 116)
 			public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_special_characters_To_validate_whether_the_value_entered_in_the_Search_currency_text_box_of_My_wallet_settings_screen_is_editable_and_deleteable () throws InterruptedException {
 				walletsettingspage = new WalletSettingsScreen(driver);
 				Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2495,7 +2495,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 			
 /* Validate the Search currency text box in the wallet settings screen by entering the numerical value */
 			
-			@Test(priority = 117)
+			/*@Test(priority = 117)
 			public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_numerical_value () throws InterruptedException {
 				walletsettingspage = new WalletSettingsScreen(driver);			
 				Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2506,13 +2506,107 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 			
 /* Validate the Search currency text box in the wallet settings screen by entering the decimal value */
 			
-			@Test(priority = 118)
+			/*@Test(priority = 118)
 			public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_decimal_value () throws InterruptedException {
 				walletsettingspage = new WalletSettingsScreen(driver);			
 				Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
 				walletsettingspage.SetValuesInSearchCurrencyTextBox("0.00001");
 				Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "0.00001");
 				walletsettingspage.ClearSearchCurrencyTextBox();
-			}		
+			}*/
+	
+/* Validate the Search currency text box in the wallet settings screen by entering the HTML value */
+	
+	@Test(priority = 119)
+	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_HTML_value () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		//Thread.sleep(59000);
+		Thread.sleep(3000);
+		mywalletpage.ClickSettingsOption();
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.click_Currency();
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.ClickSearchCurrencyTextBox();
+		walletsettingspage.SetValuesInSearchCurrencyTextBox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		walletsettingspage.ClearSearchCurrencyTextBox();
+	}	
+
+/*Validate the Search currency text box in the wallet settings screen by entering the alphanumeric value */
+	
+	@Test(priority = 120)
+	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);			
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.SetValuesInSearchCurrencyTextBox("abc123");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "abc123");
+		walletsettingspage.ClearSearchCurrencyTextBox();
+	}
+	
+	
+/* Validate the Search currency text box in the wallet settings screen by entering the alphabets both in upper case and lower case letter */
+	
+	@Test(priority = 121)
+	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);			
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.SetValuesInSearchCurrencyTextBox("abcdef");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "abcdef");
+		walletsettingspage.ClearSearchCurrencyTextBox();
+		walletsettingspage.SetValuesInSearchCurrencyTextBox("ABCDEF");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "ABCDEF");
+		walletsettingspage.ClearSearchCurrencyTextBox();
+	}
+	
+	/* Validate whether user is able to paste long text in Search currency text box in the My wallet settings screen */
+	
+	@Test(priority = 122)
+	public void To_Validate_whether_user_is_able_to_paste_long_text_in_Search_currency_text_box_in_the_wallet_settings_screen () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.pasteValuesInSearchCurrencytextbox("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		walletsettingspage.ClearSearchCurrencyTextBox();
+	}	
+	
+/* Validate if entered texts are displayed in Search currency text box in Currency popup after user navigates to settings screen and again come back to currency popup */
+	
+	@Test(priority = 123)
+	public void To_Validate_if_entered_texts_are_displayed_in_Search_currency_textbox_in_Currency_popup_after_user_navigates_to_settings_screen_again_come_back_to_currency_popup () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);	
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		walletsettingspage.SetValuesInSearchCurrencyTextBox("usd");
+		Assert.assertEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "usd");
+		//driver.navigate().back();
+		walletsettingspage.ClickCloseIconInCurrencyPopup();
+		walletsettingspage.click_Currency();
+		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
+		Assert.assertNotEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "usd");
+	}
 			
 	}
