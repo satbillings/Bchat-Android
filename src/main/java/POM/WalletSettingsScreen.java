@@ -193,11 +193,21 @@ public class WalletSettingsScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search Currency']")
 	private WebElement SearchCurrencyTextBoxPlaceholder;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search Contact']")
+	private WebElement SearchContactTextBoxPlaceholder;
+	
 	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement SearchIconInSearchCurrencyPopup;
 	
+	@AndroidFindBy(className = "android.widget.Button")
+	private WebElement SearchIconInSearchContactTextBox;
+	
 	@AndroidFindBy(className = "android.widget.ImageView")
 	private WebElement CloseIconInCurrencyPopup;
+	
+	public void ClickSearchTextBoxInAddressBook () {
+		SearchTextBox.click();
+    }
 	
 	public void ClickCloseIconInCurrencyPopup () {
 		closeIcon.click();
@@ -205,6 +215,10 @@ public class WalletSettingsScreen extends ActionsClass {
 	
 	public WebElement getSearchIconInSearchCurrencyPopup () {
     	return SearchIconInSearchCurrencyPopup;
+    }
+	
+	public WebElement getSearchIconInSearchContactTextBox () {
+    	return SearchIconInSearchContactTextBox;
     }
 	
 	public String getCurrencyPopupTitle () {
@@ -627,6 +641,10 @@ public class WalletSettingsScreen extends ActionsClass {
     
     public String AddressBook_screen_title () {
     	return optionAddressBook.getText();
+    }
+    
+    public String getSearchContactTextBoxPlaceholder () {
+    	return SearchContactTextBoxPlaceholder.getText();
     }
     
     public void click_change_Pin () {

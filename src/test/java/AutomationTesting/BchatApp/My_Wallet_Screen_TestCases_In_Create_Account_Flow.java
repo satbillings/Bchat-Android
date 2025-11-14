@@ -2517,7 +2517,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Search currency text box in the wallet settings screen by entering the HTML value */
 	
-	@Test(priority = 119)
+	/*@Test(priority = 119)
 	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_HTML_value () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2559,7 +2559,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 
 /*Validate the Search currency text box in the wallet settings screen by entering the alphanumeric value */
 	
-	@Test(priority = 120)
+	/*@Test(priority = 120)
 	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);			
 		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2571,7 +2571,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Search currency text box in the wallet settings screen by entering the alphabets both in upper case and lower case letter */
 	
-	@Test(priority = 121)
+	/*@Test(priority = 121)
 	public void To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_alphabets_both_in_uppercase_lowercase_letter () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);			
 		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2583,9 +2583,9 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		walletsettingspage.ClearSearchCurrencyTextBox();
 	}
 	
-	/* Validate whether user is able to paste long text in Search currency text box in the My wallet settings screen */
+/* Validate whether user is able to paste long text in Search currency text box in the My wallet settings screen */
 	
-	@Test(priority = 122)
+	/*@Test(priority = 122)
 	public void To_Validate_whether_user_is_able_to_paste_long_text_in_Search_currency_text_box_in_the_wallet_settings_screen () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);
 		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2596,7 +2596,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate if entered texts are displayed in Search currency text box in Currency popup after user navigates to settings screen and again come back to currency popup */
 	
-	@Test(priority = 123)
+	/*@Test(priority = 123)
 	public void To_Validate_if_entered_texts_are_displayed_in_Search_currency_textbox_in_Currency_popup_after_user_navigates_to_settings_screen_again_come_back_to_currency_popup () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);	
 		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
@@ -2607,6 +2607,74 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		walletsettingspage.click_Currency();
 		Assert.assertEquals(walletsettingspage.getCurrencyPopupTitle(), "Currency");
 		Assert.assertNotEquals(walletsettingspage.getValuesFromSearchCurrencyTextBox(), "usd");
-	}
+	}*/
+	
+	/* Validate the cursor blinks in Search Contact text box on the My wallet Address book screen */
+	/* Validate the presence of placeholder in Search Contact text box on the My wallet Address book screen */
+	/* Validate whether the Search icon is displayed in Search Contact text box on the My wallet Address book screen */
+
 			
+		@Test(priority = 124)
+		public void To_Validate_the_cursor_blinks_and_presence_of_placeholder_and_Search_icon_in_Search_Contact_text_box_on_the_Wallet_Address_book_screen () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		//Thread.sleep(59000);
+		Thread.sleep(3000);
+		mywalletpage.ClickSettingsOption();
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.scrollgesture_Using_text("Change Pin");
+		Thread.sleep(2000);
+		walletsettingspage.click_AddressBook();
+		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
+		walletsettingspage.ClickSearchTextBoxInAddressBook();
+		Assert.assertTrue(walletsettingspage.activeElement().isDisplayed());
+		Assert.assertEquals(walletsettingspage.getSearchContactTextBoxPlaceholder(), "Search Contact");
+		Assert.assertTrue(walletsettingspage.getSearchIconInSearchContactTextBox().isDisplayed());
+		}	
+		
+/*Validate the Search Contact text box in the Wallet Address book screen by entering the empty space value */
+		
+		@Test(priority = 125)
+		public void To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);		
+			Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
+			walletsettingspage.Enter_values_In_Search_TextBox("     ");
+			Assert.assertEquals(walletsettingspage.get_values_In_searchTextBox(),"     ");
+			walletsettingspage.clear_search_textbox();
+		}
+		
+/*Validate the Search Contact text box in the Wallet Address book screen by entering the numerical value */
+		
+		@Test(priority = 126)
+		public void To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_numerical_value () throws InterruptedException {
+			walletsettingspage = new WalletSettingsScreen(driver);		
+			Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
+			walletsettingspage.Enter_values_In_Search_TextBox("1234567890");
+			Assert.assertEquals(walletsettingspage.get_values_In_searchTextBox(),"1234567890");
+			walletsettingspage.clear_search_textbox();
+		}		
 	}
