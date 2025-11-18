@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-17T16:14:26 IST" name="Suite" finished-at="2025-11-17T16:16:45 IST" duration-ms="139124">
+  <suite started-at="2025-11-18T18:56:41 IST" name="Suite" finished-at="2025-11-18T18:58:34 IST" duration-ms="112720">
     <groups>
     </groups>
-    <test started-at="2025-11-17T16:14:26 IST" name="Test" finished-at="2025-11-17T16:16:45 IST" duration-ms="139124">
+    <test started-at="2025-11-18T18:56:41 IST" name="Test" finished-at="2025-11-18T18:58:34 IST" duration-ms="112720">
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
-        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:14:26 IST" name="Configure" finished-at="2025-11-17T16:15:21 IST" duration-ms="55450" status="PASS">
+        <test-method is-config="true" signature="Configure()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:56:41 IST" name="Configure" finished-at="2025-11-18T18:57:03 IST" duration-ms="21914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Configure -->
-        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:15:21 IST" name="PreSetup" finished-at="2025-11-17T16:16:07 IST" duration-ms="46277" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:57:03 IST" name="PreSetup" finished-at="2025-11-18T18:57:49 IST" duration-ms="46344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_special_characters()[pri:127, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:16:07 IST" name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_special_characters" finished-at="2025-11-17T16:16:41 IST" duration-ms="33703" status="PASS">
+        <test-method signature="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_HTML_value()[pri:131, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:57:49 IST" name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_HTML_value" finished-at="2025-11-18T18:58:23 IST" duration-ms="34110" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_special_characters -->
-        <test-method signature="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_Book_screen_by_entering_the_alphanumeric_value_To_validate_whether_the_value_entered_in_the_Search_Contact_text_box_of_My_wallet_Address_Book_screen_is_editable_and_deleteable()[pri:128, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:16:41 IST" name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_Book_screen_by_entering_the_alphanumeric_value_To_validate_whether_the_value_entered_in_the_Search_Contact_text_box_of_My_wallet_Address_Book_screen_is_editable_and_deleteable" finished-at="2025-11-17T16:16:42 IST" duration-ms="775" status="PASS">
+        </test-method> <!-- To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_HTML_value -->
+        <test-method signature="To_Validate_whether_user_is_able_to_paste_long_text_in_Search_Contact_text_box_in_the_wallet_address_book_screen()[pri:132, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:58:23 IST" name="To_Validate_whether_user_is_able_to_paste_long_text_in_Search_Contact_text_box_in_the_wallet_address_book_screen" finished-at="2025-11-18T18:58:26 IST" duration-ms="2271" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_Book_screen_by_entering_the_alphanumeric_value_To_validate_whether_the_value_entered_in_the_Search_Contact_text_box_of_My_wallet_Address_Book_screen_is_editable_and_deleteable -->
-        <test-method signature="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_alphabets_both_in_upper_case_and_lower_case_letter()[pri:129, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:16:42 IST" name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_alphabets_both_in_upper_case_and_lower_case_letter" finished-at="2025-11-17T16:16:43 IST" duration-ms="1335" status="PASS">
+        </test-method> <!-- To_Validate_whether_user_is_able_to_paste_long_text_in_Search_Contact_text_box_in_the_wallet_address_book_screen -->
+        <test-method signature="To_Validate_if_entered_texts_are_displayed_in_Search_Contact_textbox_in_wallet_address_book_screen_after_user_navigates_to_settings_screen_again_come_back_to_address_book_screen()[pri:133, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:58:26 IST" name="To_Validate_if_entered_texts_are_displayed_in_Search_Contact_textbox_in_wallet_address_book_screen_after_user_navigates_to_settings_screen_again_come_back_to_address_book_screen" finished-at="2025-11-18T18:58:33 IST" duration-ms="7311" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_alphabets_both_in_upper_case_and_lower_case_letter -->
-        <test-method signature="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_decimal_value()[pri:130, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:16:43 IST" name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_decimal_value" finished-at="2025-11-17T16:16:44 IST" duration-ms="761" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_decimal_value -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@58326051]" started-at="2025-11-17T16:16:44 IST" name="closeApp" finished-at="2025-11-17T16:16:45 IST" duration-ms="741" status="PASS">
+        </test-method> <!-- To_Validate_if_entered_texts_are_displayed_in_Search_Contact_textbox_in_wallet_address_book_screen_after_user_navigates_to_settings_screen_again_come_back_to_address_book_screen -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow@77128536]" started-at="2025-11-18T18:58:33 IST" name="closeApp" finished-at="2025-11-18T18:58:34 IST" duration-ms="699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
