@@ -34,10 +34,10 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[@index='10']")
 	private WebElement TransactionFilter;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='5']")
+	@AndroidFindBy(xpath="//android.view.View[@index='8']")
 	private WebElement ScanOption;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='10']")
+	@AndroidFindBy(xpath="//android.view.View[@index='9']")
 	//@AndroidFindBy(accessibility  = "Send")
 	private WebElement SendOption;
 	
@@ -45,10 +45,10 @@ public class MyWalletScreen extends ActionsClass {
 	//@AndroidFindBy(accessibility  = "Send")
 	//public WebElement SendOpt;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='11']")
+	@AndroidFindBy(xpath="//android.view.View[@index='10']")
 	private WebElement ReceiveOption;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='8']")
+	@AndroidFindBy(xpath="//android.view.View[@index='11']")
 	private WebElement SyncingOption;
 	
 	@AndroidFindBy(xpath="//android.view.View[@index='2']")
@@ -181,6 +181,10 @@ public class MyWalletScreen extends ActionsClass {
 	
 	 public void click_First_Transaction () {
 	    	firstTransactionInHistory.click();
+	 }
+	 
+	 public void ClickBlockHeightTextBox () {
+		 BlockheightTextBox.click();
 	    }
 	    
 	    public String get_first_Transaction_amount () {

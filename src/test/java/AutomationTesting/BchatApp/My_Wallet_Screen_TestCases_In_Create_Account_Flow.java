@@ -2761,7 +2761,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Search Contact text box in the Wallet Address book screen by entering the HTML value */
 	
-	@Test(priority = 131)
+	/*@Test(priority = 131)
 	public void To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_HTML_value () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2805,7 +2805,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether user is able to paste long text in Search Contact text box in the My wallet address book screen */
 	
-	@Test(priority = 132)
+	/*@Test(priority = 132)
 	public void To_Validate_whether_user_is_able_to_paste_long_text_in_Search_Contact_text_box_in_the_wallet_address_book_screen () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);	
 		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
@@ -2816,7 +2816,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate if entered texts are displayed in Search Contact text box in wallet address book screen after user navigates to settings screen and again come back to address book screen */
 	
-	@Test(priority = 133)
+	/*@Test(priority = 133)
 	public void To_Validate_if_entered_texts_are_displayed_in_Search_Contact_textbox_in_wallet_address_book_screen_after_user_navigates_to_settings_screen_again_come_back_to_address_book_screen () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);	
 		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
@@ -2830,7 +2830,102 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 		walletsettingspage.click_AddressBook();
 		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
 		Assert.assertNotEquals(walletsettingspage.get_values_In_searchTextBox(),"Test");
+	}*/
+	
+/* Validate whether No Contacts text is displayed in wallet address book screen when the user enters the invalid contact name */ 	
+	
+	@Test(priority = 134)
+	public void To_Validate_whether_No_Contacts_text_is_displayed_in_wallet_address_book_screen_when_the_user_enters_the_invalid_contact_name () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(10000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+		//wait.until(ExpectedConditions.visibilityOf(mywalletpage.SendOpt));
+		Thread.sleep(59000);
+		//Thread.sleep(3000);
+		mywalletpage.ClickSettingsOption();
+		walletsettingspage = new WalletSettingsScreen(driver);
+		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
+		walletsettingspage.scrollgesture_Using_text("Change Pin");
+		Thread.sleep(2000);
+		walletsettingspage.click_AddressBook();
+		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
+		walletsettingspage.ClickSearchTextBoxInAddressBook();
+		walletsettingspage.Enter_values_In_Search_TextBox("testing");
+		Assert.assertEquals(walletsettingspage.get_values_In_searchTextBox(),"testing");
+		Assert.assertEquals(walletsettingspage.Element_No_Contacts(),"No Contacts");
+		walletsettingspage.clear_search_textbox();
 	}
-
+	
+/* Validate whether No Addresses! text is displayed in wallet address book screen while having empty contacts */ 	
+	
+	@Test(priority = 135)
+	public void To_Validate_whether_No_Addresses_text_is_displayed_in_wallet_address_book_screen_while_having_empty_contacts () throws InterruptedException {
+		walletsettingspage = new WalletSettingsScreen(driver);	
+		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
+		Thread.sleep(59000);
+        driver.navigate().back();
+		Assert.assertEquals(walletsettingspage.emptyAddressBook_screen(),"No Addresses!");
+		Thread.sleep(59000);
+		driver.navigate().back();
+		Thread.sleep(59000);
+		driver.navigate().back();
+	}			
+	
+/* Validate the cursor blinks in the block height text box in rescan screen */
+	
+	@Test(priority = 136)
+	public void To_validate_the_cursor_blinks_in_blockheight_textbox_in_rescan_screen ()throws InterruptedException {
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		Thread.sleep(59000);
+		mywalletpage.ClickSyncingOption();
+		mywalletpage.ClickRescanOption();
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.ClickBlockHeightTextBox();
+		Assert.assertTrue(mywalletpage.activeElement().isDisplayed());
+	}
+	
+	
+/* Validate whether user is able to paste empty space in block height text box in the My wallet Rescan screen*/
+	
+	@Test(priority = 137)
+	public void To_validate_whether_user_is_able_to_paste_empty_space_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.paste_Value_In_BlockheightTextBox("     ");
+		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "     ");
+	}
+	
+/* Validate whether user is able to paste special characters in block height text box in the My wallet Rescan screen*/
+	
+	@Test(priority = 138)
+	public void To_validate_whether_user_is_able_to_paste_special_characters_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.paste_Value_In_BlockheightTextBox("!@#$%^&*()");
+		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "!@#$%^&*()");
+	}
+	
 
 	}

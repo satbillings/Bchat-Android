@@ -8,11 +8,14 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
+          <include name="To_validate_whether_user_is_able_to_paste_empty_space_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
+          <include name="To_validate_whether_user_is_able_to_paste_special_characters_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_cursor_blinks_and_presence_of_placeholder_and_Search_icon_in_Search_contact_text_box_on_the_Wallet_Address_book_screen"/>
+          <include name="To_Validate_whether_No_Addresses_text_is_displayed_in_wallet_address_book_screen_while_having_empty_contacts"/>
+          <include name="To_validate_the_cursor_blinks_in_blockheight_textbox_in_rescan_screen"/>
           <include name="PreSetup"/>
-          <include name="To_Validate_the_Search_currency_text_box_in_the_wallet_settings_screen_by_entering_the_alphanumeric_value"/>
+          <include name="To_Validate_whether_No_Contacts_text_is_displayed_in_wallet_address_book_screen_when_the_user_enters_the_invalid_contact_name"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
