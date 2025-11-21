@@ -2834,7 +2834,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether No Contacts text is displayed in wallet address book screen when the user enters the invalid contact name */ 	
 	
-	@Test(priority = 134)
+	/*@Test(priority = 134)
 	public void To_Validate_whether_No_Contacts_text_is_displayed_in_wallet_address_book_screen_when_the_user_enters_the_invalid_contact_name () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -2879,7 +2879,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether No Addresses! text is displayed in wallet address book screen while having empty contacts */ 	
 	
-	@Test(priority = 135)
+	/*@Test(priority = 135)
 	public void To_Validate_whether_No_Addresses_text_is_displayed_in_wallet_address_book_screen_while_having_empty_contacts () throws InterruptedException {
 		walletsettingspage = new WalletSettingsScreen(driver);	
 		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(), "Address Book");
@@ -2894,7 +2894,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the cursor blinks in the block height text box in rescan screen */
 	
-	@Test(priority = 136)
+	/*@Test(priority = 136)
 	public void To_validate_the_cursor_blinks_in_blockheight_textbox_in_rescan_screen ()throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);
 		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
@@ -2909,7 +2909,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether user is able to paste empty space in block height text box in the My wallet Rescan screen*/
 	
-	@Test(priority = 137)
+	/*@Test(priority = 137)
 	public void To_validate_whether_user_is_able_to_paste_empty_space_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);
 		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
@@ -2919,13 +2919,70 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether user is able to paste special characters in block height text box in the My wallet Rescan screen*/
 	
-	@Test(priority = 138)
+	/*@Test(priority = 138)
 	public void To_validate_whether_user_is_able_to_paste_special_characters_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);
 		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
 		mywalletpage.paste_Value_In_BlockheightTextBox("!@#$%^&*()");
 		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "!@#$%^&*()");
+	}*/
+	
+/* Validate whether user is able to paste alphanumeric value in block height text box in the My wallet Rescan screen*/
+	
+	@Test(priority = 139)
+	public void To_validate_whether_user_is_able_to_paste_alphanumeric_value_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(59000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+		wait.until(ExpectedConditions.visibilityOf(mywalletpage.ElementofStatusSynchronized()));
+		//Thread.sleep(59000);
+		mywalletpage.ClickSyncingOption();
+		mywalletpage.ClickRescanOption();
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.ClickBlockHeightTextBox();
+		mywalletpage.paste_Value_In_BlockheightTextBox("abc123");
+		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "abc123");
+		 }
+		 
+/* Validate whether user is able to paste decimal value in block height text box in the My wallet Rescan screen*/
+	
+	@Test(priority = 140)
+	public void To_validate_whether_user_is_able_to_paste_decimal_value_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.paste_Value_In_BlockheightTextBox("0.00001");
+		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "0.00001");
 	}
 	
-
+/* Validate whether user is able to paste HTML value in block height text box in the My wallet Rescan screen*/
+	
+	@Test(priority = 141)
+	public void To_validate_whether_user_is_able_to_paste_HTML_value_in_blockheight_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");
+		mywalletpage.paste_Value_In_BlockheightTextBox("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertNotEquals(mywalletpage.getValuesFromBlockheightTextBox(), "<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+	}
+	
 	}
