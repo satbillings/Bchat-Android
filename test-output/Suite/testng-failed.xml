@@ -8,11 +8,12 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_the_Search_Contact_text_box_in_the_Wallet_Address_book_screen_by_entering_the_special_characters"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_user_is_able_to_paste_HTML_value_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
-          <include name="To_validate_whether_user_is_able_to_paste_decimal_value_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
+          <include name="To_validate_whether_user_is_able_to_paste_uppercase_letter_value_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
+          <include name="To_Validate_if_entered_height_is_displayed_in_blockheight_textbox_in_My_wallet_rescan_screen_after_user_navigates_to_My_wallet_dashboard_screen_and_again_come_back_to_rescan_screen"/>
+          <include name="To_Validate_if_entered_height_is_displayed_in_blockheight_textbox_in_My_wallet_rescan_screen_after_user_navigates_to_rescan_by_date_screen_again_come_back_to_rescan_by_height_screen"/>
+          <include name="To_validate_whether_user_is_able_to_paste_long_text_in_blockheight_textbox_in_My_wallet_Rescan_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>

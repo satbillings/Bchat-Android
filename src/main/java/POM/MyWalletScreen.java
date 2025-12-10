@@ -165,6 +165,27 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='0.23 BRL']")
 	private WebElement BalanceCurrencyConversion;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='I Know the Date']")
+	private WebElement DateOptionInRescan;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='I Know the Blockheight']")
+	private WebElement BlockheightOptionInRescan;
+	
+	@AndroidFindBy(xpath="//android.widget.ImageView[@content-desc='Calendar']")
+	private WebElement CalenderIconInRescan;
+	
+	public WebElement getCalenderIconInRescan () {
+    	return CalenderIconInRescan;
+    }
+	
+	 public void ClickDateOptionInRescan(){
+		 DateOptionInRescan.click();
+	 }
+	 
+	 public void ClickBlockheightOptionInRescan(){
+		 BlockheightOptionInRescan.click();
+	 }
+	
 	public String get_Available_Balance () {
     	return AvailableBalance.getText();
     }
@@ -172,8 +193,6 @@ public class MyWalletScreen extends ActionsClass {
 	public String get_Balance_Currency_Conversion () {
     	return BalanceCurrencyConversion.getText();
     }
-	
-	
 	
 	public String get_Bdx_value () {
     	return BeldexHiddenAmount.getText();
