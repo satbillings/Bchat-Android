@@ -258,6 +258,14 @@ public class WalletSendScreen extends ActionsClass {
 		AddressTextBox.clear();
 	}
 	
+	public void ClearAmountTextBox () {
+		AmountTextBox.clear();
+	}
+	
+	public void ClearAddressTextBox () {
+		AddressTextBox.clear();
+	}
+	
 	public void click_Cancel_In_confirm_sending_popup () {
 		btncancelInConfirmPopup.click();
 	}

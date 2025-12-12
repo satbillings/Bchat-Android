@@ -93,6 +93,9 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Restore from BlockHeight']")
 	private WebElement BlockheightPlaceHolder;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Restore from Date']")
+	private WebElement RestoreFromDatePlaceHolder;
+	
 	@AndroidFindBy(accessibility  = "Calendar")
 	private WebElement btnCalendar;
 	
@@ -174,6 +177,13 @@ public class MyWalletScreen extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.ImageView[@content-desc='Calendar']")
 	private WebElement CalenderIconInRescan;
 	
+	@AndroidFindBy(className = "android.widget.EditText")
+	private WebElement DateTextBoxInRescan;
+	
+	public String getValuesFromDateTextBoxInRescan () {
+    	return DateTextBoxInRescan.getText();
+    }
+	
 	public WebElement getCalenderIconInRescan () {
     	return CalenderIconInRescan;
     }
@@ -185,6 +195,14 @@ public class MyWalletScreen extends ActionsClass {
 	 public void ClickBlockheightOptionInRescan(){
 		 BlockheightOptionInRescan.click();
 	 }
+	 
+	 public String getRestoreFromBlockHeightPlaceHolder () {
+	    	return BlockheightPlaceHolder.getText();
+	    }
+	 
+	 public String getRestoreFromDatePlaceHolder () {
+	    	return RestoreFromDatePlaceHolder.getText();
+	    }
 	
 	public String get_Available_Balance () {
     	return AvailableBalance.getText();
@@ -399,6 +417,11 @@ public class MyWalletScreen extends ActionsClass {
 	    	btnOkInCalendar.click();
 	    	ClickRescanButton();
 	    }
+	 
+	 public void SelectDateInRescan () {
+	    	btnCalendar.click();
+	    	btnOkInCalendar.click();
+	 }
 	 public void click_To_Swicth_rescan_option () {
 		 BtnSwitchBlockheightToDate.click();
 	    }
