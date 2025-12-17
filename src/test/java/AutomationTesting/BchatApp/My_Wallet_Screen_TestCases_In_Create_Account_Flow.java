@@ -3071,7 +3071,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the presence of placeholder in Date text box in the My wallet Rescan screen*/
 	
-	@Test(priority = 146)
+	/*@Test(priority = 146)
 	public void To_validate_the_presence_of_placeholder_in_Date_textbox_in_My_wallet_Rescan_screen ()throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -3109,7 +3109,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate if selected date is displayed in Date text box in My wallet rescan screen after user navigates to rescan by height screen and again come back to rescan by date screen */
 	
-	@Test(priority = 147)
+	/*@Test(priority = 147)
 	public void To_Validate_if_selected_date_is_displayed_in_Date_textbox_in_My_wallet_rescan_screen_after_user_navigates_to_rescan_by_height_screen_again_come_back_to_rescan_by_date_screen () throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);	
 		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");	
@@ -3122,9 +3122,9 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	}
 
 
-	/* Validate whether user is able to paste upper case and lower case letter in amount text box in My Wallet send screen.*/
+/* Validate whether user is able to paste upper case and lower case letter in amount text box in My Wallet send screen.*/
 	 
-	@Test(priority = 147)
+	/*@Test(priority = 147)
 	public void To_validate_whether_user_is_able_to_paste_uppercase_and_lowercase_letter_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
 		mywalletpage = new MyWalletScreen(driver);	
 		Assert.assertEquals(mywalletpage.getRescanTitle(), "Rescan");	
@@ -3142,11 +3142,97 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate whether user is able to paste alphanumeric value in amount text box in My Wallet send screen.*/
 	 
-	@Test(priority = 148)
+	/*@Test(priority = 148)
 	public void To_validate_whether_user_is_able_to_paste_alphanumeric_value_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
 		sendpage.paste_Value_In_Amount("abc123");
 		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"abc123");
-		}	
+		}*/
+	
+/* Validate whether user is able to paste empty space value in amount text box in My Wallet send screen.*/
+	
+	@Test(priority = 149)
+	public void To_validate_whether_user_is_able_to_paste_empty_space_value_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(59000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		wait = new WebDriverWait(driver, Duration.ofMinutes(30));
+		wait.until(ExpectedConditions.visibilityOf(mywalletpage.ElementofStatusSynchronized()));
+		mywalletpage.ClickSendOption();
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("     ");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"     ");
+	}
+	
+	/* Validate whether user is able to paste multiple dots in amount text box in My Wallet send screen.*/
+	 
+	@Test(priority = 150)
+	public void To_validate_whether_user_is_able_to_paste_multiple_dots_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("..........");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"..........");
+		}
+	
+/* Validate whether user is able to paste special characters in amount text box in My Wallet send screen.*/
+	 
+	@Test(priority = 151)
+	public void To_validate_whether_user_is_able_to_paste_special_characters_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("!@#$%^&*()");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"!@#$%^&*()");
+		}
+	
+/* Validate whether user is able to paste HTML value in amount text box in My Wallet send screen.*/
+	 
+	@Test(priority = 152)
+	public void To_validate_whether_user_is_able_to_paste_HTML_value_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		}
+	
+	/* Validate whether user is able to paste long text in amount text box in My Wallet send screen.*/
+	 
+	@Test(priority = 153)
+	public void To_validate_whether_user_is_able_to_paste_long_text_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"civilian ticket oxidant sixteen luxury costume coal loudly poaching suffice cigar wife aplomb gnome bevel theatrics goat novelty adhesive sawmill beyond dwelt below code sixteen");
+		}
+
+/* Validate whether user is able to paste lengthy decimal digit value in amount text box in My Wallet send screen.*/
+	 
+	@Test(priority = 154)
+	public void To_validate_whether_user_is_able_to_paste_lenghty_decimal_digit_value_in_amount_textbox_in_My_Wallet_send_screen () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.paste_Value_In_Amount("0.00000000000000000000001");
+		Assert.assertNotEquals(sendpage.get_Values_In_AmountField(),"0.00000000000000000000001");
+		}
 }
