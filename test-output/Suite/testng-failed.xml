@@ -8,12 +8,13 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_if_selected_date_is_displayed_in_Date_textbox_in_My_wallet_rescan_screen_after_user_navigates_to_rescan_by_height_screen_again_come_back_to_rescan_by_date_screen"/>
+          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_both_in_uppercase_and_lowercase_letter"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_user_is_able_to_paste_uppercase_and_lowercase_letter_in_amount_textbox_in_My_Wallet_send_screen"/>
-          <include name="To_validate_the_presence_of_placeholder_in_Date_textbox_in_My_wallet_Rescan_screen"/>
-          <include name="To_validate_whether_user_is_able_to_paste_alphanumeric_value_in_amount_textbox_in_My_Wallet_send_screen"/>
+          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_HTML_value"/>
+          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_alphanumeric_value"/>
+          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_lengthy_decimal_value"/>
+          <include name="PreSetup"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>

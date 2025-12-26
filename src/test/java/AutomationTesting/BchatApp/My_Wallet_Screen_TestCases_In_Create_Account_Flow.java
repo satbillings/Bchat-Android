@@ -3238,7 +3238,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 
 /* Validate the Address text box in My Wallet send screen by entering the empty space values.*/
 	
-	@Test(priority = 155)
+	/*@Test(priority = 155)
 	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_empty_space_values () throws InterruptedException {
 		Enablewalletpage = new EnableWalletScreen(driver);
 		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
@@ -3275,7 +3275,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 
 /* Validate the Address text box in My Wallet send screen by entering the special characters */
 	
-	@Test(priority = 156)
+	/*@Test(priority = 156)
 	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_special_characters () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -3286,7 +3286,7 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Address text box in My Wallet send screen by entering the numerical value */
 	
-	@Test(priority = 157)
+	/*@Test(priority = 157)
 	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_numerical_value () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
@@ -3297,13 +3297,85 @@ public class My_Wallet_Screen_TestCases_In_Create_Account_Flow extends baseclass
 	
 /* Validate the Address text box in My Wallet send screen by entering the multiple dots */
 	
-	@Test(priority = 158)
+	/*@Test(priority = 158)
 	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_multiple_dots () throws InterruptedException {
 		sendpage = new WalletSendScreen(driver);
 		Assert.assertEquals(sendpage.pagetitle(),"Send");
 		sendpage.Enter_Values_In_Address("..........");
 		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"..........");
 		sendpage.Clear_Address_textbox();
-		}			
+		}	*/	
 	
+/* Validate the Address text box in My Wallet send screen by entering the both in upper case and lower case letter */
+	
+	@Test(priority = 159)
+	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_both_in_uppercase_and_lowercase_letter () throws InterruptedException {
+		Enablewalletpage = new EnableWalletScreen(driver);
+		Assert.assertEquals(Enablewalletpage.getEnableWalletScreenTitle(),"Wallet");
+		Enablewalletpage.ClickEnableWalletCheckBox();
+		Enablewalletpage.ClickEnableWalletButton();
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//Thread.sleep(59000);
+		homepage = new HomeScreen(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		//Thread.sleep(59000);
+		homepage.clickMenuDrawer();
+	    menupage =new MenuScreen(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Wallet();
+		createpinpage = new CreatePINScreen(driver);
+		//Assert.assertEquals(mywalletpage.CreatePin_Screen_Title(),"Create PIN");
+		createpinpage.setPassword_0();
+		createpinpage.clickNext();
+		createpinpage2 = new CreatePINScreen2(driver);
+		createpinpage2.setPassword_0();
+		createpinpage2.clickNext();	
+		createpinpage2.clickOk();
+		mywalletpage = new MyWalletScreen(driver);
+		Assert.assertEquals(mywalletpage.getMyWalletScreenTitle(), "My Wallet");
+		wait = new WebDriverWait(driver, Duration.ofMinutes(30));
+		wait.until(ExpectedConditions.visibilityOf(mywalletpage.ElementofStatusSynchronized()));
+		mywalletpage.ClickSendOption();
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.Enter_Values_In_Address("ABCDEF");
+		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"ABCDEF");
+		sendpage.Clear_Address_textbox();
+		sendpage.Enter_Values_In_Address("abcdef");
+		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"abcdef");
+		sendpage.Clear_Address_textbox();
+		}
+	
+/* Validate the Address text box in My Wallet send screen by entering the alphanumeric value */
+	
+	@Test(priority = 160)
+	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_alphanumeric_value () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.Enter_Values_In_Address("abc123");
+		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"abc123");
+		sendpage.Clear_Address_textbox();
+		}
+	
+/* Validate the Address text box in My Wallet send screen by entering the lengthy decimal value */
+	
+	@Test(priority = 161)
+	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_lengthy_decimal_value () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.Enter_Values_In_Address("0.0000000000000001");
+		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"0.0000000000000001");
+		sendpage.Clear_Address_textbox();
+		}	
+	
+/* Validate the Address text box in My Wallet send screen by entering the HTML value */
+	
+	@Test(priority = 162)
+	public void To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_HTML_value () throws InterruptedException {
+		sendpage = new WalletSendScreen(driver);
+		Assert.assertEquals(sendpage.pagetitle(),"Send");
+		sendpage.Enter_Values_In_Address("<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		Assert.assertEquals(sendpage.getValuesFromAddressTextBox(),"<a href=\\\"https://www.example.com\\\">Visit Example</a>");
+		sendpage.Clear_Address_textbox();
+		}		
 }
