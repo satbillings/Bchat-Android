@@ -8,13 +8,11 @@
     <classes>
       <class name="AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow">
         <methods>
-          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_both_in_uppercase_and_lowercase_letter"/>
+          <include name="Validate_if_entered_text_is_displayed_in_Amount_and_Address_textboxes_in_My_wallet_send_screen_after_user_navigated_from_send_screen_to_dashboard_screen_and_again_back_to_send_screen"/>
           <include name="Configure"/>
           <include name="closeApp"/>
-          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_HTML_value"/>
-          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_alphanumeric_value"/>
-          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_lengthy_decimal_value"/>
-          <include name="PreSetup"/>
+          <include name="To_validate_the_Address_textbox_in_My_Wallet_send_screen_by_entering_the_long_text"/>
+          <include name="To_validate_whether_user_is_able_to_paste_long_text_in_Address_textbox_in_My_Wallet_send_screen"/>
         </methods>
       </class> <!-- AutomationTesting.BchatApp.My_Wallet_Screen_TestCases_In_Create_Account_Flow -->
     </classes>
